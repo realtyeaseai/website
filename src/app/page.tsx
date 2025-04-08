@@ -2,6 +2,7 @@ import { TopNavbar } from "@/components/TopNabbar";
 import { 
   HeroSection, 
   ServicesGrid,
+  PersonaPicker,
 } from "../components/landingPage/lpExports"
 
 
@@ -42,6 +43,7 @@ export default function Home() {
           <TopNavbar />
           <HeroSection/>
           <ServicesGrid/>
+          <PersonaPicker/>
         </div>
       </div>
     </div>

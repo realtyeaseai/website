@@ -36,9 +36,9 @@ export default function ServicesGrid() {
       <motion.div
         initial="initial"
         whileHover="hover"
-        className="relative flex flex-1 w-full h-full z-2 max-h-[12rem] min-h-[6rem] rounded-xl overflow-hidden dark:bg-dot-white/[0.2] bg-dot-black/[0.2] border border-transparent place-items-center justify-center"
+        className="relative flex flex-1 w-full h-full z-2 max-h-[13rem] min-h-[6rem] rounded-xl overflow-hidden dark:bg-dot-white/[0.2] bg-dot-black/[0.2] border border-transparent place-items-center justify-center"
       >
-        <span className="absolute shadow-[0px_0px_1000px_160px_#e8de72] right-[-20%] top-[-20%] w-0 h-0 rounded-full pointer-events-none z-[0]"></span>
+        <span className="absolute shadow-[0px_0px_2000px_80px_#e5da60] right-[18%] top-[20%] w-0 h-0 rounded-full pointer-events-none z-[0]"></span>
         <motion.img
           variants={imageVariants}
           src="/ServicesGridItems/Grid2.svg"
