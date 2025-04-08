@@ -32,18 +32,14 @@ export default function ServicesGrid() {
       },
     };
 
-    // return (
-    //   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl  dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black place-items-center">
-    //     <img className="w-full h-full object-contain" src="/ServicesGridItems/Grid2.svg" alt="Image not Supported" />
-    //   </div>
-    // );
-
     return (
       <motion.div
         initial="initial"
         whileHover="hover"
-        className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)] border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black place-items-center justify-center"
+        className="relative flex flex-1 w-full h-full max-h-[12rem] min-h-[6rem] rounded-xl overflow-hidden dark:bg-dot-white/[0.2] bg-dot-black/[0.2] border border-transparent place-items-center justify-center"
       >
+        <span className="absolute border border-white shadow-[0px_0px_200px_60px_yellow] right-[-20%] top-[-20%] w-10 h-10 rounded-full pointer-events-none z-[10]"></span>
+        {/*  w-0 h-0 rounded-full bg-yellow  */}
         <motion.img
           variants={imageVariants}
           src="/ServicesGridItems/Grid2.svg"

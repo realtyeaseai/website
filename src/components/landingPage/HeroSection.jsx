@@ -42,7 +42,7 @@ export default function HeroSection() {
           </div>
           {/* ---------------------------------------------------------------- */}
     
-          <video
+          {/* <video
               controls
               loop
               muted
@@ -51,7 +51,7 @@ export default function HeroSection() {
             >
               <source src="/video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
-            </video>
+            </video> */}
           
         </div>
   )
