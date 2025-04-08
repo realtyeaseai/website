@@ -27,20 +27,12 @@ export function TopNavbar(){
       link: "#features",
     },
     {
-      name: "Solutions",
-      link: "#solutions",
-    },
-    {
-      name: "Affiliate",
-      link: "#affiliate",
-    },
-    {
-      name: "Pricing",
-      link: "#pricing",
-    },
-    {
       name: "Contact",
       link: "#contact",
+    },
+    {
+      name: "About Us",
+      link: "#aboutus",
     },
   ];
 
@@ -57,8 +49,8 @@ export function TopNavbar(){
           <NavItems items={navItems} />
           <div className="flex items-center gap-2">
             {/* Varients for button are primary and secondary */}
-            <NavbarButton variant="primary">Login</NavbarButton>
-            {/* <NavbarButton variant="primary">Get Started</NavbarButton> */}
+            {/* <NavbarButton variant="primary">Login</NavbarButton> */}
+            <NavbarButton variant="primary">Contact Us</NavbarButton>
           </div>
         </NavBody>
  
@@ -87,20 +79,20 @@ export function TopNavbar(){
               </a>
             ))}
             <div className="flex w-full flex-col gap-4">
-              <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
-                className="w-full"
-              >
-                Login
-              </NavbarButton>
               {/* <NavbarButton
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
                 className="w-full"
               >
-                Get Started
+                Login
               </NavbarButton> */}
+              <NavbarButton
+                onClick={() => setIsMobileMenuOpen(false)}
+                variant="primary"
+                className="w-full"
+              >
+                Contact Us
+              </NavbarButton>
             </div>
           </MobileNavMenu>
         </MobileNav>
