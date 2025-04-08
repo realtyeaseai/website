@@ -1,7 +1,7 @@
 import { TopNavbar } from "@/components/TopNabbar";
 import { 
   HeroSection, 
-  FeaturesGrid,
+  ServicesGrid,
 } from "../components/landingPage/lpExports"
 
 
@@ -41,7 +41,7 @@ export default function Home() {
        <div className="z-10">
           <TopNavbar />
           <HeroSection/>
-          <FeaturesGrid/>
+          <ServicesGrid/>
         </div>
       </div>
     </div>
@@ -53,8 +53,8 @@ export const metadata = {
   description: "Ask about Property value, Investment potential, or city insights - RealtyEase AI has your back.",
 };
 
-function Footer(){
-    <div>
-      Footer  --- FAQs and mailing option
-    </div>
-}
+// function Footer(){
+//     <div>
+//       Footer  --- FAQs and mailing option
+//     </div>
+// }

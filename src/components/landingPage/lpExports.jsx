@@ -1,5 +1,5 @@
-import FeaturesGrid from "./FeaturesGrid";
+import ServicesGrid from "./ServicesGrid";
 import HeroSection from "./HeroSection"
 
 
-export { FeaturesGrid, HeroSection }
+export { ServicesGrid, HeroSection }
