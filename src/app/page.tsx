@@ -3,6 +3,7 @@ import {
   HeroSection, 
   ServicesGrid,
   PersonaPicker,
+  ContactUs,
 } from "../components/landingPage/lpExports"
 
 
@@ -16,7 +17,7 @@ export default function Home() {
 
         {/* -------------------------Background Video ----------------------------*/}
         
-        <video
+        {/* <video
           autoPlay
           loop
           muted
@@ -28,12 +29,12 @@ export default function Home() {
             maskImage: "linear-gradient(to bottom, #000000 60%, rgba(0,0,0,0) 100%)",
           }}
         >
-          {/* [mask-image:linear-gradient(to_bottom,white_60%,rgba(0,0,0,0)_100%)] */}
+          
           <source src="/cloud-bg.mp4" type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
         
-
+        {/* [mask-image:linear-gradient(to_bottom,white_60%,rgba(0,0,0,0)_100%)] */}
         
         {/* ----------------------------------------------------------------------- */}
 
@@ -44,6 +45,7 @@ export default function Home() {
           <HeroSection/>
           <ServicesGrid/>
           <PersonaPicker/>
+          <ContactUs/>
         </div>
       </div>
     </div>
