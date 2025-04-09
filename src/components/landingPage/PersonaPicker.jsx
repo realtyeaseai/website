@@ -38,7 +38,7 @@ export default function PersonaPicker(){
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
                 {items.map((item, i) => (
                 <div key={i}>
-                    <div className="md:max-w-[320px] md:min-w-[240px] h-[280px] w-full max-w-xl m-0 rounded-2xl transition-shadow duration-300 hover:shadow-[0_0_10px_5px_rgba(255,255,255,0.3)]">
+                    <div className="md:max-w-[300px] md:min-w-[220px] h-[270px] w-full max-w-xl m-0 rounded-2xl transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)]">
                         <div className="relative flex h-full flex-col items-start justify-end overflow-hidden rounded-2xl border border-[#ffffff20] bg-[#ffffff17] px-4 py-8 shadow-xl">
                             <div className="flex items-center justify-center h-[100%] w-[100%]">
                                 <span className="h-[80%] w-[40%] flex items-center justify-center hover:shadow-[0_0_10px_5px_rgba(255,255,255,0.3)] rounded-2xl">
@@ -56,22 +56,33 @@ export default function PersonaPicker(){
                 </div>
                 ))}
                 
-                <div className=" w-full rounded-2xl m-0 transition-shadow duration-300 hover:shadow-[0_0_10px_5px_rgba(255,255,255,0.3)] border border-[#ffffff20] bg-[#ffffff17]">
-                    <div className="relative flex h-full w-[100%] flex-col items-center justify-center">
-                        <h1 className="text-4xl mb-1">Explore More</h1>
-                        <p className="text-center text-[11px] text-[#ffffff8a] mb-4">See what our Website can do For You, </p>
+                
+                <div className="md:max-w-[300px] md:min-w-[220px] h-[270px] w-full max-w-xl">
+                    <div className="relative w-full max-w-xl h-full">
+                        {/* <div className="absolute inset-0 h-full w-full scale-[0.80] transform rounded-full bg-red-500 bg-gradient-to-r from-blue-500 to-teal-500 blur-3xl" /> */}
+                            <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff20] bg-[#ffffff17] transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)] px-4 py-8 shadow-xl">
+          
+ 
+                            <div className="relative flex h-full w-[100%] flex-col items-center justify-center">
+                                <h1 className="text-4xl mb-1">Explore More</h1>
+                                <p className="text-center text-[11px] text-[#ffffff8a] mb-4">See what our Website can do For You, </p>
                         
-                        <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-                            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-                            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-                              Comming Soon
-                            </span>
-                        </button>
+                                <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                                    <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+                                    <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
+                                      Comming Soon
+                                    </span>
+                                </button>
+                            </div>
+ 
+                            
+ 
+                            {/* Meaty part - Meteor effect */}
+                            <Meteors number={20} />
+                        </div>
                     </div>
-                    {/* Meaty part - Meteor effect */}
-                    <Meteors number={10} />
-                    
                 </div>
+                {/* transition-shadow duration-300 hover:shadow-[-4px_0_80px_2px_rgba(33,150,243,0.6),4px_0_80px_2px_rgba(0,150,136,0.6)] */}
             </div>
         </div>
     );
