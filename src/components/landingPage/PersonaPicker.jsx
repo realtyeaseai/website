@@ -38,8 +38,8 @@ export default function PersonaPicker(){
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
                 {items.map((item, i) => (
                 <div key={i}>
-                    <div className="md:max-w-[300px] md:min-w-[220px] h-[270px] w-full max-w-xl m-0 rounded-2xl transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)]">
-                        <div className="relative flex h-full flex-col items-start justify-end overflow-hidden rounded-2xl border border-[#ffffff20] bg-[#ffffff17] px-4 py-8 shadow-xl">
+                    <div className="md:max-w-[300px] md:min-w-[220px] h-[270px] w-full max-w-xl m-0 rounded-2xl cursor-pointer transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)]">
+                        <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff20] bg-[#ffffff17] px-4 py-8 shadow-xl">
                             <div className="flex items-center justify-center h-[100%] w-[100%]">
                                 <span className="h-[80%] w-[40%] flex items-center justify-center hover:shadow-[0_0_10px_5px_rgba(255,255,255,0.3)] rounded-2xl">
                                     <img src="https://i.pinimg.com/736x/e5/c3/22/e5c32248e3140ff77622d5caa65f53b4.jpg" className="h-auto w-[50%]" alt="img"/>
@@ -49,15 +49,14 @@ export default function PersonaPicker(){
                                 <h1 className="text-center mb-1">{item.title}</h1>
                                 <p className="text-center text-[11px] text-[#ffffff8a]"><i>{item.description}</i></p>
                             </div>
-                            {/* Meaty part - Meteor effect */}
-                            <Meteors number={10} />
+                            <Meteors/>
                         </div>
                     </div>
                 </div>
                 ))}
                 
                 
-                <div className="md:max-w-[300px] md:min-w-[220px] h-[270px] w-full max-w-xl">
+                <div className="md:max-w-[300px] md:min-w-[220px] h-[270px] w-full max-w-xl cursor-pointer">
                     <div className="relative w-full max-w-xl h-full">
                         {/* <div className="absolute inset-0 h-full w-full scale-[0.80] transform rounded-full bg-red-500 bg-gradient-to-r from-blue-500 to-teal-500 blur-3xl" /> */}
                             <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff20] bg-[#ffffff17] transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)] px-4 py-8 shadow-xl">
@@ -74,11 +73,7 @@ export default function PersonaPicker(){
                                     </span>
                                 </button>
                             </div>
- 
-                            
- 
-                            {/* Meaty part - Meteor effect */}
-                            <Meteors number={20} />
+                            <Meteors />
                         </div>
                     </div>
                 </div>
