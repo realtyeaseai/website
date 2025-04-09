@@ -3,35 +3,49 @@
 export default function ContactUs() {
 
   return (
-    <div className="bg-black min-h-[100dvh] w-full flex-col flex items-center justify-center ">
-      <p className="text-[#ffffff99] text-[16px] mb-4 mt-20 text-center">Any question or remarks? Just write us a message!</p>
-      <div className="w-full md:w-[80%] border bg-[rgba(255,255,255,1)] border-white md:rounded-[12px] rounded-[0px] flex md:flex-row flex-col gap-4 justify-between">
-        <div className="h-[600px] w-[460px] bg-black rounded-[10px] ml-[4px] mt-[4px] mb-[4px] md:block hidden">
+    <div className=" bg-black min-h-[100dvh] w-full flex items-center justify-evenly flex-col ">
+        {/* -------------- Static Box --------------  */}
+        <div className="md:h-[380px] h-[600px] w-[96%] rounded-2xl border border-[#ffffff20] mt-4 hover:border-[#ffffff50] flex gap-4 items-center justify-center flex-col bg-[radial-gradient(circle_at_center,_#4883ccb5,_#4883cc53,_#4883cc29,_#000)]">
+    
+            <span className="h-[50px] w-[50px] rounded-[4px] flex items-center justify-center">
+                <img src="/contactUsItems/home.svg" alt="icon" className="w-full h-auto"/>
+            </span>
+            <h1 className="md:text-5xl text-2xl text-center"><b>We&apos;d love to hear from you.</b></h1>
+            <p className="text-center text-[14px] text-[#ffffff8a]">Here&apos;s what some of our satisfied <span className="">user&apos;s</span> have said about us.</p>
 
-        </div>
-        <div className="h-[600px] w-full md:w-[800px] border border-black rounded-[10px] mr-[4px] mt-[4px] mb-[4px] text-black">
-            <form action="" className="w-full">
-                <div className="flex items-center justify-center flex-col">
-                    <span className="flex gap-20 border border-black p-4">
-                        <label htmlFor="" className="h-20 w-[40%]"> <b>First Name </b>
-                            <input type="text" placeholder="Jane" className="w-full focus:outline-none border-b border-[#00000080] focus:ring-0 focus:border-b-2 focus:border-black"/>
-                        </label>
-                        <label htmlFor="" className="h-20 w-[40%]">  <b>Last Name</b>
-                            <input type="text" placeholder="Doe" className="w-full focus:outline-none border-b border-[#00000080] focus:ring-0 focus:border-b-2 focus:border-black"/>
-                        </label>
+            <div className="flex items-center justify-center flex-col md:flex-row gap-8 h-[220px] md:h-[20%] w-[80%] md:mt-0">
+                <div className=" flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15]">
+                    <span>
+                        <img src="/contactUsItems/Clock.svg" alt="Clock" />
                     </span>
-                    <span className="flex gap-20 border border-black p-4">
-                        <label htmlFor="h-20 w-[40%]">  <b>Email</b>
-                            <input type="email" className="w-full focus:outline-none border-b border-[#00000080] focus:ring-0 focus:border-b-2 focus:border-black"/>
-                        </label>
-                        <label htmlFor="h-20 w-[40%]"><b>Phone Number</b>
-                            <input type="tel" className="w-full focus:outline-none border-b border-[#00000080] focus:ring-0 focus:border-b-2 focus:border-black"/>
-                        </label>
-                    </span>
+                    24/7 Assistance
                 </div>
-            </form>
+                <div className="flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15]">
+                    <span>
+                        <img src="/contactUsItems/star.svg" alt="Star" />
+                    </span>
+                    Quick Ai Solutions
+                </div>
+                <div className="flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15]">
+                    <span>
+                        <img src="/contactUsItems/moneyBag.svg" alt="bag" />
+                    </span>
+                    Great Costing
+                </div>
+            </div>
+        
         </div>
-      </div>
+        
+        {/* ------------------ Grid to Conatct --------------- */}
+        <div className="grid grid-cols-1 md:grid-cols-[1.5fr_2fr] gap-4 w-full md:w-[98%] p-4">
+            <div className="bg-black border border-[#ffffff50] h-[600px] w-full md:w-auto rounded-lg">
+              <p className="text-white text-center p-4">Child 1</p>
+            </div>
+
+            <div className="bg-black border border-[#ffffff50] h-[600px] w-full md:w-auto rounded-lg">
+              <p className="text-white text-center p-4">Child 2</p>
+            </div>
+        </div>
     </div>
   )
 }

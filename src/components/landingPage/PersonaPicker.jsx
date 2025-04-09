@@ -38,7 +38,7 @@ export default function PersonaPicker(){
                 {items.map((item, i) => (
                
                     <div key={i} className="md:max-w-[300px] md:w-[260px] md:min-w-[220px] h-[250px] w-[70%] max-w-xl m-0 rounded-2xl cursor-pointer transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)]">
-                        <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff20] bg-[#ffffff17] px-4 py-8 shadow-xl">
+                        <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff30] bg-[#ffffff10] px-4 py-8 shadow-xl">
                             <div className="flex items-center justify-center h-[100%] w-[100%]">
                                 <span className="h-[80%] w-[40%] flex items-center justify-center rounded-2xl">
                                     <img src={item.tag} className="h-auto w-[50%]" alt="img"/>
@@ -57,7 +57,7 @@ export default function PersonaPicker(){
                 
                 <div className="md:max-w-[300px] md:w-[260px] md:min-w-[220px] h-[250px] w-[70%] max-w-xl cursor-pointer">
                     <div className="relative w-full max-w-xl h-full">
-                            <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff20] bg-[#ffffff17] transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)] px-4 py-8 shadow-xl">
+                            <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff30] bg-[#ffffff10] transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)] px-4 py-8 shadow-xl">
                             <div className="relative flex h-full w-[100%] flex-col items-center justify-center">
                                 <h1 className="text-[24px] mb-1">Explore More</h1>
                                 <p className="text-center text-[11px] text-[#ffffff8a] mb-4">See what our Website can do For You, </p>
