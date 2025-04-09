@@ -3,12 +3,12 @@
 export default function ContactUs() {
 
   return (
-    <div className=" bg-black min-h-[100dvh] w-full flex items-center justify-evenly flex-col ">
+    <div className=" bg-black min-h-[100dvh] pt-20 w-full flex items-center justify-evenly flex-col ">
         {/* -------------- Static Box --------------  */}
         <div className="md:h-[380px] h-[600px] w-[96%] rounded-2xl border border-[#ffffff20] mt-4 hover:border-[#ffffff50] flex gap-4 items-center justify-center flex-col bg-[radial-gradient(circle_at_center,_#4883ccb5,_#4883cc53,_#4883cc29,_#000)]">
     
             <span className="h-[50px] w-[50px] rounded-[4px] flex items-center justify-center">
-                <img src="/contactUsItems/home.svg" alt="icon" className="w-full h-auto"/>
+                <img src="/contactUsItems/Subtract.svg" alt="icon" className="w-[75%] h-auto"/>
             </span>
             <h1 className="md:text-5xl text-2xl text-center"><b>We&apos;d love to hear from you.</b></h1>
             <p className="text-center text-[14px] text-[#ffffff8a]">Here&apos;s what some of our satisfied <span className="">user&apos;s</span> have said about us.</p>

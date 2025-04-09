@@ -10,7 +10,7 @@ import {
 export default function Home() {
   return (
     <div>
-       <div className="relative w-full h-screen bg-transparent">
+       <div className="relative w-full h-screen">
 
         {/* -----------Overlay of dark color over the bg cloud video ------------ */}
         <span className="absolute top-0 left-0 w-full h-full object-cover z-[-1] bg-[#00000080]"></span>

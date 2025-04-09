@@ -28,7 +28,7 @@ export default function PersonaPicker(){
 
 
     return(
-        <div className="bg-black h-auto w-full min-h-[100dvh] flex justify-center flex-col items-center">
+        <div className="bg-black h-auto w-full min-h-[120dvh] flex justify-center flex-col items-center">
             <div className="md:w-[80%] w-full flex justify-center items-center flex-col mt-12">
                 <h1 className="text-4xl text-white">Who are you?</h1>
                 <p className="text-[#ffffff99] text-[14px]">Select What You need based on who you are</p>
