@@ -4,23 +4,23 @@ import { Meteors } from "../ui/meteors";
 export default function PersonaPicker(){
 
     const items = [{
-        tag:"https://i.pinimg.com/736x/e5/c3/22/e5c32248e3140ff77622d5caa65f53b4.jpg",
+        tag:"/personaSlectorItems/home.svg",
         title:"I'm a Home Buyer",
         description:"“Browse listings, get matched with agents, and let AI find your dream home.”"
     },{
-        tag:"https://i.pinimg.com/736x/e5/c3/22/e5c32248e3140ff77622d5caa65f53b4.jpg",
+        tag:"/personaSlectorItems/tag.svg",
         title:"I'm Selling My Property",
         description:"“List your property, schedule visits, and get AI tips to sell faster.”"
     },{
-        tag:"https://i.pinimg.com/736x/e5/c3/22/e5c32248e3140ff77622d5caa65f53b4.jpg",
+        tag:"/personaSlectorItems/yen.svg",
         title:" I'm a Property Owner",
         description:"“Manage leases, track maintenance, and automate service requests.”"
     },{
-        tag:"https://i.pinimg.com/736x/e5/c3/22/e5c32248e3140ff77622d5caa65f53b4.jpg",
+        tag:"/personaSlectorItems/box.svg",
         title:"I'm a Service Provider",
         description:"“Connect with property owners to offer plumbing, repair, or other services.”"
     },{
-        tag:"https://i.pinimg.com/736x/e5/c3/22/e5c32248e3140ff77622d5caa65f53b4.jpg",
+        tag:"/personaSlectorItems/item.svg",
         title:"I'm Looking for Work",
         description:"“Take on one-time jobs in cleaning, moving, maintenance, and more.”"
     },
@@ -34,13 +34,13 @@ export default function PersonaPicker(){
                 <p className="text-[#ffffff99] text-[14px]">Select What You need based on who you are</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 place-items-center">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 place-items-center">
                 {items.map((item, i) => (
                
                     <div key={i} className="md:max-w-[300px] md:w-[260px] md:min-w-[220px] h-[250px] w-[70%] max-w-xl m-0 rounded-2xl cursor-pointer transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)]">
                         <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff20] bg-[#ffffff17] px-4 py-8 shadow-xl">
                             <div className="flex items-center justify-center h-[100%] w-[100%]">
-                                <span className="h-[80%] w-[40%] flex items-center justify-center hover:shadow-[0_0_10px_5px_rgba(255,255,255,0.3)] rounded-2xl">
+                                <span className="h-[80%] w-[40%] flex items-center justify-center rounded-2xl">
                                     <img src={item.tag} className="h-auto w-[50%]" alt="img"/>
                                 </span>
                             </div>
@@ -59,7 +59,7 @@ export default function PersonaPicker(){
                     <div className="relative w-full max-w-xl h-full">
                             <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff20] bg-[#ffffff17] transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)] px-4 py-8 shadow-xl">
                             <div className="relative flex h-full w-[100%] flex-col items-center justify-center">
-                                <h1 className="text-4xl mb-1">Explore More</h1>
+                                <h1 className="text-[24px] mb-1">Explore More</h1>
                                 <p className="text-center text-[11px] text-[#ffffff8a] mb-4">See what our Website can do For You, </p>
                                 {/*---------------- Set button output--------------*/}
                                 <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
