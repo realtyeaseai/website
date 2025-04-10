@@ -3,6 +3,7 @@ import HeroSection from "./HeroSection"
 import PersonaPicker from "./PersonaPicker"
 import ContactUs from "./ContactUs"
 import FAQ from "./FAQ.tsx"
+import Footer from "./Footer.tsx"
 
 export { 
     ServicesGrid,
@@ -10,4 +11,5 @@ export {
     PersonaPicker,
     ContactUs,
     FAQ,
+    Footer,
 }
