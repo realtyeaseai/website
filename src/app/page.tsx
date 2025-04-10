@@ -4,6 +4,8 @@ import {
   ServicesGrid,
   PersonaPicker,
   ContactUs,
+  FAQ,
+  
 } from "../components/landingPage/lpExports"
 
 
@@ -46,6 +48,7 @@ export default function Home() {
           <ServicesGrid/>
           <PersonaPicker/>
           <ContactUs/>
+          <FAQ/>
         </div>
       </div>
     </div>

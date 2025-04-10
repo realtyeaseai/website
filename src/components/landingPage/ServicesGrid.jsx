@@ -23,7 +23,7 @@ export default function ServicesGrid() {
       },
       hover: {
         scale: 1.05,
-        rotate: 3,
+        rotate: 6,
         transition: {
           type: "spring",
           stiffness: 200,
@@ -38,12 +38,12 @@ export default function ServicesGrid() {
         whileHover="hover"
         className="relative flex flex-1 w-full h-full z-2 max-h-[13rem] min-h-[6rem] rounded-xl overflow-hidden dark:bg-dot-white/[0.2] bg-dot-black/[0.2] border border-transparent place-items-center justify-center"
       >
-        <span className="absolute shadow-[0px_0px_2000px_80px_#e5da60] right-[18%] top-[20%] w-0 h-0 rounded-full pointer-events-none z-[0]"></span>
+        <span className="absolute shadow-[0px_0px_2000px_80px_#d860e5] left-[18%] top-[20%] w-0 h-0 rounded-full pointer-events-none z-[0]"></span>
         <motion.img
           variants={imageVariants}
-          src="/ServicesGridItems/Grid2.svg"
+          src="/ServicesGridItems/Hammer.svg"
           alt="Image not Supported"
-          className="w-full h-full object-contain z-2"
+          className="w-[90%] h-[90%] object-contain z-2"
         />
       </motion.div>
     );
@@ -61,8 +61,8 @@ export default function ServicesGrid() {
       // icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
     },
     {
-      title: "Help me Buy a Home",
-      description: "Dive into the transformative power of technology.",
+      title: "Request a service",
+      description: "Need a plumber? The AI finds trusted pros fast",
       header: <SkeletonTwo />,
       className: "md:col-span-1",
       // icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
@@ -74,21 +74,21 @@ export default function ServicesGrid() {
       className: "md:col-span-3",
       // icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
     },
-    {
-      title: "The Art of Design",
-      description: "Discover the beauty of thoughtful and functional design.",
-      header: <Skeleton />,
-      className: "md:col-span-1",
-      // icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
-    },
-    {
-      title: "The Power of Communication",
-      description:
-        "Understand the impact of effective communication in our lives.",
-      header: <Skeleton />,
-      className: "md:col-span-2",
-      // icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
-    },
+    // {
+    //   title: "The Art of Design",
+    //   description: "Discover the beauty of thoughtful and functional design.",
+    //   header: <Skeleton />,
+    //   className: "md:col-span-1",
+    //   // icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+    // },
+    // {
+    //   title: "The Power of Communication",
+    //   description:
+    //     "Understand the impact of effective communication in our lives.",
+    //   header: <Skeleton />,
+    //   className: "md:col-span-2",
+    //   // icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+    // },
   ];
 
 

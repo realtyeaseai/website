@@ -3,7 +3,7 @@ import { Spotlight } from "@/components/ui/Spotlight";
 
 export default function HeroSection() {
   return (
-    <div className="relative flex flex-col min-h-[72dvh] md:h-[100dvh] w-full overflow-hidden rounded-md antialiased md:items-center md:justify-center">
+    <div className="relative flex flex-col min-h-[75dvh] md:h-[100dvh] w-full overflow-hidden rounded-md antialiased md:items-center md:justify-center">
     
           {/* ------------------------ Spotlight ------------------------- */}
           <Spotlight
@@ -14,16 +14,32 @@ export default function HeroSection() {
           {/* ----------------------Center Items ---------------------- */}
           <div className="mt-12 md:mt-4 relative z-10 mx-auto w-full max-w-7xl p-4 pt-20 md:pt-0 bg-transparent flex place-items-center flex-col ">
             <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl">
-              <span className="inline-flex items-center justify-center w-full text-center">Your Personal 
+              <span className="inline-flex items-center justify-center w-full text-center">Your Trusted 
                 {/* --------------Tooltip containing the profile pics ---------- */}
                 <Tooltip/> 
               </span> 
-              Real-Estate AI Helper
+              Virtual Assistants
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-center text-base font-normal text-neutral-300">
-              Ask about Property value, Investment potential, or city our <span className="text-blue-400">AI&apos;s</span> got your back
+              We provide expert virtual assistant services that  <span className="text-blue-400">streamline operations, save time, and let you focus</span>  on growing your business.
             </p>
           
+
+            {/* ------------------------------- EDIT THIS SECTION ---------------------------------- */}
+            <div className="border h-50% w-full mt-20">
+
+              <div className="text-center">
+
+                <h1 className="text-3xl mb-2">
+                  Maximize Your Productivity with Professional Virtual Assistants 
+                </h1>
+
+                <p className="">
+                  Running a successful business is demanding—let us help lighten your load! Whether you're in real estate, construction industry, or multiservice, our experienced virtual assistants handle your day-to-day administrative tasks, allowing you to focus on what matters most.
+                </p>
+
+              </div>
+            </div>
     
               {/* ------------------ Input Box -------------------- */}
               <div className="m-2 md:w-[60%] w-full flex justify-between flex-col md:flex-row mt-12">
@@ -35,8 +51,10 @@ export default function HeroSection() {
                   </span>
                 </button>
               </div>
+              {/* --------------------------------------------------------- */}
               
-    
+
+              
               
     
           </div>

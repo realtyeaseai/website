@@ -50,7 +50,7 @@ export function TopNavbar(){
           <div className="flex items-center gap-2">
             {/* Varients for button are primary and secondary */}
             {/* <NavbarButton variant="primary">Login</NavbarButton> */}
-            <NavbarButton variant="primary">Contact Us</NavbarButton>
+            <NavbarButton variant="primary">Get Started</NavbarButton>
           </div>
         </NavBody>
  
@@ -91,7 +91,7 @@ export function TopNavbar(){
                 variant="primary"
                 className="w-full"
               >
-                Contact Us
+                Get Started
               </NavbarButton>
             </div>
           </MobileNavMenu>
