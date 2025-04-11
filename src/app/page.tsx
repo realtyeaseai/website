@@ -48,7 +48,7 @@ export default function Home() {
           <div id="hero">
             <HeroSection />
           </div>
-          <div id="services">
+          <div id="services" className="bg-black pt-24">
             <ServicesGrid />
           </div>
           <div id="persona">

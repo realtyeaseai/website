@@ -49,6 +49,37 @@ export default function ServicesGrid() {
     );
   }
 
+  const SkeletonThree = () => {
+    const imageVariants = {
+      initial: {
+        scale: 1,
+      },
+      hover: {
+        scale: 1.025, // Slight zoom-in effect
+        transition: {
+          type: "spring",
+          stiffness: 200,
+          damping: 10,
+        },
+      },
+    };
+
+    return (
+      <motion.div
+        initial="initial"
+        whileHover="hover"
+        className="relative flex flex-1 w-full h-full z-2 max-h-[13rem] min-h-[6rem] rounded-xl overflow-hidden"
+      >
+        <motion.img
+          variants={imageVariants}
+          src="/ServicesGridItems/orangeHouse.svg"
+          alt="Image not Supported"
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        />
+      </motion.div>
+    );
+  }
+
 
   // ---------------------------- Grid Content Set Here --------------------------
 
@@ -70,7 +101,7 @@ export default function ServicesGrid() {
     {
       title: "Schedule a Visit",
       description: "Tell our AI when you're free, and we'll set up a property tour with the agent.",
-      header: <Skeleton />,
+      header: <SkeletonThree />,
       className: "md:col-span-3",
       // icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
     },
@@ -94,7 +125,17 @@ export default function ServicesGrid() {
 
   return (
     <div className="w-full bg-black text-white py-12">
-    
+
+      <div className="flex flex-col items-center justify-center mb-8">
+        {/* <h1 className="text-4xl font-bold mb-2"> </h1> */}
+        
+        <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-4xl font-bold text-transparent">
+          Services we offer
+        </h1>
+        <p className="text-center text-base font-normal text-neutral-300 text-[16px] pt-2">
+          Everything you need to collaborate, create, and scale, all in one place.
+        </p>
+      </div>
         <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
           {items.map((item, i) => (
             <BentoGridItem

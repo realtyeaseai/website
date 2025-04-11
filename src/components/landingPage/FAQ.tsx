@@ -127,7 +127,7 @@ export default function FAQ() {
 
 
   return (
-    <div className="min-h-[100dvh] pt-40 w-full flex items-center justify-center bg-black">
+    <div className="min-h-[100dvh] pt-24 w-full flex items-center justify-center bg-black">
         <div className="w-[98%] flex items-start justify-center flex-col md:flex-row gap-4 p-4">
             <div className="w-full min-h-[400px] pl-4 md:basis-[45%]">
                 <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-3xl font-bold text-transparent md:text-4xl pt-30 md:ml-6 ">
