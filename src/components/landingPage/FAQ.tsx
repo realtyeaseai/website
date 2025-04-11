@@ -119,73 +119,84 @@ const faqs = [
 
 export default function FAQ() {
 
-    const [openIndex, setOpenIndex] = useState<number | null>(null);
+  return (
+    <div className="min-h-[100dvh] pt-24 w-full flex items-center justify-center bg-black">
+        <div className="w-[98%] flex items-start justify-center flex-col md:flex-row gap-4 p-4">
+            <TextBoxWithContactBtn/>
+            <RenderFaqs/>            
+        </div>
+    </div>
+  )
+}
+
+
+function TextBoxWithContactBtn(){
+  return(
+      <div className="w-full min-h-[400px] pl-4 md:basis-[45%]">
+
+        {/* text  */}
+        <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-3xl font-bold text-transparent md:text-4xl pt-30 md:ml-6 ">
+          Get All Your questions <br/>answered here
+        </h1>
+        <p className="mx-auto mt-2 max-w-xl text-base font-normal text-neutral-300 md:ml-6 ">
+            Have questions? Here are answers to some of the most asked questions about our services and process
+        </p>
+
+        {/* Button  */}
+        <a href="#contact" className="relative inline-flex md:mt-8 mt-6 h-12 overflow-hidden rounded-full p-[2px] md:ml-6 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+          <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+          <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-900 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
+            Conatct Us
+          </span>
+        </a>
+
+      </div>
+  
+  )
+}
+
+
+function RenderFaqs(){
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     const toggle = (i: number) => {
       setOpenIndex(openIndex === i ? null : i);
     };
 
-
-  return (
-    <div className="min-h-[100dvh] pt-24 w-full flex items-center justify-center bg-black">
-        <div className="w-[98%] flex items-start justify-center flex-col md:flex-row gap-4 p-4">
-            <div className="w-full min-h-[400px] pl-4 md:basis-[45%]">
-                <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-3xl font-bold text-transparent md:text-4xl pt-30 md:ml-6 ">
-                  Get All Your questions <br/>answered here
-                </h1>
-                <p className="mx-auto mt-2 max-w-xl text-base font-normal text-neutral-300 md:ml-6 ">
-                    Have questions? Here are  answers to some of the most asked questions about our services and process
-                </p>
-
-                <button className="relative inline-flex md:mt-8 mt-6 h-12 overflow-hidden rounded-full p-[2px] md:ml-6 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-                  <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-900 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-                    Conatct Us
-                  </span>
-                </button>
-
+  return(
+    <div className="w-full min-h-[700px] md:basis-[55%]">
+      <div className="max-w-2xl mx-auto p-4 text-[#ffffffcc]">
+      {/* <h1 className="text-3xl font-bold mb-6 text-start">Frequently Asked Questions</h1> */}
+        <div className="space-y-4">
+          {faqs.map((faq, i) => (
+            <div
+              key={i}
+              className="border border-[#ffffff69] rounded-xl p-4 cursor-pointer bg-[#ffffff0a]"
+              onClick={() => toggle(i)}
+            >
+              <div className="flex justify-between items-center">
+                <h1 className="text-lg font-medium w-[90%]">{faq.question}</h1>
+                <span>{openIndex === i ? <img src="/faqItems/Minus.svg" alt="-" className="w-6 h-auto"></img> : <img src="/faqItems/Add.svg" alt="+" className="w-6 h-auto"></img>}</span>
+              </div>
+          
+              <AnimatePresence initial={false}>
+                {openIndex === i && (
+                  <motion.div
+                    key="content"
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="overflow-hidden text-sm mt-2 text-gray-300"
+                  >
+                    <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
-
-            <div className="w-full min-h-[700px] md:basis-[55%]">
-
-                {/* --------------------------------------------------------------------------------------------------------------------- */}
-
-                <div className="max-w-2xl mx-auto p-4 text-[#ffffffcc]">
-                    {/* <h1 className="text-3xl font-bold mb-6 text-start">Frequently Asked Questions</h1> */}
-                    <div className="space-y-4">
-                      {faqs.map((faq, i) => (
-                        <div
-                          key={i}
-                          className="border border-[#ffffff69] rounded-xl p-4 cursor-pointer bg-[#ffffff0a]"
-                          onClick={() => toggle(i)}
-                        >
-                          <div className="flex justify-between items-center">
-                            <h1 className="text-lg font-medium">{faq.question}</h1>
-                            <span>{openIndex === i ? <img src="/faqItems/Minus.svg" alt="-"></img> : <img src="/faqItems/Add.svg" alt="+"></img>}</span>
-                          </div>
-                      
-                          <AnimatePresence initial={false}>
-                            {openIndex === i && (
-                              <motion.div
-                                key="content"
-                                initial={{ height: 0, opacity: 0 }}
-                                animate={{ height: "auto", opacity: 1 }}
-                                exit={{ height: 0, opacity: 0 }}
-                                transition={{ duration: 0.3, ease: "easeInOut" }}
-                                className="overflow-hidden text-sm mt-2 text-gray-300"
-                              >
-                                <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
-                              </motion.div>
-                            )}
-                          </AnimatePresence>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                {/* --------------------------------------------------------------------------------------------------------------------- */}
-            </div>
+          ))}
         </div>
+      </div>
     </div>
   )
 }

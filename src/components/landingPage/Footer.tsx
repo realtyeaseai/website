@@ -43,9 +43,9 @@ export default function Footer() {
             <ul className="space-y-2 text-[11px] list-none">
               <li><a href="#">About Us</a></li>
               <li><a href="#">Careers</a></li>
-              <li><a href="#">FAQs</a></li>
+              <li><a href="#faq">FAQs</a></li>
               <li><a href="#">Teams</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="#contact">Contact Us</a></li>
             </ul>
           </div>
 
