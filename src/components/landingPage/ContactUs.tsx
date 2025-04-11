@@ -10,7 +10,7 @@ export default function ContactUs() {
         <div className="md:h-[380px] h-[600px] w-[96%] rounded-2xl border border-[#ffffff20] mt-4 hover:border-[#ffffff50] flex gap-4 items-center justify-center flex-col bg-[radial-gradient(circle_at_center,_#4883ccb5,_#4883cc53,_#4883cc29,_#000)]">
     
             <span className="h-[50px] w-[50px] rounded-[4px] flex items-center justify-center">
-                <img src="/contactUsItems/Subtract.svg" alt="icon" className="w-[75%] h-auto"/>
+                <Image src="/contactUsItems/Subtract.svg" alt="icon" className="w-[75%] h-auto"/>
             </span>
             <h1 className="md:text-5xl text-2xl text-center"><b>We&apos;d love to hear from you.</b></h1>
             <p className="text-center text-[14px] text-[#ffffff8a]">Here&apos;s what some of our satisfied <span className="">user&apos;s</span> have said about us.</p>
@@ -18,19 +18,19 @@ export default function ContactUs() {
             <div className="flex items-center justify-center flex-col md:flex-row gap-8 h-[220px] md:h-[20%] w-[80%] md:mt-0">
                 <div className=" flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15]">
                     <span>
-                        <img src="/contactUsItems/Clock.svg" alt="Clock" />
+                        <Image src="/contactUsItems/Clock.svg" alt="Clock" />
                     </span>
                     24/7 Assistance
                 </div>
                 <div className="flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15]">
                     <span>
-                        <img src="/contactUsItems/star.svg" alt="Star" />
+                        <Image src="/contactUsItems/star.svg" alt="Star" />
                     </span>
                     Quick Ai Solutions
                 </div>
                 <div className="flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15]">
                     <span>
-                        <img src="/contactUsItems/moneyBag.svg" alt="bag" />
+                        <Image src="/contactUsItems/moneyBag.svg" alt="bag" />
                     </span>
                     Great Costing
                 </div>

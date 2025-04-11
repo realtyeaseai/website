@@ -1,5 +1,6 @@
 import { Tooltip } from "../Tooltip";
 import { Spotlight } from "@/components/ui/Spotlight";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
@@ -54,7 +55,7 @@ function ImageText(){
   return(
     <div className="relative flex items-center justify-center w-full h-[540px] md:h-[40%] mt-4 md:mt-12 ">
       <span className="w-full h-full md:block hidden">
-        <img
+        <Image
           src="/heroItems/HeroImage.svg"
           alt=""
           className="w-full h-full object-cover"
@@ -67,7 +68,7 @@ function ImageText(){
           Maximize Your Productivity with Professional Virtual Assistants
         </h1>
         <p className="text-neutral-400 text-base font-normal w-[80%] mx-auto mt-4">
-          Running a successful business is demanding—let us help lighten your load! Whether you're in real estate, construction industry, or multiservice, our experienced virtual assistants handle your day-to-day administrative tasks, allowing you to focus on what matters most.
+          Running a successful business is demanding—let us help lighten your load! Whether you&apos;re in real estate, construction industry, or multiservice, our experienced virtual assistants handle your day-to-day administrative tasks, allowing you to focus on what matters most.
         </p>
       </div>
     </div>

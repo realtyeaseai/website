@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -12,7 +13,7 @@ export default function Footer() {
           {/* LOGO */}
           <div className="p-4 flex justify-center items-center  md:w-[180px] w-full">
             <span className="h-[40px] w-auto">
-              <img src="/Logo.png" alt="Logo" className="h-full w-full" />
+              <Image src="/Logo.png" alt="Logo" className="h-full w-full" />
             </span>
             <p className="ml-4 text-sm font-medium">Realty Ease</p>
           </div>
@@ -56,10 +57,10 @@ export default function Footer() {
           <div className="flex justify-between w-[130px] ">
 
             {/* <button className="w-[60px] h-auto mr-4">
-              <img src="/Logo.png" alt="Social 1" className="h-full w-full" />
+              <Image src="/Logo.png" alt="Social 1" className="h-full w-full" />
             </button>
             <button className="w-[60px] h-auto">
-              <img src="/Logo.png" alt="Social 2" className="h-full w-full" />
+              <Image src="/Logo.png" alt="Social 2" className="h-full w-full" />
             </button> */}
 
              {/* LinkedIn */}
