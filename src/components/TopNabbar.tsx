@@ -14,26 +14,33 @@ import {
 import { useState } from "react";
 
 
-
 export function TopNavbar(){
   
   const navItems = [
     {
       name: "Home",
-      link: "#home",
+      link: "#hero", // Matches the id of HeroSection
     },
     {
-      name: "Features",
-      link: "#features",
+      name: "Services",
+      link: "#services", // Matches the id of ServicesGrid
+    },
+    {
+      name: "Persona",
+      link: "#persona", // Matches the id of PersonaPicker
     },
     {
       name: "Contact",
-      link: "#contact",
+      link: "#contact", // Matches the id of ContactUs
     },
     {
-      name: "About Us",
-      link: "#aboutus",
+      name: "FAQ",
+      link: "#faq", // Matches the id of FAQ
     },
+    // {
+    //   name: "Footer",
+    //   link: "#footer", // Matches the id of Footer
+    // },
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

@@ -45,12 +45,24 @@ export default function Home() {
 
        <div className="z-10">
           <TopNavbar />
-          <HeroSection/>
-          <ServicesGrid/>
-          <PersonaPicker/>
-          <ContactUs/>
-          <FAQ/>
-          <Footer/>
+          <div id="hero">
+            <HeroSection />
+          </div>
+          <div id="services">
+            <ServicesGrid />
+          </div>
+          <div id="persona">
+            <PersonaPicker />
+          </div>
+          <div id="contact">
+            <ContactUs />
+          </div>
+          <div id="faq">
+            <FAQ />
+          </div>
+          {/* <div id="footer"> */}
+            <Footer />
+          {/* </div> */}
         </div>
       </div>
     </div>

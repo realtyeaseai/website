@@ -12,7 +12,7 @@ export default function HeroSection() {
           />
     
           {/* ----------------------Center Items ---------------------- */}
-          <div className="mt-12 md:mt-4 relative z-10 mx-auto w-full max-w-7xl p-4 pt-20 md:pt-0 bg-transparent flex place-items-center flex-col ">
+          <div className="mt-12 md:mt-16 relative z-10 mx-auto w-full max-w-7xl p-4 pt-20 md:pt-0 bg-transparent flex place-items-center flex-col ">
             <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl">
               <span className="inline-flex items-center justify-center w-full text-center">Your Trusted 
                 {/* --------------Tooltip containing the profile pics ---------- */}
