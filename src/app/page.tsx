@@ -75,5 +75,5 @@ export default function Home() {
 
 export const metadata = {
   title: "RealtyEase - Your Personal Real-Estate AI Helper",
-  description: "Ask about Property value, Investment potential, or city insights - RealtyEase AI has your backs.",
+  description: "Ask about Property value, Investment potential, or city insights - RealtyEase AI has your backs. Available 24 X 7",
 };
