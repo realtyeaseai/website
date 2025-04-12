@@ -42,7 +42,8 @@ export default function PersonaPicker(){
                         <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff30] bg-[#ffffff10] px-4 py-8 shadow-xl">
                             <div className="flex items-center justify-center h-[100%] w-[100%]">
                                 <span className="h-[80%] w-[40%] flex items-center justify-center rounded-2xl">
-                                    <Image src={item.tag} className="h-auto w-[50%]" alt="Image"/>
+                                    <Image src={item.tag} className="h-auto w-[50%]" width={30}
+          height={30} alt="Image"/>
                                 </span>
                             </div>
                             <div className="">

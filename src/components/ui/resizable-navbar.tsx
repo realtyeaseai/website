@@ -239,13 +239,13 @@ export const NavbarLogo = () => {
     >
       {/* https://i.pinimg.com/736x/e5/c3/22/e5c32248e3140ff77622d5caa65f53b4.jpg */}
       <Image
-        src="https://i.pinimg.com/736x/e5/c3/22/e5c32248e3140ff77622d5caa65f53b4.jpg"
+        src="/Picture1.png"
         alt="logo"
-        width={30}
-        height={30}
+        width={50}
+        height={50}
         className="rounded-[4px]"
       />
-      <span className="font-medium text-black dark:text-white">RealtyEase</span>
+      <span className="font-medium text-black dark:text-white"></span>
     </Link>
   );
 };

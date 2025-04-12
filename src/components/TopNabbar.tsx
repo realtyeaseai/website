@@ -22,6 +22,10 @@ export function TopNavbar(){
       link: "#hero", // Matches the id of HeroSection
     },
     {
+      name: "About Us",
+      link: "#about", // Matches the id of FAQ
+    },
+    {
       name: "Services",
       link: "#services", // Matches the id of ServicesGrid
     },
@@ -29,14 +33,15 @@ export function TopNavbar(){
       name: "Persona",
       link: "#persona", // Matches the id of PersonaPicker
     },
-    {
-      name: "Contact",
-      link: "#contact", // Matches the id of ContactUs
-    },
+    
     {
       name: "FAQ",
       link: "#faq", // Matches the id of FAQ
     },
+    {
+      name: "Contact",
+      link: "#contact", // Matches the id of ContactUs
+    }
     // {
     //   name: "Footer",
     //   link: "#footer", // Matches the id of Footer

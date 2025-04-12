@@ -6,6 +6,7 @@ import {
   ContactUs,
   FAQ,
   Footer,
+  About
 
 } from "../components/landingPage/lpExports"
 
@@ -20,7 +21,7 @@ export default function Home() {
 
         {/* -------------------------Background Video ----------------------------*/}
         
-        {/* <video
+        <video
           autoPlay
           loop
           muted
@@ -35,7 +36,7 @@ export default function Home() {
           
           <source src="/cloud-bg.mp4" type="video/mp4" />
           Your browser does not support the video tag.
-        </video> */}
+        </video>
         
         {/* [mask-image:linear-gradient(to_bottom,white_60%,rgba(0,0,0,0)_100%)] */}
         
@@ -53,6 +54,9 @@ export default function Home() {
           </div>
           <div id="persona">
             <PersonaPicker />
+          </div>
+          <div id="about">
+            <About />
           </div>
           <div id="contact">
             <ContactUs />

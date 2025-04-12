@@ -4,6 +4,7 @@ import PersonaPicker from "./PersonaPicker"
 import ContactUs from "./ContactUs"
 import FAQ from "./FAQ"
 import Footer from "./Footer"
+import About from "./About"
 
 
 export { 
@@ -13,4 +14,6 @@ export {
     ContactUs,
     FAQ,
     Footer,
+    About,
+    
 }

@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Image from 'next/image'
 
@@ -11,17 +12,18 @@ export default function Footer() {
         <div className="w-full flex flex-col md:flex-row items-start justify-between p-4 ">
 
           {/* LOGO */}
-          <div className="p-4 flex justify-center items-center  md:w-[180px] w-full">
+          <div className="p-4 md:p-6 md:py-20 flex justify-center items-center  md:w-[280px] w-full">
             <span className="h-[40px] w-auto">
-              <Image src="/Logo.png" alt="Logo" className="h-full w-full" />
+              <Image src="/Logo.png" alt="Logo" className="h-full w-full" width={30}
+          height={30} />
             </span>
-            <p className="ml-4 text-sm font-medium">Realty Ease</p>
+            <p className="ml-4 text-sm md:text-xl font-bold py-4">Realty Ease</p>
           </div>
 
           {/* Services */}
-          <div className="p-4  md:w-[140px] w-full md:text-start text-center">
-            <h2 className="text-[14px] font-semibold mb-4">Services</h2>
-            <ul className="space-y-2 text-[11px] list-none">
+          <div className="p-6  md:w-[220px] w-full md:text-start text-center md:mr-10">
+            <h2 className="text-[14px] md:text-2xl font-semibold mb-4">Services</h2>
+            <ul className="space-y-4 text-[11px] md:text-xl list-none">
               <li><a href="#">Virtual Assistant</a></li>
               <li><a href="#">Remote Services</a></li>
               <li><a href="#">Credit Score</a></li>
@@ -30,18 +32,18 @@ export default function Footer() {
           </div>
 
           {/* Resources */}
-          <div className="p-4  md:w-[140px] w-full md:text-start text-center">
-            <h2 className="text-[14px] font-semibold mb-4">Resources</h2>
-            <ul className="space-y-2 text-[11px] list-none">
+          <div className="p-6  md:w-[140px] w-full md:text-start text-center md:mr-10">
+            <h2 className="text-[14px] font-semibold md:text-2xl mb-4">Resources</h2>
+            <ul className="space-y-4 text-[11px] md:text-xl list-none">
               <li><a href="#">Developers</a></li>
               <li><a href="#">Support</a></li>
             </ul>
           </div>
 
           {/* Company */}
-          <div className="p-4  md:w-[140px] w-full md:text-start text-center">
-            <h2 className="text-[14px] font-semibold mb-4">Company</h2>
-            <ul className="space-y-2 text-[11px] list-none">
+          <div className="p-6  md:w-[140px] w-full md:text-start text-center md:mr-10">
+            <h2 className="text-[14px] font-semibold md:text-2xl mb-4">Company</h2>
+            <ul className="space-y-4 text-[11px] md:text-xl list-none">
               <li><a href="#">About Us</a></li>
               <li><a href="#">Careers</a></li>
               <li><a href="#faq">FAQs</a></li>
