@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Breadcrumb from "@/components/utilities/Breadcrumb";
+import Breadcrumb from "@/components/utilities/BreadCrumb";
 import FunFactCounter from "@/components/utilities/FunFactCounter";
 // import Team from "@/components/utilities/Team";
 import { TestimonialSlider2 } from "@/components/utilities/TestimonialSlider2";
