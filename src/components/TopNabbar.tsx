@@ -32,7 +32,7 @@ export function TopNavbar(){
     },
     {
       name: "Contact",
-      link: "/contactUs", // Navigate to contactUs Page
+      link: "/ContactUs", // Navigate to contactUs Page
     },
     {
       name: "Pricing",

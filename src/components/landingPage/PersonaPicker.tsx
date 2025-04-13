@@ -1,32 +1,30 @@
 'use client'
 import { Meteors } from "../ui/meteors";
 
+const items = [{
+    tag:"/personaSlectorItems/home.svg",
+    title:"I'm a Home Buyer",
+    description:"“Browse listings, get matched with agents, and let AI find your dream home.”"
+},{
+    tag:"/personaSlectorItems/tag.svg",
+    title:"I'm Selling My Property",
+    description:"“List your property, schedule visits, and get AI tips to sell faster.”"
+},{
+    tag:"/personaSlectorItems/yen.svg",
+    title:" I'm a Property Owner",
+    description:"“Manage leases, track maintenance, and automate service requests.”"
+},{
+    tag:"/personaSlectorItems/box.svg",
+    title:"I'm a Service Provider",
+    description:"“Connect with property owners to offer plumbing, repair, or other services.”"
+},{
+    tag:"/personaSlectorItems/item.svg",
+    title:"I'm Looking for Work",
+    description:"“Take on one-time jobs in cleaning, moving, maintenance, and more.”"
+},
+];
+
 export default function PersonaPicker(){
-
-    const items = [{
-        tag:"/personaSlectorItems/home.svg",
-        title:"I'm a Home Buyer",
-        description:"“Browse listings, get matched with agents, and let AI find your dream home.”"
-    },{
-        tag:"/personaSlectorItems/tag.svg",
-        title:"I'm Selling My Property",
-        description:"“List your property, schedule visits, and get AI tips to sell faster.”"
-    },{
-        tag:"/personaSlectorItems/yen.svg",
-        title:" I'm a Property Owner",
-        description:"“Manage leases, track maintenance, and automate service requests.”"
-    },{
-        tag:"/personaSlectorItems/box.svg",
-        title:"I'm a Service Provider",
-        description:"“Connect with property owners to offer plumbing, repair, or other services.”"
-    },{
-        tag:"/personaSlectorItems/item.svg",
-        title:"I'm Looking for Work",
-        description:"“Take on one-time jobs in cleaning, moving, maintenance, and more.”"
-    },
-    ];
-
-
     return(
         <div className="bg-black h-auto w-full min-h-[120dvh] flex justify-center flex-col items-center md:pt-0 pt-30">
             <div className="md:w-[80%] w-full flex justify-center items-center flex-col mt-0">
@@ -35,27 +33,45 @@ export default function PersonaPicker(){
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 place-items-center">
-                {items.map((item, i) => (
+                
+                <RenderCards/>
+                <LastCard/>
+                
+            </div>
+        </div>
+    );
+}
+
+
+function RenderCards(){
+    return(
+        <>
+            {items.map((item, i) => (
                
-                    <div key={i} className="md:max-w-[300px] md:w-[260px] md:min-w-[220px] h-[250px] w-[70%] max-w-xl m-0 rounded-2xl cursor-pointer transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)]">
-                        <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff30] bg-[#ffffff10] px-4 py-8 shadow-xl">
-                            <div className="flex items-center justify-center h-[100%] w-[100%]">
-                                <span className="h-[80%] w-[40%] flex items-center justify-center rounded-2xl">
-                                    <img src={item.tag} className="h-auto w-[50%]" alt="img"/>
-                                </span>
-                            </div>
-                            <div className="">
-                                <h1 className="text-center mb-1">{item.title}</h1>
-                                <p className="text-center text-[11px] text-[#ffffff8a]"><i>{item.description}</i></p>
-                            </div>
-                            <Meteors/>
-                        </div>
-                    </div>
-                
-                ))}
-                
-                
-                <div className="md:max-w-[300px] md:w-[260px] md:min-w-[220px] h-[250px] w-[70%] max-w-xl cursor-pointer">
+               <div key={i} className="md:max-w-[300px] md:w-[260px] md:min-w-[220px] h-[250px] w-[70%] max-w-xl m-0 rounded-2xl cursor-pointer transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)]">
+                   <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff30] bg-[#ffffff10] px-4 py-8 shadow-xl">
+                       <div className="flex items-center justify-center h-[100%] w-[100%]">
+                           <span className="h-[80%] w-[40%] flex items-center justify-center rounded-2xl">
+                               <img src={item.tag} className="h-auto w-[50%]" alt="img"/>
+                           </span>
+                       </div>
+                       <div className="">
+                           <h1 className="text-center mb-1">{item.title}</h1>
+                           <p className="text-center text-[11px] text-[#ffffff8a]"><i>{item.description}</i></p>
+                       </div>
+                       <Meteors/>
+                   </div>
+               </div>
+           
+           ))}
+        </>
+    );
+}
+
+
+function LastCard(){
+    return(
+        <div className="md:max-w-[300px] md:w-[260px] md:min-w-[220px] h-[250px] w-[70%] max-w-xl cursor-pointer">
                     <div className="relative w-full max-w-xl h-full">
                             <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff30] bg-[#ffffff10] transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)] px-4 py-8 shadow-xl">
                             <div className="relative flex h-full w-[100%] flex-col items-center justify-center">
@@ -73,7 +89,5 @@ export default function PersonaPicker(){
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
     );
 }

@@ -8,7 +8,8 @@ import { useState } from "react";
 const faqs = [
   {
     question: "What is a Virtual Assistant?",
-    answer: `
+    answer: 
+    `
       <p>
         A <b>Virtual Assistant (VA)</b> is a professional who provides administrative, technical, or creative support services remotely.
       </p>
