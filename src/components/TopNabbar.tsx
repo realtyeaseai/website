@@ -102,7 +102,7 @@ export function TopNavbar(){
               >
                 Login
               </NavbarButton> */}
-              <NavbarButton
+              <NavbarButton href="#contact-us"
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
                 className="w-full"

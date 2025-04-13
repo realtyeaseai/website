@@ -147,29 +147,15 @@ function ContactForm() {
     setLoading(true);
     setStatus('idle');
 
-    const fullMessage = `
-      Reason: ${form.reason}
-      Phone: ${form.phone}
-  
-      ${form.message}
-    `;
-
     try {
-      const res = await fetch('https://script.google.com/macros/s/AKfycbxwcPLFlskBs7FkF_phzHxCt_ggIE6kcNlh-AuCU4bUqw0hR6lRnbSz_CYJonTkuumK/exec', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          name: `${form.firstName} ${form.lastName}`,
-          email: form.email,
-          message: fullMessage,
-          firstName: form.firstName,
-          lastName: form.lastName,
-          phone: form.phone,
-          reason: form.reason,
-        }),
+        body: JSON.stringify(form),
       });
+      
 
       if (res.ok) {
         setStatus('success');
