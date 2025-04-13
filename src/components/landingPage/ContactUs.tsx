@@ -157,10 +157,9 @@ function ContactForm() {
       let data;
       try {
         data = await res.json();
-      } catch (err) {
-        const text = await res.text();
-        console.error('❌ Response not JSON:', text);
-        throw new Error('Invalid response format');
+      } catch {
+        console.error('❌ Fetch error:');
+        setStatus('error');
       }
   
       if (res.ok) {
@@ -177,11 +176,9 @@ function ContactForm() {
         console.error('❌ Form submission failed:', data);
         setStatus('error');
       }
-    } catch (err) {
-      console.error('❌ Fetch error:', err);
+    } catch {
+      console.error('❌ Fetch error:');
       setStatus('error');
-    } finally {
-      setLoading(false);
     }
   };
   

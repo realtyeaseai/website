@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { connectToDatabase } from '@/lib/mongodb';
+import { Db } from 'mongodb';
 
 const allowedOrigins = [
   'https://realtyeaseai.com',
@@ -20,21 +21,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).end();
   }
 
-  // 1. Connect to DB with timeout guard
-  let db;
+  let db: Db;
   try {
-    const dbConnect = await Promise.race([
+    const { db: dbInstance } = await Promise.race([
       connectToDatabase(),
-      new Promise((_, reject) => setTimeout(() => reject(new Error('MongoDB timeout')), 7000))
+      new Promise<never>((_, reject) => setTimeout(() => reject(new Error('MongoDB timeout')), 7000))
     ]);
-    db = (dbConnect as any).db;
+    db = dbInstance;
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : 'Unknown DB error';
     console.error('❌ DB Error:', msg);
     return res.status(500).json({ message: 'Database connection failed', error: msg });
   }
 
-  // 2. Handle POST
   if (req.method === 'POST') {
     const { firstName, lastName, email, phone, reason, message } = req.body;
 

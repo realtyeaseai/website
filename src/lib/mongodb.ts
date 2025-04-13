@@ -1,28 +1,18 @@
-import { MongoClient } from 'mongodb';
+import { MongoClient, Db } from 'mongodb';
 
-const uri = process.env.MONGODB_URI!;
-if (!uri) throw new Error('❌ MONGODB_URI not set in .env.local');
+const uri = process.env.MONGODB_URI || '';
+const options = {};
 
 let client: MongoClient;
-let clientPromise: Promise<MongoClient>;
+let db: Db;
 
-declare global {
-  var _mongoClientPromise: Promise<MongoClient> | undefined;
-}
-
-if (process.env.NODE_ENV === 'development') {
-  if (!global._mongoClientPromise) {
-    client = new MongoClient(uri);
-    global._mongoClientPromise = client.connect();
+export async function connectToDatabase(): Promise<{ client: MongoClient; db: Db }> {
+  if (db && client) {
+    return { client, db };
   }
-  clientPromise = global._mongoClientPromise;
-} else {
-  client = new MongoClient(uri);
-  clientPromise = client.connect();
-}
 
-export async function connectToDatabase() {
-  const client = await clientPromise;
-  const db = client.db(); // or specify like db('realtyease')
+  client = new MongoClient(uri, options);
+  await client.connect();
+  db = client.db(); // default DB from URI
   return { client, db };
 }
