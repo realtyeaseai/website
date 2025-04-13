@@ -181,7 +181,7 @@ function ContactForm() {
         console.error('❌ Form submission failed:', data);
         setStatus('error');
       }
-    } catch (err) {
+    } catch (err:unknown) {
       console.error('❌ Fetch error:', err);
       setStatus('error');
     } finally {
