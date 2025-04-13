@@ -56,14 +56,48 @@
 //   }
 // }
 
-import { NextApiRequest, NextApiResponse } from 'next';
+import { NextApiRequest, NextApiResponse } from 'next'
+import clientPromise from '../../lib/mongodb' // MongoDB connection file
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'POST') {
-    return res.status(200).json({ message: 'Success' });
-  }
+  try {
+    const client = await clientPromise
+    const db = client.db()
+    const collection = db.collection('contacts')
 
-  res.setHeader('Allow', ['POST']);
-  res.status(405).end(`Method ${req.method} Not Allowed`);
+    if (req.method === 'POST') {
+      const { firstName, lastName, email, phone, message, reason } = req.body
+
+      const result = await collection.insertOne({
+        firstName,
+        lastName,
+        email,
+        phone,
+        message,
+        reason,
+        createdAt: new Date(),
+      })
+
+      return res.status(201).json({
+        message: 'Contact created successfully',
+        contact: { _id: result.insertedId, ...req.body },
+      })
+    }
+
+    if (req.method === 'GET') {
+      const contacts = await collection.find({}).sort({ createdAt: -1 }).toArray()
+      return res.status(200).json({ contacts })
+    }
+
+    res.setHeader('Allow', ['POST', 'GET'])
+    res.status(405).end(`Method ${req.method} Not Allowed`)
+  } catch (error) {
+    console.error('API error:', error)
+    return res.status(500).json({ message: 'Internal Server Error' })
+  }
 }
+
+
+
+
 

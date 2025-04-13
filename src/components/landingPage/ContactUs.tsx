@@ -154,40 +154,32 @@ function ContactForm() {
         body: JSON.stringify(form),
       });
   
-      let data;
-      try {
-        data = await res.json();
-      } catch (err: unknown) {
-        if (err instanceof Error) {
-          console.error('❌ Fetch error:', err.message);
-        } else {
-          console.error('❌ Fetch error:', err);
-        }
-        setStatus('error');
-      }
-      
-  
-      if (res.ok) {
-        setStatus('success');
-        setForm({
-          firstName: '',
-          lastName: '',
-          email: '',
-          phone: '',
-          message: '',
-          reason: '',
-        });
-      } else {
+      if (!res.ok) {
+        const data = await res.json();
         console.error('❌ Form submission failed:', data);
         setStatus('error');
+        return;
       }
-    } catch (err:unknown) {
+  
+      const data = await res.json();
+  
+      setStatus('success');
+      setForm({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        message: '',
+        reason: '',
+      });
+    } catch (err: unknown) {
       console.error('❌ Fetch error:', err);
       setStatus('error');
     } finally {
       setLoading(false);
     }
   };
+  
   
   
   
