@@ -156,9 +156,10 @@ function ContactForm() {
         body: JSON.stringify(form),
       });
   
-      const data = await res.json(); // <-- Capture backend response body
+      const data = await res.json(); // Always try to parse JSON
   
       if (res.ok) {
+        console.log('✅ Form submitted successfully:', data);
         setStatus('success');
         setForm({
           firstName: '',
@@ -169,16 +170,17 @@ function ContactForm() {
           reason: '',
         });
       } else {
-        console.error('❌ Form submission failed:', data);
+        console.error('❌ Server returned error:', data);
         setStatus('error');
       }
     } catch (err) {
-      console.error('❌ Fetch error:', err);
+      console.error('❌ Fetch/network error:', err);
       setStatus('error');
     } finally {
       setLoading(false);
     }
   };
+  
   
 
   return (
