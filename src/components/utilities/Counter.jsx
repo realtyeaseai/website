@@ -1,20 +1,27 @@
-"use client";
-import CountUp from "react-countup";
+"use client"; // For Next.js (if using App Router or strict SSR)
 
-const Counter = ({ end, decimals }) => {
-  return (
-    <CountUp
-      end={end ? end : 100}
-      duration={3}
-      decimals={decimals ? decimals : 0}
-    >
-      {({ countUpRef, start }) => (
-        <span className="count" data-from="0" data-to={end} ref={countUpRef}>
-          0
-        </span>
-      )}
-    </CountUp>
-  );
+import { useEffect, useState } from "react";
+
+const Counter = ({ end = 100, duration = 2000 }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let start = 0;
+    const increment = Math.ceil(end / (duration / 30)); // Change every 30ms
+
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= end) {
+        start = end;
+        clearInterval(timer);
+      }
+      setCount(start);
+    }, 30);
+
+    return () => clearInterval(timer);
+  }, [end, duration]);
+
+  return <span>{count}</span>;
 };
 
 export default Counter;

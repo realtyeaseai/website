@@ -3,7 +3,7 @@ import Link from "next/link";
 import Breadcrumb from "@/components/utilities/BreadCrumb";
 import FunFactCounter from "@/components/utilities/FunFactCounter";
 // import Team from "@/components/utilities/Team";
-import { TestimonialSlider2 } from "@/components/utilities/TestimonialSlider2";
+import { TestimonialSlider1 } from "@/components/utilities/TestimonialSlider";
 import { WorkingProcess2 } from "@/components/utilities/WorkingProcess2";
 
 export default function AboutUs(){
@@ -93,7 +93,7 @@ export default function AboutUs(){
           <h2 className="text-3xl md:text-4xl font-bold mb-10">
             We&apos;ve 1250+ Global Clients Saying About Us
           </h2>
-          <TestimonialSlider2 />
+          <TestimonialSlider1 />
         </div>
       </section>
     </>

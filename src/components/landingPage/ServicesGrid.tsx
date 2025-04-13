@@ -75,7 +75,7 @@ export default function ServicesGrid() {
             Emma Schodinger
           </p>
           <p className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
-            AI Assitant
+            AI Assistant
           </p>
         </motion.div>
         <motion.div

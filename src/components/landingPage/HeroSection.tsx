@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <div className="relative flex flex-col min-h-[75dvh] md:min-h-[200dvh] w-full overflow-hidden rounded-md antialiased md:items-center md:justify-center bg-black">
+    <div className="relative flex flex-col min-h-[75dvh] md:min-h-[100dvh] w-[100dvw] overflow-hidden rounded-md antialiased md:items-center md:justify-center bg-black">
           {/* ------------------------ Spotlight ------------------------- */}
           <Spotlight className="-top-40 left-0 md:-top-20 md:left-60" fill="white"/>
     
@@ -23,7 +23,7 @@ export default function HeroSection() {
 
 function TextWithTooltip(){
   return(
-    <div>
+    <div className="md:pt-24 pt-12 flex flex-col items-center justify-center w-full">
       <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl">
         <span className="inline-flex items-center justify-center w-full text-center">Your Trusted 
           {/* --------------Tooltip containing the profile pics ---------- */}
@@ -64,7 +64,7 @@ function ImageText(){
           className="w-full h-full object-cover"
         />
         {/* Black mask at the bottom */}
-        <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black to-transparent"/>
+        {/* <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black to-transparent"/> */}
       </span>
       <div className="absolute w-full h-[50%] text-center flex items-center justify-center flex-col">
         <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-2xl md:text-4xl font-bold text-transparent">

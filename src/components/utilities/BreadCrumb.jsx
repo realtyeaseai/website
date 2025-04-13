@@ -3,13 +3,13 @@ import Link from "next/link";
 
 const Breadcrumb = ({ pageName = "About Company", pageTitle }) => {
   return (
-    <section className="relative py-20 bg-neutral-900 text-white overflow-hidden">
+    <section className="relative py-20 bg-gray-900 text-white overflow-hidden">
       <Image
         src="/assets/img/breadcrumb.jpg"
         alt="Breadcrumb"
         layout="fill"
         objectFit="cover"
-        className="absolute inset-0 opacity-40"
+        className="absolute inset-0 opacity-0"
       />
 
       <div className="relative z-10 container mx-auto text-center">

@@ -24,7 +24,7 @@ export default function Footer() {
           {/* Services */}
           <div className="p-6  md:w-[220px] w-full md:text-start text-center md:mr-10">
             <h2 className="text-[14px] md:text-2xl font-semibold mb-4">Services</h2>
-            <ul className="space-y-4 text-[11px] md:text-xl list-none">
+            <ul className="space-y-4 text-[11px] md:text-[16px] list-none">
               <li><Link href="#">Virtual Assistant</Link></li>
               <li><Link href="#">Remote Services</Link></li>
               <li><Link href="#">Credit Score</Link></li>
@@ -35,7 +35,7 @@ export default function Footer() {
           {/* Resources */}
           <div className="p-6  md:w-[140px] w-full md:text-start text-center md:mr-10">
             <h2 className="text-[14px] font-semibold md:text-2xl mb-4">Resources</h2>
-            <ul className="space-y-4 text-[11px] md:text-xl list-none">
+            <ul className="space-y-4 text-[11px] md:text-[16px] list-none">
               <li><Link href="#">Developers</Link></li>
               <li><Link href="#">Support</Link></li>
             </ul>
@@ -44,7 +44,7 @@ export default function Footer() {
           {/* Company */}
           <div className="p-6  md:w-[140px] w-full md:text-start text-center md:mr-10">
             <h2 className="text-[14px] font-semibold md:text-2xl mb-4">Company</h2>
-            <ul className="space-y-4 text-[11px] md:text-xl list-none">
+            <ul className="space-y-4 text-[11px] md:text-[16px] list-none">
               <li><Link href="./AboutUs">About Us</Link></li>
               <li><Link href="#">Careers</Link></li>
               <li><Link href="#faq">FAQs</Link></li>
