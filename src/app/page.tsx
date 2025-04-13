@@ -4,6 +4,7 @@ import {
   ServicesGrid,
   PersonaPicker,
   ContactUs,
+  Pricing,
   FAQ,
   Footer,
 
@@ -54,8 +55,8 @@ export default function Home() {
           <div id="persona">
             <PersonaPicker />
           </div>
-          <div id="contact">
-            <ContactUs />
+          <div id="pricing">
+            <Pricing />
           </div>
           <div id="faq">
             <FAQ />

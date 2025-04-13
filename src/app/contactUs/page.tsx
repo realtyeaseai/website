@@ -1,11 +1,15 @@
 'use client'
+import { TopNavbar } from "@/components/TopNabbar";
 import Image from "next/image";
 import { useState } from "react";
 
-export default function ContactUs() {
+export default function contactUs() {
 
   return (
     <div className=" bg-black min-h-[100dvh] pt-20 w-full flex items-center justify-evenly flex-col ">
+
+        <TopNavbar />
+
         {/* -------------- Static Box --------------  */}
         <div className="md:h-[380px] h-[600px] w-[96%] rounded-2xl border border-[#ffffff20] mt-4 hover:border-[#ffffff50] flex gap-4 items-center justify-center flex-col bg-[radial-gradient(circle_at_center,_#4883ccb5,_#4883cc53,_#4883cc29,_#000)]">
     
@@ -50,8 +54,6 @@ export default function ContactUs() {
     </div>
   )
 }
-
-
 
 function ContactInfo(){
     return(

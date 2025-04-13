@@ -11,6 +11,7 @@ import {
   MobileNavToggle,
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
+import Link from "next/link";
 import { useState } from "react";
 
 
@@ -19,23 +20,27 @@ export function TopNavbar(){
   const navItems = [
     {
       name: "Home",
-      link: "#hero", // Matches the id of HeroSection
+      link: "/#hero", // Matches the id of HeroSection
     },
     {
       name: "Services",
-      link: "#services", // Matches the id of ServicesGrid
+      link: "/#services", // Matches the id of ServicesGrid
     },
     {
       name: "Persona",
-      link: "#persona", // Matches the id of PersonaPicker
+      link: "/#persona", // Matches the id of PersonaPicker
     },
     {
       name: "Contact",
-      link: "#contact", // Matches the id of ContactUs
+      link: "/contactUs", // Navigate to contactUs Page
+    },
+    {
+      name: "Pricing",
+      link: "/#pricing", // Matches the id of ContactUs
     },
     {
       name: "FAQ",
-      link: "#faq", // Matches the id of FAQ
+      link: "/#faq", // Matches the id of FAQ
     },
     // {
     //   name: "Footer",
@@ -76,14 +81,14 @@ export function TopNavbar(){
             onClose={() => setIsMobileMenuOpen(false)}
           >
             {navItems.map((item, idx) => (
-              <a
+              <Link
                 key={`mobile-link-${idx}`}
                 href={item.link}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="relative text-neutral-600 dark:text-neutral-300"
               >
                 <span className="block">{item.name}</span>
-              </a>
+              </Link>
             ))}
             <div className="flex w-full flex-col gap-4">
               {/* <NavbarButton
