@@ -150,16 +150,20 @@ function ContactForm() {
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
       });
   
-      const data = await res.json(); // Always try to parse JSON
+      let data;
+      try {
+        data = await res.json();
+      } catch (err) {
+        const text = await res.text();
+        console.error('❌ Response not JSON:', text);
+        throw new Error('Invalid response format');
+      }
   
       if (res.ok) {
-        console.log('✅ Form submitted successfully:', data);
         setStatus('success');
         setForm({
           firstName: '',
@@ -170,16 +174,18 @@ function ContactForm() {
           reason: '',
         });
       } else {
-        console.error('❌ Server returned error:', data);
+        console.error('❌ Form submission failed:', data);
         setStatus('error');
       }
     } catch (err) {
-      console.error('❌ Fetch/network error:', err);
+      console.error('❌ Fetch error:', err);
       setStatus('error');
     } finally {
       setLoading(false);
     }
   };
+  
+  
   
   
 
