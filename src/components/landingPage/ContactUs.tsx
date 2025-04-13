@@ -146,7 +146,7 @@ function ContactForm() {
     e.preventDefault();
     setLoading(true);
     setStatus('idle');
-
+  
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
@@ -155,8 +155,9 @@ function ContactForm() {
         },
         body: JSON.stringify(form),
       });
-      
-
+  
+      const data = await res.json(); // <-- Capture backend response body
+  
       if (res.ok) {
         setStatus('success');
         setForm({
@@ -168,15 +169,17 @@ function ContactForm() {
           reason: '',
         });
       } else {
+        console.error('❌ Form submission failed:', data);
         setStatus('error');
       }
     } catch (err) {
-      console.error('Error submitting form:', err);
+      console.error('❌ Fetch error:', err);
       setStatus('error');
     } finally {
       setLoading(false);
     }
   };
+  
 
   return (
     <div className="bg-black border border-[#ffffff50] min-h-[750px] w-full md:w-auto rounded-lg flex items-center justify-center flex-col p-6">
