@@ -146,31 +146,23 @@ function ContactForm() {
     e.preventDefault();
     setLoading(true);
     setStatus('idle');
-
-    const fullMessage = `
-      Reason: ${form.reason}
-      Phone: ${form.phone}
   
-      ${form.message}
-    `;
-
     try {
-      const res = await fetch('https://script.google.com/macros/s/AKfycbxwcPLFlskBs7FkF_phzHxCt_ggIE6kcNlh-AuCU4bUqw0hR6lRnbSz_CYJonTkuumK/exec', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: `${form.firstName} ${form.lastName}`,
-          email: form.email,
-          message: fullMessage,
-          firstName: form.firstName,
-          lastName: form.lastName,
-          phone: form.phone,
-          reason: form.reason,
-        }),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
       });
-
+  
+      let data;
+      try {
+        data = await res.json();
+      } catch (err) {
+        const text = await res.text();
+        console.error('❌ Response not JSON:', text);
+        throw new Error('Invalid response format');
+      }
+  
       if (res.ok) {
         setStatus('success');
         setForm({
@@ -182,15 +174,20 @@ function ContactForm() {
           reason: '',
         });
       } else {
+        console.error('❌ Form submission failed:', data);
         setStatus('error');
       }
     } catch (err) {
-      console.error('Error submitting form:', err);
+      console.error('❌ Fetch error:', err);
       setStatus('error');
     } finally {
       setLoading(false);
     }
   };
+  
+  
+  
+  
 
   return (
     <div className="bg-black border border-[#ffffff50] min-h-[750px] w-full md:w-auto rounded-lg flex items-center justify-center flex-col p-6">
