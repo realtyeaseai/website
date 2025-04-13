@@ -177,8 +177,8 @@ function ContactForm() {
         console.error('❌ Form submission failed:', data);
         setStatus('error');
       }
-    } catch (err) {
-      console.error('❌ Fetch error:', err);
+    } catch {
+      console.error('❌ Fetch error occurred');
       setStatus('error');
     } finally {
       setLoading(false);
