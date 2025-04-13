@@ -9,6 +9,7 @@ import {
   About
 
 } from "../components/landingPage/lpExports"
+import Pricing from "@/components/utilities/Pricing";
 
 
 export default function Home() {
@@ -54,6 +55,9 @@ export default function Home() {
           </div>
           <div id="persona">
             <PersonaPicker />
+          </div>
+          <div id="pricing">
+            <Pricing />
           </div>
           <div id="about">
             <About />

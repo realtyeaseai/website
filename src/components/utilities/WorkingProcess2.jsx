@@ -48,7 +48,7 @@ export const WorkingProcess2 = () => {
           {/* Right Image */}
           <div className="flex justify-center">
             <Image
-              src="/assets/img/business-mens-grsl.jpg"
+              src="/assets/img/working-process/workflow.png"
               alt="Working Process"
               width={500}
               height={500}
