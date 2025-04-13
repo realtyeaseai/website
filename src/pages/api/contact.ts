@@ -1,63 +1,57 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { connectToDatabase } from '@/lib/mongodb';
-import { Db } from 'mongodb';
+import clientPromise from '../../lib/mongodb';
+import Cors from 'cors';
+import runMiddleware from '../../lib/runMiddleware'; // helper to run middleware
 
-const allowedOrigins = [
-  'https://realtyeaseai.com',
-  'https://www.realtyeaseai.com',
-  'http://localhost:3000',
-];
+// Initialize CORS
+const cors = Cors({
+  methods: ['POST', 'GET', 'OPTIONS'],
+  origin: '*', // adjust if you want tighter security
+});
 
+// Main handler
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const origin = req.headers.origin;
-  if (origin && allowedOrigins.includes(origin)) {
-    res.setHeader('Access-Control-Allow-Origin', origin);
-  }
-  res.setHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-  res.setHeader('Access-Control-Allow-Credentials', 'true');
+  await runMiddleware(req, res, cors);
 
-  if (req.method === 'OPTIONS') {
-    return res.status(200).end();
-  }
-
-  let db: Db;
-  try {
-    const { db: dbInstance } = await Promise.race([
-      connectToDatabase(),
-      new Promise<never>((_, reject) => setTimeout(() => reject(new Error('MongoDB timeout')), 7000))
-    ]);
-    db = dbInstance;
-  } catch (err: unknown) {
-    const msg = err instanceof Error ? err.message : 'Unknown DB error';
-    console.error('❌ DB Error:', msg);
-    return res.status(500).json({ message: 'Database connection failed', error: msg });
-  }
+  const client = await clientPromise;
+  const db = client.db();
+  const collection = db.collection('contacts');
 
   if (req.method === 'POST') {
-    const { firstName, lastName, email, phone, reason, message } = req.body;
-
-    if (!firstName || !lastName || !email || !phone || !reason || !message) {
-      return res.status(400).json({ message: 'Missing required fields' });
-    }
-
     try {
-      const result = await db.collection('contacts').insertOne({
+      const { firstName, lastName, email, phone, reason, message } = req.body;
+
+      if (!firstName || !lastName || !email || !message || !reason) {
+        return res.status(400).json({ message: 'Missing required fields' });
+      }
+
+      const contact = {
         firstName,
         lastName,
         email,
-        phone,
+        phone: phone || '',
         reason,
         message,
         createdAt: new Date(),
-      });
-      return res.status(201).json({ message: 'Contact saved', id: result.insertedId });
-    } catch (err: unknown) {
-      const msg = err instanceof Error ? err.message : 'Unknown insert error';
-      console.error('❌ Insert failed:', msg);
-      return res.status(500).json({ message: 'Failed to save contact', error: msg });
-    }
-  }
+      };
 
-  return res.status(405).json({ message: 'Method Not Allowed' });
+      const result = await collection.insertOne(contact);
+
+      return res.status(201).json({ message: 'Contact submitted successfully', id: result.insertedId });
+    } catch (err) {
+      console.error('❌ POST /api/contact error:', err);
+      return res.status(500).json({ message: 'Failed to submit contact' });
+    }
+  } else if (req.method === 'GET') {
+    try {
+      const contacts = await collection.find({}).sort({ createdAt: -1 }).toArray();
+      return res.status(200).json({ contacts });
+    } catch (err) {
+      console.error('❌ GET /api/contact error:', err);
+      return res.status(500).json({ message: 'Failed to fetch contacts' });
+    }
+  } else {
+    res.setHeader('Allow', ['POST', 'GET']);
+    return res.status(405).json({ message: `Method ${req.method} not allowed` });
+  }
 }

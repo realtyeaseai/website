@@ -144,7 +144,6 @@ function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (loading) return; // ✅ Prevent double submission
     setLoading(true);
     setStatus('idle');
   
@@ -158,12 +157,15 @@ function ContactForm() {
       let data;
       try {
         data = await res.json();
-      } catch (err) {
-        console.error('❌ JSON parsing failed:', err); // ✅ Better error detail
+      } catch (err: unknown) {
+        if (err instanceof Error) {
+          console.error('❌ Fetch error:', err.message);
+        } else {
+          console.error('❌ Fetch error:', err);
+        }
         setStatus('error');
-        setLoading(false);
-        return; // ✅ Stop execution if parsing fails
       }
+      
   
       if (res.ok) {
         setStatus('success');
@@ -186,6 +188,7 @@ function ContactForm() {
       setLoading(false);
     }
   };
+  
   
   
   
