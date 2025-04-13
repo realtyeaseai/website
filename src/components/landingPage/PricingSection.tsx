@@ -1,18 +1,20 @@
 'use client'; // Only include this if the component uses interactivity or state
 
-import Breadcrumb from "@/components/utilities/BreadCrumb";
+// import Breadcrumb from "@/components/utilities/BreadCrumb";
 import Pricing from "@/components/utilities/Pricing";
-import Image from "next/image";
+// import Image from "next/image";
 
 
-const Page = () => {
+export default function PricingSection() {
   return (
-    <>
-      <Breadcrumb pageName="Pricing Plan" pageTitle={Pricing} />
+    <div className="w-full text-white">
+      {/* <Breadcrumb pageName="Pricing Plan" pageTitle={Pricing} /> */}
+      {/* <Pricing2 priceingClass="pricing-section-2" paddingTop="9" /> */}
+
       <Pricing />
       {/* <Pricing2 priceingClass="pricing-section-2" paddingTop="9" /> */}
 
-      <section className="testimonial-section fix section-padding">
+      {/* <section className="testimonial-section fix section-padding">
         <div className="container">
           <div className="section-title text-center mb-0">
             <span className="sub-content wow fadeInUp inline-flex items-center gap-2">
@@ -20,7 +22,7 @@ const Page = () => {
               Clients Feedback
             </span>
             <h2 className="wow fadeInUp mt-2 text-2xl font-semibold" data-wow-delay=".3s">
-              We’ve 1250+ Global Clients Say Us
+              We&apos;ve 1250+ Global Clients Say Us
             </h2>
           </div>
 
@@ -37,11 +39,7 @@ const Page = () => {
             </div>
           </div>
         </div>
-      </section>
-
-      
-    </>
-  );
-};
-
-export default Page;
+      </section> */}
+    </div>
+  )
+}

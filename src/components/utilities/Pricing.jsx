@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Pricing = () => {
   return (
-    <section className="py-16 bg-black">
+    <section className="w-full bg-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="flex justify-center items-center mb-4">

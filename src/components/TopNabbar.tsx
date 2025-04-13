@@ -6,7 +6,7 @@ import {
   NavItems,
   MobileNav,
   NavbarLogo,
-  NavbarButton,
+  // NavbarButton,
   MobileNavHeader,
   MobileNavToggle,
   MobileNavMenu,
@@ -23,7 +23,7 @@ export function TopNavbar(){
     },
     {
       name: "About Us",
-      link: "#about", // Matches the id of FAQ
+      link: "./AboutUs", // Load AboutUs page
     },
     {
       name: "Services",
@@ -66,7 +66,7 @@ export function TopNavbar(){
           <div className="flex items-center gap-2">
             {/* Varients for button are primary and secondary */}
             {/* <NavbarButton variant="primary">Login</NavbarButton> */}
-            <NavbarButton variant="primary">Get Started</NavbarButton>
+            {/* <NavbarButton variant="primary">Get Started</NavbarButton> */}
           </div>
         </NavBody>
  
@@ -102,13 +102,13 @@ export function TopNavbar(){
               >
                 Login
               </NavbarButton> */}
-              <NavbarButton href="#contact-us"
+              {/* <NavbarButton
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
                 className="w-full"
               >
                 Get Started
-              </NavbarButton>
+              </NavbarButton> */}
             </div>
           </MobileNavMenu>
         </MobileNav>

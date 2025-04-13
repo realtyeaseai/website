@@ -6,11 +6,10 @@ import {
   ContactUs,
   FAQ,
   Footer,
-  About
+  PricingSection
+  // About
 
 } from "../components/landingPage/lpExports"
-import Pricing from "@/components/utilities/Pricing";
-
 
 export default function Home() {
   return (
@@ -45,32 +44,29 @@ export default function Home() {
 
 
 
-       <div className="z-10">
+       <div className="z-10 w-full">
           <TopNavbar />
-          <div id="hero">
+          <div id="hero" className="w-full">
             <HeroSection />
           </div>
-          <div id="services" className="bg-black pt-24">
+          <div id="services" className="bg-black pt-24 w-full">
             <ServicesGrid />
           </div>
-          <div id="persona">
+          <div id="persona" className="w-full">
             <PersonaPicker />
           </div>
-          <div id="pricing">
-            <Pricing />
+          <div id="pricing" className="w-full">
+            <PricingSection />
           </div>
-          <div id="about">
-            <About />
-          </div>
-          <div id="contact">
+          <div id="contact" className="w-full">
             <ContactUs />
           </div>
-          <div id="faq">
+          <div id="faq" className="w-full">
             <FAQ />
           </div>
-          {/* <div id="footer"> */}
+          <div className="w-full">
             <Footer />
-          {/* </div> */}
+          </div>
         </div>
       </div>
     </div>
