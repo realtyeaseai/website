@@ -1,7 +1,23 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { connectToDatabase } from '@/lib/mongodb';
 
+const allowedOrigins = ['https://realtyeaseai.com', 'https://www.realtyeaseai.com', 'http://localhost:3000']; // Add more as needed
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const origin = req.headers.origin;
+  if (origin && allowedOrigins.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  }
+
+  res.setHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+
+  // Handle preflight request
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
   const { db } = await connectToDatabase();
 
   if (req.method === 'POST') {
@@ -39,6 +55,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
   }
 
-  // For all other methods
   return res.status(405).json({ message: 'Method Not Allowed' });
 }
