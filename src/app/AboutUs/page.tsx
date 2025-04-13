@@ -6,7 +6,7 @@ import FunFactCounter from "@/components/utilities/FunFactCounter";
 import { TestimonialSlider2 } from "@/components/utilities/TestimonialSlider2";
 import { WorkingProcess2 } from "@/components/utilities/WorkingProcess2";
 
-const About = () => {
+export default function AboutUs(){
   return (
     <>
       {/* Breadcrumb */}
@@ -91,7 +91,7 @@ const About = () => {
       <section className="py-20 bg-neutral-950 text-white">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-10">
-            We’ve 1250+ Global Clients Saying About Us
+            We&apos;ve 1250+ Global Clients Saying About Us
           </h2>
           <TestimonialSlider2 />
         </div>
@@ -100,4 +100,4 @@ const About = () => {
   );
 };
 
-export default About;
+

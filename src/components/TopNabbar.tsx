@@ -23,7 +23,7 @@ export function TopNavbar(){
     },
     {
       name: "About Us",
-      link: "#about", // Matches the id of FAQ
+      link: "./AboutUs", // Load AboutUs page
     },
     {
       name: "Services",

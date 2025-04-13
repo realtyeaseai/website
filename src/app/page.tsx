@@ -6,9 +6,10 @@ import {
   ContactUs,
   FAQ,
   Footer,
-  About
+  // About
 
 } from "../components/landingPage/lpExports"
+import Link from "next/link";
 
 
 export default function Home() {
@@ -55,9 +56,9 @@ export default function Home() {
           <div id="persona">
             <PersonaPicker />
           </div>
-          <div id="about">
-            <About />
-          </div>
+          {/* <Link href="/AboutUs"> */}
+            {/* <About /> */}
+          {/* </Link> */}
           <div id="contact">
             <ContactUs />
           </div>
