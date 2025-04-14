@@ -6,7 +6,8 @@ import {
   ContactUs,
   FAQ,
   Footer,
-  PricingSection
+  PricingSection,
+  ContactForm,
   // About
 
 } from "../components/landingPage/lpExports"
@@ -63,6 +64,9 @@ export default function Home() {
           </div>
           <div id="faq" className="w-full">
             <FAQ />
+          </div>
+          <div className="w-full h-[100vh] bg-black flex items-center justify-center">
+            <ContactForm/>
           </div>
           <div className="w-full">
             <Footer />
