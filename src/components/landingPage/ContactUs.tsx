@@ -68,19 +68,19 @@ function ContactInfo() {
       <p className="text-sm text-gray-500">Reach out to us at your own convinience</p>
 
       <div className="box mt-20 pl-9 w-[300px] md:w-[500px] h-[100px] border rounded-2xl float-left cursor-pointer hover:bg-gray-700">
-        <Image src="/contactUsitems/mail.svg" alt="Mail Icon" width={24} height={24} className="mt-10 mr-7 md:mr-8 float-left text-gray-200" />
+        <Image src="/contactUsitems/mail.svg" alt="Mail Icon 2" width={24} height={24} className="mt-10 mr-7 md:mr-8 float-left text-gray-200" />
 
         <span className="mt-9 flex float-left text-gray-400">info@realtyeaseai.com</span>
       </div>
 
       <div className="box mt-6 pl-9 w-[300px] md:w-[500px] h-[100px] border rounded-2xl float-left">
-        <Image src="/contactUsitems/mail.svg" alt="Mail Icon" width={24} height={24} className="mt-10 mr-7 md:mr-8 float-left text-gray-200" />
+        <Image src="/contactUsitems/mail.svg" alt="Mail Icon 3" width={24} height={24} className="mt-10 mr-7 md:mr-8 float-left text-gray-200" />
 
         <span className="mt-9 flex float-left text-gray-400">info@realtyeaseai.com</span>
       </div>
 
       <div className="box mt-6 pl-9 w-[300px] md:w-[500px] h-[100px] border rounded-2xl float-left">
-        <Image src="/contactUsitems/location.svg" alt="Mail Icon" width={16} height={20} className="mt-10 mr-7 md:mr-8 float-left text-gray-700" />
+        <Image src="/contactUsitems/location.svg" alt="Mail Icon" width={16} height={20} className="mt-10 mr-7 md:mr-8 float-left text-gray-700 w-auto h-auto" />
 
         <span className="mt-9 flex float-left text-gray-400 text-xs">Studio 448 Event Planners LLC <br />
           DBA Realty Ease</span>
