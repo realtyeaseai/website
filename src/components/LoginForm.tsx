@@ -2,7 +2,7 @@
 import React from "react";
 import { Label } from "@radix-ui/react-label";
 import { Input } from "./ui/input";
-import { cn } from "@/lib/utils";
+import { cn } from "@/app/lib/utils";
 import {
   IconBrandGithub,
   IconBrandGoogle,

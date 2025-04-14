@@ -1,129 +1,110 @@
-'use client';
-import { useState, useEffect, FormEvent, useRef } from 'react';
-import { ApiResponse } from '@/types/contact';
+/* eslint-disable react/jsx-key */
+"use client";
+
+import { useState } from "react";
 
 export default function ContactForm() {
-  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [loading, setLoading] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState<string[]>([]);
+  const [success, setSuccess] = useState(false);
 
-  const mounted = useRef(true); // Use useRef to persist the value
-
-  useEffect(() => {
-    mounted.current = true; // Set to true when the component mounts
-    return () => {
-      mounted.current = false; // Set to false when the component unmounts
-    };
-  }, []);
-
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setLoading(true);
-    setStatus('idle');
-
-    const form = e.currentTarget; // Store a reference to the form element
-    const formData = new FormData(form);
-    const data = {
-      name: formData.get('name') as string,
-      email: formData.get('email') as string,
-      message: formData.get('message') as string
-    };
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
+      const res = await fetch("api/contact", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({ name, email, message }),
       });
 
-      const result: ApiResponse = await response.json();
-      
-      if (!response.ok) {
-        throw new Error(result.error || 'Failed to send message');
-      }
+      const { msg, success } = await res.json();
 
-      if (mounted.current) {
-        setStatus('success');
-        form.reset(); // Use the stored reference
+      setError(msg);
+      setSuccess(success);
+      if (success) {
+        setName("");
+        setEmail("");
+        setMessage("");
       }
-    } catch (error) {
-      console.error('Submission error:', error);
-      if (mounted.current) setStatus('error');
-    } finally {
-      if (mounted.current) setLoading(false);
+    } catch (err) {
+      console.error("Error:", err);
+      setError(["An unexpected error occurred. Please try again later."]);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-lg mx-auto space-y-6">
-      <div>
-        <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-          Name
-        </label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          required
-          minLength={2}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2"
-          aria-describedby="name-helper"
-        />
-        <p id="name-helper" className="mt-1 text-sm text-gray-500">
-          Please enter your full name
-        </p>
-      </div>
-  
-      <div>
-        <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-          Email
-        </label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          required
-          pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2"
-          aria-describedby="email-helper"
-        />
-        <p id="email-helper" className="mt-1 text-sm text-gray-500">
-          We&#39;ll never share your email
-        </p>
-      </div>
-  
-      <div>
-        <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-          Message
-        </label>
-        <textarea
-          id="message"
-          name="message"
-          rows={4}
-          required
-          minLength={10}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2"
-          aria-describedby="message-helper"
-        ></textarea>
-        <p id="message-helper" className="mt-1 text-sm text-gray-500">
-          Please write your message (minimum 10 characters)
-        </p>
-      </div>
-  
-      <button
-        type="submit"
-        disabled={loading}
-        className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50"
-      >
-        {loading ? 'Sending...' : 'Send Message'}
-      </button>
+    <div className="relative flex flex-col gap-5 px-32 mx-auto w-[80%] mt-20">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+        <div>
+          <h1 className="text-3xl font-bold">Contact Us</h1>
+          <h3 className="text-base mt-2 font-medium opacity-90">
+            Please fill the form below!
+          </h3>
+        </div>
+        <div className="flex flex-col gap-1">
+          <label htmlFor="name">Full Name</label>
+          <input
+            id="name"
+            type="text"
+            placeholder="Pa Pa"
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setName(e.target.value)
+            }
+            value={name}
+            className="border shadow-lg rounded-md p-3 h-14 outline-none"
+          />
+        </div>
 
-      {status === 'success' && (
-        <p className="text-green-600 text-center">Message sent successfully!</p>
-      )}
-      {status === 'error' && (
-        <p className="text-red-600 text-center">Error sending message. Please try again.</p>
-      )}
-    </form>
+        <div className="flex flex-col gap-1">
+          <label htmlFor="email">Email</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="papahmwe@gamil.com"
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setEmail(e.target.value)
+            }
+            value={email}
+            className="border rounded-md shadow-lg p-3 h-14 outline-none"
+          />
+        </div>
+
+        <div className="flex flex-col gap-1">
+          <label htmlFor="message">Your Message</label>
+          <textarea
+            id="message"
+            placeholder="Type your message here ..."
+            onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
+              setMessage(e.target.value)
+            }
+            value={message}
+            className="h-[150px] border shadow-lg p-3 rounded-md outline-none"
+          />
+        </div>
+
+        <button className="p-3 w-[100%] text-white font-semibold text-base bg-green-700 hover:bg-green-800 transition-all duration-200 outline-none rounded-md shadow-lg">
+          Send
+        </button>
+      </form>
+
+      <div className="bg-slate-100 rounded-md">
+        {error &&
+          error.map((err, index) => (
+            <div
+              key={index}
+              className={`${
+                success ? "text-green-700" : "text-red-700"
+              } text-base font-normal px-3 py-2`}
+            >
+              {err}
+            </div>
+          ))}
+      </div>
+    </div>
   );
-      
 }
