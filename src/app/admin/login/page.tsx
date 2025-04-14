@@ -1,5 +1,6 @@
-// pages/admin/login.tsx
-import { useRouter } from 'next/router'
+// src/app/admin/login/page.tsx
+"use client"
+import { useRouter } from 'next/navigation'
 import { useState, useEffect } from 'react'
 
 export default function AdminLogin() {

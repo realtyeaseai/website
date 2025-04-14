@@ -1,110 +1,162 @@
-/* eslint-disable react/jsx-key */
 "use client";
-
-import { useState } from "react";
+import React, { useState } from 'react';
 
 export default function ContactForm() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [error, setError] = useState<string[]>([]);
-  const [success, setSuccess] = useState(false);
+  const [form, setForm] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    message: '',
+    reason: '',
+  });
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const reasons = ['General Inquiry', 'Services', 'Credit Score', 'Others'];
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
+    setStatus('idle');
+
+    // Basic validation
+    if (!form.firstName || !form.lastName || !form.email || !form.phone || !form.message || !form.reason) {
+      console.error('❌ Validation error: All fields are required.');
+      setStatus('error');
+      setLoading(false);
+      return;
+    }
 
     try {
-      const res = await fetch("api/contact", {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify({ name, email, message }),
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
       });
 
-      const { msg, success } = await res.json();
-
-      setError(msg);
-      setSuccess(success);
-      if (success) {
-        setName("");
-        setEmail("");
-        setMessage("");
+      // Check if the response is JSON
+      const contentType = res.headers.get('Content-Type');
+      if (!res.ok || !contentType?.includes('application/json')) {
+        console.error('❌ Unexpected response:', await res.text());
+        setStatus('error');
+        return;
       }
-    } catch (err) {
-      console.error("Error:", err);
-      setError(["An unexpected error occurred. Please try again later."]);
+
+      const data = await res.json();
+      console.log('✅ Response:', data); // Or display data.message
+
+      setStatus('success');
+      setForm({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        message: '',
+        reason: '',
+      });
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        console.error('❌ Fetch error:', err.message);
+      } else {
+        console.error('❌ An unknown error occurred:', err);
+      }
+      setStatus('error');
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
-    <div className="relative flex flex-col gap-5 px-32 mx-auto w-[80%] mt-20">
-      <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-        <div>
-          <h1 className="text-3xl font-bold">Contact Us</h1>
-          <h3 className="text-base mt-2 font-medium opacity-90">
-            Please fill the form below!
-          </h3>
-        </div>
-        <div className="flex flex-col gap-1">
-          <label htmlFor="name">Full Name</label>
+    <div className="bg-black border border-[#ffffff50] min-h-[750px] w-full md:w-auto rounded-lg flex items-center justify-center flex-col p-6">
+      <form onSubmit={handleSubmit} className="max-w-2xl w-full space-y-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <input
-            id="name"
             type="text"
-            placeholder="Pa Pa"
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              setName(e.target.value)
-            }
-            value={name}
-            className="border shadow-lg rounded-md p-3 h-14 outline-none"
+            placeholder="First Name"
+            className="input p-3 border rounded-2xl"
+            value={form.firstName}
+            onChange={(e) => setForm({ ...form, firstName: e.target.value })}
+            required
           />
-        </div>
-
-        <div className="flex flex-col gap-1">
-          <label htmlFor="email">Email</label>
           <input
-            id="email"
+            type="text"
+            placeholder="Last Name"
+            className="input p-3 border rounded-2xl"
+            value={form.lastName}
+            onChange={(e) => setForm({ ...form, lastName: e.target.value })}
+            required
+          />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <input
             type="email"
-            placeholder="papahmwe@gamil.com"
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              setEmail(e.target.value)
-            }
-            value={email}
-            className="border rounded-md shadow-lg p-3 h-14 outline-none"
+            placeholder="Ex. john.doe@gmail.com"
+            className="input p-3 border rounded-2xl"
+            value={form.email}
+            onChange={(e) => setForm({ ...form, email: e.target.value })}
+            required
+          />
+          <input
+            type="tel"
+            placeholder="Phone Number"
+            className="input w-full p-3 border rounded-2xl"
+            value={form.phone}
+            onChange={(e) => setForm({ ...form, phone: e.target.value })}
+            required
           />
         </div>
 
-        <div className="flex flex-col gap-1">
-          <label htmlFor="message">Your Message</label>
-          <textarea
-            id="message"
-            placeholder="Type your message here ..."
-            onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
-              setMessage(e.target.value)
-            }
-            value={message}
-            className="h-[150px] border shadow-lg p-3 rounded-md outline-none"
-          />
+        <div>
+          <label className="text-sm text-white mb-2 block">
+            Why are you contacting us?
+          </label>
+          <div className="flex gap-4 flex-wrap">
+            {reasons.map((item) => (
+              <button
+                key={item}
+                type="button"
+                aria-pressed={form.reason === item}
+                className={`border px-4 py-2 rounded-md text-white ${
+                  form.reason === item ? 'border-white bg-neutral-700' : 'border-neutral-700'
+                }`}
+                onClick={() => setForm({ ...form, reason: item })}
+              >
+                {item}
+              </button>
+            ))}
+          </div>
         </div>
 
-        <button className="p-3 w-[100%] text-white font-semibold text-base bg-green-700 hover:bg-green-800 transition-all duration-200 outline-none rounded-md shadow-lg">
-          Send
-        </button>
+        <textarea
+          placeholder="Type your message here.."
+          className="input h-32 w-full border rounded-2xl p-2"
+          value={form.message}
+          onChange={(e) => setForm({ ...form, message: e.target.value })}
+          required
+        />
+
+        <div className="flex justify-end">
+          <button
+            type="submit"
+            disabled={loading}
+            className="bg-white text-neutral-900 px-6 py-3 rounded-md font-medium disabled:opacity-60"
+          >
+            {loading ? 'Sending...' : 'Send Message'}
+          </button>
+        </div>
+
+        {status === 'success' && (
+          <p className="text-green-400 text-center">Message sent successfully!</p>
+        )}
+        {status === 'error' && (
+          <p className="text-red-400 text-center">
+            Something went wrong. Please try again later.
+          </p>
+        )}
       </form>
-
-      <div className="bg-slate-100 rounded-md">
-        {error &&
-          error.map((err, index) => (
-            <div
-              key={index}
-              className={`${
-                success ? "text-green-700" : "text-red-700"
-              } text-base font-normal px-3 py-2`}
-            >
-              {err}
-            </div>
-          ))}
-      </div>
     </div>
   );
 }

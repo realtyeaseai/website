@@ -1,44 +1,40 @@
-import connectDB from "@/app/lib/mongodb";
-import Contact from "@/app/models/contact";
-import mongoose from "mongoose";
-import { NextResponse } from "next/server";
+// src/app/api/contact/route.ts
+import { NextResponse } from 'next/server';
+import { connectToDatabase } from '@/lib/mongodb';
 
 export async function POST(req: Request) {
-  const { name, email, message } = await req.json();
+  const body = await req.json();
+  const { firstName, lastName, email, phone, reason, message } = body;
 
-  // Validate input fields
-  if (!name || !email || !message) {
-    return NextResponse.json({
-      msg: ["All fields (name, email, message) are required."],
-      success: false,
-    });
+  if (!firstName || !lastName || !email || !phone || !reason || !message) {
+    return NextResponse.json({ message: 'Missing required fields' }, { status: 400 });
   }
 
   try {
-    await connectDB();
-  } catch {
-    return NextResponse.json({
-      msg: ["Database connection failed."],
-      success: false,
+    const { db } = await connectToDatabase();
+    const result = await db.collection('contacts').insertOne({
+      firstName,
+      lastName,
+      email,
+      phone,
+      reason,
+      message,
+      createdAt: new Date(),
     });
-  }
-
-  try {
-    await Contact.create({ name, email, message });
-
-    return NextResponse.json({
-      msg: ["Message sent successfully"],
-      success: true,
-    });
+    return NextResponse.json({ message: 'Contact saved', id: result.insertedId }, { status: 201 });
   } catch (error) {
-    if (error instanceof mongoose.Error.ValidationError) {
-      const errorList = [];
-      for (const e in error.errors) {
-        errorList.push(error.errors[e].message);
-      }
-      return NextResponse.json({ msg: errorList, success: false });
-    } else {
-      return NextResponse.json({ msg: ["Unable to send message."], success: false });
-    }
+    console.error('DB error:', error);
+    return NextResponse.json({ message: 'Failed to save contact' }, { status: 500 });
+  }
+}
+
+export async function GET() {
+  try {
+    const { db } = await connectToDatabase();
+    const contacts = await db.collection('contacts').find().sort({ createdAt: -1 }).toArray();
+    return NextResponse.json({ contacts }, { status: 200 });
+  } catch (error) {
+    console.error('DB error:', error);
+    return NextResponse.json({ message: 'Failed to fetch contacts' }, { status: 500 });
   }
 }

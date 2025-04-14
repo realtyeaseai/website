@@ -1,8 +1,9 @@
 // pages/admin/dashboard.tsx
+"use client"
 import { useEffect, useState } from 'react'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
-import "../../app/globals.css"
+import "../../globals.css"
 
 interface Contact {
   _id: string
