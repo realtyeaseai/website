@@ -1,21 +1,32 @@
-import { MongoClient } from 'mongodb';
+import { MongoClient, Db } from 'mongodb';
 
-const uri = process.env.MONGODB_URI;
-if (!uri) throw new Error('Missing MONGODB_URI in environment variables');
+let client: MongoClient | null = null;
+let db: Db | null = null;
 
-declare global {
-  // eslint-disable-next-line no-var
-  var _mongoClientPromise: Promise<MongoClient> | undefined;
+const MONGODB_URI = process.env.MONGODB_URI || '';
+const MONGODB_DB = process.env.MONGODB_DB || '';
+
+if (!MONGODB_URI) {
+  throw new Error('Please define the MONGODB_URI environment variable');
 }
 
-const client = new MongoClient(uri);
-
-// Use cached promise in dev to prevent multiple connections during HMR
-const clientPromise =
-  global._mongoClientPromise ?? (global._mongoClientPromise = client.connect());
+if (!MONGODB_DB) {
+  throw new Error('Please define the MONGODB_DB environment variable');
+}
 
 export async function connectToDatabase() {
-  const client = await clientPromise;
-  const db = client.db();
-  return { client, db };
+  if (client && db) {
+    return { client, db };
+  }
+
+  try {
+    client = await MongoClient.connect(MONGODB_URI);
+
+    db = client.db(MONGODB_DB);
+    console.log('Connected to MongoDB');
+    return { client, db };
+  } catch (error) {
+    console.error('Failed to connect to MongoDB:', error);
+    throw new Error('Failed to connect to the database');
+  }
 }
