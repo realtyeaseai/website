@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <div className="relative flex flex-col min-h-[75dvh] md:min-h-[100dvh] w-[100dvw] overflow-hidden rounded-md antialiased md:items-center md:justify-center bg-black">
+    <div className="relative flex flex-col min-h-[75dvh] md:min-h-[100dvh] w-[100dvw] overflow-hidden rounded-md antialiased md:items-center md:justify-center">
           {/* ------------------------ Spotlight ------------------------- */}
           <Spotlight className="-top-40 left-0 md:-top-20 md:left-60" fill="white"/>
     
