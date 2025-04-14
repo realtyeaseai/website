@@ -30,8 +30,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await db.collection('contacts').insertOne(newContact);
     return res.status(200).json({ message: 'Contact saved' });
   } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('DB Error:', error);
+    // Now accepting the error and logging it
+    console.error('Error saving contact:', error);
     return res.status(500).json({ message: 'Internal Server Error' });
   }
 }

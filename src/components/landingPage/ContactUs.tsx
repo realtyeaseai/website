@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import { useState } from "react";
+
 
 export default function ContactUs() {
 
@@ -51,7 +51,7 @@ export default function ContactUs() {
           <ContactInfo />
         </div>
         {/* <div className="bg-black border border-[#ffffff50] h-[600px] w-full md:w-auto rounded-lg"> */}
-        <ContactForm />
+        {/* <ContactForm /> */}
         {/* </div> */}
       </div>
     </div>
@@ -127,58 +127,58 @@ function ContactInfo() {
 }
 
 
-function ContactForm() {
-  const [form, setForm] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    message: '',
-    reason: '',
-  });
+// function ContactForm() {
+//   const [form, setForm] = useState({
+//     firstName: '',
+//     lastName: '',
+//     email: '',
+//     phone: '',
+//     message: '',
+//     reason: '',
+//   });
 
-  const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+//   const [loading, setLoading] = useState(false);
+//   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const reasons = ['General Inquiry', 'Services', 'Credit Score', 'Others'];
+//   const reasons = ['General Inquiry', 'Services', 'Credit Score', 'Others'];
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setStatus('idle');
+//   const handleSubmit = async (e: React.FormEvent) => {
+//     e.preventDefault();
+//     setLoading(true);
+//     setStatus('idle');
   
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      });
+//     try {
+//       const res = await fetch('/api/contact', {
+//         method: 'POST',
+//         headers: { 'Content-Type': 'application/json' },
+//         body: JSON.stringify(form),
+//       });
   
-      if (!res.ok) {
-        const data = await res.json();
-        console.error('❌ Form submission failed:', data);
-        setStatus('error');
-        return;
-      }
+//       if (!res.ok) {
+//         const data = await res.json();
+//         console.error('❌ Form submission failed:', data);
+//         setStatus('error');
+//         return;
+//       }
   
-      const data = await res.json();
+//       const data = await res.json();
   
-      setStatus('success');
-      setForm({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        message: '',
-        reason: '',
-      });
-    } catch (err: unknown) {
-      console.error('❌ Fetch error:', err);
-      setStatus('error');
-    } finally {
-      setLoading(false);
-    }
-  };
+//       setStatus('success');
+//       setForm({
+//         firstName: '',
+//         lastName: '',
+//         email: '',
+//         phone: '',
+//         message: '',
+//         reason: '',
+//       });
+//     } catch (err: unknown) {
+//       console.error('❌ Fetch error:', err);
+//       setStatus('error');
+//     } finally {
+//       setLoading(false);
+//     }
+//   };
   
   
   
@@ -186,95 +186,95 @@ function ContactForm() {
   
   
 
-  return (
-    <div className="bg-black border border-[#ffffff50] min-h-[750px] w-full md:w-auto rounded-lg flex items-center justify-center flex-col p-6">
-      <form onSubmit={handleSubmit} className="max-w-2xl w-full space-y-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <input
-            type="text"
-            placeholder="First Name"
-            className="input p-3 border rounded-2xl"
-            value={form.firstName}
-            onChange={(e) => setForm({ ...form, firstName: e.target.value })}
-            required
-          />
-          <input
-            type="text"
-            placeholder="Last Name"
-            className="input p-3 border rounded-2xl"
-            value={form.lastName}
-            onChange={(e) => setForm({ ...form, lastName: e.target.value })}
-            required
-          />
-        </div>
+//   return (
+//     <div className="bg-black border border-[#ffffff50] min-h-[750px] w-full md:w-auto rounded-lg flex items-center justify-center flex-col p-6">
+//       <form onSubmit={handleSubmit} className="max-w-2xl w-full space-y-12">
+//         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+//           <input
+//             type="text"
+//             placeholder="First Name"
+//             className="input p-3 border rounded-2xl"
+//             value={form.firstName}
+//             onChange={(e) => setForm({ ...form, firstName: e.target.value })}
+//             required
+//           />
+//           <input
+//             type="text"
+//             placeholder="Last Name"
+//             className="input p-3 border rounded-2xl"
+//             value={form.lastName}
+//             onChange={(e) => setForm({ ...form, lastName: e.target.value })}
+//             required
+//           />
+//         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <input
-            type="email"
-            placeholder="Ex. john.doe@gmail.com"
-            className="input p-3 border rounded-2xl"
-            value={form.email}
-            onChange={(e) => setForm({ ...form, email: e.target.value })}
-            required
-          />
-          <input
-            type="tel"
-            placeholder="Phone Number"
-            className="input w-full p-3 border rounded-2xl"
-            value={form.phone}
-            onChange={(e) => setForm({ ...form, phone: e.target.value })}
-            required
-          />
-        </div>
+//         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+//           <input
+//             type="email"
+//             placeholder="Ex. john.doe@gmail.com"
+//             className="input p-3 border rounded-2xl"
+//             value={form.email}
+//             onChange={(e) => setForm({ ...form, email: e.target.value })}
+//             required
+//           />
+//           <input
+//             type="tel"
+//             placeholder="Phone Number"
+//             className="input w-full p-3 border rounded-2xl"
+//             value={form.phone}
+//             onChange={(e) => setForm({ ...form, phone: e.target.value })}
+//             required
+//           />
+//         </div>
 
-        <div>
-          <label className="text-sm text-white mb-2 block">
-            Why are you contacting us?
-          </label>
-          <div className="flex gap-4 flex-wrap">
-            {reasons.map((item) => (
-              <button
-                key={item}
-                type="button"
-                className={`border px-4 py-2 rounded-md text-white ${form.reason === item
-                    ? 'border-white bg-neutral-700'
-                    : 'border-neutral-700'
-                  }`}
-                onClick={() => setForm({ ...form, reason: item })}
-              >
-                {item}
-              </button>
-            ))}
-          </div>
-        </div>
+//         <div>
+//           <label className="text-sm text-white mb-2 block">
+//             Why are you contacting us?
+//           </label>
+//           <div className="flex gap-4 flex-wrap">
+//             {reasons.map((item) => (
+//               <button
+//                 key={item}
+//                 type="button"
+//                 className={`border px-4 py-2 rounded-md text-white ${form.reason === item
+//                     ? 'border-white bg-neutral-700'
+//                     : 'border-neutral-700'
+//                   }`}
+//                 onClick={() => setForm({ ...form, reason: item })}
+//               >
+//                 {item}
+//               </button>
+//             ))}
+//           </div>
+//         </div>
 
-        <textarea
-          placeholder="Type your message here.."
-          className="input h-32 w-full border rounded-2xl p-2"
-          value={form.message}
-          onChange={(e) => setForm({ ...form, message: e.target.value })}
-          required
-        />
+//         <textarea
+//           placeholder="Type your message here.."
+//           className="input h-32 w-full border rounded-2xl p-2"
+//           value={form.message}
+//           onChange={(e) => setForm({ ...form, message: e.target.value })}
+//           required
+//         />
 
-        <div className="flex justify-end">
-          <button
-            type="submit"
-            disabled={loading}
-            className="bg-white text-neutral-900 px-6 py-3 rounded-md font-medium disabled:opacity-60"
-          >
-            {loading ? 'Sending...' : 'Send Message'}
-          </button>
-        </div>
+//         <div className="flex justify-end">
+//           <button
+//             type="submit"
+//             disabled={loading}
+//             className="bg-white text-neutral-900 px-6 py-3 rounded-md font-medium disabled:opacity-60"
+//           >
+//             {loading ? 'Sending...' : 'Send Message'}
+//           </button>
+//         </div>
 
-        {status === 'success' && (
-          <p className="text-green-400 text-center">Message sent successfully!</p>
-        )}
-        {status === 'error' && (
-          <p className="text-red-400 text-center">
-            Something went wrong. Please try again later.
-          </p>
-        )}
-      </form>
-    </div>
-  );
-}
+//         {status === 'success' && (
+//           <p className="text-green-400 text-center">Message sent successfully!</p>
+//         )}
+//         {status === 'error' && (
+//           <p className="text-red-400 text-center">
+//             Something went wrong. Please try again later.
+//           </p>
+//         )}
+//       </form>
+//     </div>
+//   );
+// }
