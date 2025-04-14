@@ -10,7 +10,10 @@ interface ContactData {
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ message: 'Method Not Allowed' });
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', ['POST']);
+    return res.status(405).json({ message: 'Method Not Allowed' });
+  }
 
   const { name, email, message } = req.body;
 
@@ -30,8 +33,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await db.collection('contacts').insertOne(newContact);
     return res.status(200).json({ message: 'Contact saved' });
   } catch (error) {
-    // Now accepting the error and logging it
     console.error('Error saving contact:', error);
+
+    if ((error as { name?: string }).name === 'MongoNetworkError') {
+      return res.status(503).json({ message: 'Database connection error' });
+    }
+
     return res.status(500).json({ message: 'Internal Server Error' });
   }
 }
