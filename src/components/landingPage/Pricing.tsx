@@ -84,7 +84,7 @@ function PricingCard() {
                     </span>
                     
                     <span className="flex justify-center mb-6">
-                        <button onClick={()=>{item.handleClick && item.handleClick()}} className="bg-white z-10 hover:bg-[#ffffffe3] transition-all duration-100 ease-in-out text-black w-[88%] px-4 py-2 rounded cursor-pointer">Choose Plan</button>
+                        <button onClick={()=>item.handleClick} className="bg-white z-10 hover:bg-[#ffffffe3] transition-all duration-100 ease-in-out text-black w-[88%] px-4 py-2 rounded cursor-pointer">Choose Plan</button>
                     </span>
                     <ul className="list-disc list-outside mb-4 text-[14px] pl-4 md:flex md:flex-col md:justify-evenly h-[60%]">
                         {item.features.map((feature, index) => (

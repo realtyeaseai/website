@@ -1,7 +1,8 @@
 'use client'
 import { TopNavbar } from "@/components/TopNabbar";
 import Link from "next/link";
-import { useState } from "react";
+import Image from "next/image";
+// import { useState } from "react";
 import { Footer, FAQ } from "@/components/landingPage/lpExports";
 
 export default function contactUs() {
@@ -38,7 +39,7 @@ function TopBox(){
   return(
     <div className="md:h-[380px] h-[600px] w-[96%] rounded-2xl border border-[#ffffff20] mt-4 hover:border-[#ffffff50] flex gap-4 items-center justify-center flex-col bg-[radial-gradient(circle_at_center,_#0072feb5,_#4883cc53,_#4883cc29,_#000)]">
       <span className="h-[50px] w-[50px] rounded-[4px] flex items-center justify-center">
-          <img src="/contactUsItems/Mail.svg" alt="icon" className="w-[75%] h-auto"/>
+          <Image src="/contactUsItems/Mail.svg" alt="icon" className="w-[75%] h-auto"/>
       </span>
       <h1 className="md:text-5xl text-2xl text-center"><b>We&apos;d love to hear from you.</b></h1>
       <p className="text-center text-[14px] text-[#ffffff8a]">Here&apos;s what some of our satisfied <span className="">user&apos;s</span> have said about us.</p>
@@ -46,19 +47,19 @@ function TopBox(){
       <div className="flex items-center justify-center flex-col md:flex-row gap-8 h-[220px] md:h-[20%] w-[80%] md:mt-0">
           <div className=" flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15]">
               <span>
-                  <img src="/contactUsItems/Clock.svg" alt="Clock" />
+                  <Image src="/contactUsItems/Clock.svg" alt="Clock" />
               </span>
               24/7 Assistance
           </div>
           <div className="flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15]">
               <span>
-                  <img src="/contactUsItems/star.svg" alt="Star" />
+                  <Image src="/contactUsItems/star.svg" alt="Star" />
               </span>
               Quick Ai Solutions
           </div>
           <div className="flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15]">
               <span>
-                  <img src="/contactUsItems/moneyBag.svg" alt="bag" />
+                  <Image src="/contactUsItems/moneyBag.svg" alt="bag" />
               </span>
               Great Costing
           </div>
@@ -105,7 +106,7 @@ function ContactInfo(){
               info.map((item, idx) => (
                 <div key={idx} className="flex items-center justify-start gap-2 min-h-[50px] w-full md:w-[100%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15] p-2">
                   <span className="w-[50px] h-[50px] rounded-[4px] flex items-center justify-center">
-                      <img src={item.logo} alt={item.alt} className="w-[50%] h-auto"/>
+                      <Image src={item.logo} alt={item.alt} className="w-[50%] h-auto"/>
                   </span>
                   <p className="text-neutral-400 text-lg">{item.text}</p>
                 </div>
@@ -255,16 +256,16 @@ function ContactInfo(){
 
 function ContactForm(){
 
-  const [form, setForm] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    message: '',
-    reason: '',
-  })
+  // const [form, setForm] = useState({
+  //   firstName: '',
+  //   lastName: '',
+  //   email: '',
+  //   phone: '',
+  //   message: '',
+  //   reason: '',
+  // })
   
-  const reasons = ['General Inquiry', 'Services', 'Credit Score', 'Others']
+  // const reasons = ['General Inquiry', 'Services', 'Credit Score', 'Others']
       
   function handelSubmit(){
     console.log("Submitted")
@@ -272,7 +273,10 @@ function ContactForm(){
 
   return(
     <div className="w-full h-full flex items-center justify-center p-4 pt-10">
-      <form action={()=>handelSubmit()} className="h-full w-full md:w-[80%] p-2 md:p-0 text-[19px]">
+      <form onSubmit={(e)=>{
+        e.preventDefault();
+        handelSubmit();
+      }} className="h-full w-full md:w-[80%] p-2 md:p-0 text-[19px]">
 
         {/* Name  */}
         <div className="flex items-center justify-center flex-col md:flex-row gap-4 h-fit w-full mb-4 md:mb-8">

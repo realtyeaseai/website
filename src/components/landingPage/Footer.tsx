@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -13,7 +14,7 @@ export default function Footer() {
           {/* LOGO */}
           <div className="p-4 flex justify-center items-center md:w-[180px] w-full">
             <span className="h-[40px] w-auto">
-              <img src="/Logo.png" alt="Logo" className="h-full w-full" />
+              <Image src="/Logo.png" alt="Logo" className="h-full w-full" />
             </span>
             <p className="ml-4 text-[16px] font-medium">Realty Ease</p>
           </div>

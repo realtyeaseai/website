@@ -1,5 +1,6 @@
 import { TopNavbar } from "@/components/TopNabbar";
 import { Footer, FAQ } from "@/components/landingPage/lpExports";
+import Image from "next/image";
 
 export default function AboutUs() {
     return (
@@ -34,7 +35,7 @@ function HeroAboutUsSection(){
 
                 {/* image  */}
                 <div className="flex items-center justify-center w-full m-4 md:m-12">
-                    <img
+                    <Image
                       src="/aboutUsItems/AboutUsHeroPic.svg"
                       alt=""
                       className="w-[80%] h-auto object-cover"
@@ -45,7 +46,7 @@ function HeroAboutUsSection(){
 
                 <div className="w-[80%] h-auto m-4 md:m-28 flex items-center justify-center">
                     <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-4xl font-bold text-transparent md:text-5xl">
-                        Introduce your business, mission, and the team behind the virtual assistant services. Real estate agents and property managers want to know who they're working with.
+                        Introduce your business, mission, and the team behind the virtual assistant services. Real estate agents and property managers want to know who they&apos;re working with.
                     </h1>
                 </div>
             </div>
@@ -57,7 +58,7 @@ function ImageDiv(){
     return(
       <div className="relative flex items-center justify-center w-full pt-20 bg-[#010101]">
         <span className="w-[80%] h-full md:block hidden">
-          <img
+          <Image
             src="/aboutUsItems/bgPic.svg"
             alt=""
             className="w-full h-full object-cover"
@@ -75,7 +76,7 @@ function ImageDiv(){
         
             <div className="w-[60%] h-fit">
               <span className="w-full mt-10 h-full md:block hidden">
-                <img
+                <Image
                   src="/aboutUsItems/AboutUsPicTwo.svg"
                   alt=""
                   className="w-full h-full object-cover"

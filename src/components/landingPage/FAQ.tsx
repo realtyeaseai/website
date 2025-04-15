@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { useState } from "react";
 
 // --------------------------------------------------------------------------------------------------------------------- 
@@ -177,7 +178,7 @@ function RenderFaqs(){
             >
               <div className="flex justify-between items-center">
                 <h1 className="text-lg font-medium w-[90%]">{faq.question}</h1>
-                <span>{openIndex === i ? <img src="/faqItems/Minus.svg" alt="-" className="w-6 h-auto"></img> : <img src="/faqItems/Add.svg" alt="+" className="w-6 h-auto"></img>}</span>
+                <span>{openIndex === i ? <Image src="/faqItems/Minus.svg" alt="-" className="w-6 h-auto"/>: <Image src="/faqItems/Add.svg" alt="+" className="w-6 h-auto"/>}</span>
               </div>
           
               <AnimatePresence initial={false}>
