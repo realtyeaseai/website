@@ -2,6 +2,7 @@
 import { TopNavbar } from "@/components/TopNabbar";
 import Link from "next/link";
 import { useState } from "react";
+import { Footer, FAQ } from "@/components/landingPage/lpExports";
 
 export default function contactUs() {
 
@@ -15,13 +16,19 @@ export default function contactUs() {
         
         {/* ------------------ Grid to Conatct --------------- */}
         <div className="grid grid-cols-1 md:grid-cols-[1.5fr_2fr] gap-4 w-full md:w-[98%] p-4">
-            <div className="bg-black border border-[#ffffff50] h-[800px] w-full md:w-auto rounded-lg">
+            <div className="bg-[#ffffff09] border border-[#ffffff50] h-[800px] w-full md:w-auto rounded-lg">
                 <ContactInfo/>
             </div>
-            <div className="bg-black border border-[#ffffff50] h-[800px] w-full md:w-auto rounded-lg">
+            <div className="bg-[#ffffff09] border border-[#ffffff50] min-h-[800px] w-full md:w-auto rounded-lg">
                 <ContactForm/>
             </div>
         </div>
+
+        {/* ------------------ FAQ --------------- */}
+        <FAQ/>
+
+        {/* ------------------ Footer --------------- */}
+        <Footer/>
     </div>
   )
 }
@@ -29,7 +36,7 @@ export default function contactUs() {
 // Static Box
 function TopBox(){
   return(
-    <div className="md:h-[380px] h-[600px] w-[96%] rounded-2xl border border-[#ffffff20] mt-4 hover:border-[#ffffff50] flex gap-4 items-center justify-center flex-col bg-[radial-gradient(circle_at_center,_#4883ccb5,_#4883cc53,_#4883cc29,_#000)]">
+    <div className="md:h-[380px] h-[600px] w-[96%] rounded-2xl border border-[#ffffff20] mt-4 hover:border-[#ffffff50] flex gap-4 items-center justify-center flex-col bg-[radial-gradient(circle_at_center,_#0072feb5,_#4883cc53,_#4883cc29,_#000)]">
       <span className="h-[50px] w-[50px] rounded-[4px] flex items-center justify-center">
           <img src="/contactUsItems/Mail.svg" alt="icon" className="w-[75%] h-auto"/>
       </span>
@@ -264,45 +271,45 @@ function ContactForm(){
   }
 
   return(
-    <div className="w-full h-full flex items-center justify-center p-4 ">
-      <form action={()=>handelSubmit()} className="h-full w-full md:w-[80%] p-2 md:p-0 text-xl ">
+    <div className="w-full h-full flex items-center justify-center p-4 pt-10">
+      <form action={()=>handelSubmit()} className="h-full w-full md:w-[80%] p-2 md:p-0 text-[19px]">
 
         {/* Name  */}
-        <div className="flex items-center justify-center flex-row gap-4 h-fit w-full mb-8">
-          <label htmlFor="fn" className="flex-[.5]"> 
+        <div className="flex items-center justify-center flex-col md:flex-row gap-4 h-fit w-full mb-4 md:mb-8">
+          <label htmlFor="fn" className="flex-[.5] md:flex-[1] w-full"> 
             <span className="w-full "> First Name </span>
             <input type="text" id="fn" placeholder="Jane" required className="w-full h-[50px] border border-[#bababa] rounded-[8px] p-2"/>
           </label>
 
-          <label htmlFor="ln" className="flex-[.5] "> 
+          <label htmlFor="ln" className="flex-[.5] md:flex-[1] w-full"> 
             <span className="w-full"> Last Name </span>
             <input type="text" id="ln" placeholder="Doe" required className="w-full h-[50px] border border-[#bababa] rounded-[8px] p-2"/>
           </label>
         </div>
 
         {/* Contact  */}
-        <div className="flex items-center justify-center flex-row gap-4 h-fit w-full mb-8">
-          <label htmlFor="fn" className="flex-[.5]"> 
-            <span className="w-full "> Mail </span>
-            <input type="mail" placeholder="example@mail.com" id="fn" required className="w-full h-[50px] border border-[#bababa] rounded-[8px] p-2"/>
+        <div className="flex items-center justify-center flex-col md:flex-row gap-4 h-fit w-full mb-16">
+          <label htmlFor="mail" className="flex-[.5] md:flex-[1] w-full"> 
+            <span className="w-full"> Mail </span>
+            <input type="email" placeholder="example@mail.com" id="mail" required className="w-full h-[50px] border border-[#bababa] rounded-[8px] p-2"/>
           </label>
 
-          <label htmlFor="phone" className="flex-[.5] "> 
+          <label htmlFor="phone" className="flex-[.5] md:flex-[1] w-full"> 
             <span className="w-full"> Phone Number </span>
             <input type="tel" id="phone" placeholder="+1 20X 5X5 X4X2" required className="w-full h-[50px] border border-[#bababa] rounded-[8px] p-2"/>
           </label>
         </div>
 
-        {/* Message  */}
-        <div className="flex items-center justify-center flex-row gap-4 h-fit w-full mt-8 mb-8">
-          <label htmlFor="fn" className="flex-[1]"> 
+        {/* Message */}
+        <div className="flex items-center justify-center gap-4 h-fit w-full mt-8 mb-8">
+          <label htmlFor="fn" className="flex-[1] w-full"> 
             {/* <span className="w-full mb-[15px]"> Enter your message </span> */}
-            <textarea placeholder="Type your message here ..." id="fn" className="w-full h-[150px] border border-[#bababa] rounded-[8px] p-2"/>
+            <textarea placeholder="Type your message here ..." id="fn" className="w-full min-h-[150px] border border-[#bababa] rounded-[8px] p-2"/>
           </label>
         </div>
 
-        {/* Submit btn  */}
-        <span className="w-full flex items-center justify-center md:justify-end md:pr-10">
+        {/* Submit btn */}
+        <span className="w-full flex items-center justify-center md:justify-end md:pr-10 mb-10">
           <input type="submit" value="Send Message" className="bg-[#ffffff] text-black px-6 py-3 md:w-[200px] w-[80%] rounded-md font-medium hover:bg-[#ffffffcc] transition-all cursor-pointer"/>
         </span>
       </form>

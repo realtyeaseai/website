@@ -68,7 +68,7 @@ export default function Footer() {
               href="https://www.linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-[60px] h-[40px] flex items-center justify-center mr-4 bg-white rounded-md hover:bg-[#ffffffc5] transition"
+              className="w-[60px] h-[50px] flex items-center justify-center mr-4 bg-white rounded-md hover:bg-[#ffffffc5] transition"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +85,7 @@ export default function Footer() {
               href="https://www.instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-[60px] h-[40px] flex items-center justify-center bg-white rounded-md hover:bg-[#ffffffc5] transition"
+              className="w-[60px] h-[50px] flex items-center justify-center bg-white rounded-md hover:bg-[#ffffffc5] transition"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
