@@ -3,12 +3,12 @@ import { Spotlight } from "@/components/ui/Spotlight";
 
 export default function HeroSection() {
   return (
-    <div className="relative flex flex-col min-h-[75dvh] md:min-h-[200dvh] w-full overflow-hidden rounded-md antialiased md:items-center md:justify-center bg-black">
+    <div className="relative flex flex-col min-h-[75dvh] md:min-h-fit w-full overflow-hidden rounded-md antialiased md:items-center md:justify-start bg-black ">
           {/* ------------------------ Spotlight ------------------------- */}
           <Spotlight className="-top-40 left-0 md:-top-20 md:left-60" fill="white"/>
     
           {/* ---------------------- Items ---------------------- */}
-          <div className="mt-12 md:mt-16 relative z-10 mx-auto w-full max-w-7xl p-4 pt-20 md:pt-0 bg-transparent flex place-items-center flex-col ">
+          <div className="mt-12 md:mt-16 relative z-10 mx-auto w-full max-w-7xl p-4 pt-20 md:pt-0 bg-transparent flex place-items-center flex-col">
             
             <TextWithTooltip/>
             <InputTab/>
@@ -21,7 +21,7 @@ export default function HeroSection() {
 
 function TextWithTooltip(){
   return(
-    <div>
+    <div className="mt-48">
       <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl">
         <span className="inline-flex items-center justify-center w-full text-center">Your Trusted 
           {/* --------------Tooltip containing the profile pics ---------- */}
