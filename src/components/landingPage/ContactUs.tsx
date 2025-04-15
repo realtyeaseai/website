@@ -67,25 +67,25 @@ function ContactInfo() {
       <h3 className="text-white text-left  font-bold font-sans text-xl">Contact Information</h3>
       <p className="text-sm text-gray-500">Reach out to us at your own convinience</p>
 
-      <div className="box mt-20 pl-9 w-[300px] md:w-[500px] h-[100px] border rounded-2xl float-left cursor-pointer hover:bg-gray-700">
-        <Image src="/contactUsitems/mail.svg" alt="Mail Icon 2" width={24} height={24} className="mt-10 mr-7 md:mr-8 float-left text-gray-200" />
+      <div className="box mt-6 pl-9 w-full md:w-[500px] h-[100px] border rounded-2xl justify-between inline-flex">
+        <Image src="/contactUsitems/mail.svg" alt="Mail Icon 3" width={24} height={24} className="text-gray-200" />
 
-        <span className="mt-9 flex float-left text-gray-400">info@realtyeaseai.com</span>
+        <span className="mt-9 text-gray-400 mr-3">info@realtyeaseai.com</span>
       </div>
 
-      <div className="box mt-6 pl-9 w-[300px] md:w-[500px] h-[100px] border rounded-2xl float-left">
-        <Image src="/contactUsitems/mail.svg" alt="Mail Icon 3" width={24} height={24} className="mt-10 mr-7 md:mr-8 float-left text-gray-200" />
+      <div className="box mt-6 pl-9 w-full md:w-[500px] h-[100px] border rounded-2xl justify-between inline-flex">
+        <Image src="/contactUsitems/mail.svg" alt="Mail Icon 3" width={24} height={24} className="text-gray-200" />
 
-        <span className="mt-9 flex float-left text-gray-400">info@realtyeaseai.com</span>
+        <span className="mt-9 text-gray-400 mr-3">info@realtyeaseai.com</span>
       </div>
 
-      <div className="box mt-6 pl-9 w-[300px] md:w-[500px] h-[100px] border rounded-2xl float-left">
-        <Image src="/contactUsitems/location.svg" alt="Mail Icon" width={16} height={20} className="mt-10 mr-7 md:mr-8 float-left text-gray-700 w-auto h-auto" />
+      <div className="box mt-6 pl-9 w-full h-[98px]  md:w-[500px] md:h-[100px] border rounded-2xl justify-between inline-flex">
+        <Image src="/contactUsitems/location.svg" alt="Mail Icon" width={24} height={24} className=" text-gray-200" />
 
-        <span className="mt-9 flex float-left text-gray-400 text-xs">Studio 448 Event Planners LLC <br />
+        <span className="mt-9 text-gray-400 text-xs mr-3">Studio 448 Event Planners LLC <br />
           DBA Realty Ease</span>
       </div>
-      <div className="social-icons mt-10 mb-10 relative">
+      <div className="social-icons relative">
         <div className="flex justify-between w-[130px]">
 
           <a

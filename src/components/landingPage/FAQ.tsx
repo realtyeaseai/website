@@ -133,23 +133,23 @@ export default function FAQ() {
 
 function TextBoxWithContactBtn(){
   return(
-      <div className="w-full min-h-[400px] pl-4 md:basis-[45%]">
+      <div className="w-full min-h-[230px] pl-4 md:basis-[45%]">
 
         {/* text  */}
         <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-3xl font-bold text-transparent md:text-4xl pt-30 md:ml-6 ">
-          Get All Your questions <br/>answered here
+        Have questions?
         </h1>
         <p className="mx-auto mt-2 max-w-xl text-base font-normal text-neutral-300 md:ml-6 ">
-            Have questions? Here are answers to some of the most asked questions about our services and process
+             Here are answers to some of the most asked questions about our services and process
         </p>
 
         {/* Button  */}
-        <a href="#contact" className="relative inline-flex md:mt-8 mt-6 h-12 overflow-hidden rounded-full p-[2px] md:ml-6 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+        {/* <a href="#contact" className="relative inline-flex md:mt-8 mt-6 h-12 overflow-hidden rounded-full p-[2px] md:ml-6 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
           <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
           <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-900 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
             Conatct Us
           </span>
-        </a>
+        </a> */}
 
       </div>
   
