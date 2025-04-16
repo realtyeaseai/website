@@ -3,14 +3,14 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
-interface FaqProps {
+interface DropdownProps {
   question: string;
   description: string; // HTML content as a string
   width?: string; // Tailwind width class, e.g., "w-full", "w-1/2"
   height?: string; // Tailwind height class, e.g., "h-auto", "h-40"
 }
 
-export default function Faq({ question, description, width = "w-full", height = "h-auto" }: FaqProps) {
+export default function DropdownCompo({ question, description, width = "w-full", height = "h-auto" }: DropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (

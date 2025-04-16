@@ -51,12 +51,6 @@ function TopBox(){
   )
 }
 
-const imgBoxItems = [
-  {text: "24/7 Assistance", img: "/contactUsItems/Clock.svg"},
-  {text: "Quick Ai Solutions", img: "/contactUsItems/star.svg"},
-  {text: "Great Costing", img: "/contactUsItems/moneyBag.svg"},
-]
-
 function ImageBox(){
 
   const imgBoxItems = [

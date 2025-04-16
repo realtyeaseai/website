@@ -1,13 +1,16 @@
 import Image from "next/image";
 import { TopNavbar } from "@/components/TopNabbar";
-import Faq from "@/components/ui/FaqComponent";
+import DropdownCompo from "@/components/ui/DropdownCompo";
+import Footer from "@/components/landingPage/Footer";
 
 export default function Services() {
     return (
-        <div className="relative w-full h-screen min-h-[100dvh] bg-[#010101] pt-28 md:pt-40">
+        <div className="relative w-full h-fit pb-8 flex flex-col justify-start items-center min-h-[100dvh] bg-[#010101] pt-28 md:pt-40">
             <TopNavbar/>
             <TopHeading/>
             <RenderedServices/>
+            <BottomBox/>
+            <Footer/>
         </div>
     )
 }
@@ -15,7 +18,7 @@ export default function Services() {
 const faqs = [
     [
         {
-            question: "What is a Virtual Assistant?",
+            question: "Property Management Support",
             answer: 
             `
               <p>
@@ -23,7 +26,7 @@ const faqs = [
               </p>
             `,
         },{
-            question: "What is a Virtual Assistant?",
+            question: "Lead Generation & Marketing",
             answer: 
             `
               <p>
@@ -32,7 +35,7 @@ const faqs = [
             `,
         },
         {
-            question: "What is a Virtual Assistant?",
+            question: "Client Relations",
             answer: 
             `
               <p>
@@ -76,8 +79,7 @@ function RenderedServices() {
         </div>
       </div>
     );
-  }
-
+}
 
 function FirstBox(){
     return(
@@ -94,7 +96,7 @@ function FirstBox(){
               {/* FAQ */}
               <div className="w-full h-[80%] mt-4 flex gap-4 items-center justify-center flex-col">
                 {faqs[0].map((item, i) => (
-                  <Faq
+                  <DropdownCompo
                     key={i}
                     question={item.question}
                     description={item.answer}
@@ -146,7 +148,7 @@ function SecondBox(){
               {/* FAQ */}
               <div className="w-full h-[80%] mt-4 flex gap-4 items-center justify-center flex-col">
                 {faqs[0].map((item, i) => (
-                  <Faq
+                  <DropdownCompo
                     key={i}
                     question={item.question}
                     description={item.answer}
@@ -176,7 +178,7 @@ function ThirdBox(){
               {/* FAQ */}
               <div className="w-full h-[80%] mt-4 flex gap-4 items-center justify-center flex-col">
                 {faqs[0].map((item, i) => (
-                  <Faq
+                  <DropdownCompo
                     key={i}
                     question={item.question}
                     description={item.answer}
@@ -200,4 +202,22 @@ function ThirdBox(){
           </div>
         </>
     )
+}
+
+function BottomBox(){
+  return(
+    <div className="md:h-[380px] h-[600px] w-[96%] rounded-2xl border border-[#ffffff20] mt-4 hover:border-[#ffffff50] flex gap-4 items-center justify-center flex-col bg-[radial-gradient(circle_at_center,_#0072feb5,_#4883cc53,_#4883cc29,_#000)]">
+      <span className="h-[50px] w-[50px] rounded-[4px] flex items-center justify-center">
+          <Image width={1000} height={1000} src="/contactUsItems/Mail.svg" alt="icon" className="w-[75%] h-auto"/>
+      </span>
+      <h1 className="md:text-5xl text-2xl text-center"><b>Let&apos;s get to work together</b></h1>
+      <p className="text-center text-[14px] text-[#ffffff8a]">Contact us now to know more details</p>
+
+      <div className="flex items-center justify-center h-fit md:h-[20%] w-[80%] md:mt-0 "> 
+        <a href="/contact" className=" text-center text-black cursor-pointer h-[50px] w-[200px] rounded-[4px] flex items-center justify-center bg-[#ffffff] hover:bg-[#ffffff] transition-all duration-300 ease-in-out">
+          Contact Us
+        </a>
+      </div> 
+    </div>
+  )
 }
