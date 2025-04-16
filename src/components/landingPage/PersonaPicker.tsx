@@ -99,22 +99,22 @@ function RenderCards(){
 function LastCard(){
     return(
         <div className="md:max-w-[300px] md:w-[260px] md:min-w-[220px] h-[250px] w-[70%] max-w-xl cursor-pointer">
-                    <div className="relative w-full max-w-xl h-full">
-                            <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff30] bg-[#ffffff10] transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)] px-4 py-8 shadow-xl">
-                            <div className="relative flex h-full w-[100%] flex-col items-center justify-center">
-                                <h1 className="text-[24px] mb-1">Explore More</h1>
-                                <p className="text-center text-[11px] text-[#ffffff8a] mb-4">See what our Website can do For You, </p>
-                                {/*---------------- Set button output--------------*/}
-                                <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-                                    <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-                                    <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-                                      Comming Soon
-                                    </span>
-                                </button>
-                            </div>
-                            <Meteors />
-                        </div>
+            <div className="relative w-full max-w-xl h-full">
+                <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff30] bg-[#ffffff10] transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)] px-4 py-8 shadow-xl">
+                    <div className="relative flex h-full w-[100%] flex-col items-center justify-center">
+                        <h1 className="text-[24px] mb-1">Explore More</h1>
+                        <p className="text-center text-[11px] text-[#ffffff8a] mb-4">See what our Website can do For You, </p>
+                        {/*---------------- Set button output--------------*/}
+                        <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+                            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
+                              Comming Soon
+                            </span>
+                        </button>
                     </div>
+                    <Meteors />
                 </div>
+            </div>
+        </div>
     );
 }
