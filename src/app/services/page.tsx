@@ -22,7 +22,7 @@ const faqs = [
             answer: 
             `
               <p>
-                A <b>Virtual Assistant (VA)</b> is a professional who provides administrative, technical, or creative support services remotely.
+                Manage listings, schedules, tenant communications, and paperwork—without the overhead.
               </p>
             `,
         },{
@@ -30,7 +30,7 @@ const faqs = [
             answer: 
             `
               <p>
-                A <b>Virtual Assistant (VA)</b> is a professional who provides administrative, technical, or creative support services remotely.
+                Optimize your marketing strategy, manage ads, and capture high-quality leads.
               </p>
             `,
         },
@@ -39,13 +39,64 @@ const faqs = [
             answer: 
             `
               <p>
-                A <b>Virtual Assistant (VA)</b> is a professional who provides administrative, technical, or creative support services remotely.
+                Keep your clients engaged with timely follow-ups, meeting scheduling, and communication.
               </p>
             `,
         },
     ],
     [
-
+      {
+        question: "Project Coordination",
+        answer: 
+        `
+          <p>
+            Assist with scheduling, client communication, and documentation to ensure your projects stay on track.
+          </p>
+        `,
+      },{
+        question: "Vendor & Subcontractor Management",
+        answer: 
+        `
+          <p>
+            Handle communication and logistics for subcontractors and vendors.
+          </p>
+        `,
+      },{
+        question: "Time & Budget Tracking",
+        answer: 
+        `
+          <p>
+            Maintain project timelines, update budgets, and monitor expenses
+          </p>
+        `,
+      },
+    ],
+    [
+      {
+        question: "Administrative Supportt",
+        answer: 
+        `
+          <p>
+            Organize emails, schedule appointments, and manage documentation.
+          </p>
+        `,
+      },{
+        question: "Customer Service",
+        answer: 
+        `
+          <p>
+            Offer 24/7 customer support via phone, email, or chat.
+          </p>
+        `,
+      },{
+        question: "Sales & Marketing",
+        answer: 
+        `
+          <p>
+            Manage social media, create marketing content, and assist with business development.
+          </p>
+        `,
+      },
     ]
     
 ]
@@ -147,7 +198,7 @@ function SecondBox(){
               </p>
               {/* FAQ */}
               <div className="w-full h-[80%] mt-4 flex gap-4 items-center justify-center flex-col">
-                {faqs[0].map((item, i) => (
+                {faqs[1].map((item, i) => (
                   <DropdownCompo
                     key={i}
                     question={item.question}
@@ -177,7 +228,7 @@ function ThirdBox(){
               </p>
               {/* FAQ */}
               <div className="w-full h-[80%] mt-4 flex gap-4 items-center justify-center flex-col">
-                {faqs[0].map((item, i) => (
+                {faqs[2].map((item, i) => (
                   <DropdownCompo
                     key={i}
                     question={item.question}
@@ -214,7 +265,7 @@ function BottomBox(){
       <p className="text-center text-[14px] text-[#ffffff8a]">Contact us now to know more details</p>
 
       <div className="flex items-center justify-center h-fit md:h-[20%] w-[80%] md:mt-0 "> 
-        <a href="/contact" className=" text-center text-black cursor-pointer h-[50px] w-[200px] rounded-[4px] flex items-center justify-center bg-[#ffffff] hover:bg-[#ffffff] transition-all duration-300 ease-in-out">
+        <a href="/contactUs" className=" text-center text-black cursor-pointer h-[50px] w-[200px] rounded-[4px] flex items-center justify-center bg-[#ffffff] hover:bg-[#ffffff] transition-all duration-300 ease-in-out">
           Contact Us
         </a>
       </div> 

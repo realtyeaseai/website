@@ -15,7 +15,7 @@ export default function DropdownCompo({ question, description, width = "w-full",
 
   return (
     <div
-      className={`border border-[#ffffff69] rounded-xl p-4 cursor-pointer bg-[#ffffff0a] ${width} ${height}`}
+      className={`border border-transparent border-b-[#ffffff69]  p-4 cursor-pointer bg-[#ffffff0a] ${width} ${height}`}
       onClick={() => setIsOpen(!isOpen)}
     >
       <div className="flex justify-between items-center">
@@ -23,16 +23,16 @@ export default function DropdownCompo({ question, description, width = "w-full",
         <span>
           {isOpen ? (
             <Image
-              width={24}
-              height={24}
+              width={100}
+              height={100}
               src="/faqItems/Minus.svg"
               alt="-"
               className="w-6 h-auto"
             />
           ) : (
             <Image
-              width={24}
-              height={24}
+              width={100}
+              height={100}
               src="/faqItems/Add.svg"
               alt="+"
               className="w-6 h-auto"
