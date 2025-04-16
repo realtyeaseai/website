@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <div className="relative flex flex-col min-h-[75dvh] md:min-h-[100dvh] w-[100dvw] overflow-hidden rounded-md antialiased md:items-center md:justify-center bg-black">
+    <div className="relative flex flex-col min-h-[75dvh] md:min-h-[100dvh] w-[100dvw] overflow-hidden rounded-md antialiased md:items-center md:justify-center">
           {/* ------------------------ Spotlight ------------------------- */}
           <Spotlight className="-top-40 left-0 md:-top-20 md:left-60" fill="white"/>
     
@@ -40,9 +40,9 @@ function TextWithTooltip(){
 
 function InputTab(){
   return (
-    <div className="m-2 mb-10 md:w-[10%] w-full flex justify-between flex-col md:flex-row mt-12">
+    <div className="m-2 mb-10 md:w-[15%] w-full flex justify-between flex-col md:flex-row mt-12">
     {/* <input type="text" placeholder="Lorem ipsum" className="border border-[#FFFFFF40] mt-4 md:mr-2 mb-4 h-12 md:w-[84%] w-full rounded-4xl p-[20px] focus:outline-none focus:ring-0 focus:border-[#FFFFFF60]"/> */}
-    <button className="relative inline-flex md:mt-4  h-12 overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+    <button className="relative inline-flex md:mt-4  h-12 overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 md:w-full">
       <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
       <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-900 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl hover:bg-indigo-900">
         Get Started

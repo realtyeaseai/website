@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
 
         {/* ---------------------------- Right Section (Social Logos) ---------------------------- */}
-        <div className="w-full flex justify-center md:justify-end items-start p-4">
+        <div className="w-full md:overflow-hidden flex justify-center md:justify-end md:mr-5">
           <div className="flex justify-between w-[130px] ">
 
             {/* <button className="w-[60px] h-auto mr-4">

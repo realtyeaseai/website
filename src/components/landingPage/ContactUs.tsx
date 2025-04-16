@@ -1,5 +1,6 @@
 'use client'
 import Image from "next/image";
+import ContactForm from "../ContactForm";
 
 
 export default function ContactUs() {
@@ -51,7 +52,7 @@ export default function ContactUs() {
           <ContactInfo />
         </div>
         {/* <div className="bg-black border border-[#ffffff50] h-[600px] w-full md:w-auto rounded-lg"> */}
-        {/* <ContactForm /> */}
+        <ContactForm />
         {/* </div> */}
       </div>
     </div>
@@ -66,25 +67,25 @@ function ContactInfo() {
       <h3 className="text-white text-left  font-bold font-sans text-xl">Contact Information</h3>
       <p className="text-sm text-gray-500">Reach out to us at your own convinience</p>
 
-      <div className="box mt-20 pl-9 w-[300px] md:w-[500px] h-[100px] border rounded-2xl float-left cursor-pointer hover:bg-gray-700">
-        <Image src="/contactUsitems/mail.svg" alt="Mail Icon" width={24} height={24} className="mt-10 mr-7 md:mr-8 float-left text-gray-200" />
+      <div className="box mt-6 pl-9 w-full md:w-[500px] h-[100px] border rounded-2xl justify-between inline-flex">
+        <Image src="/contactUsitems/mail.svg" alt="Mail Icon 3" width={24} height={24} className="text-gray-200" />
 
-        <span className="mt-9 flex float-left text-gray-400">info@realtyeaseai.com</span>
+        <span className="mt-9 text-gray-400 mr-3">info@realtyeaseai.com</span>
       </div>
 
-      <div className="box mt-6 pl-9 w-[300px] md:w-[500px] h-[100px] border rounded-2xl float-left">
-        <Image src="/contactUsitems/mail.svg" alt="Mail Icon" width={24} height={24} className="mt-10 mr-7 md:mr-8 float-left text-gray-200" />
+      <div className="box mt-6 pl-9 w-full md:w-[500px] h-[100px] border rounded-2xl justify-between inline-flex">
+        <Image src="/contactUsitems/mail.svg" alt="Mail Icon 3" width={24} height={24} className="text-gray-200" />
 
-        <span className="mt-9 flex float-left text-gray-400">info@realtyeaseai.com</span>
+        <span className="mt-9 text-gray-400 mr-3">info@realtyeaseai.com</span>
       </div>
 
-      <div className="box mt-6 pl-9 w-[300px] md:w-[500px] h-[100px] border rounded-2xl float-left">
-        <Image src="/contactUsitems/location.svg" alt="Mail Icon" width={16} height={20} className="mt-10 mr-7 md:mr-8 float-left text-gray-700" />
+      <div className="box mt-6 pl-9 w-full h-[98px]  md:w-[500px] md:h-[100px] border rounded-2xl justify-between inline-flex">
+        <Image src="/contactUsitems/location.svg" alt="Mail Icon" width={24} height={24} className=" text-gray-200" />
 
-        <span className="mt-9 flex float-left text-gray-400 text-xs">Studio 448 Event Planners LLC <br />
+        <span className="mt-9 text-gray-400 text-xs mr-3">Studio 448 Event Planners LLC <br />
           DBA Realty Ease</span>
       </div>
-      <div className="social-icons mt-10 mb-10 relative">
+      <div className="social-icons relative">
         <div className="flex justify-between w-[130px]">
 
           <a
@@ -127,154 +128,3 @@ function ContactInfo() {
 }
 
 
-// function ContactForm() {
-//   const [form, setForm] = useState({
-//     firstName: '',
-//     lastName: '',
-//     email: '',
-//     phone: '',
-//     message: '',
-//     reason: '',
-//   });
-
-//   const [loading, setLoading] = useState(false);
-//   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-//   const reasons = ['General Inquiry', 'Services', 'Credit Score', 'Others'];
-
-//   const handleSubmit = async (e: React.FormEvent) => {
-//     e.preventDefault();
-//     setLoading(true);
-//     setStatus('idle');
-  
-//     try {
-//       const res = await fetch('/api/contact', {
-//         method: 'POST',
-//         headers: { 'Content-Type': 'application/json' },
-//         body: JSON.stringify(form),
-//       });
-  
-//       if (!res.ok) {
-//         const data = await res.json();
-//         console.error('❌ Form submission failed:', data);
-//         setStatus('error');
-//         return;
-//       }
-  
-//       const data = await res.json();
-  
-//       setStatus('success');
-//       setForm({
-//         firstName: '',
-//         lastName: '',
-//         email: '',
-//         phone: '',
-//         message: '',
-//         reason: '',
-//       });
-//     } catch (err: unknown) {
-//       console.error('❌ Fetch error:', err);
-//       setStatus('error');
-//     } finally {
-//       setLoading(false);
-//     }
-//   };
-  
-  
-  
-  
-  
-  
-
-//   return (
-//     <div className="bg-black border border-[#ffffff50] min-h-[750px] w-full md:w-auto rounded-lg flex items-center justify-center flex-col p-6">
-//       <form onSubmit={handleSubmit} className="max-w-2xl w-full space-y-12">
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-//           <input
-//             type="text"
-//             placeholder="First Name"
-//             className="input p-3 border rounded-2xl"
-//             value={form.firstName}
-//             onChange={(e) => setForm({ ...form, firstName: e.target.value })}
-//             required
-//           />
-//           <input
-//             type="text"
-//             placeholder="Last Name"
-//             className="input p-3 border rounded-2xl"
-//             value={form.lastName}
-//             onChange={(e) => setForm({ ...form, lastName: e.target.value })}
-//             required
-//           />
-//         </div>
-
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-//           <input
-//             type="email"
-//             placeholder="Ex. john.doe@gmail.com"
-//             className="input p-3 border rounded-2xl"
-//             value={form.email}
-//             onChange={(e) => setForm({ ...form, email: e.target.value })}
-//             required
-//           />
-//           <input
-//             type="tel"
-//             placeholder="Phone Number"
-//             className="input w-full p-3 border rounded-2xl"
-//             value={form.phone}
-//             onChange={(e) => setForm({ ...form, phone: e.target.value })}
-//             required
-//           />
-//         </div>
-
-//         <div>
-//           <label className="text-sm text-white mb-2 block">
-//             Why are you contacting us?
-//           </label>
-//           <div className="flex gap-4 flex-wrap">
-//             {reasons.map((item) => (
-//               <button
-//                 key={item}
-//                 type="button"
-//                 className={`border px-4 py-2 rounded-md text-white ${form.reason === item
-//                     ? 'border-white bg-neutral-700'
-//                     : 'border-neutral-700'
-//                   }`}
-//                 onClick={() => setForm({ ...form, reason: item })}
-//               >
-//                 {item}
-//               </button>
-//             ))}
-//           </div>
-//         </div>
-
-//         <textarea
-//           placeholder="Type your message here.."
-//           className="input h-32 w-full border rounded-2xl p-2"
-//           value={form.message}
-//           onChange={(e) => setForm({ ...form, message: e.target.value })}
-//           required
-//         />
-
-//         <div className="flex justify-end">
-//           <button
-//             type="submit"
-//             disabled={loading}
-//             className="bg-white text-neutral-900 px-6 py-3 rounded-md font-medium disabled:opacity-60"
-//           >
-//             {loading ? 'Sending...' : 'Send Message'}
-//           </button>
-//         </div>
-
-//         {status === 'success' && (
-//           <p className="text-green-400 text-center">Message sent successfully!</p>
-//         )}
-//         {status === 'error' && (
-//           <p className="text-red-400 text-center">
-//             Something went wrong. Please try again later.
-//           </p>
-//         )}
-//       </form>
-//     </div>
-//   );
-// }
