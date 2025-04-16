@@ -65,39 +65,39 @@ const faqs = [
       </ul>
     `,
   },
-  {
-    question: "How do I communicate with my Virtual Assistant?",
-    answer: `
-      <p>
-        Communication is handled through multiple channels, including:
-      </p>
-      <ul class="list-disc list-inside mt-2">
-        <li>Email</li>
-        <li>Video calls (via Bitrix24)</li>
-      </ul>
-    `,
-  },
-  {
-    question: "Can I hire a Virtual Assistant for a one-time project?",
-    answer: `
-      <p>
-        Yes! We offer both long-term and short-term contracts. If you only need help with a one-time project, simply let us know, and we will match you with the right VA.
-      </p>
-    `,
-  },
-  {
-    question: "How do you ensure quality and reliability?",
-    answer: `
-      <p>
-        We vet all our Virtual Assistants through a rigorous screening process, which includes:
-      </p>
-      <ul class="list-disc list-inside mt-2">
-        <li>Interviewing candidates for skills and reliability</li>
-        <li>Reviewing past work and references</li>
-        <li>Providing training to ensure consistent service quality Additionally, we offer ongoing support to ensure your expectations are met.</li>
-      </ul>
-    `,
-  },
+  // {
+  //   question: "How do I communicate with my Virtual Assistant?",
+  //   answer: `
+  //     <p>
+  //       Communication is handled through multiple channels, including:
+  //     </p>
+  //     <ul class="list-disc list-inside mt-2">
+  //       <li>Email</li>
+  //       <li>Video calls (via Bitrix24)</li>
+  //     </ul>
+  //   `,
+  // },
+  // {
+  //   question: "Can I hire a Virtual Assistant for a one-time project?",
+  //   answer: `
+  //     <p>
+  //       Yes! We offer both long-term and short-term contracts. If you only need help with a one-time project, simply let us know, and we will match you with the right VA.
+  //     </p>
+  //   `,
+  // },
+  // {
+  //   question: "How do you ensure quality and reliability?",
+  //   answer: `
+  //     <p>
+  //       We vet all our Virtual Assistants through a rigorous screening process, which includes:
+  //     </p>
+  //     <ul class="list-disc list-inside mt-2">
+  //       <li>Interviewing candidates for skills and reliability</li>
+  //       <li>Reviewing past work and references</li>
+  //       <li>Providing training to ensure consistent service quality Additionally, we offer ongoing support to ensure your expectations are met.</li>
+  //     </ul>
+  //   `,
+  // },
   {
     question: "What happens if I am not satisfied with my Virtual Assistant?",
     answer: `
@@ -106,14 +106,14 @@ const faqs = [
       </p>
     `,
   },
-  {
-    question: "Are your Virtual Assistants available globally?",
-    answer: `
-      <p>
-        Yes! We have Virtual Assistants from around the world, providing a wide range of services. Depending on your needs, we can match you with a VA who speaks your language and understands your industry.
-      </p>
-    `,
-  },
+  // {
+  //   question: "Are your Virtual Assistants available globally?",
+  //   answer: `
+  //     <p>
+  //       Yes! We have Virtual Assistants from around the world, providing a wide range of services. Depending on your needs, we can match you with a VA who speaks your language and understands your industry.
+  //     </p>
+  //   `,
+  // },
   ];
 
 // ---------------------------------------------------------------------------------------------------------------------
