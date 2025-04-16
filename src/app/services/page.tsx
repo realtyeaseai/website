@@ -162,7 +162,7 @@ function FirstBox(){
               <Image
                 width={100}
                 height={100}
-                src="/servicesItems/FirstImage.svg"
+                src="/ServicesItems/FirstImage.svg"
                 alt=""
                 className="w-[70%] h-auto object-cover"
               />
@@ -183,7 +183,7 @@ function SecondBox(){
               <Image
                 width={200}
                 height={200}
-                src="/servicesItems/SecImage.svg"
+                src="/ServicesItems/SecImage.svg"
                 alt=""
                 className="w-[70%] h-auto object-cover"
               />
@@ -244,7 +244,7 @@ function ThirdBox(){
               <Image
                 width={100}
                 height={100}
-                src="/servicesItems/ThiImage.svg"
+                src="/ServicesItems/ThiImage.svg"
                 alt=""
                 className="w-[70%] h-auto object-cover"
               />
