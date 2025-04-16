@@ -56,11 +56,35 @@ function RenderPref(){
        <div className="md:w-[50%] w-full h-[320px] flex justify-center items-center flex-col md:mt-0">
            <div className="relative flex h-full w-full p-4 flex-row gap-4 md:gap-8 items-center justify-center">
                
-               <div className="relative h-[80%] md:h-full w-full flex-[.45] rounded-[8px] text-white text-center overflow-hidden border border-[#ffffff30] bg-[#ffffff10]">
+               <div className="relative h-[80%] md:h-full w-full flex-[.45] rounded-[8px] text-white text-center overflow-hidden border border-[#ffffff30] bg-[#ffffff10] ">
+                   
+                    <div className="w-full h-full flex flex-col items-center justify-between"> 
+                        <div className="flex items-center justify-center flex-[.75] h-auto w-[100%]">
+                           <span className="h-[70%] border w-[50%] flex items-center justify-center rounded-2xl">
+                               <Image src="/personaSlectorItems/item.svg" width={100} height={100} className="h-auto w-[50%]" alt="img"/>
+                           </span>
+                        </div>
+                        <div className="flex items-center justify-center flex-col flex-[.35] h-auto w-[100%]">
+                           <h1 className="text-center text-3xl mb-1">Agent</h1>
+                           <p className="text-center text-[12px] text-[#ffffff8a]"><i>i&apos;m an agent looking for clients</i></p>
+                       </div>
+                    </div>
+                   
                    <Meteors/>
                </div>
    
                <div className="relative h-[80%] md:h-full w-full flex-[.45] rounded-[8px] text-white text-center overflow-hidden border border-[#ffffff30] bg-[#ffffff10]">
+                    <div className="w-full h-full flex flex-col items-center justify-between"> 
+                        <div className="flex items-center justify-center flex-[.75] h-auto w-[100%]">
+                           <span className="h-[70%] border w-[50%] flex items-center justify-center rounded-2xl">
+                               <Image src="/personaSlectorItems/item.svg" width={100} height={100} className="h-auto w-[50%]" alt="img"/>
+                           </span>
+                       </div>
+                       <div className="flex items-center justify-center flex-col flex-[.35] h-auto w-[100%]">
+                           <h1 className="text-center text-3xl mb-1">Owner</h1>
+                           <p className="text-center text-[12px] text-[#ffffff8a]"><i>i&apos;m an owner looking for services</i></p>
+                       </div>
+                    </div> 
                    <Meteors/>
                </div>
    
