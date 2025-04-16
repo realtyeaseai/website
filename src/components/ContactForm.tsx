@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import toast from 'react-hot-toast';
 
 export default function ContactForm() {
   const [form, setForm] = useState({
@@ -12,19 +13,15 @@ export default function ContactForm() {
   });
 
   const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const reasons = ['Agent', 'Property owners', 'Specialized Services', 'Others'];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setStatus('idle');
 
-    // Basic validation
     if (!form.firstName || !form.lastName || !form.email || !form.phone || !form.message || !form.reason) {
-      console.error('❌ Validation error: All fields are required.');
-      setStatus('error');
+      toast.error('All fields are required.');
       setLoading(false);
       return;
     }
@@ -36,18 +33,25 @@ export default function ContactForm() {
         body: JSON.stringify(form),
       });
 
-      // Check if the response is JSON
       const contentType = res.headers.get('Content-Type');
       if (!res.ok || !contentType?.includes('application/json')) {
         console.error('❌ Unexpected response:', await res.text());
-        setStatus('error');
+        toast.error('Something went wrong. Please try again.');
         return;
       }
 
       const data = await res.json();
-      console.log('✅ Response:', data); // Or display data.message
+      console.log('✅ Response:', data);
 
-      setStatus('success');
+      toast.success('Message sent successfully!', {
+        icon: '✅',
+        style: {
+          borderRadius: '10px',
+          background: '#22c55e', // Tailwind green-500
+          color: '#fff',
+          fontWeight: '600',
+        },
+      });
       setForm({
         firstName: '',
         lastName: '',
@@ -57,12 +61,8 @@ export default function ContactForm() {
         reason: '',
       });
     } catch (err: unknown) {
-      if (err instanceof Error) {
-        console.error('❌ Fetch error:', err.message);
-      } else {
-        console.error('❌ An unknown error occurred:', err);
-      }
-      setStatus('error');
+      console.error('❌ Error:', err);
+      toast.error('Failed to send. Please try again later.');
     } finally {
       setLoading(false);
     }
@@ -110,9 +110,7 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label className="text-sm text-white mb-2 block">
-            Why are you contacting us?
-          </label>
+          <label className="text-sm text-white mb-2 block">Why are you contacting us?</label>
           <div className="flex gap-4 flex-wrap">
             {reasons.map((item) => (
               <button
@@ -147,15 +145,6 @@ export default function ContactForm() {
             {loading ? 'Sending...' : 'Send Message'}
           </button>
         </div>
-
-        {status === 'success' && (
-          <p className="text-green-400 text-center">Message sent successfully!</p>
-        )}
-        {status === 'error' && (
-          <p className="text-red-400 text-center">
-            Something went wrong. Please try again later.
-          </p>
-        )}
       </form>
     </div>
   );
