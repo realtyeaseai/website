@@ -6,7 +6,7 @@ import {
   ContactUs,
   FAQ,
   Footer,
-  // PricingSection,
+  // PricingSection
   // About
 
 } from "../components/landingPage/lpExports"
@@ -56,7 +56,9 @@ export default function Home() {
             <PersonaPicker />
           </div>
           {/* <div id="pricing" className="w-full">
+           <div id="pricing" className="w-full">
             <PricingSection />
+          </div> 
           </div> */}
           <div id="contact" className="w-full">
             <ContactUs />

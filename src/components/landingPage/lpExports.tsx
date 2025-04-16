@@ -5,8 +5,6 @@ import ContactUs from "./ContactUs"
 import FAQ from "./FAQ"
 import Footer from "./Footer"
 // import PricingSection from "./PricingSection"
-import ContactForm from "../ContactForm"
-
 
 
 
@@ -18,7 +16,6 @@ export {
     FAQ,
     Footer,
     // PricingSection,
-    ContactForm
     // About,
     
 }
