@@ -178,7 +178,7 @@ function RenderFaqs(){
             >
               <div className="flex justify-between items-center">
                 <h1 className="text-lg font-medium w-[90%]">{faq.question}</h1>
-                <span>{openIndex === i ? <Image src="/faqItems/Minus.svg" alt="-" className="w-6 h-auto"/>: <Image src="/faqItems/Add.svg" alt="+" className="w-6 h-auto"/>}</span>
+                <span>{openIndex === i ? <Image width={1000} height={1000} src="/faqItems/Minus.svg" alt="-" className="w-6 h-auto"/>: <Image width={1000} height={1000} src="/faqItems/Add.svg" alt="+" className="w-6 h-auto"/>}</span>
               </div>
           
               <AnimatePresence initial={false}>

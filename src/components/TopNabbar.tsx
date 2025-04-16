@@ -28,16 +28,16 @@ export function TopNavbar(){
     },
     {
       name: "Services",
-      link: "/#services", // Matches the id of PersonaPicker
+      link: "/services", // Navigate to Services Page
     },
     {
       name: "Contact",
       link: "/contactUs", // Navigate to contactUs Page
     },
-    {
-      name: "Pricing",
-      link: "/#pricing", // Matches the id of ContactUs
-    },
+    // {
+      // name: "Pricing",
+      // link: "/#pricing", // Matches the id of ContactUs
+    // },
     // {
     //   name: "Footer",
     //   link: "#footer", // Matches the id of Footer

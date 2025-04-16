@@ -58,6 +58,8 @@ function ImageText(){
         <Image
           src="/heroItems/HeroImage.svg"
           alt="svg"
+          width={1000}
+          height={1000}
           className="w-full h-full object-cover"
         />
         {/* Black mask at the bottom */}

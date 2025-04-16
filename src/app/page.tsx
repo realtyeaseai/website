@@ -3,7 +3,7 @@ import {
   HeroSection, 
   ServicesGrid,
   PersonaPicker,
-  Pricing,
+  // Pricing,
   FAQ,
   Footer,
 
@@ -24,9 +24,9 @@ export default function Home() {
          <div id="persona">
            <PersonaPicker />
          </div>
-         <div id="pricing">
+         {/* <div id="pricing">
            <Pricing />
-         </div>
+         </div> */}
          <div id="faq">
            <FAQ />
          </div>

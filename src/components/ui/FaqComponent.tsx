@@ -1,0 +1,61 @@
+"use client"
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+
+interface FaqProps {
+  question: string;
+  description: string; // HTML content as a string
+  width?: string; // Tailwind width class, e.g., "w-full", "w-1/2"
+  height?: string; // Tailwind height class, e.g., "h-auto", "h-40"
+}
+
+export default function Faq({ question, description, width = "w-full", height = "h-auto" }: FaqProps) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div
+      className={`border border-[#ffffff69] rounded-xl p-4 cursor-pointer bg-[#ffffff0a] ${width} ${height}`}
+      onClick={() => setIsOpen(!isOpen)}
+    >
+      <div className="flex justify-between items-center">
+        <h1 className="text-lg font-medium w-[90%]">{question}</h1>
+        <span>
+          {isOpen ? (
+            <Image
+              width={24}
+              height={24}
+              src="/faqItems/Minus.svg"
+              alt="-"
+              className="w-6 h-auto"
+            />
+          ) : (
+            <Image
+              width={24}
+              height={24}
+              src="/faqItems/Add.svg"
+              alt="+"
+              className="w-6 h-auto"
+            />
+          )}
+        </span>
+      </div>
+
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            key="content"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="overflow-hidden text-sm mt-2 text-gray-300"
+          >
+            {/* Render HTML content */}
+            <div dangerouslySetInnerHTML={{ __html: description }} />
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}

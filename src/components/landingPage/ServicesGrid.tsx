@@ -52,8 +52,7 @@ export default function ServicesGrid() {
           <Image
             src="/profileAgent.jpeg"
             alt="avatar"
-            height="100"
-            width="100"
+            width={1000} height={1000}
             className="rounded-full h-10 w-10"
           />
           <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
@@ -67,8 +66,7 @@ export default function ServicesGrid() {
           <Image
             src="/profileAgent.jpeg"
             alt="avatar"
-            height="100"
-            width="100"
+            width={1000} height={1000}
             className="rounded-full h-10 w-10"
           />
           <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
@@ -85,8 +83,7 @@ export default function ServicesGrid() {
           <Image
             src="/profileAgent.jpeg"
             alt="avatar"
-            height="100"
-            width="100"
+            width={1000} height={1000}
             className="rounded-full h-10 w-10"
           />
           <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">

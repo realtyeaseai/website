@@ -36,6 +36,7 @@ function HeroAboutUsSection(){
                 {/* image  */}
                 <div className="flex items-center justify-center w-full m-4 md:m-12">
                     <Image
+                      width={1000} height={1000}
                       src="/aboutUsItems/AboutUsHeroPic.svg"
                       alt=""
                       className="w-[80%] h-auto object-cover"
@@ -60,6 +61,7 @@ function ImageDiv(){
         <span className="w-[80%] h-full md:block hidden">
           <Image
             src="/aboutUsItems/bgPic.svg"
+            width={1000} height={1000}
             alt=""
             className="w-full h-full object-cover"
           />
@@ -79,6 +81,7 @@ function ImageDiv(){
                 <Image
                   src="/aboutUsItems/AboutUsPicTwo.svg"
                   alt=""
+                  width={1000} height={1000}
                   className="w-full h-full object-cover"
                 />
               </span>
