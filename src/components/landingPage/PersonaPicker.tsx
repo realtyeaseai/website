@@ -27,12 +27,20 @@ const items = [{
 
 export default function PersonaPicker(){
     return(
-        <div className="bg-black h-auto w-full min-h-[120dvh] flex justify-center flex-col items-center md:pt-0 pt-30">
+        <div className="bg-black h-fit w-full min-h-[120dvh] flex justify-center flex-col items-center py-10 md:py-20">
             <div className="md:w-[80%] w-full flex justify-center items-center flex-col mt-0">
                 <h1 className="text-4xl text-white">Who are you?</h1>
                 <p className="text-[#ffffff99] text-[14px]">Select What You need based on who you are</p>
             </div>
 
+            <RenderPref/>
+            
+            <div className="md:w-[80%] w-full flex justify-center items-center flex-col mt-8">
+                <h1 className="w-[70%] m-2 py-4 px-2 text-4xl rounded-[8px] text-white text-center ">Services</h1>
+                {/* border border-[#ffffff80] bg-[#ffffff10]  */}
+            </div>
+
+            {/* ------------------------ Cards ------------------------ */} 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 place-items-center">
                 
                 <RenderCards/>
@@ -43,6 +51,23 @@ export default function PersonaPicker(){
     );
 }
 
+function RenderPref(){
+    return(
+       <div className="md:w-[50%] w-full h-[320px] flex justify-center items-center flex-col md:mt-0">
+           <div className="relative flex h-full w-full p-4 flex-row gap-4 md:gap-8 items-center justify-center">
+               
+               <div className="relative h-[80%] md:h-full w-full flex-[.45] rounded-[8px] text-white text-center overflow-hidden border border-[#ffffff30] bg-[#ffffff10]">
+                   <Meteors/>
+               </div>
+   
+               <div className="relative h-[80%] md:h-full w-full flex-[.45] rounded-[8px] text-white text-center overflow-hidden border border-[#ffffff30] bg-[#ffffff10]">
+                   <Meteors/>
+               </div>
+   
+           </div>
+       </div>
+    )
+   }
 
 function RenderCards(){
     return(
@@ -53,7 +78,7 @@ function RenderCards(){
                    <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff30] bg-[#ffffff10] px-4 py-8 shadow-xl">
                        <div className="flex items-center justify-center h-[100%] w-[100%]">
                            <span className="h-[80%] w-[40%] flex items-center justify-center rounded-2xl">
-                               <Image src={item.tag} width={50} height={50} className="h-auto w-[50%]" alt="img"/>
+                               <Image src={item.tag} width={100} height={100} className="h-auto w-[50%]" alt="img"/>
                            </span>
                        </div>
                        <div className="">

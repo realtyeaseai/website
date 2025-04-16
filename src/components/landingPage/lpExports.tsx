@@ -4,7 +4,7 @@ import PersonaPicker from "./PersonaPicker"
 import ContactUs from "./ContactUs"
 import FAQ from "./FAQ"
 import Footer from "./Footer"
-import PricingSection from "./PricingSection"
+// import PricingSection from "./PricingSection"
 
 
 
@@ -15,7 +15,7 @@ export {
     ContactUs,
     FAQ,
     Footer,
-    PricingSection,
+    // PricingSection,
     // About,
     
 }
