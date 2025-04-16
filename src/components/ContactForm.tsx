@@ -14,7 +14,7 @@ export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const reasons = ['General Inquiry', 'Services', 'Credit Score', 'Others'];
+  const reasons = ['Real Estate VA Services', 'Property Owner VA Services', 'Specialized Services', 'Others'];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -69,7 +69,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="bg-black border border-[#ffffff50] min-h-[750px] w-full md:w-auto rounded-lg flex items-center justify-center flex-col p-6">
+    <div className="bg-[#0b4a3ca5] border border-[#ffffff50] min-h-[750px] w-full md:w-auto rounded-lg flex items-center justify-center flex-col p-6 text-white font-bold">
       <form onSubmit={handleSubmit} className="max-w-2xl w-full space-y-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <input

@@ -27,7 +27,7 @@ export default function Home() {
           muted
           playsInline
           title="Cloud background video" aria-hidden="true"
-          className="absolute top-0 left-0 w-full overflow-hidden h-full object-cover z-[-2]"
+          className="absolute top-0 left-0 w-full h-full object-cover z-[-2]"
           style={{
             WebkitMaskImage: "linear-gradient(to bottom, #000000 60%, rgba(0,0,0,0) 100%)",
             maskImage: "linear-gradient(to bottom, #000000 60%, rgba(0,0,0,0) 100%)",
@@ -46,7 +46,7 @@ export default function Home() {
 
        <div className="z-10 w-full">
           <TopNavbar />
-          <div id="hero" className="w-full">
+          <div id="hero" className="w-full overflow-hidden">
             <HeroSection />
           </div>
           <div id="services" className="bg-black pt-24 w-full">

@@ -63,28 +63,25 @@ export default function ContactUs() {
 
 function ContactInfo() {
   return (
-    <div className="bg-black border border-[#ffffff50] h-[750px] w-full md:w-auto rounded-lg p-5 md:p-10">
+    <div className="bg-gray-800 border border-[#ffffff50] h-[750px] w-full md:w-auto rounded-lg p-5 md:p-10">
       <h3 className="text-white text-left  font-bold font-sans text-xl">Contact Information</h3>
       <p className="text-sm text-gray-500">Reach out to us at your own convinience</p>
 
-      <div className="box mt-6 pl-9 w-full md:w-[500px] h-[100px] border rounded-2xl justify-between inline-flex">
-        <Image src="/contactUsitems/mail.svg" alt="Mail Icon 3" width={24} height={24} className="text-gray-200" />
+      <div className="box mt-20 pl-9 w-full md:w-[500px] h-[100px] border rounded-2xl float-left cursor-pointer hover:bg-gray-700 inline-flex md:justify-center items-center">
+        <Image src="/contactUsItems/mail.svg" alt="Mail Icon 2" width={24} height={24} className="mr-5 text-gray-200" />
 
-        <span className="mt-9 text-gray-400 mr-3">info@realtyeaseai.com</span>
+        info@realtyeaseai.com
       </div>
 
-      <div className="box mt-6 pl-9 w-full md:w-[500px] h-[100px] border rounded-2xl justify-between inline-flex">
-        <Image src="/contactUsitems/mail.svg" alt="Mail Icon 3" width={24} height={24} className="text-gray-200" />
+      
+      
+      <div className="box mt-20 pl-9 w-full md:w-[500px] h-[100px] border rounded-2xl float-left cursor-pointer hover:bg-gray-700 inline-flex md:justify-center items-center">
+        <Image src="/contactUsItems/mail.svg" alt="Mail Icon 2" width={24} height={24} className="md:ml-14 mr-5  text-gray-200" />
 
-        <span className="mt-9 text-gray-400 mr-3">info@realtyeaseai.com</span>
+        Studio 448 Event Planners LLC <br />
+          DBA Realty Ease
       </div>
 
-      <div className="box mt-6 pl-9 w-full h-[98px]  md:w-[500px] md:h-[100px] border rounded-2xl justify-between inline-flex">
-        <Image src="/contactUsitems/location.svg" alt="Mail Icon" width={24} height={24} className=" text-gray-200" />
-
-        <span className="mt-9 text-gray-400 text-xs mr-3">Studio 448 Event Planners LLC <br />
-          DBA Realty Ease</span>
-      </div>
       <div className="social-icons relative">
         <div className="flex justify-between w-[130px]">
 
