@@ -63,7 +63,7 @@ export default function ContactUs() {
 
 function ContactInfo() {
   return (
-    <div className="bg-gray-800 border border-[#ffffff50] h-[750px] w-full md:w-auto rounded-lg p-5 md:p-10">
+    <div className="bg-gradient-to-tr from-gray-700 via-gray--500 to-black border border-[#ffffff50] h-[750px] w-full md:w-auto rounded-lg p-5 md:p-10">
       <h3 className="text-white text-left  font-bold font-sans text-xl">Contact Information</h3>
       <p className="text-sm text-gray-500">Reach out to us at your own convinience</p>
 

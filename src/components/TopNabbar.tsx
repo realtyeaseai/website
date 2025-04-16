@@ -27,7 +27,7 @@ export function TopNavbar(){
     },
     {
       name: "Services",
-      link: "#services", // Matches the id of ServicesGrid
+      link: "Services", // Matches the id of ServicesGrid
     },
     {
       name: "Persona",

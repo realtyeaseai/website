@@ -1,7 +1,6 @@
 import { TopNavbar } from "@/components/TopNabbar";
 import { 
   HeroSection, 
-  ServicesGrid,
   PersonaPicker,
   ContactUs,
   FAQ,
@@ -49,9 +48,9 @@ export default function Home() {
           <div id="hero" className="w-full overflow-hidden">
             <HeroSection />
           </div>
-          <div id="services" className="bg-black pt-24 w-full">
+          {/* <div id="services" className="bg-black pt-24 w-full">
             <ServicesGrid />
-          </div>
+          </div> */}
           <div id="persona" className="w-full">
             <PersonaPicker />
           </div>
