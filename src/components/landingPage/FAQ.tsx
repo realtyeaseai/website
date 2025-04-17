@@ -66,39 +66,39 @@ const faqs = [
       </ul>
     `,
   },
-  {
-    question: "How do I communicate with my Virtual Assistant?",
-    answer: `
-      <p>
-        Communication is handled through multiple channels, including:
-      </p>
-      <ul class="list-disc list-inside mt-2">
-        <li>Email</li>
-        <li>Video calls (via Bitrix24)</li>
-      </ul>
-    `,
-  },
-  {
-    question: "Can I hire a Virtual Assistant for a one-time project?",
-    answer: `
-      <p>
-        Yes! We offer both long-term and short-term contracts. If you only need help with a one-time project, simply let us know, and we will match you with the right VA.
-      </p>
-    `,
-  },
-  {
-    question: "How do you ensure quality and reliability?",
-    answer: `
-      <p>
-        We vet all our Virtual Assistants through a rigorous screening process, which includes:
-      </p>
-      <ul class="list-disc list-inside mt-2">
-        <li>Interviewing candidates for skills and reliability</li>
-        <li>Reviewing past work and references</li>
-        <li>Providing training to ensure consistent service quality Additionally, we offer ongoing support to ensure your expectations are met.</li>
-      </ul>
-    `,
-  },
+  // {
+  //   question: "How do I communicate with my Virtual Assistant?",
+  //   answer: `
+  //     <p>
+  //       Communication is handled through multiple channels, including:
+  //     </p>
+  //     <ul class="list-disc list-inside mt-2">
+  //       <li>Email</li>
+  //       <li>Video calls (via Bitrix24)</li>
+  //     </ul>
+  //   `,
+  // },
+  // {
+  //   question: "Can I hire a Virtual Assistant for a one-time project?",
+  //   answer: `
+  //     <p>
+  //       Yes! We offer both long-term and short-term contracts. If you only need help with a one-time project, simply let us know, and we will match you with the right VA.
+  //     </p>
+  //   `,
+  // },
+  // {
+  //   question: "How do you ensure quality and reliability?",
+  //   answer: `
+  //     <p>
+  //       We vet all our Virtual Assistants through a rigorous screening process, which includes:
+  //     </p>
+  //     <ul class="list-disc list-inside mt-2">
+  //       <li>Interviewing candidates for skills and reliability</li>
+  //       <li>Reviewing past work and references</li>
+  //       <li>Providing training to ensure consistent service quality Additionally, we offer ongoing support to ensure your expectations are met.</li>
+  //     </ul>
+  //   `,
+  // },
   {
     question: "What happens if I am not satisfied with my Virtual Assistant?",
     answer: `
@@ -107,14 +107,14 @@ const faqs = [
       </p>
     `,
   },
-  {
-    question: "Are your Virtual Assistants available globally?",
-    answer: `
-      <p>
-        Yes! We have Virtual Assistants from around the world, providing a wide range of services. Depending on your needs, we can match you with a VA who speaks your language and understands your industry.
-      </p>
-    `,
-  },
+  // {
+  //   question: "Are your Virtual Assistants available globally?",
+  //   answer: `
+  //     <p>
+  //       Yes! We have Virtual Assistants from around the world, providing a wide range of services. Depending on your needs, we can match you with a VA who speaks your language and understands your industry.
+  //     </p>
+  //   `,
+  // },
   ];
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -122,7 +122,7 @@ const faqs = [
 export default function FAQ() {
 
   return (
-    <div className="min-h-[100dvh] pt-24 w-full flex items-center justify-center bg-black">
+    <div className="h-fit pt-24 w-full flex items-center justify-center bg-black">
         <div className="w-[98%] flex items-start justify-center flex-col md:flex-row gap-4 p-4">
             <TextBoxWithContactBtn/>
             <RenderFaqs/>            
@@ -134,7 +134,7 @@ export default function FAQ() {
 
 function TextBoxWithContactBtn(){
   return(
-      <div className="w-full min-h-[400px] pl-4 md:basis-[45%]">
+      <div className="w-full min-h-fit py-10 pl-4 md:basis-[45%]">
 
         {/* text  */}
         <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-3xl font-bold text-transparent md:text-4xl pt-30 md:ml-6 ">
@@ -166,7 +166,7 @@ function RenderFaqs(){
     };
 
   return(
-    <div className="w-full min-h-[700px] md:basis-[55%]">
+    <div className="w-full min-h-fit py-10 md:basis-[55%]">
       <div className="max-w-2xl mx-auto p-4 text-[#ffffffcc]">
       {/* <h1 className="text-3xl font-bold mb-6 text-start">Frequently Asked Questions</h1> */}
         <div className="space-y-4">

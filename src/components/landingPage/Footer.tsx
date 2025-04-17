@@ -43,7 +43,7 @@ export default function Footer() {
           <div className="p-4 md:w-[160px] w-full md:text-start text-center">
             <h2 className="text-[18px] font-semibold mb-4">Company</h2>
             <ul className="space-y-2 text-[14px] list-none">
-              <li><Link href="#">About Us</Link></li>
+              <li><Link href="/aboutUs">About Us</Link></li>
               <li><Link href="#">Careers</Link></li>
               <li><Link href="#faq">FAQs</Link></li>
               <li><Link href="#">Teams</Link></li>
