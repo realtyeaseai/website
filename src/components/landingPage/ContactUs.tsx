@@ -42,6 +42,28 @@ export default function ContactUs() {
             </span>
             Great Costing
           </div>
+          {/* <div className="flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15] hover:bg-gray-900">
+            <span>
+              <Image src="/contactUsItems/moneyBag.svg" width={30}
+                height={30} alt="bag" />
+            </span>
+            efficient
+          </div>
+          <div className="flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15] hover:bg-gray-900">
+            <span>
+              <Image src="/contactUsItems/moneyBag.svg" width={30}
+                height={30} alt="bag" />
+            </span>
+            Supportive
+          </div>
+          <div className="flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15] hover:bg-gray-900">
+            <span>
+              <Image src="/contactUsItems/moneyBag.svg" width={30}
+                height={30} alt="bag" />
+            </span>
+            Reliable
+          </div> */}
+          
         </div>
 
       </div>
@@ -76,10 +98,9 @@ function ContactInfo() {
       
       
       <div className="box mt-20 pl-9 w-full md:w-[500px] h-[100px] border rounded-2xl float-left cursor-pointer hover:bg-gray-700 inline-flex md:justify-center items-center">
-        <Image src="/contactUsItems/mail.svg" alt="Mail Icon 2" width={24} height={24} className="md:ml-14 mr-5  text-gray-200" />
+        <Image src="/contactUsItems/mail.svg" alt="Mail Icon 2" width={24} height={24} className="mr-5 text-gray-200" />
 
-        Studio 448 Event Planners LLC <br />
-          DBA Realty Ease
+        info@realtyeaseai.com
       </div>
 
       <div className="social-icons relative">

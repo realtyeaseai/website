@@ -6,23 +6,23 @@ import Image from "next/image";
 const items = [{
     tag:"/personaSlectorItems/heroicons_paint-brush-20-solid.svg",
     title:"Painting Service",
-    description:'“Schedule painters, compare quotes, and refresh your space — stress-free.”'
+    // description:'“Schedule painters, compare quotes, and refresh your space — stress-free.”'
 },{
     tag:"/personaSlectorItems/healthicons_electricity.svg",
     title:"Electrician Service",
-    description:'“Let us book certified electricians for installations, fixes, and safety checks.”'
+    // description:'“Let us book certified electricians for installations, fixes, and safety checks.”'
 },{
     tag:"/personaSlectorItems/ic_baseline-pest-control.svg",
     title:"Pest removal Service",
-    description:'“Don&apos;t bug out — we&apos;ll arrange quick, professional pest control near you.”'
+    // description:'“Don&apos;t bug out — we&apos;ll arrange quick, professional pest control near you.”'
 },{
     tag:"/personaSlectorItems/map_plumber.svg",
     title:"Plumbing Service",
-    description:'“Leaky tap or blocked pipe? We&aposll get the right plumber to your door.”'
+    // description:'“Leaky tap or blocked pipe? We&aposll get the right plumber to your door.”'
 },{
     tag:"/personaSlectorItems/home.svg",
     title:"Construction Service",
-    description:'“Manage your renovation or repair crew — with timelines and updates.”'
+    // description:'“Manage your renovation or repair crew — with timelines and updates.”'
 },
 ];
 
@@ -31,7 +31,7 @@ export default function PersonaPicker(){
         <div className="bg-black h-fit w-full min-h-[120dvh] flex justify-center flex-col items-center py-10 md:py-20">
             <div className="md:w-[80%] w-full flex justify-center items-center flex-col mt-0">
                 <h1 className="text-4xl text-white">Who are you?</h1>
-                <p className="text-[#ffffff99] text-[14px]">Select What You need based on who you are</p>
+                <p className="text-[#ffffff99] text-[14px]">Help us identify you needs</p>
             </div>
 
             <RenderPref/>
@@ -68,7 +68,7 @@ function RenderPref(){
                         </div>
                         <div className="flex items-center justify-center flex-col flex-[.35] h-auto w-[100%]">
                            <h1 className="text-center text-3xl mb-1">Agent</h1>
-                           <p className="text-center text-[12px] text-[#ffffff8a]"><i>i&apos;m an agent looking for clients</i></p>
+                           {/* <p className="text-center text-[12px] text-[#ffffff8a]"><i>i&apos;m an agent looking for clients</i></p> */}
                        </div>
                     </div>
                    
@@ -85,7 +85,7 @@ function RenderPref(){
                        </div>
                        <div className="flex items-center justify-center flex-col flex-[.35] h-auto w-[100%]">
                            <h1 className="text-center text-3xl mb-1">Owner</h1>
-                           <p className="text-center text-[12px] text-[#ffffff8a]"><i>i&apos;m an owner looking for services</i></p>
+                           {/* <p className="text-center text-[12px] text-[#ffffff8a]"><i>i&apos;m an owner looking for services</i></p> */}
                        </div>
                     </div> 
                    <Meteors/>
@@ -109,8 +109,8 @@ function RenderCards(){
                            </span>
                        </div>
                        <div className="">
-                           <h1 className="text-center mb-1">{item.title}</h1>
-                           <p className="text-center text-[11px] text-[#ffffff8a]"><i>{item.description}</i></p>
+                           <h1 className="text-center mb-1 text-2xl text-white">{item.title}</h1>
+                           {/* <p className="text-center text-[11px] text-[#ffffff8a]"><i>{item.description}</i></p> */}
                        </div>
                        <Meteors/>
                    </div>

@@ -137,10 +137,11 @@ function TextBoxWithContactBtn(){
 
         {/* text  */}
         <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-3xl font-bold text-transparent md:text-4xl pt-30 md:ml-6 ">
-        Have questions?
+        Got Questions? We&apos;ve Got Answers!
         </h1>
         <p className="mx-auto mt-2 max-w-xl text-base font-normal text-neutral-300 md:ml-6 ">
-             Here are answers to some of the most asked questions about our services and process
+        Explore our frequently asked questions below to find clarity on our services, processes, and everything in between. Can’t find what you’re looking for? [Contact us] – we’re always here to help!
+
         </p>
 
         {/* Button  */}

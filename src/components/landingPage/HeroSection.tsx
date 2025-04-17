@@ -25,14 +25,14 @@ function TextWithTooltip(){
   return(
     <div className="md:pt-24 pt-12 flex flex-col items-center justify-center w-full">
       <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl">
-        <span className="inline-flex items-center justify-center w-full text-center">Your Trusted 
+        <span className="inline-flex items-center justify-center w-full text-center"> Your Trusted Partner 
           {/* --------------Tooltip containing the profile pics ---------- */}
           <Tooltip/> 
         </span> 
-        Virtual Assistants
+        in Real Estate Excellence
       </h1>
       <p className="mx-auto mt-6 max-w-xl text-center text-base font-normal text-neutral-300">
-        We provide expert virtual assistant services that  <span className="text-blue-400">streamline operations, save time, and let you focus</span>  on growing your business.
+      Tailored Virtual Assistance for Real Estate Professionals  <span className="text-blue-400">so you can focus on closing deals, building relationships, and growing your portfolio. Reclaim Your Time</span>  Scale Your Business.
       </p>
     </div>
   )

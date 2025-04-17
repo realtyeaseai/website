@@ -17,7 +17,8 @@ export default function AboutUs(){
         <div className="container mx-auto grid md:grid-cols-2 gap-10 items-center justify-center">
           <div>
             <h2 className="text-xl md:text-2xl font-bold mb-4 text-center md:text-left">
-            Introduce your business, mission, and the team behind the virtual assistant services. Real estate agents and property managers want to know who they&apos;re working with.
+            Realty Ease AI was founded by Kathy Tiburcio and Eyandra Molina, first-generation Americans born to Dominican immigrant parents. Growing up in Hunts Point, Bronx, and Harlem, respectively, Kathy and Eyandra met as teenagers at Washington Irving High School in New York City. After years of pursuing separate paths, a chance reunion over coffee in the Dominican Republic reignited their shared passion for real estate and inspired the creation of Realty Ease AI.
+
             </h2>
             {/* <p className="mb-6 text-neutral-400">
               Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque.
@@ -54,9 +55,10 @@ export default function AboutUs(){
             className="rounded-2xl"
           />
           <div>
-            <h4 className="text-2xl font-semibold mb-4 text-center">Flexible Scaling & Support</h4>
+            <h4 className="text-2xl font-semibold mb-4 text-center">Our Mission</h4>
             <p className="mb-6 text-neutral-400 text-center">
-              Our dedicated team works tirelessly to achieve key milestones, product launches, & partnerships.
+            Realty Ease AI is a consulting firm dedicated to transforming the real estate industry by acting as a seamless bridge between property owners, real estate agents, and service providers such as plumbers, electricians, pest control, construction, and HVAC companies. We provide tailored virtual assistant services and manage comprehensive Request for Proposal (RFP) processes to streamline operations, reduce stress, and combat burnout for real estate professionals. Our mission is to foster collaboration, enhance efficiency, and create a dynamic network that delivers consistent opportunities for our clients as their needs evolve.
+
             </p>
             {/* <div className="flex gap-4">
               <div className="w-3 h-3 bg-white rounded-full mt-2" />

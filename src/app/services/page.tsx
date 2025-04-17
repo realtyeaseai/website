@@ -108,7 +108,10 @@ function TopHeading(){
                 Our Services
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-center text-base font-normal text-neutral-300">
-            From managing listings to client communication, our trained virtual assistants handle your day-to-day tasks so you can focus on growing your business.
+            From managing and client communications to coordinating and administrative workflows, our virtual assistants adapt to your priorities.
+
+            <p>No two businesses are alike—that&apos;s why every service we deliver is tailored to your unique goals, processes, and growth ambitions.
+            </p>
             </p>
         </div>
     );
@@ -259,7 +262,7 @@ function BottomBox(){
   return(
     <div className="md:h-[380px] h-[600px] w-[96%] rounded-2xl border border-[#ffffff20] mt-4 hover:border-[#ffffff50] flex gap-4 items-center justify-center flex-col bg-[radial-gradient(circle_at_center,_#0072feb5,_#4883cc53,_#4883cc29,_#000)]">
       <span className="h-[50px] w-[50px] rounded-[4px] flex items-center justify-center">
-          <Image width={1000} height={1000} src="/contactUsItems/Mail.svg" alt="icon" className="w-[75%] h-auto"/>
+          <Image width={1000} height={1000} src="/contactUsItems/mail.svg" alt="icon" className="w-[75%] h-auto"/>
       </span>
       <h1 className="md:text-5xl text-2xl text-center"><b>Let&apos;s get to work together</b></h1>
       <p className="text-center text-[14px] text-[#ffffff8a]">Contact us now to know more details</p>
