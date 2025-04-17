@@ -24,10 +24,15 @@ export default function HomeClient() {
   if (loading) {
     return (
       <div className="h-screen w-screen flex items-center justify-center bg-black text-white">
-        <p className="italic text-3xl animate-pulse tracking-wide">RealtyEase</p>
+        <p className="text-3xl italic font-light font-serif tracking-wide">
+          <span className="typewriter-effect">
+            RealtyEase
+          </span>
+        </p>
       </div>
     );
   }
+  
 
   return (
     <div className="relative w-full h-screen">

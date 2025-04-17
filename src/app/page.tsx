@@ -99,11 +99,9 @@
 
 import HomeClient from "@/components/HomeClient";
 
-export const metadata = {
-  title: "RealtyEase - Your Personal Real-Estate AI Helper",
-  description:
-    "Ask about Property value, Investment potential, or city insights - RealtyEase AI has your backs. Available 24 X 7",
-};
+
+// Page-specific metadata (this will override global metadata for this page)
+
 
 export default function HomePage() {
   return <HomeClient />;

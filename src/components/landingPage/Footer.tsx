@@ -106,9 +106,9 @@ export default function Footer() {
       </div>
 
         {/* ------------------------------------------------- BOTTOM REALTY EASE DESIGN TEXT -------------------------------------------- */}
-        <div className='w-full h-auto mt-20 mb-18 md:text-start text-center'>
+        {/* <div className='w-full h-auto mt-20 mb-18 md:text-start text-center'>
             <h1 className='w-[90%] md:text-[65px] text-4xl m-4'>RealtyEaseAI</h1>
-        </div>
+        </div> */}
     </div>
   )
 }

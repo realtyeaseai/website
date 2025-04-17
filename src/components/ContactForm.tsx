@@ -68,8 +68,11 @@ export default function ContactForm() {
     }
   };
 
+  // bg-gradient-to-bl from-violet-500 via-purple-800 to-indigo-900
+
   return (
     <div className="bg-gradient-to-bl from-violet-500 via-purple-800 to-indigo-900 border border-[#ffffff50] min-h-[750px] w-full md:w-auto rounded-lg flex items-center justify-center flex-col p-6 text-white font-bold">
+      <h2 className="text-3xl text-white mb-10">Get in Touch With Us</h2>
       <form onSubmit={handleSubmit} className="max-w-2xl w-full space-y-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <input
@@ -110,15 +113,15 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label className="text-sm text-white mb-2 block">Who are you??</label>
+          <label className="text-sm text-white mb-2 block">Who are you?</label>
           <div className="flex gap-4 flex-wrap">
             {reasons.map((item) => (
               <button
                 key={item}
                 type="button"
                 aria-pressed={form.reason === item}
-                className={`border px-4 py-2 rounded-md text-white ${
-                  form.reason === item ? 'border-white bg-neutral-700' : 'border-neutral-700'
+                className={`border border-black px-4 py-2 rounded-xl text-white ${
+                  form.reason === item ? 'border-2 border-black bg-green-900' : 'border-white'
                 }`}
                 onClick={() => setForm({ ...form, reason: item })}
               >
