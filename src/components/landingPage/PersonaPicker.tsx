@@ -1,4 +1,3 @@
-'use client'
 import { Meteors } from "../ui/meteors";
 import Image from "next/image";
 
