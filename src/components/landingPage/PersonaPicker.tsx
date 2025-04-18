@@ -1,12 +1,11 @@
-'use client'
 import { Meteors } from "../ui/meteors";
 import Image from "next/image";
 
 // edit this for top servicer 5 grid images 
 const items = [{
-    tag:"/personaSlectorItems/heroicons_paint-brush-20-solid.svg",
-    title:"Painting Service",
-    // description:'“Schedule painters, compare quotes, and refresh your space — stress-free.”'
+    tag:"/personaSlectorItems/home.svg",
+    title:"Construction Service",
+    // description:'“Manage your renovation or repair crew — with timelines and updates.”'
 },{
     tag:"/personaSlectorItems/healthicons_electricity.svg",
     title:"Electrician Service",
@@ -20,9 +19,9 @@ const items = [{
     title:"Plumbing Service",
     // description:'“Leaky tap or blocked pipe? We&aposll get the right plumber to your door.”'
 },{
-    tag:"/personaSlectorItems/home.svg",
-    title:"Construction Service",
-    // description:'“Manage your renovation or repair crew — with timelines and updates.”'
+    tag:"/personaSlectorItems/heroicons_paint-brush-20-solid.svg",
+    title:"Painting Service",
+    // description:'“Schedule painters, compare quotes, and refresh your space — stress-free.”'
 },
 ];
 
@@ -56,9 +55,9 @@ function RenderPref(){
     return(
        <div className="md:w-[50%] w-full h-[320px] flex justify-center items-center flex-col md:mt-0">
            <div className="relative flex h-full w-full p-4 flex-row gap-4 md:gap-8 items-center justify-center">
-               
-               <div className="relative h-[80%] md:h-full w-full flex-[.45] rounded-[8px] text-white text-center overflow-hidden border border-[#ffffff30] bg-[#ffffff10] ">
-                   
+                
+                <div className="relative h-[80%] md:h-full w-full flex-[.45] rounded-[8px] text-white text-center overflow-hidden border border-[#ffffff30] bg-[#ffffff10] cursor-pointer transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)]">
+                    <a href="/services/">
                     <div className="w-full h-full flex flex-col items-center justify-between"> 
                         <div className="flex items-center justify-center flex-[.75] h-auto w-[100%]">
                            <span className="h-[70%] w-[50%] flex items-center justify-center rounded-2xl">
@@ -73,9 +72,12 @@ function RenderPref(){
                     </div>
                    
                    <Meteors/>
-               </div>
-   
-               <div className="relative h-[80%] md:h-full w-full flex-[.45] rounded-[8px] text-white text-center overflow-hidden border border-[#ffffff30] bg-[#ffffff10]">
+                   </a>
+                </div>
+                
+                
+                <div className="relative h-[80%] md:h-full w-full flex-[.45] rounded-[8px] text-white text-center overflow-hidden border border-[#ffffff30] bg-[#ffffff10] cursor-pointer transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)]">
+                    <a href="/services/#RealEstateOwners">
                     <div className="w-full h-full flex flex-col items-center justify-between"> 
                         <div className="flex items-center justify-center flex-[.75] h-auto w-[100%]">
                            <span className="h-[70%] w-[50%] flex items-center justify-center rounded-2xl">
@@ -89,8 +91,9 @@ function RenderPref(){
                        </div>
                     </div> 
                    <Meteors/>
-               </div>
-   
+                   </a>
+                </div>
+                
            </div>
        </div>
     )
@@ -100,8 +103,8 @@ function RenderCards(){
     return(
         <>
             {items.map((item, i) => (
-               
-               <div key={i} className="md:max-w-[300px] md:w-[260px] md:min-w-[220px] h-[250px] w-[100%] max-w-xl m-0 rounded-2xl cursor-pointer transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)]">
+               <a href="/services/#RealEstateOwners" key={i}>
+               <div className="md:max-w-[300px] md:w-[260px] md:min-w-[220px] h-[250px] w-[100%] max-w-xl m-0 rounded-2xl cursor-pointer transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)]">
                    <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff30] bg-[#ffffff10] px-4 py-8 shadow-xl">
                        <div className="flex items-center justify-center h-[100%] w-[100%]">
                            <span className="h-[80%] w-[40%] flex items-center justify-center rounded-2xl">
@@ -115,7 +118,7 @@ function RenderCards(){
                        <Meteors/>
                    </div>
                </div>
-           
+                </a>
            ))}
         </>
     );
@@ -124,6 +127,7 @@ function RenderCards(){
 
 function LastCard(){
     return(
+        <a href="/services/#services">
         <div className="md:max-w-[300px] md:w-[260px] md:min-w-[220px] h-[250px] w-[100%] max-w-xl cursor-pointer">
             <div className="relative w-full max-w-xl h-full">
                 <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff30] bg-[#ffffff10] transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)] px-4 py-8 shadow-xl">
@@ -143,5 +147,6 @@ function LastCard(){
                 </div>
             </div>
         </div>
+        </a>
     );
 }

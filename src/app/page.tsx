@@ -100,9 +100,6 @@
 import HomeClient from "@/components/HomeClient";
 
 
-// Page-specific metadata (this will override global metadata for this page)
-
-
 export default function HomePage() {
   return <HomeClient />;
 }

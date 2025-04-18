@@ -41,7 +41,7 @@ export default function HomeClient() {
         <div id="hero" className="w-full overflow-hidden">
           <HeroSection />
         </div>
-        <div id="persona" className="w-full">
+        <div id="clients" className="w-full">
           <PersonaPicker />
         </div>
         <div id="contact" className="w-full">
