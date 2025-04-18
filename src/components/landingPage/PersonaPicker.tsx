@@ -56,39 +56,42 @@ function RenderPref(){
        <div className="md:w-[50%] w-full h-[320px] flex justify-center items-center flex-col md:mt-0">
            <div className="relative flex h-full w-full p-4 flex-row gap-4 md:gap-8 items-center justify-center">
                
-               <div className="relative h-[80%] md:h-full w-full flex-[.45] rounded-[8px] text-white text-center overflow-hidden border border-[#ffffff30] bg-[#ffffff10] ">
-                   
-                    <div className="w-full h-full flex flex-col items-center justify-between"> 
-                        <div className="flex items-center justify-center flex-[.75] h-auto w-[100%]">
-                           <span className="h-[70%] w-[50%] flex items-center justify-center rounded-2xl">
-                            {/* add image here  */}
-                               <Image src="/personaSlectorItems/boy-front-color.svg" width={100} height={100} className="h-auto w-[80%]" alt="img"/>
-                           </span>
-                        </div>
-                        <div className="flex items-center justify-center flex-col flex-[.35] h-auto w-[100%]">
-                           <h1 className="text-center text-3xl mb-1">Agent</h1>
-                           <p className="text-center text-[12px] text-[#ffffff8a]"><i>i&apos;m an agent looking for clients</i></p>
-                       </div>
-                    </div>
-                   
-                   <Meteors/>
-               </div>
-   
-               <div className="relative h-[80%] md:h-full w-full flex-[.45] rounded-[8px] text-white text-center overflow-hidden border border-[#ffffff30] bg-[#ffffff10]">
-                    <div className="w-full h-full flex flex-col items-center justify-between"> 
-                        <div className="flex items-center justify-center flex-[.75] h-auto w-[100%]">
-                           <span className="h-[70%] w-[50%] flex items-center justify-center rounded-2xl">
+                <div className="relative h-[80%] md:h-full w-full flex-[.45] rounded-[8px] text-white text-center overflow-hidden border border-[#ffffff30] bg-[#ffffff10] transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)] px-4 py-8 shadow-xl">
+                    <a href="/services" className="w-full h-full">
+                        <div className="w-full h-full flex flex-col items-center justify-between"> 
+                            <div className="flex items-center justify-center flex-[.75] h-auto w-[100%]">
+                               <span className="h-[70%] w-[50%] flex items-center justify-center rounded-2xl">
                                 {/* add image here  */}
-                               <Image src="/personaSlectorItems/house_5033186 1.svg" width={100} height={100} className="h-auto w-[50%]" alt="img"/>
-                           </span>
-                       </div>
-                       <div className="flex items-center justify-center flex-col flex-[.35] h-auto w-[100%]">
-                           <h1 className="text-center text-3xl mb-1">Owner</h1>
-                           <p className="text-center text-[12px] text-[#ffffff8a]"><i>i&apos;m an owner looking for services</i></p>
-                       </div>
-                    </div> 
+                                   <Image src="/personaSlectorItems/boy-front-color.svg" width={100} height={100} className="h-auto w-[80%]" alt="img"/>
+                               </span>
+                            </div>
+                            <div className="flex items-center justify-center flex-col flex-[.35] h-auto w-[100%]">
+                               <h1 className="text-center text-3xl mb-1">Agent</h1>
+                               <p className="text-center text-[12px] text-[#ffffff8a]"><i>i&apos;m an agent looking for clients</i></p>
+                           </div>
+                        </div>
+                   
                    <Meteors/>
-               </div>
+                    </a>
+                </div>
+   
+                <div className="relative h-[80%] md:h-full w-full flex-[.45] rounded-[8px] text-white text-center overflow-hidden border border-[#ffffff30] bg-[#ffffff10] transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)] px-4 py-8 shadow-xl">
+                    <a href="/services" className="w-full h-full">
+                        <div className="w-full h-full flex flex-col items-center justify-between"> 
+                            <div className="flex items-center justify-center flex-[.75] h-auto w-[100%]">
+                               <span className="h-[70%] w-[50%] flex items-center justify-center rounded-2xl">
+                                    {/* add image here  */}
+                                   <Image src="/personaSlectorItems/house_5033186 1.svg" width={100} height={100} className="h-auto w-[50%]" alt="img"/>
+                               </span>
+                           </div>
+                           <div className="flex items-center justify-center flex-col flex-[.35] h-auto w-[100%]">
+                               <h1 className="text-center text-3xl mb-1">Owner</h1>
+                               <p className="text-center text-[12px] text-[#ffffff8a]"><i>i&apos;m an owner looking for services</i></p>
+                           </div>
+                        </div> 
+                        <Meteors/>
+                    </a>
+                </div>
    
            </div>
        </div>
@@ -99,8 +102,8 @@ function RenderCards(){
     return(
         <>
             {items.map((item, i) => (
-               
                <div key={i} className="md:max-w-[300px] md:w-[260px] md:min-w-[220px] h-[250px] w-[100%] max-w-xl m-0 rounded-2xl cursor-pointer transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)]">
+                   <a href="/services" className="relative w-full h-full">
                    <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff30] bg-[#ffffff10] px-4 py-8 shadow-xl">
                        <div className="flex items-center justify-center h-[100%] w-[100%]">
                            <span className="h-[80%] w-[40%] flex items-center justify-center rounded-2xl">
@@ -113,6 +116,7 @@ function RenderCards(){
                        </div>
                        <Meteors/>
                    </div>
+                   </a>
                </div>
            
            ))}
@@ -127,7 +131,9 @@ function LastCard(){
             <div className="relative w-full max-w-xl h-full">
                 <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff30] bg-[#ffffff10] transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)] px-4 py-8 shadow-xl">
                     <div className="relative flex h-full w-[100%] flex-col items-center justify-center">
-                    <Image src="/personaSlectorItems/healthicons_question.svg" width={10} height={20} className="h-auto md:w-[30%] border mt-10" alt="img"/>
+                    <span className="h-[80%] w-[40%] flex items-center justify-center rounded-2xl">
+                        <Image src="/personaSlectorItems/healthicons_question.svg" width={100} height={100} className="h-auto md:w-[50%] w-[100%] border mt-10" alt="img"/>
+                    </span>
                         <h1 className="md:text-[16px] text-[15px] mb-1 mt-10">Got something else ?</h1>
                         <p className="text-center text-[12px] text-[#ffffff8a] mb-4">“Tell us what you need — we&apos;ll find the best pro and handle the rest.”</p>
                         {/*---------------- Set button output--------------*/}
