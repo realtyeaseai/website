@@ -30,7 +30,7 @@ export function TopNavbar(){
       link: "/services", // Matches the id of ServicesGrid
     },
     {
-      name: "Persona",
+      name: "Clients",
       link: "/#persona", // Matches the id of PersonaPicker
     },
     // {
@@ -40,11 +40,11 @@ export function TopNavbar(){
     
     {
       name: "FAQ",
-      link: "#faq", // Matches the id of FAQ
+      link: "/#faq", // Matches the id of FAQ
     },
     {
       name: "Contact",
-      link: "#contact", // Matches the id of ContactUs
+      link: "/#contact", // Matches the id of ContactUs
     }
     // {
     //   name: "Footer",

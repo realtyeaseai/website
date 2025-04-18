@@ -19,7 +19,7 @@ export default function Services() {
     )
 }
 // SR no. accordingly -->
-// 1. real estate agent,2. real estate/property owners,3. state services,4. specialised services
+// (1.) real estate agent,(2.) real estate/property owners,(3.) ResalEstate services, (4.) specialised services
 
 const faqs = [
     [
@@ -103,6 +103,33 @@ const faqs = [
           </p>
         `,
       },
+    ],
+    [
+      {
+        question: "Web Development Services",
+        answer: 
+        `
+          <p>
+            Build and maintain websites, including e-commerce platforms and landing pages.
+          </p>
+        `,
+      },{
+        question: "Social Media Management Services",
+        answer: 
+        `
+          <p>
+            Create, schedule, and manage social media posts across various platforms.
+          </p>
+        `,
+      },{
+        question: "Manage Listings",
+        answer: 
+        `
+          <p>
+            Create and manage property listings on various platforms, including MLS and social media.
+          </p>
+        `,
+      }
     ]
     
 ]
@@ -114,7 +141,9 @@ function TopHeading(){
                 Our Services
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-center text-base font-normal text-neutral-300">
-            From managing listings to client communication, our trained virtual assistants handle your day-to-day tasks so you can focus on growing your business.
+            From managing and client communications to coordinating and administrative workflows, our virtual assistants adapt to your priorities.
+
+            <br/>No two businesses are alike—that&apos;s why every service we deliver is tailored to your unique goals, processes, and growth ambitions.
             </p>
         </div>
     );
@@ -124,14 +153,17 @@ function RenderedServices() {
     return (
       <div className="flex flex-col items-center justify-start w-full h-fit bg-[#010101]">
         <div className="rounded-xl min-h-[400px] w-[80%] flex flex-col gap-20 p-8 mt-12">
-            <div className="h-fit w-full">
+            <div className="h-fit w-full" id="RealEstateAgent">
                 <FirstBox/>
             </div>
-            <div className="h-fit w-full">
+            <div className="h-fit w-full" id="RealEstateOwners">
                 <SecondBox/>
             </div>
-            <div className="h-fit w-full">
+            <div className="h-fit w-full" id="services">
                 <ThirdBox/>
+            </div>
+            <div className="h-fit w-full" id="specialisedServices">
+                <FourthBox/>
             </div>
         </div>
       </div>
@@ -196,10 +228,10 @@ function SecondBox(){
             {/*-------------- text + FAQ -----------*/}
             <span className="w-full md:w-[50%] h-full flex flex-col">
               <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-start text-3xl font-bold text-transparent md:text-4xl">
-                Real Estate Virtual Assistant Services
+                Property Owners Virtual Assistant Services
               </h1>
               <p className="text-start font-normal text-neutral-400 mt-2">
-                Get Connected with verified assistants quickly and shortly
+                Have your own VAs that are ready to help at anytime
               </p>
               {/* FAQ */}
               <div className="w-full h-[80%] mt-4 flex gap-4 items-center justify-center flex-col">
@@ -226,10 +258,10 @@ function ThirdBox(){
             {/*-------------- text + FAQ -----------*/}
             <span className="w-full md:w-[50%] h-full flex flex-col">
               <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-start text-3xl font-bold text-transparent md:text-4xl">
-                Real Estate Virtual Assistant Services
+                  Services
               </h1>
               <p className="text-start font-normal text-neutral-400 mt-2">
-                Get Connected with verified assistants quickly and shortly
+                Need  Support? The AI finds trusted pros fast
               </p>
               {/* FAQ */}
               <div className="w-full h-[80%] mt-4 flex gap-4 items-center justify-center flex-col">
@@ -260,11 +292,51 @@ function ThirdBox(){
     )
 }
 
+function FourthBox(){
+  return(
+      <>
+        <div className="relative flex items-center justify-between md:flex-row flex-col gap-8 w-full h-[80%] bg-[#010101]">
+          {/*--------------- image --------------*/}
+          <span className="md:w-[50%] hidden md:flex w-full h-full items-center justify-center md:justify-start">
+            <Image
+              width={200}
+              height={200}
+              src="/ServicesItems/SecImage.svg"
+              alt=""
+              className="w-[70%] h-auto object-cover"
+            />
+          </span>
+          {/*-------------- text + FAQ -----------*/}
+          <span className="w-full md:w-[50%] h-full flex flex-col">
+            <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-start text-3xl font-bold text-transparent md:text-4xl">
+            Specialized Support Services
+            </h1>
+            <p className="text-start font-normal text-neutral-400 mt-2">
+              Need smthing else? The AI finds trusted pros fast
+            </p>
+            {/* FAQ */}
+            <div className="w-full h-[80%] mt-4 flex gap-4 items-center justify-center flex-col">
+              {faqs[3].map((item, i) => (
+                <DropdownCompo
+                  key={i}
+                  question={item.question}
+                  description={item.answer}
+                  width="w-full"
+                  height="h-auto"
+                />
+              ))}
+            </div>
+          </span>
+        </div>
+      </>
+  )
+}
+
 function BottomBox(){
   return(
     <div className="md:h-[380px] h-[600px] w-[96%] rounded-2xl border border-[#ffffff20] mt-4 hover:border-[#ffffff50] flex gap-4 items-center justify-center flex-col bg-[radial-gradient(circle_at_center,_#0072feb5,_#4883cc53,_#4883cc29,_#000)]">
       <span className="h-[50px] w-[50px] rounded-[4px] flex items-center justify-center">
-          <Image width={1000} height={1000} src="/contactUsItems/Mail.svg" alt="icon" className="w-[75%] h-auto"/>
+          <Image width={1000} height={1000} src="/contactUsItems/mail.svg" alt="icon" className="w-[75%] h-auto"/>
       </span>
       <h1 className="md:text-5xl text-2xl text-center"><b>Let&apos;s get to work together</b></h1>
       <p className="text-center text-[14px] text-[#ffffff8a]">Contact us now to know more details</p>

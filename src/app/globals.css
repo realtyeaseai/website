@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@theme inline {
+:root {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -79,3 +79,33 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Add this to globals.css */
+
+@keyframes typewriter {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 12ch; /* match number of characters */
+  }
+}
+
+@keyframes blinkText {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.typewriter-effect {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.1em solid white;
+  font-family: serif;
+  max-width: 0;
+  animation: typewriter 2.5s steps(11) forwards, blinkText 0.75s step-end infinite;
+}
+
+
+
