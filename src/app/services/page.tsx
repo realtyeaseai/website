@@ -4,6 +4,10 @@ import DropdownCompo from "@/components/ui/DropdownCompo";
 import Footer from "@/components/landingPage/Footer";
 
 export default function Services() {
+
+  // Page Load delay for 3 seconds -- to use this make the function async
+  // await new Promise((resolve) => setTimeout(resolve, 3000));
+
     return (
         <div className="relative w-full h-fit pb-8 flex flex-col justify-start items-center min-h-[100dvh] bg-[#010101] pt-28 md:pt-40">
             <TopNavbar/>
@@ -14,6 +18,8 @@ export default function Services() {
         </div>
     )
 }
+// SR no. accordingly -->
+// 1. real estate agent,2. real estate/property owners,3. state services,4. specialised services
 
 const faqs = [
     [
@@ -172,7 +178,6 @@ function FirstBox(){
         </>
     )
 }
-
 
 function SecondBox(){
     return(

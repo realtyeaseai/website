@@ -13,7 +13,7 @@ const items = [{
 },{
     tag:"/personaSlectorItems/ic_baseline-pest-control.svg",
     title:"Pest removal Service",
-    description:'“Don&apos;t bug out — we&apos;ll arrange quick, professional pest control near you.”'
+    description:"“Don't bug out — we'll arrange quick, professional pest control near you.”"
 },{
     tag:"/personaSlectorItems/map_plumber.svg",
     title:"Plumbing Service",

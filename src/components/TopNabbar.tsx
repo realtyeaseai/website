@@ -19,7 +19,7 @@ export function TopNavbar(){
   const navItems = [
     {
       name: "Home",
-      link: "#hero", // Matches the id of HeroSection
+      link: "/#hero", // Matches the id of HeroSection
     },
     {
       name: "About Us",
@@ -27,11 +27,11 @@ export function TopNavbar(){
     },
     {
       name: "Services",
-      link: "services", // Matches the id of ServicesGrid
+      link: "/services", // Matches the id of ServicesGrid
     },
     {
       name: "Persona",
-      link: "#persona", // Matches the id of PersonaPicker
+      link: "/#persona", // Matches the id of PersonaPicker
     },
     // {
     //   name: "Pricing",
