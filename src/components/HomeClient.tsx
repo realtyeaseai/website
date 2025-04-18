@@ -1,7 +1,6 @@
 "use client";
 import "../app/globals.css";
 
-import { useState, useEffect } from "react";
 import { TopNavbar } from "@/components/TopNabbar";
 import {
   HeroSection,
@@ -12,28 +11,6 @@ import {
 } from "./landingPage/lpExports";
 
 export default function HomeClient() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1800);
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="h-screen w-screen flex items-center justify-center bg-black text-white">
-        <p className="text-3xl italic font-light font-serif tracking-wide">
-          <span className="typewriter-effect">
-            RealtyEase
-          </span>
-        </p>
-      </div>
-    );
-  }
-  
-
   return (
     <div className="relative w-full h-screen">
       {/* -----------Overlay of dark color over the bg cloud video ------------ */}

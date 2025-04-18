@@ -110,8 +110,7 @@ function TopHeading(){
             <p className="mx-auto mt-6 max-w-xl text-center text-base font-normal text-neutral-300">
             From managing and client communications to coordinating and administrative workflows, our virtual assistants adapt to your priorities.
 
-            <p>No two businesses are alike—that&apos;s why every service we deliver is tailored to your unique goals, processes, and growth ambitions.
-            </p>
+            <br/>No two businesses are alike—that&apos;s why every service we deliver is tailored to your unique goals, processes, and growth ambitions.
             </p>
         </div>
     );
