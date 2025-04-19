@@ -71,7 +71,8 @@ export default function ContactForm() {
   // bg-gradient-to-bl from-violet-500 via-purple-800 to-indigo-900
 
   return (
-    <div className="bg-gradient-to-bl from-violet-500 via-purple-800 to-indigo-900 border border-[#ffffff50] min-h-[750px] w-full md:w-auto rounded-lg flex items-center justify-center flex-col p-6 text-white font-bold">
+    <div className="bg-[radial-gradient(circle_at_top_right,_#0072feb5,_#4883cc53,_#4883cc29,_#000)]
+ border border-[#ffffff50] min-h-[750px] w-full md:w-auto rounded-lg flex items-center justify-center flex-col p-6 text-white font-bold">
       <h2 className="text-3xl text-white mb-10">Get in Touch With Us</h2>
       <form onSubmit={handleSubmit} className="max-w-2xl w-full space-y-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -121,7 +122,7 @@ export default function ContactForm() {
                 type="button"
                 aria-pressed={form.reason === item}
                 className={`border border-black px-4 py-2 rounded-xl text-white ${
-                  form.reason === item ? 'border-2 border-black bg-green-900' : 'border-white'
+                  form.reason === item ? 'border-2 border-black bg-gradient-to-tl from-blue-400 to-blue-600' : 'border-white'
                 }`}
                 onClick={() => setForm({ ...form, reason: item })}
               >

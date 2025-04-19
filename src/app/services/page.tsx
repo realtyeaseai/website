@@ -80,7 +80,7 @@ const faqs = [
   ],
   [
     {
-      question: "Administrative Support",
+      question: "Construction/Rennovation Services",
       answer:
         `
           <p>
@@ -88,7 +88,7 @@ const faqs = [
           </p>
         `,
     }, {
-      question: "Customer Service",
+      question: "HVAC & Plumbing Services",
       answer:
         `
           <p>
@@ -96,7 +96,16 @@ const faqs = [
           </p>
         `,
     }, {
-      question: "Sales & Marketing",
+      question: "Plumbery & Electrical Services",
+      answer:
+        `
+          <p>
+            Manage social media, create marketing content, and assist with business development.
+          </p>
+        `,
+    },
+    {
+      question: "Pest control Services",
       answer:
         `
           <p>
@@ -163,9 +172,9 @@ function RenderedServices() {
         <div className="h-fit w-full" id="services">
           <ThirdBox />
         </div>
-        {/* <div className="h-fit w-full" id="specialisedServices">
+        <div className="h-fit w-full" id="specialisedServices">
                 <FourthBox/>
-            </div> */}
+            </div>
       </div>
     </div>
   );
@@ -178,10 +187,10 @@ function FirstBox() {
         {/*-------------- text + FAQ -----------*/}
         <span className="w-full md:w-[50%] h-full flex flex-col">
           <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-start text-3xl font-bold text-transparent md:text-4xl">
-            Real Estate Virtual Assistant Services
-            <span className="text-sm text-gray-600 bg-pink-100 px-2 py-0.5 rounded-xl ml-5 font-semibold">
-              #AGENT
-            </span>
+            Agent Virtual Assistant Services
+            <span className="text-sm text-gray-900 bg-yellow-500 px-2.5 py-1 rounded-xl ml-5 font-extrabold">
+    #REAL ESTATE
+  </span>
           </h1>
           <p className="text-start font-normal text-neutral-400 mt-2">
             Get Connected with verified assistants quickly and shortly
@@ -235,10 +244,10 @@ function SecondBox() {
         {/*-------------- text + FAQ -----------*/}
         <span className="w-full md:w-[50%] h-full flex flex-col">
           <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-start text-3xl font-bold text-transparent md:text-4xl">
-            Property Owners Virtual Assistant Services
-            <span className="text-sm text-gray-600 bg-green-100 px-2 py-0.5 rounded-xl ml-5 font-semibold">
-              #OWNER
-            </span>
+            Owner Virtual Assistant Services
+            <span className="text-sm text-gray-900 bg-green-500 px-2 py-0.5 rounded-xl ml-5 font-extrabold">
+    #PROPERTY OWNER
+  </span>
             {/* <span className="text-sm font-medium text-gray-600 bg-gray-100 px-2 py-0.5 rounded-xl ml-5">
     
   </span> */}
@@ -276,20 +285,20 @@ function ThirdBox() {
         {/*-------------- text + FAQ -----------*/}
         <span className="w-full md:w-[50%] h-full flex flex-col">
           <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-start text-3xl font-bold text-transparent md:text-4xl">
-            Specialized Support Services
-            <span className="text-sm text-gray-600 bg-green-100 px-2 py-0.5 rounded-xl ml-5 font-semibold">
-              #OWNER
-            </span>
-            <span className="text-sm text-gray-600 bg-pink-100 px-2 py-0.5 rounded-xl ml-5 font-semibold">
+            Real Estate Services
+            <span className="text-sm text-gray-900 bg-green-500 px-2 py-0.5 rounded-xl ml-5 font-extrabold">
+    #PROPERTY OWNER
+  </span>
+            {/* <span className="text-sm text-gray-600 bg-pink-100 px-2 py-0.5 rounded-xl ml-5 font-extrabold">
               #AGENT
-            </span>
+            </span> */}
           </h1>
           <p className="text-start font-normal text-neutral-400 mt-2">
             Get Any specialized support services you need
           </p>
           {/* FAQ */}
           <div className="w-full h-[80%] mt-4 flex gap-4 items-center justify-center flex-col">
-            {faqs[3].map((item, i) => (
+            {faqs[2].map((item, i) => (
               <DropdownCompo
                 key={i}
                 question={item.question}
@@ -319,54 +328,54 @@ function ThirdBox() {
   )
 }
 
-// function FourthBox(){
-//   return(
-//       <>
-//         <div className="relative flex items-center justify-between md:flex-row flex-col gap-8 w-full h-[80%] bg-[#010101]">
-//           {/*--------------- image --------------*/}
-//           <span className="md:w-[50%] hidden md:flex w-full h-full items-center justify-center md:justify-start">
-//             <Image
-//               width={200}
-//               height={200}
-//               src="/ServicesItems/SecImage.svg"
-//               alt=""
-//               className="w-[70%] h-auto object-cover"
-//             />
-//           </span>
-//           {/*-------------- text + FAQ -----------*/}
-//           <span className="w-full md:w-[50%] h-full flex flex-col">
-//             <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-start text-3xl font-bold text-transparent md:text-4xl">
-//             Specialized Support Services
-//             <span className="text-sm text-gray-600 bg-green-100 px-2 py-0.5 rounded-xl ml-5 font-semibold">
-//     #OWNER
-//   </span>
-//   <span className="text-sm text-gray-600 bg-pink-100 px-2 py-0.5 rounded-xl ml-5 font-semibold">
-//     #AGENT
-//   </span>
-//             </h1>
-//             <p className="text-start font-normal text-neutral-400 mt-2">
-//               Need smthing else? The AI finds trusted pros fast
-//             </p>
-//             {/* FAQ */}
-//             <div className="w-full h-[80%] mt-4 flex gap-4 items-center justify-center flex-col">
-//               {faqs[3].map((item, i) => (
-//                 <DropdownCompo
-//                   key={i}
-//                   question={item.question}
-//                   description={item.answer}
-//                   width="w-full"
-//                   height="h-auto"
-//                 />
-//               ))}
-//             </div>
-//             <Link href="/#contact" className="h-[50px] text-black w-full rounded-[4px] text-center flex items-center justify-center bg-[#ffffff] hover:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
-//                 Contact Us
-//               </Link>
-//           </span>
-//         </div>
-//       </>
-//   )
-// }
+function FourthBox(){
+  return(
+      <>
+        <div className="relative flex items-center justify-between md:flex-row flex-col gap-8 w-full h-[80%] bg-[#010101]">
+          {/*--------------- image --------------*/}
+          <span className="md:w-[50%] hidden md:flex w-full h-full items-center justify-center md:justify-start">
+            <Image
+              width={200}
+              height={200}
+              src="/ServicesItems/SecImage.svg"
+              alt=""
+              className="w-[70%] h-auto object-cover"
+            />
+          </span>
+          {/*-------------- text + FAQ -----------*/}
+          <span className="w-full md:w-[50%] h-full flex flex-col">
+            <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-start text-3xl font-bold text-transparent md:text-4xl">
+            Specialized Support Services
+            <span className="text-sm text-gray-900 bg-green-500 px-2 py-0.5 rounded-xl ml-5 font-extrabold">
+    #PROPERTY OWNER
+  </span>
+  <span className="text-sm text-gray-900 bg-yellow-500 px-2.5 py-1 rounded-xl ml-5 font-extrabold">
+    #REAL ESTATE AGENT
+  </span>
+            </h1>
+            <p className="text-start font-normal text-neutral-400 mt-2">
+              Need smthing else? The AI finds trusted pros fast
+            </p>
+            {/* FAQ */}
+            <div className="w-full h-[80%] mt-4 flex gap-4 items-center justify-center flex-col">
+              {faqs[3].map((item, i) => (
+                <DropdownCompo
+                  key={i}
+                  question={item.question}
+                  description={item.answer}
+                  width="w-full"
+                  height="h-auto"
+                />
+              ))}
+            </div>
+            <Link href="/#contact" className="h-[50px] text-black w-full rounded-[4px] text-center flex items-center justify-center bg-[#ffffff] hover:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
+                Contact Us
+              </Link>
+          </span>
+        </div>
+      </>
+  )
+}
 
 function BottomBox() {
   return (
