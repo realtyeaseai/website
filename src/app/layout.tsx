@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
-import LoaderWrapper from "@/components/Loader";
+// import LoaderWrapper from "@/components/Loader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,9 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-black dark:bg-black dark:text-white transition-colors duration-300`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-black dark:text-white transition-colors duration-300`}>
         <Toaster position="top-center" />
-        <LoaderWrapper>{children}</LoaderWrapper>
+        {children}
       </body>
     </html>
   );
