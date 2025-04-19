@@ -121,7 +121,7 @@ const faqs = [
 export default function FAQ() {
 
   return (
-    <div className="min-h-[100dvh] pt-24 w-full flex items-center justify-center bg-black">
+    <div className="min-h-fit pt-24 w-full flex items-center justify-center bg-black">
         <div className="w-[98%] flex items-start justify-center flex-col md:flex-row gap-4 p-4">
             <TextBoxWithContactBtn/>
             <RenderFaqs/>            
@@ -133,7 +133,7 @@ export default function FAQ() {
 
 function TextBoxWithContactBtn(){
   return(
-      <div className="w-full min-h-[230px] pl-4 md:basis-[45%]">
+      <div className="w-full min-h-fit pb-20 pl-4 md:basis-[45%]">
 
         {/* text  */}
         <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-3xl font-bold text-transparent md:text-4xl pt-30 md:ml-6 ">
@@ -166,7 +166,7 @@ function RenderFaqs(){
     };
 
   return(
-    <div className="w-full min-h-[700px] md:basis-[55%]">
+    <div className="w-full min-h-fit md:basis-[55%]">
       <div className="max-w-2xl mx-auto p-4 text-[#ffffffcc]">
       {/* <h1 className="text-3xl font-bold mb-6 text-start">Frequently Asked Questions</h1> */}
         <div className="space-y-4">
