@@ -4,7 +4,7 @@ import Link from "next/link";
 import FunFactCounter from "@/components/utilities/FunFactCounter";
 // import Team from "@/components/utilities/Team";
 import { TestimonialSlider1 } from "@/components/utilities/TestimonialSlider";
-import { WorkingProcess2 } from "@/components/utilities/WorkingProcess2";
+// import { WorkingProcess2 } from "@/components/utilities/WorkingProcess2";
 import { TopNavbar } from "@/components/TopNabbar";
 import MyGlobe from "@/components/myGlobe";
 
@@ -46,7 +46,7 @@ export default function AboutUs(){
       </section>
   
       {/* About Section 2 - The Founder Story - Who we Are */}
-      <section className="p-5 py-10 h-[80dvh] md:py-20 flex items-center justify-center bg-neutral-900 text-white text-center md:text-left">
+      <section className="p-5 py-10 md:py-20 flex rounded-[24px_24px_0_0] items-center justify-center bg-neutral-900 text-white text-center md:text-left">
         <div className="container mx-auto grid md:grid-cols-2 gap-10 py-10 px-10 items-center">
           <div className="flex flex-col items-center md:items-start">
             <h2 className="text-xl md:text-2xl font-bold mb-4 text-center md:text-left">
@@ -75,7 +75,7 @@ export default function AboutUs(){
       </section>
 
       {/* About Section 4 - Why Realty Ease AI? */}
-      <section className="p-3 py-30 bg-neutral-900 text-white">
+      <section className="p-3 py-30 bg-neutral-900 text-white rounded-[24px_24px_0_0]">
         <div className="container mx-auto grid md:grid-cols-2 gap-10 py-10 px-10 items-center">
           
         <div>
