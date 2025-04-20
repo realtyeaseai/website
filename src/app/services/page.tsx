@@ -343,7 +343,7 @@ function FourthBox(){
             />
           </span>
           {/*-------------- text + FAQ -----------*/}
-          <span className="w-full md:w-[50%] h-full flex flex-col">
+          <span className="w-full md:w-[60%] h-full flex flex-col">
             <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-start text-3xl font-bold text-transparent md:text-4xl">
             Specialized Support Services
             <span className="text-sm text-gray-900 bg-green-500 px-2 py-0.5 rounded-xl ml-5 font-extrabold">
