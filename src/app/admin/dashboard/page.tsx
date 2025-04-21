@@ -9,6 +9,7 @@ interface Contact {
   _id: string
   firstName: string
   lastName: string
+  cName : string
   email: string
   phone: string
   reason: string
@@ -78,7 +79,7 @@ export default function Dashboard() {
         </motion.h1>
         <motion.button
           onClick={handleLogout}
-          className="bg-red-600 hover:bg-red-700 px-4 py-2 rounded"
+          className="bg-red-600 hover:bg-red-700 px-4 py-2 rounded cursor-pointer"
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.3 }}
@@ -113,6 +114,7 @@ export default function Dashboard() {
             >
               <p><strong>Name:</strong> {contact.firstName} {contact.lastName}</p>
               <p><strong>Email:</strong> {contact.email}</p>
+              <p><strong>cName:</strong> {contact.cName}</p>
               <p><strong>Phone:</strong> {contact.phone}</p>
               <p><strong>Reason:</strong> {contact.reason}</p>
               <p><strong>Message:</strong> {contact.message}</p>

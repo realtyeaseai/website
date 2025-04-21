@@ -16,7 +16,7 @@ export default function AdminLogin() {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault()
-    if (password === 'godmode') {
+    if (password === 'admin1234') {
       localStorage.setItem('admin-auth', 'true')
       router.push('/admin/dashboard')
     } else {
@@ -38,7 +38,7 @@ export default function AdminLogin() {
         {error && <p className="text-red-500 text-sm mb-2">{error}</p>}
         <button
           type="submit"
-          className="w-full bg-blue-600 hover:bg-blue-700 p-2 rounded text-white font-semibold"
+          className="w-full bg-blue-600 hover:bg-blue-700 p-2 rounded text-white font-semibold cursor-pointer transition duration-200"
         >
           Login
         </button>

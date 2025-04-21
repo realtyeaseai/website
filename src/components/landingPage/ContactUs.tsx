@@ -1,9 +1,13 @@
 'use client'
 import Image from "next/image";
 import ContactForm from "../ContactForm";
+import ScheduleCallForm from "../utilities/ScheduleCallForm";
+import { useState } from "react";
+
 
 
 export default function ContactUs() {
+  const [activeForm, setActiveForm] = useState<"message" | "call">("message");
 
   return (
     <div className=" bg-black min-h-[100dvh] pt-20 w-full flex items-center justify-evenly flex-col ">
@@ -77,24 +81,32 @@ export default function ContactUs() {
     </p>
 
     <div className="flex flex-col md:flex-row gap-4 mt-8">
-      <button
-        type="button"
-        className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-2xl transition duration-300"
-      >
-        Schedule Call
-      </button>
+    <button
+  type="button"
+  onClick={() => setActiveForm("call")}
+  className={`bg-indigo-600 hover:bg-indigo-700 cursor-pointer text-white font-semibold px-6 py-3 rounded-2xl transition duration-300 ${
+    activeForm === "call" ? "ring-2 ring-white" : ""
+  }`}
+>
+  Schedule Call
+</button>
 
-      <button
-        type="submit"
-        className="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-2xl transition duration-300"
-      >
-        Send Message
-      </button>
+<button
+  type="button"
+  onClick={() => setActiveForm("message")}
+  className={`bg-green-600 hover:bg-green-700 cursor-pointer text-black font-semibold px-6 py-3 rounded-2xl transition duration-300 ${
+    activeForm === "message" ? "ring-2 ring-white" : ""
+  }`}
+>
+  Send Message
+</button>
+
     </div>
   </div>
 
         {/* <div className="bg-black border border-[#ffffff50] h-[600px] w-full md:w-auto rounded-lg"> */}
-        <ContactForm />
+        {activeForm === "message" ? <ContactForm /> : <ScheduleCallForm />}
+
         {/* </div> */}
       </div>
     </div>

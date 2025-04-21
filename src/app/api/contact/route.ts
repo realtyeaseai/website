@@ -4,7 +4,7 @@ import { connectToDatabase } from '@/lib/mongodb';
 
 export async function POST(req: Request) {
   const body = await req.json();
-  const { firstName, lastName, email, phone, reason, message } = body;
+  const { firstName, lastName, email, phone, reason, message , cName} = body;
 
   if (!firstName || !lastName || !email || !phone || !reason || !message) {
     return NextResponse.json({ message: 'Missing required fields' }, { status: 400 });
@@ -15,6 +15,7 @@ export async function POST(req: Request) {
     const result = await db.collection('contacts').insertOne({
       firstName,
       lastName,
+      cName,
       email,
       phone,
       reason,

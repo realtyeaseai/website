@@ -142,7 +142,7 @@ export default function ContactForm() {
               placeholder="Ex. Co. M-Dash"
               id='cName'
               className="input w-full p-3 border rounded-[8px]"
-              value={form.phone}
+              value={form.cName}
               onChange={(e) => setForm({ ...form, cName: e.target.value })}
               required
             />
@@ -157,7 +157,7 @@ export default function ContactForm() {
                 key={item}
                 type="button"
                 aria-pressed={form.reason === item}
-                className={`border border-black px-4 py-2 rounded-[8px] text-white ${
+                className={`border border-black px-4 py-2 rounded-[8px] cursor-pointer text-white ${
                   form.reason === item ? 'border-2 border-black bg-gradient-to-tl from-blue-400 to-blue-600' : 'border-white'
                 }`}
                 onClick={() => setForm({ ...form, reason: item })}
@@ -180,7 +180,7 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={loading}
-            className="bg-white text-neutral-900 w-full px-6 py-3 rounded-md font-medium disabled:opacity-60"
+            className="bg-white text-neutral-900 w-full px-6 py-3 rounded-md font-medium disabled:opacity-60 cursor-pointer transition duration-300 hover:bg-neutral-900 hover:text-white"
           >
             {loading ? 'Sending...' : 'Send Message'}
           </button>
