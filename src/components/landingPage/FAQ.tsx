@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 // -------------------------------------------------Content-------------------------------------------------------- 
 
@@ -140,7 +141,7 @@ function TextBoxWithContactBtn(){
         Got Questions? We&apos;ve Got Answers!
         </h1>
         <p className="mx-auto mt-2 max-w-xl text-base font-normal text-neutral-300 md:ml-6 ">
-        Explore our frequently asked questions below to find clarity on our services, processes, and everything in between. Can&apos;t find what you&apos;re looking for? <a href="/#contact" className="text-green-500 font-semibold">Contact us</a> – we&apos;re always here to help!
+        Explore our frequently asked questions below to find clarity on our services, processes, and everything in between. Can&apos;t find what you&apos;re looking for? <Link href="/#contact" className="text-green-500 font-semibold">Contact us</Link> – we&apos;re always here to help!
 
         </p>
 
