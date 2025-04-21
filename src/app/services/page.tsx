@@ -343,22 +343,23 @@ function FourthBox(){
             />
           </span>
           {/*-------------- text + FAQ -----------*/}
-          <span className="w-full md:w-[50%] h-full flex flex-col">
+          <span className="w-full md:w-[70%] h-full flex flex-col">
             <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-start text-3xl font-bold text-transparent md:text-4xl">
             Specialized Support Services
-            <span className="text-sm text-gray-900 bg-green-500 px-2 py-0.5 rounded-xl ml-5 font-extrabold">
-    #PROPERTY OWNER
-  </span>
-  <span className="text-sm text-gray-900 bg-yellow-500 px-2.5 py-1 rounded-xl ml-5 font-extrabold">
-    #AGENT
-  </span>
-  <span className="text-sm text-gray-900 bg-pink-100 px-2.5 py-1 rounded-xl ml-5 font-extrabold">
-    #SERVICE PROVIDER
-  </span>
             </h1>
             <p className="text-start font-normal text-neutral-400 mt-2">
               Need smthing else? The AI finds trusted pros fast
             </p>
+            <div className="flex flex-row items-center justify-start gap-2 mt-4 text-center">
+            <span className="text-sm text-gray-900 bg-green-500 px-2 py-1 rounded-xl ml-5 font-extrabold w-[185px] text-center">
+    #PROPERTY OWNER
+  </span>
+  <span className="text-sm text-gray-900 bg-yellow-500 px-2.5 py-1 rounded-xl ml-5 font-extrabold w-[80px]">
+    #AGENT
+  </span>
+  <span className="text-sm text-gray-900 bg-pink-100 px-2.5 py-1.5 rounded-xl ml-5 font-extrabold w-[185px]">
+    #SERVICE PROVIDER
+  </span></div>
             {/* FAQ */}
             <div className="w-full h-[80%] mt-4 flex gap-4 items-center justify-center flex-col">
               {faqs[3].map((item, i) => (

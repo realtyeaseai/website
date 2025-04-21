@@ -33,7 +33,7 @@ export function TopNavbar(){
     },
     {
       name: "Clients",
-      link: "/#persona", // Matches the id of PersonaPicker
+      link: "/#clients", // Matches the id of PersonaPicker
     },
     // {
     //   name: "Pricing",
