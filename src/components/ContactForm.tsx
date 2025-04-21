@@ -14,7 +14,7 @@ export default function ContactForm() {
 
   const [loading, setLoading] = useState(false);
 
-  const reasons = ['Agent', 'Property owner', 'Service Providers', 'Others'];
+  const reasons = ['Agent', 'Property owner', 'Service Providers', 'Other'];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

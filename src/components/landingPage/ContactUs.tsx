@@ -70,10 +70,29 @@ export default function ContactUs() {
 
       {/* ------------------ Grid to Conatct --------------- */}
       <div id="contact" className="grid grid-cols-1 md:grid-cols-[1.5fr_2fr] gap-4 w-full md:w-[98%] p-4">
-        <div className="h-[600px] w-full md:w-auto flex justify-center items-center">
-          {/* <ContactInfo /> */}
-          <p className="text-4xl text-white"><span className="text-green-400 font-semibold italic">Have a Question ?</span> <br/> You&apos;re just a <br/> Message Away!</p>
-        </div>
+  <div className="h-[600px] w-full md:w-auto flex flex-col justify-center items-center text-center">
+    <p className="text-4xl text-white">
+      <span className="text-green-400 font-semibold italic">Have a Question ?</span><br />
+      You&apos;re just a <br /> Message Away!
+    </p>
+
+    <div className="flex flex-col md:flex-row gap-4 mt-8">
+      <button
+        type="button"
+        className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-2xl transition duration-300"
+      >
+        Schedule Call
+      </button>
+
+      <button
+        type="submit"
+        className="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-2xl transition duration-300"
+      >
+        Send Message
+      </button>
+    </div>
+  </div>
+
         {/* <div className="bg-black border border-[#ffffff50] h-[600px] w-full md:w-auto rounded-lg"> */}
         <ContactForm />
         {/* </div> */}

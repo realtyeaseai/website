@@ -104,7 +104,7 @@ function RenderCards(){
         <>
             {items.map((item, i) => (
                <a href="/services/#RealEstateOwners" key={i}>
-               <div className="md:max-w-[300px] md:w-[260px] md:min-w-[220px] h-[250px] w-[100%] max-w-xl m-0 rounded-2xl cursor-pointer transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)]">
+               <div className="md:max-w-[300px] md:w-[300px] h-[270px] w-[100%] max-w-xl m-0 rounded-2xl cursor-pointer transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)]">
                    <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff30] bg-[#ffffff10] px-4 py-8 shadow-xl">
                        <div className="flex items-center justify-center h-[100%] w-[100%]">
                            <span className="h-[80%] w-[40%] flex items-center justify-center rounded-2xl">
@@ -128,11 +128,11 @@ function RenderCards(){
 function LastCard(){
     return(
         <a href="/services/#services">
-        <div className="md:max-w-[300px] md:w-[260px] md:min-w-[220px] h-[250px] w-[100%] max-w-xl cursor-pointer">
+        <div className="md:max-w-[300px] md:w-[300px] h-[270px] w-[100%] max-w-xl cursor-pointer">
             <div className="relative w-full max-w-xl h-full">
                 <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff30] bg-[#ffffff10] transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)] px-4 py-8 shadow-xl">
                     <div className="relative flex h-full w-[100%] flex-col items-center justify-center">
-                    <Image src="/personaSlectorItems/healthicons_question.svg" width={10} height={20} className="h-auto md:w-[30%] border mt-10" alt="img"/>
+                    <Image src="/personaSlectorItems/healthicons_question.svg" width={40} height={20} className="h-auto md:w-[30%] border mt-10" alt="img"/>
                         <h1 className="md:text-[16px] text-[15px] mb-1 mt-10">Got something else ?</h1>
                         <p className="text-center text-[12px] text-[#ffffff8a] mb-4">“Tell us what you need — we&apos;ll find the best pro and handle the rest.”</p>
                         {/*---------------- Set button output--------------*/}
