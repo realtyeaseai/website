@@ -32,7 +32,7 @@ const faqs = [
     `,
   },
   {
-    question: "How do I get started with hiring a Virtual Assistant?",
+    question: "How do I get started with onboarding a Virtual Assistant?",
     answer: `
       <p>
         To get started, simply <b>contact us</b> via our website or fill out our <b>online questionnaire</b>. We will match you with a VA based on your specific needs. Afterward, we will schedule a consultation to discuss the scope of work.
@@ -40,7 +40,7 @@ const faqs = [
     `,
   },
   {
-    question: "What are the benefits of hiring a Virtual Assistant?",
+    question: "What are the benefits of onboarding a Virtual Assistant?",
     answer: `
       <p>
         Some key benefits include:
@@ -54,7 +54,7 @@ const faqs = [
     `,
   },
   {
-    question: "How much does it cost to hire a Virtual Assistant?",
+    question: "How much is it to invest in a Virtual Assistant?",
     answer: `
       <p>
         The cost of hiring a VA depends on several factors:

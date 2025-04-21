@@ -44,7 +44,7 @@ export default function HomeClient() {
         <div id="clients" className="w-full">
           <PersonaPicker />
         </div>
-        <div id="contact" className="w-full">
+        <div className="w-full">
           <ContactUs />
         </div>
         <div id="faq" className="w-full">

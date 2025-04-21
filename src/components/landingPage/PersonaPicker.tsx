@@ -4,23 +4,23 @@ import Image from "next/image";
 // edit this for top servicer 5 grid images 
 const items = [{
     tag:"/personaSlectorItems/home.svg",
-    title:"Construction Service",
+    title:"Construction/Rennovation",
     // description:'“Manage your renovation or repair crew — with timelines and updates.”'
 },{
     tag:"/personaSlectorItems/healthicons_electricity.svg",
-    title:"Electrician Service",
+    title:"Electrician",
     // description:'“Let us book certified electricians for installations, fixes, and safety checks.”'
 },{
     tag:"/personaSlectorItems/ic_baseline-pest-control.svg",
-    title:"Pest removal Service",
+    title:"Pest Control",
     // description:'“Don&apos;t bug out — we&apos;ll arrange quick, professional pest control near you.”'
 },{
     tag:"/personaSlectorItems/map_plumber.svg",
-    title:"Plumbing Service",
+    title:"Plumbing",
     // description:'“Leaky tap or blocked pipe? We&aposll get the right plumber to your door.”'
 },{
     tag:"/personaSlectorItems/heroicons_paint-brush-20-solid.svg",
-    title:"Painting Service",
+    title:"Painting",
     // description:'“Schedule painters, compare quotes, and refresh your space — stress-free.”'
 },
 ];
@@ -35,11 +35,10 @@ export default function PersonaPicker(){
 
             <RenderPref/>
             
-            {/* <section className="border flex items-center justify-center flex-col pb-10 px-20 rounded-2xl"> */}
-                <div className="md:w-[80%] w-full flex justify-center items-center flex-col mt-8">
-                    <h1 className="w-[70%] m-2 py-4 px-2 text-4xl rounded-[8px] text-white text-center ">Require Services ?</h1>
-                    {/* border border-[#ffffff80] bg-[#ffffff10]  */}
-                </div>
+            <div className="md:w-[80%] w-full flex justify-center items-center flex-col mt-8">
+                <h1 className="w-[70%] m-2 py-4 px-2 text-4xl rounded-[8px] text-white text-center ">Service Providers</h1>
+                {/* border border-[#ffffff80] bg-[#ffffff10]  */}
+            </div>
 
                 {/* ------------------------ Cards ------------------------ */} 
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-6 place-items-center m-2 md:m-0">
