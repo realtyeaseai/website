@@ -17,8 +17,8 @@ export default function ContactUs() {
             alt="icon"
             className="w-[75%] h-auto" />
         </span>
-        <h1 className="md:text-5xl text-2xl text-center"><b>We&apos;d love to hear from you.</b></h1>
-        <h1 className="text-center text-[14px] text-[#ffffff8a]">Here&apos;s what some of our satisfied <span className="">user&apos;s</span> have said about us.</h1>
+        <h1 className="md:text-4xl text-2xl text-center"><b>Here&apos;s what some of our <span className="text-green-400"> satisfied user&apos;s</span> have <br /> said about us.</b></h1>
+        {/* <p className="text-center text-[14px] text-[#ffffff8a]">Here&apos;s what some of our satisfied <span className="">user&apos;s</span> have said about us.</p> */}
 
         <div className="flex items-center justify-center flex-col md:flex-row gap-8 h-[220px] md:h-[20%] w-[80%] md:mt-0">
           <div className=" flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15] hover:bg-gray-900">
@@ -26,21 +26,21 @@ export default function ContactUs() {
               <Image src="/contactUsItems/Clock.svg" width={30}
                 height={30} alt="Clock" />
             </span>
-            24/7 Assistance
+              Efficient
           </div>
           <div className="flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15] hover:bg-gray-900">
             <span>
               <Image src="/contactUsItems/star.svg" width={30}
                 height={30} alt="Star" />
             </span>
-            Quick Ai Solutions
+            Supportive
           </div>
           <div className="flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15] hover:bg-gray-900">
             <span>
               <Image src="/contactUsItems/moneyBag.svg" width={30}
                 height={30} alt="bag" />
             </span>
-            Cost Effective
+              Reliable 
           </div>
           {/* <div className="flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15] hover:bg-gray-900">
             <span>

@@ -40,13 +40,14 @@ export default function PersonaPicker(){
                 {/* border border-[#ffffff80] bg-[#ffffff10]  */}
             </div>
 
-            {/* ------------------------ Cards ------------------------ */} 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-6 place-items-center m-2 md:m-0">
-                
-                <RenderCards/>
-                <LastCard/>
-                
-            </div>
+                {/* ------------------------ Cards ------------------------ */} 
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-6 place-items-center m-2 md:m-0">
+
+                    <RenderCards/>
+                    <LastCard/>
+
+                </div>
+            {/* </section> */}
         </div>
     );
 }
