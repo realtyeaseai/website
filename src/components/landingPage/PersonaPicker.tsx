@@ -35,18 +35,20 @@ export default function PersonaPicker(){
 
             <RenderPref/>
             
-            <div className="md:w-[80%] w-full flex justify-center items-center flex-col mt-8">
-                <h1 className="w-[70%] m-2 py-4 px-2 text-4xl rounded-[8px] text-white text-center ">Services</h1>
-                {/* border border-[#ffffff80] bg-[#ffffff10]  */}
-            </div>
+            {/* <section className="border flex items-center justify-center flex-col pb-10 px-20 rounded-2xl"> */}
+                <div className="md:w-[80%] w-full flex justify-center items-center flex-col mt-8">
+                    <h1 className="w-[70%] m-2 py-4 px-2 text-4xl rounded-[8px] text-white text-center ">Require Services ?</h1>
+                    {/* border border-[#ffffff80] bg-[#ffffff10]  */}
+                </div>
 
-            {/* ------------------------ Cards ------------------------ */} 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-6 place-items-center m-2 md:m-0">
-                
-                <RenderCards/>
-                <LastCard/>
-                
-            </div>
+                {/* ------------------------ Cards ------------------------ */} 
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-6 place-items-center m-2 md:m-0">
+
+                    <RenderCards/>
+                    <LastCard/>
+
+                </div>
+            {/* </section> */}
         </div>
     );
 }

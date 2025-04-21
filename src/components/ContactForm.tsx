@@ -10,6 +10,7 @@ export default function ContactForm() {
     phone: '',
     message: '',
     reason: '',
+    cName: '',
   });
 
   const [loading, setLoading] = useState(false);
@@ -59,6 +60,7 @@ export default function ContactForm() {
         phone: '',
         message: '',
         reason: '',
+        cName: '',
       });
     } catch (err: unknown) {
       console.error('❌ Error:', err);
@@ -74,54 +76,88 @@ export default function ContactForm() {
     <div className="bg-[radial-gradient(circle_at_top_right,_#0072feb5,_#4883cc53,_#4883cc29,_#000)]
  border border-[#ffffff50] min-h-[750px] w-full md:w-auto rounded-lg flex items-center justify-center flex-col p-6 text-white font-bold">
       <h2 className="text-3xl text-white mb-10">Get in Touch With Us</h2>
-      <form onSubmit={handleSubmit} className="max-w-2xl w-full space-y-12">
+      <form onSubmit={handleSubmit} className="max-w-2xl w-full space-y-8">
+
+        {/*----------------- Name Block ------------- */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <input
-            type="text"
-            placeholder="First Name"
-            className="input p-3 border rounded-2xl"
-            value={form.firstName}
-            onChange={(e) => setForm({ ...form, firstName: e.target.value })}
-            required
-          />
-          <input
-            type="text"
-            placeholder="Last Name"
-            className="input p-3 border rounded-2xl"
-            value={form.lastName}
-            onChange={(e) => setForm({ ...form, lastName: e.target.value })}
-            required
-          />
+          <label htmlFor="fname" className="text-white flex flex-col">
+            <span className='w-full pb-2 text-[16px]'>First Name</span>
+            <input
+              type="text"
+              placeholder="Jane"
+              id='fname'
+              className="input p-3 border rounded-[8px]"
+              value={form.firstName}
+              onChange={(e) => setForm({ ...form, firstName: e.target.value })}
+              required
+            />
+          </label>
+          <label htmlFor="lname" className="text-white pb-2 flex flex-col">
+            <span className='w-full pb-2 text-[16px]'>Last Name</span>
+            <input
+              type="text"
+              placeholder="Doe"
+              id='lname'
+              className="input p-3 border rounded-[8px]"
+              value={form.lastName}
+              onChange={(e) => setForm({ ...form, lastName: e.target.value })}
+              required
+            />
+          </label>
+
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <input
-            type="email"
-            placeholder="Ex. john.doe@gmail.com"
-            className="input p-3 border rounded-2xl"
-            value={form.email}
-            onChange={(e) => setForm({ ...form, email: e.target.value })}
-            required
-          />
-          <input
-            type="tel"
-            placeholder="Phone Number"
-            className="input w-full p-3 border rounded-2xl"
-            value={form.phone}
-            onChange={(e) => setForm({ ...form, phone: e.target.value })}
-            required
-          />
+          <label htmlFor="email" className="text-white pb-2 flex flex-col">
+            <span className='w-full pb-2 text-[16px]'>Email</span>
+            <input
+              type="email"
+              placeholder="Ex. john.doe@gmail.com"
+              id='email'
+              className="input p-3 border rounded-[8px]"
+              value={form.email}
+              onChange={(e) => setForm({ ...form, email: e.target.value })}
+              required
+            />
+          </label>
+          <label htmlFor="pNumber" className="text-white pb-2 flex flex-col">
+            <span className='w-full pb-2 text-[16px]'>Phone Number</span>
+            <input
+              type="tel"
+              placeholder="Phone Number"
+              id='pNumber'
+              className="input w-full p-3 border rounded-[8px]"
+              value={form.phone}
+              onChange={(e) => setForm({ ...form, phone: e.target.value })}
+              required
+            />
+          </label>
+        </div>
+
+        <div className=''>
+          <label htmlFor="cName" className="text-white pb-2 flex flex-col">
+            <span className='w-full pb-2 text-[16px]'>Company Name</span>
+            <input
+              type="text"
+              placeholder="Ex. Co. M-Dash"
+              id='cName'
+              className="input w-full p-3 border rounded-[8px]"
+              value={form.phone}
+              onChange={(e) => setForm({ ...form, cName: e.target.value })}
+              required
+            />
+          </label>
         </div>
 
         <div>
-          <label className="text-sm text-white mb-2 block">Who are you?</label>
+          <label className="text-[16px] text-white pb-2 block">Who are you?</label>
           <div className="flex gap-4 flex-wrap">
             {reasons.map((item) => (
               <button
                 key={item}
                 type="button"
                 aria-pressed={form.reason === item}
-                className={`border border-black px-4 py-2 rounded-xl text-white ${
+                className={`border border-black px-4 py-2 rounded-[8px] text-white ${
                   form.reason === item ? 'border-2 border-black bg-gradient-to-tl from-blue-400 to-blue-600' : 'border-white'
                 }`}
                 onClick={() => setForm({ ...form, reason: item })}
@@ -133,18 +169,18 @@ export default function ContactForm() {
         </div>
 
         <textarea
-          placeholder="Type your message here.."
-          className="input h-32 w-full border rounded-2xl p-2"
+          placeholder="Type your message here ..."
+          className="input min-h-32 w-full border rounded-[4px] p-2 overflow-auto no-scrollbar"
           value={form.message}
           onChange={(e) => setForm({ ...form, message: e.target.value })}
           required
         />
 
-        <div className="flex justify-end">
+        <div className="flex mb-4 justify-center">
           <button
             type="submit"
             disabled={loading}
-            className="bg-white text-neutral-900 px-6 py-3 rounded-md font-medium disabled:opacity-60"
+            className="bg-white text-neutral-900 w-full px-6 py-3 rounded-md font-medium disabled:opacity-60"
           >
             {loading ? 'Sending...' : 'Send Message'}
           </button>
@@ -244,7 +280,7 @@ export default function ContactForm() {
 
 //         {/* Form */}
 //         <div className="md:w-1/2 p-8">
-//           <h2 className="text-2xl md:text-3xl font-bold mb-2">Send us a message</h2>
+//           <h2 className="text-2xl md:text-3xl font-bold pb-2">Send us a message</h2>
 //           <p className="text-gray-400 mb-6">
 //             Your satisfaction is our top priority, and we are committed to providing exceptional service and support
 //           </p>

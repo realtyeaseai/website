@@ -81,7 +81,7 @@ export default function AboutUs(){
         <div>
             <h4 className="text-2xl font-semibold mb-4 text-center md:text-start">Why Realty Ease AI?</h4>
             <p className="mb-6 text-neutral-400 text-start">
-            Rooted in our Dominican heritage and first-generation American experience, we understand the value of hard work, community, and innovation. Realty Ease AI isn’t just a service provider—we’re a partner dedicated to helping real estate professionals thrive. Whether it’s managing administrative tasks or facilitating connections with top-tier service providers, we’re here to simplify your operations and elevate your success.
+            Rooted in our Dominican heritage and first-generation American experience, we understand the value of hard work, community, and innovation. Realty Ease AI isn&apos;t just a service provider—we&apos;re a partner dedicated to helping real estate professionals thrive. Whether it&apos;s managing administrative tasks or facilitating connections with top-tier service providers, we&apos;re here to simplify your operations, elevate your experience, and foster success.
               <br/><br/> ~ Kathy Tiburcio & Eyandra Molina
               <br/> ~ Co-Founders, Realty Ease AI
             </p>
