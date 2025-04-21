@@ -80,7 +80,7 @@ const faqs = [
   ],
   [
     {
-      question: "Construction/Rennovation Services",
+      question: "Construction/Rennovation",
       answer:
         `
           <p>
@@ -132,7 +132,7 @@ const faqs = [
           </p>
         `,
     }, {
-      question: "Manage Listings",
+      question: "Business Development Services",
       answer:
         `
           <p>
@@ -187,9 +187,9 @@ function FirstBox() {
         {/*-------------- text + FAQ -----------*/}
         <span className="w-full md:w-[50%] h-full flex flex-col">
           <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-start text-3xl font-bold text-transparent md:text-4xl">
-            Agent Virtual Assistant Services
+            Virtual Assistant Service
             <span className="text-sm text-gray-900 bg-yellow-500 px-2.5 py-1 rounded-xl ml-5 font-extrabold">
-    #REAL ESTATE
+    #AGENT
   </span>
           </h1>
           <p className="text-start font-normal text-neutral-400 mt-2">
@@ -244,7 +244,7 @@ function SecondBox() {
         {/*-------------- text + FAQ -----------*/}
         <span className="w-full md:w-[50%] h-full flex flex-col">
           <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-start text-3xl font-bold text-transparent md:text-4xl">
-            Owner Virtual Assistant Services
+            Virtual Assistant Services
             <span className="text-sm text-gray-900 bg-green-500 px-2 py-0.5 rounded-xl ml-5 font-extrabold">
     #PROPERTY OWNER
   </span>
@@ -285,9 +285,9 @@ function ThirdBox() {
         {/*-------------- text + FAQ -----------*/}
         <span className="w-full md:w-[50%] h-full flex flex-col">
           <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-start text-3xl font-bold text-transparent md:text-4xl">
-            Real Estate Services
-            <span className="text-sm text-gray-900 bg-green-500 px-2 py-0.5 rounded-xl ml-5 font-extrabold">
-    #PROPERTY OWNER
+            Virtual Assistant Services
+            <span className="text-sm text-gray-900 bg-pink-100 px-2.5 py-1 rounded-xl ml-5 font-extrabold">
+    #SERVICE PROVIDER
   </span>
             {/* <span className="text-sm text-gray-600 bg-pink-100 px-2 py-0.5 rounded-xl ml-5 font-extrabold">
               #AGENT
@@ -343,14 +343,17 @@ function FourthBox(){
             />
           </span>
           {/*-------------- text + FAQ -----------*/}
-          <span className="w-full md:w-[60%] h-full flex flex-col">
+          <span className="w-full md:w-[50%] h-full flex flex-col">
             <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-start text-3xl font-bold text-transparent md:text-4xl">
             Specialized Support Services
             <span className="text-sm text-gray-900 bg-green-500 px-2 py-0.5 rounded-xl ml-5 font-extrabold">
     #PROPERTY OWNER
   </span>
   <span className="text-sm text-gray-900 bg-yellow-500 px-2.5 py-1 rounded-xl ml-5 font-extrabold">
-    #REAL ESTATE AGENT
+    #AGENT
+  </span>
+  <span className="text-sm text-gray-900 bg-pink-100 px-2.5 py-1 rounded-xl ml-5 font-extrabold">
+    #SERVICE PROVIDER
   </span>
             </h1>
             <p className="text-start font-normal text-neutral-400 mt-2">

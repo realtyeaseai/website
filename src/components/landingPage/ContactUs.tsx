@@ -18,7 +18,7 @@ export default function ContactUs() {
             className="w-[75%] h-auto" />
         </span>
         <h1 className="md:text-5xl text-2xl text-center"><b>We&apos;d love to hear from you.</b></h1>
-        <p className="text-center text-[14px] text-[#ffffff8a]">Here&apos;s what some of our satisfied <span className="">user&apos;s</span> have said about us.</p>
+        <h1 className="text-center text-[14px] text-[#ffffff8a]">Here&apos;s what some of our satisfied <span className="">user&apos;s</span> have said about us.</h1>
 
         <div className="flex items-center justify-center flex-col md:flex-row gap-8 h-[220px] md:h-[20%] w-[80%] md:mt-0">
           <div className=" flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15] hover:bg-gray-900">
@@ -40,7 +40,7 @@ export default function ContactUs() {
               <Image src="/contactUsItems/moneyBag.svg" width={30}
                 height={30} alt="bag" />
             </span>
-            Great Costing
+            Cost Effective
           </div>
           {/* <div className="flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15] hover:bg-gray-900">
             <span>
@@ -69,7 +69,7 @@ export default function ContactUs() {
       </div>
 
       {/* ------------------ Grid to Conatct --------------- */}
-      <div className="grid grid-cols-1 md:grid-cols-[1.5fr_2fr] gap-4 w-full md:w-[98%] p-4">
+      <div id="contact" className="grid grid-cols-1 md:grid-cols-[1.5fr_2fr] gap-4 w-full md:w-[98%] p-4">
         <div className="h-[600px] w-full md:w-auto flex justify-center items-center">
           {/* <ContactInfo /> */}
           <p className="text-4xl text-white"><span className="text-green-400 font-semibold italic">Have a Question ?</span> <br/> You&apos;re just a <br/> Message Away!</p>
