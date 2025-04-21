@@ -58,7 +58,7 @@ export function TopNavbar(){
 
     return (
         <div 
-          className="relative w-full"
+          className="relative w-full z-[100]"
         >
             <Navbar>
         {/* Desktop Navigation */}
