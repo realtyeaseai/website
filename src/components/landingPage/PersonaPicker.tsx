@@ -104,7 +104,7 @@ function RenderCards(){
     return(
         <>
             {items.map((item, i) => (
-               <a href="/services/#RealEstateOwners" key={i}>
+               <a href="/services/#RealEstateOwners" className="w-full h-auto" key={i}>
                <div className="md:max-w-[300px] md:w-[300px] h-[270px] w-[100%] max-w-xl m-0 rounded-2xl cursor-pointer transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)]">
                    <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff30] bg-[#ffffff10] px-4 py-8 shadow-xl">
                        <div className="flex items-center justify-center h-[100%] w-[100%]">
