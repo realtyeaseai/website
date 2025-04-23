@@ -7,6 +7,14 @@ const items = [{
     title:"Construction/Rennovation",
     // description:'“Manage your renovation or repair crew — with timelines and updates.”'
 },{
+    tag:"/air conditioner-svgrepo-com.svg",
+    title:"HVAC",
+    // description:'“Schedule painters, compare quotes, and refresh your space — stress-free.”'
+},{
+    tag:"/personaSlectorItems/map_plumber.svg",
+    title:"Plumber",
+    // description:'“Leaky tap or blocked pipe? We&aposll get the right plumber to your door.”'
+},{
     tag:"/personaSlectorItems/healthicons_electricity.svg",
     title:"Electrician",
     // description:'“Let us book certified electricians for installations, fixes, and safety checks.”'
@@ -14,14 +22,6 @@ const items = [{
     tag:"/personaSlectorItems/ic_baseline-pest-control.svg",
     title:"Pest Control",
     // description:'“Don&apos;t bug out — we&apos;ll arrange quick, professional pest control near you.”'
-},{
-    tag:"/personaSlectorItems/map_plumber.svg",
-    title:"Plumbing",
-    // description:'“Leaky tap or blocked pipe? We&aposll get the right plumber to your door.”'
-},{
-    tag:"/personaSlectorItems/heroicons_paint-brush-20-solid.svg",
-    title:"Painting",
-    // description:'“Schedule painters, compare quotes, and refresh your space — stress-free.”'
 },
 ];
 
