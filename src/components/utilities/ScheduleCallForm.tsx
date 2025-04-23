@@ -62,7 +62,7 @@ export default function ScheduleCallForm() {
     <div className="bg-[radial-gradient(circle_at_top_right,_#8e2de2,_#4a00e0aa,_#2c006aaa,_#000)]
 
  border border-[#ffffff50] min-h-[750px] w-full md:w-auto rounded-lg flex items-center justify-center flex-col p-6 text-white font-bold">
-    <h1 className='text-whitet mb-10 text-3xl'>Schedule a Call With Us</h1>
+    <h1 className='text-whitet mb-10 text-center w-[70%] md:w-[90%] text-3xl'>Schedule a Call With Us</h1>
       <form onSubmit={handleSubmit} className="space-y-6">
         <input type="text" placeholder="Full Name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} required className="w-full p-3 border rounded-md" />
         <input type="email" placeholder="Email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} required className="w-full p-3 border rounded-md" />

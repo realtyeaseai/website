@@ -139,7 +139,7 @@ export default function ContactForm() {
             <span className='w-full pb-2 text-[16px]'>Company Name</span>
             <input
               type="text"
-              placeholder="Ex. Co. M-Dash"
+              placeholder="Ex. Co. M-Dash or N/A"
               id='cName'
               className="input w-full p-3 border rounded-[8px]"
               value={form.cName}
