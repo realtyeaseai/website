@@ -4,7 +4,7 @@ import Image from "next/image";
 // edit this for top servicer 5 grid images 
 const items = [{
     tag:"/personaSlectorItems/home.svg",
-    title:"Construction/Rennovation",
+    title:"Construction/ Rennovation",
     // description:'“Manage your renovation or repair crew — with timelines and updates.”'
 },{
     tag:"/personaSlectorItems/healthicons_electricity.svg",
@@ -36,8 +36,10 @@ export default function PersonaPicker(){
             <RenderPref/>
             
             <div className="md:w-[80%] w-full flex justify-center items-center flex-col mt-8">
-                <h1 className="w-[70%] m-2 py-4 px-2 text-4xl rounded-[8px] text-white text-center ">Service Providers</h1>
+                 
+                <h1 className="w-[70%] m-2 py-4 px-2 text-4xl rounded-[8px] text-white text-center "><a href="/services" className="h-fit w-full">Service Providers</a></h1>
                 {/* border border-[#ffffff80] bg-[#ffffff10]  */}
+                
             </div>
 
                 {/* ------------------------ Cards ------------------------ */} 
@@ -106,17 +108,17 @@ function RenderCards(){
             {items.map((item, i) => (
                <a href="/services/#RealEstateOwners" className="w-full h-auto" key={i}>
                <div className="md:max-w-[300px] md:w-[300px] h-[270px] w-[100%] max-w-xl m-0 rounded-2xl cursor-pointer transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)]">
-                   <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff30] bg-[#ffffff10] px-4 py-8 shadow-xl">
-                       <div className="flex items-center justify-center h-[100%] w-[100%]">
+                   <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff30] bg-[#ffffff10] shadow-xl">
+                       <div className="flex-[.7] grid place-items-center h-[100%] w-[100%]">
                            <span className="h-[80%] w-[40%] flex items-center justify-center rounded-2xl">
                                <Image src={item.tag} width={100} height={100} className="h-auto md:w-[50%] w-[100%] border" alt="img"/>
                            </span>
                        </div>
-                       <div className="">
-                           <h1 className="text-center mb-1 text-2xl text-white">{item.title}</h1>
+                       <div className="flex-[.3] h-full w-full grid place-items-center">
+                           <p className="text-center text-xl h-full w-full text-white">{item.title}</p>
                            {/* <p className="text-center text-[11px] text-[#ffffff8a]"><i>{item.description}</i></p> */}
                        </div>
-                       <Meteors/>
+                       {/* <Meteors/> */}
                    </div>
                </div>
                 </a>
