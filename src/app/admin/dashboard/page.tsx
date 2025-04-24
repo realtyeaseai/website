@@ -12,7 +12,7 @@ interface Contact {
   cName : string
   email: string
   phone: string
-  reason: string
+  client: string
   message: string
   createdAt: string
 }
@@ -116,7 +116,7 @@ export default function Dashboard() {
               <p><strong>Email:</strong> {contact.email}</p>
               <p><strong>cName:</strong> {contact.cName}</p>
               <p><strong>Phone:</strong> {contact.phone}</p>
-              <p><strong>Reason:</strong> {contact.reason}</p>
+              <p><strong>Reason:</strong> {contact.client}</p>
               <p><strong>Message:</strong> {contact.message}</p>
               <p className="text-xs text-neutral-500 mt-2">
                 <strong>Submitted:</strong> {new Date(contact.createdAt).toLocaleString()}

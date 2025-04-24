@@ -9,20 +9,20 @@ export default function ContactForm() {
     email: '',
     phone: '',
     message: '',
-    reason: '',
+    client: '',
     cName: '',
     serviceType: '',
   });
 
   const [loading, setLoading] = useState(false);
 
-  const reasons = ['Agent', 'Property owner', 'Service Providers', 'Other'];
+  const clients = ['Agent', 'Property owner', 'Service Providers', 'Other'];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
 
-    if (!form.firstName || !form.lastName || !form.email || !form.phone || !form.message || !form.reason) {
+    if (!form.firstName || !form.lastName || !form.email || !form.phone || !form.message || !form.client) {
       toast.error('All fields are required.');
       setLoading(false);
       return;
@@ -60,7 +60,7 @@ export default function ContactForm() {
         email: '',
         phone: '',
         message: '',
-        reason: '',
+        client: '',
         cName: '',
         serviceType: '',
       });
@@ -154,20 +154,20 @@ export default function ContactForm() {
         <div>
           <label className="text-[16px] text-white pb-2 block">Who are you?</label>
           <div className="flex gap-4 flex-wrap">
-            {reasons.map((item) => (
+            {clients.map((item) => (
               <button
                 key={item}
                 type="button"
-                aria-pressed={form.reason === item}
+                aria-pressed={form.client === item}
                 className={`border border-black px-4 py-2 rounded-[8px] cursor-pointer text-white ${
-                  form.reason === item ? 'border-2 border-black bg-gradient-to-tl from-blue-400 to-blue-600' : 'border-white'
+                  form.client === item ? 'border-2 border-black bg-gradient-to-tl from-blue-400 to-blue-600' : 'border-white'
                 }`}
-                onClick={() => setForm({ ...form, reason: item })}
+                onClick={() => setForm({ ...form, client: item })}
               >
                 {item}
               </button>
             ))}
-            {form.reason === 'Service Providers' && (
+            {form.client === 'Service Providers' && (
   <div className="mt-4">
     <label className="text-[16px] text-white pb-2 block">Which service do you offer?</label>
     <div className="flex gap-4 flex-wrap">
@@ -181,7 +181,13 @@ export default function ContactForm() {
               ? 'border-2 border-black bg-gradient-to-tl from-green-400 to-green-600'
               : 'border-white'
           }`}
-          onClick={() => setForm({ ...form, serviceType: type })}
+          onClick={() =>
+            setForm({
+              ...form,
+              serviceType: type,
+              client: type, // 👈 This is the key change
+            })
+          }
         >
           {type}
         </button>
@@ -229,7 +235,7 @@ export default function ContactForm() {
 //   //   email: '',
 //   //   phone: '',
 //   //   message: '',
-//   //   reason: '',
+//   //   client: '',
 //   // });
 
 //   // const [loading, setLoading] = useState(false);
@@ -240,7 +246,7 @@ export default function ContactForm() {
 //   //   e.preventDefault();
 //   //   setLoading(true);
 
-//   //   if (!form.firstName || !form.lastName || !form.email || !form.phone || !form.message || !form.reason) {
+//   //   if (!form.firstName || !form.lastName || !form.email || !form.phone || !form.message || !form.client) {
 //   //     toast.error('All fields are required.');
 //   //     setLoading(false);
 //   //     return;
@@ -278,7 +284,7 @@ export default function ContactForm() {
 //   //       email: '',
 //   //       phone: '',
 //   //       message: '',
-//   //       reason: '',
+//   //       client: '',
 //   //     });
 //   //   } catch (err: unknown) {
 //   //     console.error('❌ Error:', err);

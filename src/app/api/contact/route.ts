@@ -4,9 +4,9 @@ import { connectToDatabase } from '@/lib/mongodb';
 
 export async function POST(req: Request) {
   const body = await req.json();
-  const { firstName, lastName, email, phone, reason, message , cName} = body;
+  const { firstName, lastName, email, phone, client, message , cName , serviceType} = body;
 
-  if (!firstName || !lastName || !email || !phone || !reason || !message) {
+  if (!firstName || !lastName || !email || !phone || !client || !message) {
     return NextResponse.json({ message: 'Missing required fields' }, { status: 400 });
   }
 
@@ -18,9 +18,11 @@ export async function POST(req: Request) {
       cName,
       email,
       phone,
-      reason,
+      client,
+      serviceType,
       message,
       createdAt: new Date(),
+
     });
     return NextResponse.json({ message: 'Contact saved', id: result.insertedId }, { status: 201 });
   } catch (error) {
