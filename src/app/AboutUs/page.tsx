@@ -38,7 +38,7 @@ export default function AboutUs(){
                 </p>
               </div>
             </div> */}
-            <Link href="/about" className=" bg-white text-black px-6 py-3 rounded-md mt-6 justify-center flex items-center">
+            <Link href="/#contact" className=" bg-white text-black px-6 py-3 rounded-md mt-6 justify-center flex items-center">
               Learn More
             </Link>
           </div>
