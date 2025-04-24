@@ -7,7 +7,7 @@ const items = [{
     title:"Construction/ Rennovation",
     // description:'“Manage your renovation or repair crew — with timelines and updates.”'
 },{
-    tag:"/air conditioner-svgrepo-com.svg",
+    tag:"/personaSlectorItems/streamline_hotel-air-conditioner-solid.svg",
     title:"HVAC",
     // description:'“Schedule painters, compare quotes, and refresh your space — stress-free.”'
 },{

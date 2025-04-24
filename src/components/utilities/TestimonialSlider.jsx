@@ -14,10 +14,9 @@ export const TestimonialSlider1 = () => {
       text: "We denounce with right indignation dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire cannot foresee.",
       author: "Lucas J. Swe",
       role: "CO Founder",
-      avatar: "/assets/img/testimonial/client.png",
-      icon: "/assets/img/testimonial/icon.png",
+      avatar: "/assets/img/testimonial/review.jpeg",
       stars: 5,
-      sideImage: "/assets/img/testimonial/client-2.png",
+      sideImage: "/assets/img/testimonial/review.jpeg",
     },
     {
       text: "Their service is unmatched and the process is so smooth — I've never worked with a better team.",
@@ -26,7 +25,16 @@ export const TestimonialSlider1 = () => {
       avatar: "/assets/img/testimonial/client-3.png",
       icon: "/assets/img/testimonial/icon.png",
       stars: 4,
-      sideImage: "/assets/img/testimonial/client-4.png",
+      sideImage: "/assets/img/testimonial/review1.jpeg",
+    },
+    {
+      text: "I was blown away by the quality of work and the attention to detail. Highly recommend!",
+      author: "Sarah L. Johnson",
+      role: "Project Manager",
+      avatar: "/assets/img/testimonial/client-3.png",
+      icon: "/assets/img/testimonial/icon.png",
+      stars: 4,
+      sideImage: "/assets/img/testimonial/review2.png",
     },
   ];
 
@@ -59,19 +67,19 @@ export const TestimonialSlider1 = () => {
               <div className="w-full md:w-2/3 text-center md:text-left">
                 <p className="text-lg mb-4">{item.text}</p>
                 <div className="flex items-center justify-center md:justify-start gap-4 mb-4">
-                  <Image
+                  {/* <Image
                     src={item.avatar}
                     alt={item.author}
                     width={50}
                     height={50}
                     className="rounded-full"
-                  />
+                  /> */}
                   <div>
                     <h5 className="font-semibold text-white">
                       {item.author} <span className="text-neutral-400 font-normal">/ {item.role}</span>
                     </h5>
                   </div>
-                  <Image src={item.icon} alt="Quote icon" width={24} height={24} />
+                  {/* <Image src={item.icon} alt="Quote icon" width={24} height={24} /> */}
                 </div>
                 <div className="flex justify-center md:justify-start text-yellow-400">
                   {Array.from({ length: item.stars }).map((_, i) => (

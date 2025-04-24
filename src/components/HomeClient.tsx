@@ -9,6 +9,7 @@ import {
   FAQ,
   Footer,
 } from "./landingPage/lpExports";
+// import BookingPage from "./utilities/Calendly";
 
 export default function HomeClient() {
   return (
@@ -47,6 +48,9 @@ export default function HomeClient() {
         <div className="w-full">
           <ContactUs />
         </div>
+        {/* <div className="w-full">
+          <BookingPage />
+        </div> */}
         <div id="faq" className="w-full">
           <FAQ />
         </div>

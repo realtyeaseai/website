@@ -11,6 +11,7 @@ export default function ContactForm() {
     message: '',
     reason: '',
     cName: '',
+    serviceType: '',
   });
 
   const [loading, setLoading] = useState(false);
@@ -61,6 +62,7 @@ export default function ContactForm() {
         message: '',
         reason: '',
         cName: '',
+        serviceType: '',
       });
     } catch (err: unknown) {
       console.error('❌ Error:', err);
@@ -165,6 +167,28 @@ export default function ContactForm() {
                 {item}
               </button>
             ))}
+            {form.reason === 'Service Providers' && (
+  <div className="mt-4">
+    <label className="text-[16px] text-white pb-2 block">Which service do you offer?</label>
+    <div className="flex gap-4 flex-wrap">
+      {['Web Development', 'Social Media Management', 'Business Development'].map((type) => (
+        <button
+          key={type}
+          type="button"
+          aria-pressed={form.serviceType === type}
+          className={`border px-4 py-2 rounded-[8px] cursor-pointer text-white ${
+            form.serviceType === type
+              ? 'border-2 border-black bg-gradient-to-tl from-green-400 to-green-600'
+              : 'border-white'
+          }`}
+          onClick={() => setForm({ ...form, serviceType: type })}
+        >
+          {type}
+        </button>
+      ))}
+    </div>
+  </div>
+)}
           </div>
         </div>
 
