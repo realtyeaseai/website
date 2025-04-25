@@ -1,7 +1,5 @@
 import Image from "next/image";
-import { TopNavbar } from "@/components/TopNabbar";
 import DropdownCompo from "@/components/ui/DropdownCompo";
-import Footer from "@/components/landingPage/Footer";
 import Link from "next/link";
 
 export default function Services() {
@@ -10,12 +8,11 @@ export default function Services() {
   // await new Promise((resolve) => setTimeout(resolve, 3000));
 
   return (
-    <div className="relative w-full h-fit pb-8 flex flex-col justify-start items-center min-h-[100dvh] bg-[#010101] pt-28 md:pt-40">
-      <TopNavbar />
+    <div className="relative w-full h-fit pb-8 flex flex-col justify-start items-center min-h-[100dvh] dark:text-white dark:bg-[#010101] pt-28 md:pt-40">
       <TopHeading />
       <RenderedServices />
       <BottomBox />
-      <Footer />
+      
     </div>
   )
 }
@@ -146,11 +143,11 @@ const faqs = [
 
 function TopHeading() {
   return (
-    <div className="flex flex-col items-center justify-start w-full h-fit bg-[#010101]">
-      <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl">
+    <div className="flex flex-col items-center justify-start w-full h-fit">
+      <h1 className="bg-opacity-50 bg-gradient-to-b dark:from-neutral-50 dark:to-neutral-400 bg-clip-text text-center text-4xl font-bold dark:dark:text-transparent md:text-7xl">
         Our Services
       </h1>
-      <p className="mx-auto mt-6 max-w-xl text-center text-base font-normal text-neutral-300">
+      <p className="mx-auto mt-6 max-w-xl text-center text-base font-normal dark:text-neutral-300 mb-6">
         From managing and client communications to coordinating and administrative workflows, our virtual assistants adapt to your priorities.
 
         <br />No two businesses are alike—that&apos;s why every service we deliver is tailored to your unique goals, processes, and growth ambitions.
@@ -161,7 +158,7 @@ function TopHeading() {
 
 function RenderedServices() {
   return (
-    <div className="flex flex-col items-center justify-start w-full h-fit bg-[#010101]">
+    <div className="flex flex-col items-center justify-start w-full h-fit">
       <div className="rounded-xl min-h-[400px] w-[80%] flex flex-col gap-20 p-8 mt-12">
         <div className="h-fit w-full" id="RealEstateAgent">
           <FirstBox />
@@ -183,10 +180,10 @@ function RenderedServices() {
 function FirstBox() {
   return (
     <>
-      <div className="relative flex items-center justify-between md:flex-row flex-col gap-8 w-full h-[80%] bg-[#010101]">
+      <div className="relative flex items-center justify-between md:flex-row flex-col gap-8 w-full h-[80%]">
         {/*-------------- text + FAQ -----------*/}
         <span className="w-full md:w-[50%] h-full flex flex-col">
-          <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-start text-3xl font-bold text-transparent md:text-4xl">
+          <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-start text-3xl font-bold dark:text-transparent md:text-4xl">
             Virtual Assistant Service
             <span className="text-sm text-gray-900 bg-yellow-500 px-2.5 py-1 rounded-xl ml-5 font-extrabold">
     #AGENT
@@ -207,7 +204,7 @@ function FirstBox() {
               />
             ))}
           </div>
-          <Link href="/#contact" className="h-[50px] text-black w-full rounded-[4px] text-center flex items-center justify-center bg-[#ffffff] hover:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
+          <Link href="/#contact" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-[#ffffff] hover:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
             Contact Us
           </Link>
         </span>
@@ -230,7 +227,7 @@ function FirstBox() {
 function SecondBox() {
   return (
     <>
-      <div className="relative flex items-center justify-between md:flex-row flex-col gap-8 w-full h-[80%] bg-[#010101]">
+      <div className="relative flex items-center justify-between md:flex-row flex-col gap-8 w-full h-[80%]">
         {/*--------------- image --------------*/}
         <span className="md:w-[50%] hidden md:flex w-full h-full items-center justify-center md:justify-start">
           <Image
@@ -243,7 +240,7 @@ function SecondBox() {
         </span>
         {/*-------------- text + FAQ -----------*/}
         <span className="w-full md:w-[50%] h-full flex flex-col">
-          <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-start text-3xl font-bold text-transparent md:text-4xl">
+          <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-start text-3xl font-bold dark:text-transparent md:text-4xl">
             Virtual Assistant Services
             <span className="text-sm text-gray-900 bg-green-500 px-2 py-0.5 rounded-xl ml-5 font-extrabold">
     #PROPERTY OWNER
@@ -267,7 +264,7 @@ function SecondBox() {
               />
             ))}
           </div>
-          <Link href="/#contact" className="h-[50px] text-black w-full rounded-[4px] text-center flex items-center justify-center bg-[#ffffff] hover:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
+          <Link href="/#contact" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-[#ffffff] hover:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
             Contact Us
           </Link>
         </span>
@@ -281,10 +278,10 @@ function SecondBox() {
 function ThirdBox() {
   return (
     <>
-      <div className="relative flex items-center justify-between md:flex-row flex-col gap-8 w-full h-[80%] bg-[#010101]">
+      <div className="relative flex items-center justify-between md:flex-row flex-col gap-8 w-full h-[80%]">
         {/*-------------- text + FAQ -----------*/}
         <span className="w-full md:w-[50%] h-full flex flex-col">
-          <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-start text-3xl font-bold text-transparent md:text-4xl">
+          <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-start text-3xl font-bold dark:text-transparent md:text-4xl">
             Virtual Assistant Services
             <span className="text-sm text-gray-900 bg-pink-100 px-2.5 py-1 rounded-xl ml-5 font-extrabold">
     #SERVICE PROVIDER
@@ -308,7 +305,7 @@ function ThirdBox() {
               />
             ))}
           </div>
-          <Link href="/#contact" className="h-[50px] text-black w-full rounded-[4px] text-center flex items-center justify-center bg-[#ffffff] hover:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
+          <Link href="/#contact" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-[#ffffff] hover:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
             Contact Us
           </Link>
         </span>
@@ -331,7 +328,7 @@ function ThirdBox() {
 function FourthBox(){
   return(
       <>
-        <div className="relative flex items-center justify-between md:flex-row flex-col gap-8 w-full h-[80%] bg-[#010101]">
+        <div className="relative flex items-center justify-between md:flex-row flex-col gap-8 w-full h-[80%]">
           {/*--------------- image --------------*/}
           <span className="md:w-[50%] hidden md:flex w-full h-full items-center justify-center md:justify-start">
             <Image
@@ -344,7 +341,7 @@ function FourthBox(){
           </span>
           {/*-------------- text + FAQ -----------*/}
           <span className="w-full md:w-[70%] h-full flex flex-col">
-            <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-start text-3xl font-bold text-transparent md:text-4xl">
+            <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-start text-3xl font-bold dark:text-transparent md:text-4xl">
             Specialized Support Services
             </h1>
             <p className="text-start font-normal text-neutral-400 mt-2">
@@ -372,7 +369,7 @@ function FourthBox(){
                 />
               ))}
             </div>
-            <Link href="/#contact" className="h-[50px] text-black w-full rounded-[4px] text-center flex items-center justify-center bg-[#ffffff] hover:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
+            <Link href="/#contact" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-[#ffffff] hover:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
                 Contact Us
               </Link>
           </span>
@@ -383,7 +380,7 @@ function FourthBox(){
 
 function BottomBox() {
   return (
-    <div className="md:h-[380px] h-[600px] w-[96%] rounded-2xl border border-[#ffffff20] mt-4 hover:border-[#ffffff50] flex gap-4 items-center justify-center flex-col bg-[radial-gradient(circle_at_center,_#0072feb5,_#4883cc53,_#4883cc29,_#000)]">
+    <div className="md:h-[380px] h-[600px] w-[96%] rounded-2xl text-white border border-neutral-950 dark:border-[#ffffff20] mt-10 mb-10 hover:border-[#ffffff50] flex gap-4 items-center justify-center flex-col bg-indigo-700 dark:bg-[radial-gradient(circle_at_center,_#0072feb5,_#4883cc53,_#4883cc29,_#000)]">
       <span className="h-[50px] w-[50px] rounded-[4px] flex items-center justify-center">
         <Image width={1000} height={1000} src="/contactUsItems/mail.svg" alt="icon" className="w-[75%] h-auto" />
       </span>
@@ -391,7 +388,7 @@ function BottomBox() {
       <p className="text-center text-[14px] text-[#ffffff8a]">Contact us now to know more details</p>
 
       <div className="flex items-center justify-center h-fit md:h-[20%] w-[80%] md:mt-0 ">
-        <Link href="/#contact" className=" text-center text-black cursor-pointer h-[50px] w-[200px] rounded-[4px] flex items-center justify-center bg-[#ffffff] hover:bg-[#ffffff] transition-all duration-300 ease-in-out">
+        <Link href="/#contact" className=" text-center text-black cursor-pointer h-[50px] w-[200px] flex items-center justify-center  bg-[#ffffff] hover:bg-[#000] hover:text-white transition-all duration-300 ease-in-out rounded-2xl">
           Contact Us
         </Link>
       </div>

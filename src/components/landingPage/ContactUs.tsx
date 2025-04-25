@@ -10,9 +10,9 @@ export default function ContactUs() {
   const [activeForm, setActiveForm] = useState<"message" | "call">("message");
 
   return (
-    <div className=" bg-black min-h-[100dvh] pt-20 w-full flex items-center justify-evenly flex-col ">
+    <div className=" dark:bg-black min-h-[100dvh] pt-20 w-full flex items-center justify-evenly flex-col ">
       {/* -------------- Static Box --------------  */}
-      <div className="md:h-[380px] h-[600px] w-[96%] rounded-2xl border border-[#ffffff20] mt-4 hover:border-[#ffffff50] flex gap-4 items-center justify-center flex-col bg-[radial-gradient(circle_at_center,_#0072feb5,_#4883cc53,_#4883cc29,_#000)]">
+      <div className="md:h-[380px] h-[600px] w-[96%] rounded-2xl border border-[#ffffff20] mt-4 hover:border-[#ffffff50] flex gap-4 items-center justify-center flex-col bg-indigo-700 dark:bg-[radial-gradient(circle_at_center,_#0072feb5,_#4883cc53,_#4883cc29,_#000)]">
 
         <span className="h-[50px] w-[50px] rounded-[4px] flex items-center justify-center">
           <Image src="/contactUsItems/mail.svg"
@@ -21,10 +21,10 @@ export default function ContactUs() {
             alt="icon"
             className="w-[75%] h-auto" />
         </span>
-        <h1 className="md:text-4xl md:w-[55%] w-[90%] text-2xl text-center"><b>Here&apos;s what some of our <span className="text-green-400"> satisfied user&apos;s</span> have said about us.</b></h1>
+        <h1 className="md:text-4xl md:w-[55%] w-[90%] text-2xl text-center dark:text-black text-white"><b>Here&apos;s what some of our <span className="text-green-400"> satisfied user&apos;s</span> have said about us.</b></h1>
         {/* <p className="text-center text-[14px] text-[#ffffff8a]">Here&apos;s what some of our satisfied <span className="">user&apos;s</span> have said about us.</p> */}
 
-        <div className="flex items-center justify-center flex-col md:flex-row gap-8 h-[220px] md:h-[20%] w-[80%] md:mt-0">
+        <div className="flex items-center justify-center flex-col md:flex-row gap-8 h-[220px] md:h-[20%] w-[80%] md:mt-0 text-white">
           <div className=" flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15] hover:bg-gray-900">
             <span>
               <Image src="/contactUsItems/Clock.svg" width={30}
@@ -75,7 +75,7 @@ export default function ContactUs() {
       {/* ------------------ Grid to Conatct --------------- */}
       <div id="contact" className="grid grid-cols-1 md:grid-cols-[1.5fr_2fr] gap-4 w-full md:w-[98%] p-4">
   <div className="h-[600px] w-full md:w-auto flex flex-col justify-center items-center text-center">
-    <p className="text-4xl text-white">
+    <p className="text-4xl dark:text-white">
       <span className="text-green-400 font-semibold italic">Have a Question ?</span><br />
       You&apos;re just a <br /> Message Away!
     </p>

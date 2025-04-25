@@ -6,7 +6,7 @@ import Link from 'next/link'
 export default function Footer() {
   return (
 
-    <div className='flex flex-col md:justify-end justify-center items-center min-h-[80dvh] w-full bg-black pt-48'>
+    <div className='flex flex-col md:justify-end justify-center items-center min-h-[40dvh] w-full bg-gray-200 dark:bg-black pt-12'>
 
       <div className="w-full h-auto flex flex-col md:flex-row items-start justify-between">
         {/* ---------------------------- Left Section (Logo + Links) ---------------------------- */}

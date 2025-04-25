@@ -121,7 +121,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
     <motion.div
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-zinc-600 transition duration-150 hover:text-zinc-800 lg:flex lg:space-x-2",
+        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-md font-medium text-zinc-600 transition duration-150 hover:text-zinc-800 lg:flex lg:space-x-2",
         className,
       )}
     >
@@ -129,14 +129,14 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
         <Link
           onMouseEnter={() => setHovered(idx)}
           onClick={onItemClick}
-          className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300 hover:text-zinc-800 transition-colors duration-40 delay-80"
+          className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300 hover:dark:text-zinc-900 hover:text-zinc-100 transition-colors duration-40 delay-40"
           key={`link-${idx}`}
           href={item.link}
         >
           {hovered === idx && (
             <motion.div
               layoutId="hovered"
-              className="absolute inset-0 h-full w-full rounded-full bg-gray-100 dark:bg-[#ffffff]"
+              className="absolute inset-0 h-full w-full rounded-full bg-gray-900 dark:bg-[#ffffff]"
             />
           )}
           <span className="relative z-20">{item.name}</span>

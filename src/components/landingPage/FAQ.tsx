@@ -118,15 +118,17 @@ const faqs = [
   ];
 
 // ---------------------------------------------------------------------------------------------------------------------
-
+//<h1 className="text-4xl text-black dark:text-white text-center">FAQs</h1>
 export default function FAQ() {
 
   return (
-    <div className="min-h-fit pt-24 w-full flex items-center justify-center bg-black">
+    <div className="dark:bg-black">
+    <div className="min-h-fit pt-24 w-full flex items-center justify-center dark:bg-black">
         <div className="w-[98%] flex items-start justify-center flex-col md:flex-row gap-4 p-4">
             <TextBoxWithContactBtn/>
             <RenderFaqs/>            
         </div>
+    </div>
     </div>
   )
 }
@@ -137,10 +139,10 @@ function TextBoxWithContactBtn(){
       <div className="w-full min-h-fit pb-20 pl-4 md:basis-[45%]">
 
         {/* text  */}
-        <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-3xl font-bold text-transparent md:text-4xl pt-30 md:ml-6 ">
+        <h2 className="bg-opacity-50 bg-gradient-to-b text-black dark:from-neutral-50 dark:to-neutral-400 bg-clip-text text-3xl font-bold dark:text-transparent md:text-4xl pt-30 md:ml-6 ">
         Got Questions? We&apos;ve Got Answers!
-        </h1>
-        <p className="mx-auto mt-2 max-w-xl text-base font-normal text-neutral-300 md:ml-6 ">
+        </h2>
+        <p className="mx-auto mt-2 max-w-xl text-base font-normal dark:text-neutral-300 md:ml-6 ">
         Explore our frequently asked questions below to find clarity on our services, processes, and everything in between. Can&apos;t find what you&apos;re looking for? <Link href="/#contact" className="text-green-500 font-semibold">Contact us</Link> – we&apos;re always here to help!
 
         </p>
@@ -168,13 +170,13 @@ function RenderFaqs(){
 
   return(
     <div className="w-full min-h-fit md:basis-[55%]">
-      <div className="max-w-2xl mx-auto p-4 text-[#ffffffcc]">
+      <div className="max-w-2xl mx-auto p-4 dark:text-[#ffffffcc]">
       {/* <h1 className="text-3xl font-bold mb-6 text-start">Frequently Asked Questions</h1> */}
         <div className="space-y-4">
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className="border border-[#ffffff69] rounded-xl p-4 cursor-pointer bg-[#ffffff0a]"
+              className="border dark:border-[#ffffff69] rounded-xl p-4 cursor-pointer dark:bg-[#ffffff0a]"
               onClick={() => toggle(i)}
             >
               <div className="flex justify-between items-center">
@@ -192,7 +194,7 @@ function RenderFaqs(){
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
-                    className="overflow-hidden text-sm mt-2 text-gray-300"
+                    className="overflow-hidden text-sm mt-2 dark:text-gray-300"
                   >
                     <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
                   </motion.div>

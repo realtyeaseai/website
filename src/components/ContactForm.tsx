@@ -75,14 +75,15 @@ export default function ContactForm() {
   // bg-gradient-to-bl from-violet-500 via-purple-800 to-indigo-900
 
   return (
-    <div className="bg-[radial-gradient(circle_at_top_right,_#0072feb5,_#4883cc53,_#4883cc29,_#000)]
- border border-[#ffffff50] min-h-[750px] w-full md:w-auto rounded-lg flex items-center justify-center flex-col p-6 text-white font-bold">
-      <h2 className="text-3xl text-white mb-10">Get in Touch With Us</h2>
+    <div className="bg-[radial-gradient(circle_at_top_right,_#00c26e,_#00d77ab3,_#66e6aab3,_#1e3d2f)]
+ dark:bg-[radial-gradient(circle_at_top_right,_#0072feb5,_#4883cc53,_#4883cc29,_#000)]
+ border dark:border-[#ffffff50] min-h-[750px] w-full md:w-auto rounded-lg flex items-center justify-center flex-col p-6 dark:dark:text-white font-bold">
+      <h2 className="text-3xl dark:dark:text-white mb-10">Get in Touch With Us</h2>
       <form onSubmit={handleSubmit} className="max-w-2xl w-full space-y-8">
 
         {/*----------------- Name Block ------------- */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <label htmlFor="fname" className="text-white flex flex-col">
+          <label htmlFor="fname" className="dark:text-white flex flex-col">
             <span className='w-full pb-2 text-[16px]'>First Name</span>
             <input
               type="text"
@@ -94,7 +95,7 @@ export default function ContactForm() {
               required
             />
           </label>
-          <label htmlFor="lname" className="text-white pb-2 flex flex-col">
+          <label htmlFor="lname" className="dark:text-white pb-2 flex flex-col">
             <span className='w-full pb-2 text-[16px]'>Last Name</span>
             <input
               type="text"
@@ -110,7 +111,7 @@ export default function ContactForm() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <label htmlFor="email" className="text-white pb-2 flex flex-col">
+          <label htmlFor="email" className="dark:text-white pb-2 flex flex-col">
             <span className='w-full pb-2 text-[16px]'>Email</span>
             <input
               type="email"
@@ -122,7 +123,7 @@ export default function ContactForm() {
               required
             />
           </label>
-          <label htmlFor="pNumber" className="text-white pb-2 flex flex-col">
+          <label htmlFor="pNumber" className="dark:text-white pb-2 flex flex-col">
             <span className='w-full pb-2 text-[16px]'>Phone Number</span>
             <input
               type="tel"
@@ -137,7 +138,7 @@ export default function ContactForm() {
         </div>
 
         <div className=''>
-          <label htmlFor="cName" className="text-white pb-2 flex flex-col">
+          <label htmlFor="cName" className="dark:text-white pb-2 flex flex-col">
             <span className='w-full pb-2 text-[16px]'>Company Name</span>
             <input
               type="text"
@@ -152,14 +153,14 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label className="text-[16px] text-white pb-2 block">Who are you?</label>
+          <label className="text-[16px] dark:text-white pb-2 block">Who are you?</label>
           <div className="flex gap-4 flex-wrap">
             {clients.map((item) => (
               <button
                 key={item}
                 type="button"
                 aria-pressed={form.client === item}
-                className={`border border-black px-4 py-2 rounded-[8px] cursor-pointer text-white ${
+                className={`border border-black px-4 py-2 rounded-[8px] cursor-pointer dark:text-white ${
                   form.client === item ? 'border-2 border-black bg-gradient-to-tl from-blue-400 to-blue-600' : 'border-white'
                 }`}
                 onClick={() => setForm({ ...form, client: item })}
@@ -169,14 +170,14 @@ export default function ContactForm() {
             ))}
             {form.client === 'Service Providers' && (
   <div className="mt-4">
-    <label className="text-[16px] text-white pb-2 block">Which service do you offer?</label>
+    <label className="text-[16px] dark:text-white pb-2 block">Which service do you offer?</label>
     <div className="flex gap-4 flex-wrap">
       {['Web Development', 'Social Media Management', 'Business Development'].map((type) => (
         <button
           key={type}
           type="button"
           aria-pressed={form.serviceType === type}
-          className={`border px-4 py-2 rounded-[8px] cursor-pointer text-white ${
+          className={`border px-4 py-2 rounded-[8px] cursor-pointer dark:text-white ${
             form.serviceType === type
               ? 'border-2 border-black bg-gradient-to-tl from-green-400 to-green-600'
               : 'border-white'
@@ -210,7 +211,7 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={loading}
-            className="bg-white text-neutral-900 w-full px-6 py-3 rounded-md font-medium disabled:opacity-60 cursor-pointer transition duration-300 hover:bg-neutral-900 hover:text-white"
+            className="bg-white text-neutral-900 w-full px-6 py-3 rounded-md font-medium disabled:opacity-60 cursor-pointer transition duration-300 dark:text-black hover:text-white hover:bg-neutral-900 hover:dark:text-white"
           >
             {loading ? 'Sending...' : 'Send Message'}
           </button>
@@ -366,7 +367,7 @@ export default function ContactForm() {
 
 //             <button
 //               type="submit"
-//               className="w-full bg-indigo-600 text-white font-medium py-2 rounded-lg hover:bg-indigo-700 transition"
+//               className="w-full bg-indigo-600 dark:text-white font-medium py-2 rounded-lg hover:bg-indigo-700 transition"
 //             >
 //               Send
 //             </button>

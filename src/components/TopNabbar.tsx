@@ -62,9 +62,9 @@ export function TopNavbar(){
         >
             <Navbar>
         {/* Desktop Navigation */}
-        <NavBody>
+        <NavBody className="bg-white text-black dark:text-white dark:bg-black transition-colors duration-300">
           <NavbarLogo />
-          <NavItems items={navItems} />
+          <NavItems items={navItems}/>
           <div className="flex items-center gap-2">
           <ThemeToggle/>
             {/* Varients for button are primary and secondary */}
@@ -92,7 +92,7 @@ export function TopNavbar(){
                 key={`mobile-link-${idx}`}
                 href={item.link}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="relative text-neutral-600 dark:text-neutral-300"
+                className="relative text-neutral-900 dark:text-neutral-300"
               >
                 <span className="block">{item.name}</span>
               </a>

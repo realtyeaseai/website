@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import LoaderWrapper from "@/components/Loader";
+import { TopNavbar } from "@/components/TopNabbar";
+import Footer from "@/components/landingPage/Footer";
 // import LoaderWrapper from "@/components/Loader";
 
 const geistSans = Geist({
@@ -32,7 +34,9 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-black dark:text-white transition-colors duration-300`}>
       <LoaderWrapper>
         <Toaster position="top-center" />
+        <TopNavbar />
         {children}
+        <Footer />
         </LoaderWrapper>
       </body>
       
