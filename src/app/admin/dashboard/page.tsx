@@ -13,6 +13,7 @@ interface Contact {
   email: string
   phone: string
   client: string
+  serviceType: string
   message: string
   createdAt: string
 }
@@ -116,7 +117,8 @@ export default function Dashboard() {
               <p><strong>Email:</strong> {contact.email}</p>
               <p><strong>cName:</strong> {contact.cName}</p>
               <p><strong>Phone:</strong> {contact.phone}</p>
-              <p><strong>Reason:</strong> {contact.client}</p>
+              <p><strong>Client:</strong> {contact.client}</p>
+              <p><strong>Service Type:</strong> {contact.serviceType}</p>
               <p><strong>Message:</strong> {contact.message}</p>
               <p className="text-xs text-neutral-500 mt-2">
                 <strong>Submitted:</strong> {new Date(contact.createdAt).toLocaleString()}

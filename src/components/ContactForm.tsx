@@ -185,7 +185,7 @@ export default function ContactForm() {
             setForm({
               ...form,
               serviceType: type,
-              client: type, // 👈 This is the key change
+            
             })
           }
         >
