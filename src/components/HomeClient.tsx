@@ -1,21 +1,22 @@
-"use client";
-import "../app/globals.css";
+'use client'
+import '../app/globals.css'
 
-import { TopNavbar } from "@/components/TopNabbar";
+import { TopNavbar } from '@/components/TopNabbar'
 import {
   HeroSection,
   PersonaPicker,
   ContactUs,
   FAQ,
   Footer,
-} from "./landingPage/lpExports";
-// import BookingPage from "./utilities/Calendly";
+} from './landingPage/lpExports'
+import FadeInOnView from '@/components/FadeInOnView'
+// import BookingPage from './utilities/Calendly'
 
 export default function HomeClient() {
   return (
     <div className="relative w-full h-screen">
       {/* -----------Overlay of dark color over the bg cloud video ------------ */}
-      <span className="absolute top-0 left-0 w-full h-full object-cover z-[-1] bg-[#00000080]"></span>
+      <span className="absolute top-0 left-0 w-full h-full object-cover z-[-1] bg-[#00000080]" />
 
       {/* -------------------------Background Video ---------------------------- */}
       <video
@@ -28,9 +29,9 @@ export default function HomeClient() {
         className="absolute top-0 left-0 w-full h-full object-cover z-[-2]"
         style={{
           WebkitMaskImage:
-            "linear-gradient(to bottom, #000000 60%, rgba(0,0,0,0) 100%)",
+            'linear-gradient(to bottom, #000000 60%, rgba(0,0,0,0) 100%)',
           maskImage:
-            "linear-gradient(to bottom, #000000 60%, rgba(0,0,0,0) 100%)",
+            'linear-gradient(to bottom, #000000 60%, rgba(0,0,0,0) 100%)',
         }}
       >
         <source src="/cloud-bg.mp4" type="video/mp4" />
@@ -39,25 +40,43 @@ export default function HomeClient() {
 
       <div className="z-10 w-full">
         <TopNavbar />
+
         <div id="hero" className="w-full overflow-hidden">
-          <HeroSection />
+          <FadeInOnView delay={0}>
+            <HeroSection />
+          </FadeInOnView>
         </div>
+
         <div id="clients" className="w-full">
-          <PersonaPicker />
+          <FadeInOnView delay={0.1}>
+            <PersonaPicker />
+          </FadeInOnView>
         </div>
+
         <div className="w-full">
-          <ContactUs />
+          <FadeInOnView delay={0.2}>
+            <ContactUs />
+          </FadeInOnView>
         </div>
+
         {/* <div className="w-full">
-          <BookingPage />
+          <FadeInOnView delay={0.3}>
+            <BookingPage />
+          </FadeInOnView>
         </div> */}
+
         <div id="faq" className="w-full">
-          <FAQ />
+          <FadeInOnView delay={0.3}>
+            <FAQ />
+          </FadeInOnView>
         </div>
+
         <div className="w-full">
-          <Footer />
+          <FadeInOnView delay={0.4}>
+            <Footer />
+          </FadeInOnView>
         </div>
       </div>
     </div>
-  );
+  )
 }
