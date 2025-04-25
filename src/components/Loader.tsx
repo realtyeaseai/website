@@ -18,7 +18,7 @@ export default function LoaderWrapper({ children }: { children: React.ReactNode 
     RealtyEaseAI
   </p>
   <p className="text-lg text-green-500 font-semibold">
-    Welcome to the World of Virtual Assistants
+    Welcome to the Network
   </p>
 </div>
 
