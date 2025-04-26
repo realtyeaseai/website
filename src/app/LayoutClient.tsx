@@ -1,5 +1,5 @@
 // src/app/layoutClient.tsx
-'use client'
+// 'use client'
 
 import { Toaster } from "react-hot-toast";
 import { ThemeProvider } from "next-themes";

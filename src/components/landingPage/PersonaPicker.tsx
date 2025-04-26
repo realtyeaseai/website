@@ -69,7 +69,7 @@ function RenderPref(){
                            </span>
                         </div>
                         <div className="flex items-center justify-center flex-col flex-[.35] h-auto w-[100%]">
-                           <h1 className="text-center text-3xl mb-1">Agent</h1>
+                           <h1 className="text-center text-3xl mb-1 text-black dark:text-white">Agent</h1>
                            {/* <p className="text-center text-[12px] text-[#ffffff8a]"><i>i&apos;m an agent looking for clients</i></p> */}
                        </div>
                     </div>
@@ -89,7 +89,7 @@ function RenderPref(){
                            </span>
                        </div>
                        <div className="flex items-center justify-center flex-col flex-[.35] h-auto w-[100%]">
-                           <h1 className="text-center text-3xl mb-1">Owner</h1>
+                           <h1 className="text-center text-3xl mb-1 text-black dark:text-white">Owner</h1>
                            {/* <p className="text-center text-[12px] text-[#ffffff8a]"><i>i&apos;m an owner looking for services</i></p> */}
                        </div>
                     </div> 
@@ -107,18 +107,18 @@ function RenderCards(){
         <>
             {items.map((item, i) => (
                <a href="/services/#RealEstateOwners" className="w-full h-auto" key={i}>
-<div className={`md:max-w-[300px] md:w-[300px] h-[270px] w-[100%] max-w-xl m-0 rounded-2xl cursor-pointer transition-shadow duration-300 dark:hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)] hover:shadow-black hover:shadow-2xl hover:border-black border`}>
-    <div className={`relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff30] shadow-xl ${item.bgColor} dark:bg-[#ffffff10]`}>
-                       <div className="flex-[.7] grid place-items-center h-[100%] w-[100%]">
-                       <span className="h-[80%] w-[40%] flex items-center justify-center rounded-2xl dark:bg-transparent">
-  <Image
-    src={item.tag}
-    width={100}
-    height={100}
-    className="h-auto md:w-[50%] w-[100%] border filter dark:invert-[100%]"
-    alt="img"
-  />
-</span>
+                <div className={`md:max-w-[300px] md:w-[300px] h-[270px] w-[100%] max-w-xl m-0 rounded-2xl cursor-pointer transition-shadow duration-300 border border-[#ffffff35] hover:border-black hover:shadow-[6px_6px_2px_2px_#333333] dark:hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)] `}>
+                    <div className={`relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl shadow-xl ${item.bgColor} dark:bg-[#ffffff10]`}>
+                        <div className="flex-[.7] grid place-items-center h-[100%] w-[100%]">
+                        <span className="h-[80%] w-[40%] flex items-center justify-center rounded-2xl dark:bg-transparent">
+                            <Image
+                              src={item.tag}
+                              width={100}
+                              height={100}
+                              className="h-auto md:w-[50%] w-[100%] border filter dark:invert-[100%]"
+                              alt="img"
+                            />
+                        </span>
 
                        </div>
                        <div className="flex-[.3] h-full w-full grid place-items-center">
@@ -140,11 +140,11 @@ function LastCard(){
         <a href="/services/#services">
         <div className="md:max-w-[300px] md:w-[300px] h-[270px] w-[100%] max-w-xl cursor-pointer">
             <div className="relative w-full max-w-xl h-full">
-                <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff30] bg-[#ffffff10] transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)] px-4 py-8 shadow-xl">
+                <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff30] bg-[#ffffff10] transition-shadow duration-300 hover:border-black hover:shadow-[6px_6px_2px_2px_#333333] dark:hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)] px-4 py-8 shadow-xl">
                     <div className="relative flex h-full w-[100%] flex-col items-center justify-center">
                     <Image src="/personaSlectorItems/question-mark-svgrepo-com.svg" width={40} height={20} className="h-auto md:w-[30%] border mt-10 dark:invert-[100%]" alt="img"/>
-                        <h1 className="md:text-[16px] text-[15px] mb-1 mt-10">Got something else ?</h1>
-                        <p className="text-center text-[12px] dark:text-[#ffffff8a] mb-4">“Tell us what you need — we&apos;ll find the best pro and handle the rest.”</p>
+                        <h1 className="md:text-[16px] text-[15px] mb-1 mt-10 text-[#000000dc] dark:text-white">Got something else ?</h1>
+                        <p className="text-center text-[12px] dark:text-[#ffffff8a] text-[#00000075] mb-4">“Tell us what you need — we&apos;ll find the best pro and handle the rest.”</p>
                         {/*---------------- Set button output--------------*/}
                         {/* <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
                             <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
