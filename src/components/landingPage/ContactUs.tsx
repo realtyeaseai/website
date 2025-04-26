@@ -21,7 +21,7 @@ export default function ContactUs() {
             alt="icon"
             className="w-[75%] h-auto" />
         </span>
-        <h1 className="md:text-4xl md:w-[55%] w-[90%] text-2xl text-center dark:text-black text-white"><b>Here&apos;s what some of our <span className="text-green-400"> satisfied user&apos;s</span> have said about us.</b></h1>
+        <h1 className="md:text-4xl md:w-[55%] w-[90%] text-2xl text-center text-white"><b>Here&apos;s what some of our <span className="text-green-400"> satisfied user&apos;s</span> have said about us.</b></h1>
         {/* <p className="text-center text-[14px] text-[#ffffff8a]">Here&apos;s what some of our satisfied <span className="">user&apos;s</span> have said about us.</p> */}
 
         <div className="flex items-center justify-center flex-col md:flex-row gap-8 h-[220px] md:h-[20%] w-[80%] md:mt-0 text-white">
