@@ -11,8 +11,8 @@ import {
   MobileNavToggle,
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
-import { useState } from "react";
 import ThemeToggle from '@/components/ThemeToggle'
+import { useState } from 'react'
 
 
 
@@ -56,13 +56,15 @@ export function TopNavbar(){
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+
     return (
         <div 
           className="relative w-full z-[100]"
         >
             <Navbar>
         {/* Desktop Navigation */}
-        <NavBody className="bg-white text-black dark:text-white dark:bg-black transition-colors duration-300">
+        <NavBody className="bg-white dark:text-white dark:bg-black/10 backdrop-blur-4xl dark:backdrop-blur-2xl transition-colors duration-300 font-bold">
+
           <NavbarLogo />
           <NavItems items={navItems}/>
           <div className="flex items-center gap-2">

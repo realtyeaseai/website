@@ -1,8 +1,15 @@
-'use client'
+'use client';
 import React from "react";
 import { AnimatedTooltip } from "./ui/animated-tooltip";
 
-const people = [
+interface Person {
+  id: number;
+  name: string;
+  designation: string;
+  image: string;
+}
+
+const people: Person[] = [
   {
     id: 1,
     name: "Robert Johnson",
@@ -27,7 +34,7 @@ const people = [
   {
     id: 4,
     name: "Tyler Durden",
-    designation: "Soap Developer",
+    designation: "Web Developer",
     image:
       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80",
   },
@@ -39,7 +46,7 @@ const people = [
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
   },
 ];
- 
+
 export function Tooltip() {
   return (
     <div className="hidden md:inline-flex items-center ml-4">

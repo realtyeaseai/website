@@ -15,31 +15,54 @@ export default function DropdownCompo({ question, description, width = "w-full",
 
   return (
     <div
-      className={`border border-transparent border-b-[#ffffff69]  p-4 cursor-pointer bg-[#ffffff0a] ${width} ${height}`}
+      className={`border dark:border-transparent border-gray-300 border-b-blue-900 dark:border-b-[#ffffff69]  p-4 cursor-pointer dark:bg-[#ffffff0a] ${width} ${height}`}
       onClick={() => setIsOpen(!isOpen)}
     >
       <div className="flex justify-between items-center">
-        <h1 className="text-lg font-medium w-[90%]">{question}</h1>
-        <span>
-          {isOpen ? (
-            <Image
-              width={100}
-              height={100}
-              src="/faqItems/Minus.svg"
-              alt="-"
-              className="w-6 h-auto"
-            />
-          ) : (
-            <Image
-              width={100}
-              height={100}
-              src="/faqItems/Add.svg"
-              alt="+"
-              className="w-6 h-auto"
-            />
-          )}
-        </span>
-      </div>
+  <h1 className="text-lg font-medium w-[90%]">{question}</h1>
+  <span>
+    {isOpen ? (
+      <>
+        {/* Light mode minus */}
+        <Image
+          width={100}
+          height={100}
+          src="/faqItems/minus-svgrepo-com.svg"
+          alt="-"
+          className="w-6 h-auto block dark:hidden"
+        />
+        {/* Dark mode minus */}
+        <Image
+          width={100}
+          height={100}
+          src="/faqItems/Minus.svg" // You need a white or light version here
+          alt="-"
+          className="w-6 h-auto hidden dark:block"
+        />
+      </>
+    ) : (
+      <>
+        {/* Light mode plus */}
+        <Image
+          width={100}
+          height={100}
+          src="/faqItems/plus-svgrepo-com.svg"
+          alt="+"
+          className="w-6 h-auto block dark:hidden"
+        />
+        {/* Dark mode plus */}
+        <Image
+          width={100}
+          height={100}
+          src="/faqItems/Add.svg" // You need a white or light version here too
+          alt="+"
+          className="w-6 h-auto hidden dark:block"
+        />
+      </>
+    )}
+  </span>
+</div>
+
 
       <AnimatePresence initial={false}>
         {isOpen && (
@@ -49,7 +72,7 @@ export default function DropdownCompo({ question, description, width = "w-full",
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.1, ease: "easeInOut" }}
-            className="overflow-hidden text-sm mt-2 text-gray-300"
+            className="overflow-hidden text-sm mt-2 text-gray-900 dark:text-gray-300"
           >
             {/* Render HTML content */}
             <div dangerouslySetInnerHTML={{ __html: description }} />

@@ -4,26 +4,26 @@ import Image from "next/image";
 // edit this for top servicer 5 grid images 
 const items = [{
     tag:"/personaSlectorItems/home-icon-silhouette-svgrepo-com.svg",
-    title:"Construction/ Rennovation",
-    // description:'“Manage your renovation or repair crew — with timelines and updates.”'
+    title:"Construction/ Renovation",
+    bgColor:"bg-red-300"
 },{
     tag:"/personaSlectorItems/airconditioning-sf-svgrepo-com.svg",
     title:"HVAC",
-    // description:'“Schedule painters, compare quotes, and refresh your space — stress-free.”'
+    bgColor:"bg-indigo-300"
 },{
     tag:"/personaSlectorItems/plumber-svgrepo-com.svg",
     title:"Plumber",
-    // description:'“Leaky tap or blocked pipe? We&aposll get the right plumber to your door.”'
+    bgColor:"bg-cyan-300"
 },{
     tag:"/personaSlectorItems/lightbulb-flash-fill-svgrepo-com.svg",
     title:"Electrician",
-    // description:'“Let us book certified electricians for installations, fixes, and safety checks.”'
+    bgColor:"bg-yellow-300"
 },{
     tag:"/personaSlectorItems/cockroach-svgrepo-com.svg",
     title:"Pest Control",
-    // description:'“Don&apos;t bug out — we&apos;ll arrange quick, professional pest control near you.”'
-},
-];
+    bgColor:"bg-orange-300"
+}]
+
 
 export default function PersonaPicker(){
     return(
@@ -107,10 +107,10 @@ function RenderCards(){
         <>
             {items.map((item, i) => (
                <a href="/services/#RealEstateOwners" className="w-full h-auto" key={i}>
-               <div className="md:max-w-[300px] md:w-[300px] h-[270px] w-[100%] max-w-xl m-0 rounded-2xl cursor-pointer transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)]">
-                   <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff30] bg-[#ffffff10] shadow-xl">
+<div className={`md:max-w-[300px] md:w-[300px] h-[270px] w-[100%] max-w-xl m-0 rounded-2xl cursor-pointer transition-shadow duration-300 dark:hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)] hover:shadow-black hover:shadow-2xl hover:border-black border`}>
+    <div className={`relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff30] shadow-xl ${item.bgColor} dark:bg-[#ffffff10]`}>
                        <div className="flex-[.7] grid place-items-center h-[100%] w-[100%]">
-                       <span className="h-[80%] w-[40%] flex items-center justify-center rounded-2xl bg-white dark:bg-transparent">
+                       <span className="h-[80%] w-[40%] flex items-center justify-center rounded-2xl dark:bg-transparent">
   <Image
     src={item.tag}
     width={100}

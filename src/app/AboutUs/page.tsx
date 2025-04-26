@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import FunFactCounter from "@/components/utilities/FunFactCounter";
 import { TestimonialSlider1 } from "@/components/utilities/TestimonialSlider";
-import { TopNavbar } from "@/components/TopNabbar";
+import { TopNavbar } from "@/components/TopNavbar";
 import MyGlobe from "@/components/myGlobe";
 
 export default function AboutUs() {

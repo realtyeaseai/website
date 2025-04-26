@@ -1,6 +1,7 @@
 import Image from "next/image";
 import DropdownCompo from "@/components/ui/DropdownCompo";
 import Link from "next/link";
+import AgentTag from '@/components/AgentTag';
 
 export default function Services() {
 
@@ -77,7 +78,7 @@ const faqs = [
   ],
   [
     {
-      question: "Construction/Rennovation",
+      question: "Construction & Rennovation",
       answer:
         `
           <p>
@@ -143,16 +144,18 @@ const faqs = [
 
 function TopHeading() {
   return (
-    <div className="flex flex-col items-center justify-start w-full h-fit">
-      <h1 className="bg-opacity-50 bg-gradient-to-b dark:from-neutral-50 dark:to-neutral-400 bg-clip-text text-center text-4xl font-bold dark:dark:text-transparent md:text-7xl">
-        Our Services
-      </h1>
-      <p className="mx-auto mt-6 max-w-xl text-center text-base font-normal dark:text-neutral-300 mb-6">
-        From managing and client communications to coordinating and administrative workflows, our virtual assistants adapt to your priorities.
+    <div className="flex flex-col items-center justify-start w-full h-fit px-4 md:px-8 py-8">
+  <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-center bg-clip-text bg-gradient-to-b from-neutral-700 to-gray-900 dark:from-neutral-50 dark:to-neutral-400 dark:text-transparent">
+    Our Services
+  </h1>
+  
+  <p className="mt-6 mb-6 max-w-2xl text-center text-sm md:text-base font-normal text-neutral-600 dark:text-neutral-300">
+    From managing and client communications to coordinating and administrative workflows, our virtual assistants adapt to your priorities.
+    <br className="hidden md:block" />
+    No two businesses are alike—that&apos;s why every service we deliver is tailored to your unique goals, processes, and growth ambitions.
+  </p>
+</div>
 
-        <br />No two businesses are alike—that&apos;s why every service we deliver is tailored to your unique goals, processes, and growth ambitions.
-      </p>
-    </div>
   );
 }
 
@@ -179,54 +182,58 @@ function RenderedServices() {
 
 function FirstBox() {
   return (
-    <>
-      <div className="relative flex items-center justify-between md:flex-row flex-col gap-8 w-full h-[80%]">
-        {/*-------------- text + FAQ -----------*/}
-        <span className="w-full md:w-[50%] h-full flex flex-col">
-          <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-start text-3xl font-bold dark:text-transparent md:text-4xl">
-            Virtual Assistant Service
-            <span className="text-sm text-gray-900 bg-yellow-500 px-2.5 py-1 rounded-xl ml-5 font-extrabold">
-    #AGENT
-  </span>
-          </h1>
-          <p className="text-start font-normal text-neutral-400 mt-2">
-            Get Connected with verified assistants quickly and shortly
-          </p>
-          {/* FAQ */}
-          <div className="w-full h-[80%] mt-4 flex gap-4 items-center justify-center flex-col">
-            {faqs[0].map((item, i) => (
-              <DropdownCompo
-                key={i}
-                question={item.question}
-                description={item.answer}
-                width="w-full"
-                height="h-auto"
-              />
-            ))}
-          </div>
-          <Link href="/#contact" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-black text-white hover:bg-gray-700 dark:bg-[#ffffff] hover:dark:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
+    <div className="relative flex flex-col md:flex-row items-center justify-between gap-8 w-full h-auto px-4 md:px-10 py-6">
+      
+      {/* Text + FAQ */}
+      <div className="w-full md:w-1/2 h-full flex flex-col items-center md:items-start text-center md:text-left">
+        <div className="flex gap-2 mb-4">
+          <AgentTag type="agent" />
+        </div>
+
+        <h1 className="text-2xl md:text-4xl font-bold bg-clip-text bg-gradient-to-b from-neutral-700 to-gray-900 dark:from-neutral-50 dark:to-neutral-400 dark:text-transparent">
+          Virtual Assistant Services
+        </h1>
+
+        <p className="font-normal dark:text-neutral-400 mt-2 text-sm md:text-base">
+          Get Connected with verified assistants quickly and shortly
+        </p>
+
+        <div className="w-full mt-4 flex flex-col gap-4 items-center md:items-start">
+          {faqs[0].map((item, i) => (
+            <DropdownCompo
+              key={i}
+              question={item.question}
+              description={item.answer}
+              width="w-full"
+              height="h-auto"
+            />
+          ))}
+        </div>
+
+        <Link href="/#contact" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-black text-white hover:bg-gray-700 dark:bg-[#ffffff] hover:dark:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
             Contact Us
           </Link>
-        </span>
-        {/*--------------- image --------------*/}
-        <span className="md:w-[50%] w-full h-full flex items-center justify-center md:justify-end">
-          <Image
-            width={100}
-            height={100}
-            src="/ServicesItems/FirstImage.svg"
-            alt=""
-            className="w-[70%] h-auto object-cover"
-          />
-        </span>
-
       </div>
-    </>
-  )
+
+      {/* Image */}
+      <div className="w-full md:w-1/2 h-full flex items-center justify-center md:justify-end">
+        <Image
+          width={100}
+          height={100}
+          src="/ServicesItems/FirstImage.svg"
+          alt="Virtual Assistant Service"
+          className="w-[80%] max-w-xs md:max-w-none h-auto object-cover"
+        />
+      </div>
+
+    </div>
+  );
 }
+
+
 
 function SecondBox() {
   return (
-    <>
       <div className="relative flex items-center justify-between md:flex-row flex-col gap-8 w-full h-[80%]">
         {/*--------------- image --------------*/}
         <span className="md:w-[50%] hidden md:flex w-full h-full items-center justify-center md:justify-start">
@@ -239,17 +246,14 @@ function SecondBox() {
           />
         </span>
         {/*-------------- text + FAQ -----------*/}
-        <span className="w-full md:w-[50%] h-full flex flex-col">
-          <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-start text-3xl font-bold dark:text-transparent md:text-4xl">
-            Virtual Assistant Services
-            <span className="text-sm text-gray-900 bg-green-500 px-2 py-0.5 rounded-xl ml-5 font-extrabold">
-    #PROPERTY OWNER
-  </span>
-            {/* <span className="text-sm font-medium text-gray-600 bg-gray-100 px-2 py-0.5 rounded-xl ml-5">
-    
-  </span> */}
-          </h1>
-          <p className="text-start font-normal text-neutral-400 mt-2">
+        <span className="w-full md:w-[50%] h-full flex flex-col items-center">
+        <div className="flex gap-2 mb-4">
+          <AgentTag type="property-owner" />
+        </div>
+        <h1 className="text-2xl md:text-4xl font-bold bg-clip-text bg-gradient-to-b from-neutral-700 to-gray-900 dark:from-neutral-50 dark:to-neutral-400 dark:text-transparent">
+          Virtual Assistant Services
+        </h1>
+          <p className="text-start font-normal dark:text-neutral-400 mt-2">
             Have your own VAs that are ready to help at anytime
           </p>
           {/* FAQ */}
@@ -269,7 +273,6 @@ function SecondBox() {
           </Link>
         </span>
       </div>
-    </>
   )
 }
 
@@ -277,106 +280,107 @@ function SecondBox() {
 
 function ThirdBox() {
   return (
-    <>
-      <div className="relative flex items-center justify-between md:flex-row flex-col gap-8 w-full h-[80%]">
-        {/*-------------- text + FAQ -----------*/}
-        <span className="w-full md:w-[50%] h-full flex flex-col">
-          <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-start text-3xl font-bold dark:text-transparent md:text-4xl">
-            Virtual Assistant Services
-            <span className="text-sm text-gray-900 bg-pink-100 px-2.5 py-1 rounded-xl ml-5 font-extrabold">
-    #SERVICE PROVIDER
-  </span>
-            {/* <span className="text-sm text-gray-600 bg-pink-100 px-2 py-0.5 rounded-xl ml-5 font-extrabold">
-              #AGENT
-            </span> */}
-          </h1>
-          <p className="text-start font-normal text-neutral-400 mt-2">
-            Get Any specialized support services you need
-          </p>
-          {/* FAQ */}
-          <div className="w-full h-[80%] mt-4 flex gap-4 items-center justify-center flex-col">
-            {faqs[2].map((item, i) => (
-              <DropdownCompo
-                key={i}
-                question={item.question}
-                description={item.answer}
-                width="w-full"
-                height="h-auto"
-              />
-            ))}
-          </div>
-          <Link href="/#contact" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-black text-white hover:bg-gray-700 dark:bg-[#ffffff] hover:dark:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
-            Contact Us
-          </Link>
-        </span>
-        {/*--------------- image --------------*/}
-        <span className="md:w-[50%] w-full h-full flex items-center justify-center md:justify-end">
-          <Image
-            width={100}
-            height={100}
-            src="/ServicesItems/ThiImage.svg"
-            alt=""
-            className="w-[70%] h-auto object-cover"
-          />
-        </span>
+    <div className="relative flex flex-col md:flex-row items-center justify-between gap-8 w-full h-auto px-4 md:px-10 py-6">
 
-      </div>
-    </>
-  )
-}
-
-function FourthBox(){
-  return(
-      <>
-        <div className="relative flex items-center justify-between md:flex-row flex-col gap-8 w-full h-[80%]">
-          {/*--------------- image --------------*/}
-          <span className="md:w-[50%] hidden md:flex w-full h-full items-center justify-center md:justify-start">
-            <Image
-              width={200}
-              height={200}
-              src="/ServicesItems/SecImage.svg"
-              alt=""
-              className="w-[70%] h-auto object-cover"
-            />
-          </span>
-          {/*-------------- text + FAQ -----------*/}
-          <span className="w-full md:w-[70%] h-full flex flex-col">
-            <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-start text-3xl font-bold dark:text-transparent md:text-4xl">
-            Specialized Support Services
-            </h1>
-            <p className="text-start font-normal text-neutral-400 mt-2">
-              Need smthing else? The AI finds trusted pros fast
-            </p>
-            <div className="flex flex-row items-center justify-start gap-2 mt-4 text-center">
-            <span className="text-sm text-gray-900 bg-green-500 px-2 py-1 rounded-xl ml-5 font-extrabold w-[185px] text-center">
-    #PROPERTY OWNER
-  </span>
-  <span className="text-sm text-gray-900 bg-yellow-500 px-2.5 py-1 rounded-xl ml-5 font-extrabold w-[80px]">
-    #AGENT
-  </span>
-  <span className="text-sm text-gray-900 bg-pink-100 px-2.5 py-1.5 rounded-xl ml-5 font-extrabold w-[185px]">
-    #SERVICE PROVIDER
-  </span></div>
-            {/* FAQ */}
-            <div className="w-full h-[80%] mt-4 flex gap-4 items-center justify-center flex-col">
-              {faqs[3].map((item, i) => (
-                <DropdownCompo
-                  key={i}
-                  question={item.question}
-                  description={item.answer}
-                  width="w-full"
-                  height="h-auto"
-                />
-              ))}
-            </div>
-            <Link href="/#contact" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-black text-white hover:bg-gray-700 dark:bg-[#ffffff] hover:dark:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
-            Contact Us
-          </Link>
-          </span>
+      {/* Text + FAQ */}
+      <div className="w-full md:w-1/2 h-full flex flex-col items-center md:items-start text-center md:text-left">
+        <div className="flex gap-2 mb-4">
+          <AgentTag type="service-provider" />
         </div>
-      </>
-  )
+
+        <h1 className="text-2xl md:text-4xl font-bold bg-clip-text bg-gradient-to-b from-neutral-700 to-gray-900 dark:from-neutral-50 dark:to-neutral-400 dark:text-transparent">
+          Virtual Assistant Services
+        </h1>
+
+        <p className="font-normal dark:text-neutral-400 mt-2 text-sm md:text-base">
+          Get any specialized support services you need
+        </p>
+
+        <div className="w-full mt-4 flex flex-col gap-4 items-center md:items-start">
+          {faqs[2].map((item, i) => (
+            <DropdownCompo
+              key={i}
+              question={item.question}
+              description={item.answer}
+              width="w-full"
+              height="h-auto"
+            />
+          ))}
+        </div>
+
+        <Link href="/#contact" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-black text-white hover:bg-gray-700 dark:bg-[#ffffff] hover:dark:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
+            Contact Us
+          </Link>
+      </div>
+
+      {/* Image */}
+      <div className="w-full md:w-1/2 h-full flex items-center justify-center md:justify-end">
+        <Image
+          width={100}
+          height={100}
+          src="/ServicesItems/ThiImage.svg"
+          alt="Virtual Assistant Services"
+          className="w-[80%] max-w-xs md:max-w-none h-auto object-cover"
+        />
+      </div>
+
+    </div>
+  );
 }
+
+
+function FourthBox() {
+  return (
+    <div className="relative flex flex-col md:flex-row items-center justify-between gap-8 w-full h-auto px-2 sm:px-4 md:px-10 py-6">
+      
+      {/* Image */}
+      <div className="w-full md:w-1/2 h-full hidden md:flex items-center justify-center md:justify-start">
+        <Image
+          width={200}
+          height={200}
+          src="/ServicesItems/SecImage.svg"
+          alt="Specialized Support Services"
+          className="w-[70%] h-auto object-cover"
+        />
+      </div>
+
+      {/* Text + FAQ */}
+      <div className="w-full md:w-1/2 h-full flex flex-col items-center md:items-start text-center md:text-left">
+        <div className="flex flex-wrap gap-2 mb-4">
+          <AgentTag type="agent" />
+          <AgentTag type="property-owner" />
+          <AgentTag type="service-provider" />
+        </div>
+
+        <h1 className="text-2xl md:text-4xl font-bold bg-clip-text bg-gradient-to-b from-neutral-700 to-gray-900 dark:from-neutral-50 dark:to-neutral-400 dark:text-transparent">
+          Specialized Support Services
+        </h1>
+
+        <p className="font-normal dark:text-neutral-400 mt-2 text-sm md:text-base">
+          Need something else? The AI finds trusted pros fast.
+        </p>
+
+        <div className="w-full mt-4 flex flex-col gap-4 items-center md:items-start">
+          {faqs[3].map((item, i) => (
+            <DropdownCompo
+              key={i}
+              question={item.question}
+              description={item.answer}
+              width="w-full"
+              height="h-auto"
+            />
+          ))}
+        </div>
+
+        <Link href="/#contact" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-black text-white hover:bg-gray-700 dark:bg-[#ffffff] hover:dark:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
+            Contact Us
+          </Link>
+      </div>
+
+    </div>
+  );
+}
+
 
 function BottomBox() {
   return (
@@ -385,10 +389,10 @@ function BottomBox() {
         <Image width={1000} height={1000} src="/contactUsItems/mail.svg" alt="icon" className="w-[75%] h-auto" />
       </span>
       <h1 className="md:text-5xl text-2xl text-center"><b>Let&apos;s get to work together</b></h1>
-      <p className="text-center text-[14px] text-[#ffffff8a]">Contact us now to know more details</p>
+      <p className="text-center text-[14px] dark:text-[#ffffff8a]">Contact us now to know more details</p>
 
       <div className="flex items-center justify-center h-fit md:h-[20%] w-[80%] md:mt-0 ">
-      <Link href="/#contact" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-black text-white hover:bg-gray-700 dark:bg-[#ffffff] hover:dark:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
+      <Link href="/#contact" className="h-[50px] dark:text-black w-[50%] rounded-[4px] text-center flex items-center justify-center bg-black text-white hover:bg-gray-700 dark:bg-[#ffffff] hover:dark:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
             Contact Us
           </Link>
       </div>

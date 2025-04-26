@@ -7,16 +7,18 @@ export default function ThemeToggle() {
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    const dark =
-      localStorage.getItem('theme') === 'dark' ||
-      (!localStorage.getItem('theme') &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)
-    setIsDark(dark)
-    document.documentElement.classList.toggle('dark', dark)
+    // On first render, check for theme in localStorage or default to system preference
+    const savedTheme = localStorage.getItem('theme') || 'light'
+    const isDarkMode = savedTheme === 'dark' || 
+      (savedTheme === 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    
+    setIsDark(isDarkMode)
+    document.documentElement.classList.toggle('dark', isDarkMode)
     setMounted(true)
   }, [])
 
   const toggleTheme = () => {
+    // Toggle between dark and light theme
     const newTheme = isDark ? 'light' : 'dark'
     setIsDark(!isDark)
     document.documentElement.classList.toggle('dark', !isDark)
@@ -39,4 +41,3 @@ export default function ThemeToggle() {
     </button>
   )
 }
-

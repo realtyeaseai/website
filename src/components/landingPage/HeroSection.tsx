@@ -1,51 +1,49 @@
 "use client"
 import { Tooltip } from "../Tooltip";
-import { Spotlight } from "@/components/ui/Spotlight";
+// import { Spotlight } from "@/components/ui/Spotlight";
 // import Image from "next/image";
 import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <div className="relative flex flex-col h-fit md:h-[800px] w-[100dvw] overflow-hidden rounded-md antialiased md:items-center md:justify-center">
-          {/* ------------------------ Spotlight ------------------------- */}
-          <Spotlight className="-top-40 left-0 md:-top-20 md:left-60" fill="white"/>
-          {/* -----------Overlay of dark color over the bg cloud video ------------ */}
-                <span className="absolute top-0 left-0 w-full h-full object-cover z-[-1] dark:bg-[#00000080]" />
-          
-                {/* -------------------------Background Video ---------------------------- */}
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  title="Cloud background video"
-                  aria-hidden="true"
-                  className="absolute top-0 left-0 w-full h-full object-cover z-[-2]"
-                  style={{
-                    WebkitMaskImage:
-                      'linear-gradient(to bottom, #000000 60%, rgba(0,0,0,0) 100%)',
-                    maskImage:
-                      'linear-gradient(to bottom, #000000 60%, rgba(0,0,0,0) 100%)',
-                  }}
-                >
-                  <source src="/cloud-bg.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-          {/* ---------------------- Items ---------------------- */}
-          <div className="mt-12 md:mt-16 relative z-10 mx-auto w-full max-w-7xl p-4 pt-20 md:pt-0 bg-transparent flex place-items-center flex-col">
-            
-            <TextWithTooltip/>
-            <InputTab/>
-            {/* <ImageText/> */}
+    <div className="relative flex flex-col h-fit min-h-[600px] md:min-h-[850px] w-full overflow-hidden rounded-md antialiased items-center justify-center">
+  {/* Spotlight */}
+  {/* <Spotlight className="absolute -top-32 left-0 md:-top-20 md:left-60" fill="white" /> */}
 
-          </div>
-        </div>
-  )
-}
+  {/* Overlay (dark layer over video) */}
+  <span className="absolute top-0 left-0 w-full h-full bg-black/30 z-[1]" />
+
+  {/* Background Video */}
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    title="Cloud background video"
+    aria-hidden="true"
+    className="absolute top-0 left-0 w-full h-full object-cover z-0"
+    style={{
+      WebkitMaskImage: 'linear-gradient(to bottom, #000000 60%, rgba(0,0,0,0) 100%)',
+      maskImage: 'linear-gradient(to bottom, #000000 60%, rgba(0,0,0,0) 100%)',
+    }}
+  >
+    <source src="/cloud-bg.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  {/* Content Layer */}
+  <div className="relative z-10 w-full max-w-[1920px] px-4 sm:px-6 lg:px-12 pt-24 md:pt-32 flex flex-col items-center text-center">
+    <TextWithTooltip />
+    <InputTab />
+    {/* <ImageText /> */}
+  </div>
+</div>
+  );
+} 
 
 function TextWithTooltip(){
   return(
-    <div className="md:pt-24 pt-12 flex flex-col items-center justify-center w-full">
+    <div className="md:pt-0 pt-12 flex flex-col items-center justify-center w-full">
       <h1 className="bg-opacity-50 bg-gradient-to-b text-green-400 dark:from-neutral-50 dark:to-neutral-400 bg-clip-text text-center text-4xl font-bold dark:text-transparent md:text-7xl">
         <span className="inline-flex items-center justify-center w-full text-center"> Your Trusted Partner 
           {/* --------------Tooltip containing the profile pics ---------- */}
