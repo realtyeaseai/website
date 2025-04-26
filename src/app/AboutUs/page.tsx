@@ -63,6 +63,21 @@ export default function AboutUs() {
         </div>
       </section>
 
+      
+
+      
+
+     
+
+      
+
+      {/* Fun Fact Section */}
+      <section className="p-3 py-20 bg-white text-black dark:bg-neutral-950 dark:text-white">
+        <div className="container mx-auto">
+          <FunFactCounter style={2} />
+        </div>
+      </section>
+
       {/* About Section 4 - Why Realty Ease AI? */}
       <section className="p-3 py-30 bg-white text-black dark:bg-neutral-950 dark:text-white">
         <div className="container mx-auto grid md:grid-cols-2 gap-10 py-10 px-10 items-center">
@@ -89,19 +104,6 @@ export default function AboutUs() {
               className="rounded-2xl"
             />
           </span>
-        </div>
-      </section>
-
-      
-
-     
-
-      
-
-      {/* Fun Fact Section */}
-      <section className="p-3 py-20 bg-white text-black dark:bg-neutral-950 dark:text-white">
-        <div className="container mx-auto">
-          <FunFactCounter style={2} />
         </div>
       </section>
 
