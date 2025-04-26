@@ -41,7 +41,7 @@ export default function AboutUs() {
       </section>
 
       {/* About Section 3 - The Founder Story - Who we Are */}
-      <section className="p-5 py-10 md:py-20 flex rounded-[24px_24px_0_0] items-center justify-center bg-white text-black dark:bg-neutral-950 dark:text-white text-center md:text-left">
+      <section className="p-5 py-10 md:py-20 flex items-center justify-center bg-white text-black dark:bg-neutral-950 dark:text-white text-center md:text-left">
         <div className="container mx-auto grid md:grid-cols-2 gap-10 py-10 px-10 items-center">
           <div className="flex flex-col items-center md:items-start">
             <h2 className="text-xl md:text-2xl font-bold mb-4 text-center md:text-left">

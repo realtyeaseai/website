@@ -162,11 +162,11 @@ function TopHeading() {
 function RenderedServices() {
   return (
     <div className="flex flex-col items-center justify-start w-full h-fit">
-      <div className="rounded-xl min-h-[400px] w-[80%] flex flex-col gap-20 p-8 mt-12">
+      <div className="rounded-xl min-h-[400px] w-[96%] md:w-[80%] flex flex-col gap-20 p-8 mt-12">
         <div className="h-fit w-full" id="RealEstateAgent">
           <FirstBox />
         </div>
-        <div className="h-fit w-full" id="RealEstateOwners">
+        <div className="h-fit w-full" id="vas">
           <SecondBox />
         </div>
         <div className="h-fit w-full" id="services">
@@ -182,7 +182,7 @@ function RenderedServices() {
 
 function FirstBox() {
   return (
-    <div className="relative flex flex-col md:flex-row items-center justify-between gap-8 w-full h-auto px-4 md:px-10 py-6">
+    <div className="relative flex flex-col-reverse md:flex-row items-center justify-between gap-8 w-full h-auto px-4 md:px-10 py-6">
       
       {/* Text + FAQ */}
       <div className="w-full md:w-1/2 h-full flex flex-col items-center md:items-start text-center md:text-left">
@@ -236,7 +236,7 @@ function SecondBox() {
   return (
       <div className="relative flex items-center justify-between md:flex-row flex-col gap-8 w-full h-[80%]">
         {/*--------------- image --------------*/}
-        <span className="md:w-[50%] hidden md:flex w-full h-full items-center justify-center md:justify-start">
+        <span className="md:w-[50%] flex w-full h-full items-center justify-center md:justify-start">
           <Image
             width={200}
             height={200}
@@ -280,7 +280,7 @@ function SecondBox() {
 
 function ThirdBox() {
   return (
-    <div className="relative flex flex-col md:flex-row items-center justify-between gap-8 w-full h-auto px-4 md:px-10 py-6">
+    <div className="relative flex flex-col-reverse md:flex-row items-center justify-between gap-8 w-full h-auto px-4 md:px-10 py-6">
 
       {/* Text + FAQ */}
       <div className="w-full md:w-1/2 h-full flex flex-col items-center md:items-start text-center md:text-left">
@@ -334,7 +334,7 @@ function FourthBox() {
     <div className="relative flex flex-col md:flex-row items-center justify-between gap-8 w-full h-auto px-2 sm:px-4 md:px-10 py-6">
       
       {/* Image */}
-      <div className="w-full md:w-1/2 h-full hidden md:flex items-center justify-center md:justify-start">
+      <div className="w-full md:w-1/2 h-full flex items-center justify-center md:justify-start">
         <Image
           width={200}
           height={200}
