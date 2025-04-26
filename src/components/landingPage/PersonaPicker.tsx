@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Meteors } from "../ui/meteors";
 import Image from "next/image";
-import { link } from "fs";
 
 // edit this for top servicer 5 grid images 
 const items = [{
