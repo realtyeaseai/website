@@ -27,7 +27,7 @@ const items = [{
 
 export default function PersonaPicker(){
     return(
-        <div className="bg-white dark:bg-black h-fit w-full min-h-[120dvh] flex justify-center flex-col items-center py-10 md:py-20">
+        <div className="bg-white text-black dark:text-white dark:bg-black h-fit w-full min-h-[120dvh] flex justify-center flex-col items-center py-10 md:py-20">
             <div className="md:w-[80%] w-full flex justify-center items-center flex-col mt-0">
                 <h1 className="text-4xl text-black dark:text-white">Who are you?</h1>
                 <p className="text-black dark:text-[#ffffff99] text-[14px]">Help us identify you needs</p>

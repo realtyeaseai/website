@@ -78,7 +78,7 @@ export default function ContactForm() {
     <div className="bg-[radial-gradient(circle_at_top_right,_#00c26e,_#00d77ab3,_#66e6aab3,_#1e3d2f)]
  dark:bg-[radial-gradient(circle_at_top_right,_#0072feb5,_#4883cc53,_#4883cc29,_#000)]
  border dark:border-[#ffffff50] min-h-[750px] w-full md:w-auto rounded-lg flex items-center justify-center flex-col p-6 dark:dark:text-white font-bold">
-      <h2 className="text-3xl dark:dark:text-white mb-10">Get in Touch With Us</h2>
+      <h2 className="text-3xl dark:text-white mb-10">Get in Touch With Us</h2>
       <form onSubmit={handleSubmit} className="max-w-2xl w-full space-y-8">
 
         {/*----------------- Name Block ------------- */}

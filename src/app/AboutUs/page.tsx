@@ -11,7 +11,7 @@ export default function AboutUs() {
       <TopNavbar />
 
       {/* About Section 1 - Mission */}
-      <section className="p-3 py-30 dark:bg-neutral-950 dark:text-white">
+      <section className="p-3 py-30 bg-white text-black dark:bg-neutral-950 dark:text-white">
         <div className="container mx-auto grid md:grid-cols-2 gap-10 py-10 px-10 items-center">
           <Image
             src="/assets/img/team/working.jpg"
@@ -36,12 +36,50 @@ export default function AboutUs() {
       </section>
 
        {/* About Section 2 - Global Impact */}
-       <section className="h-fit w-full bg-neutral-950 dark:text-white">
+       <section className="h-fit w-full bg-white text-black dark:bg-neutral-950 dark:text-white">
         <MyGlobe />
       </section>
 
-      {/* About Section 3 - Why Realty Ease AI? */}
-      <section className="p-3 py-30 dark:bg-neutral-900 dark:text-white rounded-[24px_24px_0_0]">
+      {/* About Section 3 - The Founder Story - Who we Are */}
+      <section className="p-5 py-10 md:py-20 flex rounded-[24px_24px_0_0] items-center justify-center bg-white text-black dark:bg-neutral-950 dark:text-white text-center md:text-left">
+        <div className="container mx-auto grid md:grid-cols-2 gap-10 py-10 px-10 items-center">
+          <div className="flex flex-col items-center md:items-start">
+            <h2 className="text-xl md:text-2xl font-bold mb-4 text-center md:text-left">
+              Who We Are
+            </h2>
+            <p className="mb-6 text-black dark:text-neutral-400">
+              Realty Ease AI was founded by Kathy Tiburcio and Eyandra Molina, first-generation Americans born to Dominican immigrant parents. Growing up in Hunts Point, Bronx, and Harlem, respectively, Kathy and Eyandra met as teenagers at Washington Irving High School in New York City. After years of pursuing separate paths, a chance reunion over coffee dec 2024 in the Dominican Republic reignited their shared passion for real estate and inspired the creation of Realty Ease AI.
+            </p>
+          </div>
+          <span className="h-fit w-full flex items-center justify-center">
+            <Image
+              src="/assets/img/team/working2.png"
+              width={500}
+              height={400}
+              alt="about"
+              className="rounded-xl w-[140px] md:w-[300px] h-auto"
+            />
+          </span>
+        </div>
+      </section>
+
+      
+
+      
+
+     
+
+      
+
+      {/* Fun Fact Section */}
+      <section className="p-3 py-20 bg-white text-black dark:bg-neutral-950 dark:text-white">
+        <div className="container mx-auto">
+          <FunFactCounter style={2} />
+        </div>
+      </section>
+
+      {/* About Section 4 - Why Realty Ease AI? */}
+      <section className="p-3 py-30 bg-white text-black dark:bg-neutral-950 dark:text-white">
         <div className="container mx-auto grid md:grid-cols-2 gap-10 py-10 px-10 items-center">
           <div>
             <h4 className="text-2xl font-semibold mb-4 text-center md:text-start">Why Realty Ease AI?</h4>
@@ -69,42 +107,8 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* About Section 4 - The Founder Story - Who we Are */}
-      <section className="p-5 py-10 md:py-20 flex rounded-[24px_24px_0_0] items-center justify-center dark:bg-neutral-900 dark:text-white text-center md:text-left">
-        <div className="container mx-auto grid md:grid-cols-2 gap-10 py-10 px-10 items-center">
-          <div className="flex flex-col items-center md:items-start">
-            <h2 className="text-xl md:text-2xl font-bold mb-4 text-center md:text-left">
-              Who We Are
-            </h2>
-            <p className="mb-6 text-black dark:text-neutral-400">
-              Realty Ease AI was founded by Kathy Tiburcio and Eyandra Molina, first-generation Americans born to Dominican immigrant parents. Growing up in Hunts Point, Bronx, and Harlem, respectively, Kathy and Eyandra met as teenagers at Washington Irving High School in New York City. After years of pursuing separate paths, a chance reunion over coffee dec 2024 in the Dominican Republic reignited their shared passion for real estate and inspired the creation of Realty Ease AI.
-            </p>
-          </div>
-          <span className="h-fit w-full flex items-center justify-center">
-            <Image
-              src="/assets/img/team/working2.png"
-              width={500}
-              height={400}
-              alt="about"
-              className="rounded-xl w-[140px] md:w-[300px] h-auto"
-            />
-          </span>
-        </div>
-      </section>
-
-     
-
-      
-
-      {/* Fun Fact Section */}
-      <section className="p-3 py-20 dark:bg-neutral-900 dark:text-white">
-        <div className="container mx-auto">
-          <FunFactCounter style={2} />
-        </div>
-      </section>
-
       {/* Testimonial Section */}
-      <section className="py-20 dark:bg-neutral-950 dark:text-white">
+      <section className="py-20 bg-white text-black dark:bg-neutral-950 dark:text-white">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-10">
             We&apos;ve 1250+ Global Clients Saying About Us

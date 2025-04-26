@@ -122,7 +122,7 @@ const faqs = [
 export default function FAQ() {
 
   return (
-    <div className="dark:bg-black">
+    <div className="dark:bg-black bg-white dark:text-white text-black">
     <div className="min-h-fit pt-24 w-full flex items-center justify-center dark:bg-black">
         <div className="w-[98%] flex items-start justify-center flex-col md:flex-row gap-4 p-4">
             <TextBoxWithContactBtn/>
