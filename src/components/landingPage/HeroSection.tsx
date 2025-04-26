@@ -11,7 +11,7 @@ export default function HeroSection() {
   {/* <Spotlight className="absolute -top-32 left-0 md:-top-20 md:left-60" fill="white" /> */}
 
   {/* Overlay (dark layer over video) */}
-  <span className="absolute top-0 left-0 w-full h-full bg-black/30 z-[1]" />
+  <span className="absolute top-0 left-0 w-full h-full dark:bg-black/30 z-[1]" />
 
   {/* Background Video */}
   <video
