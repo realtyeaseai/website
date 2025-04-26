@@ -10,7 +10,7 @@ export default function ContactUs() {
   const [activeForm, setActiveForm] = useState<"message" | "call">("message");
 
   return (
-    <div className=" dark:bg-black min-h-[100dvh] pt-20 w-full flex items-center justify-evenly flex-col ">
+    <div className="bg-white text-black dark:bg-black min-h-[100dvh] pt-20 w-full flex items-center justify-evenly flex-col ">
       {/* -------------- Static Box --------------  */}
       <div className="md:h-[380px] h-[600px] w-[96%] rounded-2xl border border-[#ffffff20] mt-4 hover:border-[#ffffff50] flex gap-4 items-center justify-center flex-col bg-indigo-700 dark:bg-[radial-gradient(circle_at_center,_#0072feb5,_#4883cc53,_#4883cc29,_#000)]">
 
