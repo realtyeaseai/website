@@ -73,7 +73,7 @@ export default function ContactUs() {
       </div>
 
       {/* ------------------ Grid to Conatct --------------- */}
-      <div id="contact" className="grid grid-cols-1 md:grid-cols-[1.5fr_2fr] gap-4 w-full md:w-[98%] p-4">
+      <div id="contact" className="grid grid-cols-1 md:grid-cols-[1.5fr_2fr] gap-4 w-full md:w-[98%] p-4 scroll-mt-24">
   <div className="h-[600px] w-full md:w-auto flex flex-col justify-center items-center text-center">
     <p className="text-4xl dark:text-white">
       <span className="text-green-400 font-semibold italic">Have a Question ?</span><br />

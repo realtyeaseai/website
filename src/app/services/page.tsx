@@ -9,7 +9,7 @@ export default function Services() {
   // await new Promise((resolve) => setTimeout(resolve, 3000));
 
   return (
-    <div className="relative w-full h-fit pb-8 flex flex-col justify-start items-center min-h-[100dvh] dark:bg-black bg-white dark:text-white text-black pt-28 md:pt-40">
+    <div className="relative w-full h-fit pb-8 flex flex-col justify-start items-center min-h-[100dvh] dark:bg-black bg-green-50 dark:text-white text-black pt-28 md:pt-40">
       <TopHeading />
       <RenderedServices />
       <BottomBox />

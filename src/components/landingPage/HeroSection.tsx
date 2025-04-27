@@ -44,7 +44,7 @@ export default function HeroSection() {
 function TextWithTooltip(){
   return(
     <div className="md:pt-0 pt-12 flex flex-col items-center justify-center w-full">
-      <h1 className="bg-opacity-50 bg-gradient-to-b text-green-400 dark:from-neutral-50 dark:to-neutral-400 bg-clip-text text-center text-4xl font-bold dark:text-transparent md:text-7xl">
+      <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-4xl font-bold dark:text-transparent md:text-7xl">
         <span className="inline-flex items-center justify-center w-full text-center"> Your Trusted Partner 
           {/* --------------Tooltip containing the profile pics ---------- */}
           <Tooltip/> 
@@ -72,35 +72,3 @@ function InputTab(){
   )
 }
 
-// function ImageText(){
-//   return(
-//     <div className="relative flex items-center justify-center w-full h-[540px] md:h-[40%] mt-4 md:mt-12">
-//       <span className="w-full h-full md:block hidden bg-white dark:bg-transparent">
-//         <Image
-//           src="/heroItems/HeroImage.svg"
-//           alt=""
-//           width={30}
-//           height={30}
-//           className="w-full h-full object-cover [filter:blur(3px)]"
-//         />
-//         {/* Black mask at the bottom */}
-//         {/* <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black to-transparent"/> */}
-//       </span>
-//       <div className="absolute w-full h-[50%] text-center flex items-center justify-center flex-col">
-//         <h1 className="bg-opacity-50 bg-gradient-to-b  text-white md:text-black lg:text-white dark:from-neutral-50 dark:to-neutral-400 bg-clip-text text-center text-2xl md:text-4xl font-bold dark:text-transparent">
-//           Maximize Your Productivity with Professional Virtual Assistants
-//         </h1>
-//         <p className="dark:text-white md:text-black lg:text-white text-base font-normal w-[80%] mx-auto mt-4 p-4 rounded-xl shadow-md">
-//   Running a successful business is demanding, <span className="text-green-500 font-medium">let us help lighten your load!</span> Whether you&apos;re in 
-//   <span className="text-green-500 font-semibold"> Real estate</span>, 
-//   <span className="text-green-500 font-semibold"> Construction</span>, or 
-//   <span className="text-green-500 font-semibold"> Multiservice</span>, our experienced virtual assistants handle your 
-//   <span className="text-green-500 font-medium"> day-to-day administrative tasks</span>, allowing you to focus on  
-//   <span className="text-green-500 font-semibold"> what matters most.</span>
-// </p>
-
-
-//       </div>
-//     </div>
-//   )
-// }

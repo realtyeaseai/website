@@ -63,7 +63,7 @@ export function TopNavbar(){
         >
             <Navbar>
         {/* Desktop Navigation */}
-        <NavBody className="bg-white dark:text-white dark:bg-black/10 backdrop-blur-4xl dark:backdrop-blur-2xl transition-colors duration-300 font-bold">
+        <NavBody className="bg-white/70 dark:text-white dark:bg-black/7 backdrop-blur-4xl dark:backdrop-blur-2xl transition-colors duration-300 font-bold">
 
           <NavbarLogo />
           <NavItems items={navItems}/>

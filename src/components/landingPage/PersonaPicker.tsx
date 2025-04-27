@@ -6,27 +6,27 @@ import Image from "next/image";
 const items = [{
     tag:"/personaSlectorItems/home-icon-silhouette-svgrepo-com.svg",
     title:"Construction/ Renovation",
-    bgColor:"bg-red-300",
+    // bgColor:"bg-red-300",
     link: "/services/#RealEstateOwners"
 },{
     tag:"/personaSlectorItems/airconditioning-sf-svgrepo-com.svg",
     title:"HVAC",
-    bgColor:"bg-indigo-300",
+    // bgColor:"bg-indigo-300",
     link: "/services/#RealEstateOwners"
 },{
     tag:"/personaSlectorItems/plumber-svgrepo-com.svg",
     title:"Plumber",
-    bgColor:"bg-cyan-300",
+    // bgColor:"bg-cyan-300",
     link: "/services/#RealEstateOwners"
 },{
     tag:"/personaSlectorItems/lightbulb-flash-fill-svgrepo-com.svg",
     title:"Electrician",
-    bgColor:"bg-yellow-300",
+    // bgColor:"bg-yellow-300",
     link: "/services/#RealEstateOwners"
 },{
     tag:"/personaSlectorItems/cockroach-svgrepo-com.svg",
     title:"Pest Control",
-    bgColor:"bg-orange-300",
+    // bgColor:"bg-orange-300",
     link: "/services/#RealEstateOwners"
 }]
 
@@ -65,7 +65,8 @@ function RenderPref(){
        <div className="md:w-[50%] w-full h-[320px] flex justify-center items-center flex-col md:mt-0">
            <div className="relative flex h-full w-full p-4 flex-row gap-4 md:gap-8 items-center justify-center">
                 
-                <div className="relative h-[80%] md:h-full w-full flex-[.45] rounded-[8px] dark:text-white text-center overflow-hidden border dark:border-[#ffffff30] bg-amber-100 dark:bg-[#ffffff10] cursor-pointer transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)]">
+                <div className="relative h-[80%] md:h-full w-full flex-[.45] rounded-[8px] dark:text-white text-center overflow-hidden border dark:border-[#ffffff30] dark:bg-[radial-gradient(circle_at_top_left,_#0073FF_20%,_black)] bg-[radial-gradient(circle_at_top_left,_#0073FF_1%,_white)]
+ dark:bg-[#ffffff10] cursor-pointer transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)]">
                     <Link href="/services/">
                     <div className="w-full h-full flex flex-col items-center justify-between"> 
                         <div className="flex items-center justify-center flex-[.75] h-auto w-[100%]">
@@ -85,7 +86,7 @@ function RenderPref(){
                 </div>
                 
                 
-                <div className="relative h-[80%] md:h-full w-full flex-[.45] rounded-[8px] dark:text-white text-center overflow-hidden border dark:border-[#ffffff30] bg-emerald-300 dark:bg-[#ffffff10] cursor-pointer transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)]">
+                <div className="relative h-[80%] md:h-full w-full flex-[.45] rounded-[8px] dark:text-white text-center overflow-hidden border dark:border-[#ffffff30] dark:bg-[radial-gradient(circle_at_top_left,_#EC3880_20%,_black)] bg-[radial-gradient(circle_at_top_left,_#EC3880_1%,_white)] dark:bg-[#ffffff10] cursor-pointer transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)]">
                     <Link href="/services/#RealEstateOwners">
                     <div className="w-full h-full flex flex-col items-center justify-between"> 
                         <div className="flex items-center justify-center flex-[.75] h-auto w-[100%]">
@@ -114,7 +115,7 @@ function RenderCards(){
             {items.map((item, i) => (
                <Link href={item.link} className="w-full h-auto" key={i}>
                 <div className={`md:max-w-[300px] md:w-[300px] h-[270px] w-[100%] max-w-xl m-0 rounded-2xl cursor-pointer transition-shadow duration-300 border border-[#ffffff35] hover:border-black hover:shadow-[6px_6px_2px_2px_#333333] dark:hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)] `}>
-                    <div className={`relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl shadow-xl ${item.bgColor} dark:bg-[#ffffff10]`}>
+                    <div className={`relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl shadow-xl dark:bg-[#ffffff10]`}>
                         <div className="flex-[.7] grid place-items-center h-[100%] w-[100%]">
                         <span className="h-[80%] w-[40%] flex items-center justify-center rounded-2xl dark:bg-transparent">
                             <Image

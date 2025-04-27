@@ -3,13 +3,24 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
-import { FaStar } from "react-icons/fa"; // Using react-icons for the stars
+import { FaStar } from "react-icons/fa";
 
 import "swiper/css";
 import "swiper/css/pagination";
 
+// Define the type for each testimonial item
+interface Testimonial {
+  text: string;
+  author: string;
+  role: string;
+  avatar?: string;
+  stars: number;
+  sideImage: string;
+  icon?: string;
+}
+
 export const TestimonialSlider1 = () => {
-  const testimonials = [
+  const testimonials: Testimonial[] = [
     {
       text: "We denounce with right indignation dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire cannot foresee.",
       author: "Lucas J. Swe",
@@ -23,18 +34,18 @@ export const TestimonialSlider1 = () => {
       author: "Jordan R. Blake",
       role: "CTO",
       avatar: "/assets/img/testimonial/client-3.png",
-      icon: "/assets/img/testimonial/icon.png",
       stars: 4,
       sideImage: "/assets/img/testimonial/review1.jpeg",
+      icon: "/assets/img/testimonial/icon.png",
     },
     {
       text: "I was blown away by the quality of work and the attention to detail. Highly recommend!",
       author: "Sarah L. Johnson",
       role: "Project Manager",
       avatar: "/assets/img/testimonial/client-3.png",
-      icon: "/assets/img/testimonial/icon.png",
       stars: 4,
       sideImage: "/assets/img/testimonial/review2.png",
+      icon: "/assets/img/testimonial/icon.png",
     },
   ];
 
@@ -44,12 +55,12 @@ export const TestimonialSlider1 = () => {
         modules={[Autoplay, Pagination]}
         spaceBetween={30}
         slidesPerView={1}
-        loop={true}
+        loop
         autoplay={{
           delay: 3000,
           disableOnInteraction: false,
         }}
-        pagination={{clickable: true}}
+        pagination={{ clickable: true }}
         className="w-full max-w-7xl mx-auto"
       >
         {testimonials.map((item, index) => (
@@ -67,19 +78,11 @@ export const TestimonialSlider1 = () => {
               <div className="w-full md:w-2/3 text-center md:text-left">
                 <p className="text-lg mb-4">{item.text}</p>
                 <div className="flex items-center justify-center md:justify-start gap-4 mb-4">
-                  {/* <Image
-                    src={item.avatar}
-                    alt={item.author}
-                    width={50}
-                    height={50}
-                    className="rounded-full"
-                  /> */}
                   <div>
                     <h5 className="font-semibold text-white">
                       {item.author} <span className="text-neutral-400 font-normal">/ {item.role}</span>
                     </h5>
                   </div>
-                  {/* <Image src={item.icon} alt="Quote icon" width={24} height={24} /> */}
                 </div>
                 <div className="flex justify-center md:justify-start text-yellow-400">
                   {Array.from({ length: item.stars }).map((_, i) => (
@@ -91,8 +94,6 @@ export const TestimonialSlider1 = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-
-      
     </div>
   );
 };

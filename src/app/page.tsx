@@ -1,3 +1,4 @@
+// import ImageText from '@/components/HireVa'
 import {
     HeroSection,
     PersonaPicker,
@@ -16,13 +17,15 @@ export default function HomePage() {
     </FadeInOnView>
   </div>
 
-  <div id="clients" className="w-full">
+  <div id="clients" className="w-full scroll-mt-24">
     <FadeInOnView delay={0.1}>
       <PersonaPicker />
     </FadeInOnView>
   </div>
 
-  <div className="w-full">
+  {/* <ImageText /> */}
+
+  <div className="w-full scroll-mt-24">
     <FadeInOnView delay={0.2}>
       <ContactUs />
     </FadeInOnView>
