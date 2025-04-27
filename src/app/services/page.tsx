@@ -163,16 +163,16 @@ function RenderedServices() {
   return (
     <div className="flex flex-col items-center justify-start w-full h-fit">
       <div className="rounded-xl min-h-[400px] w-[96%] md:w-[80%] flex flex-col gap-20 p-8 mt-12">
-        <div className="h-fit w-full" id="RealEstateAgent">
+        <div className="h-fit w-full scroll-mt-48" id="RealEstateAgent">
           <FirstBox />
         </div>
-        <div className="h-fit w-full" id="vas">
+        <div className="h-fit w-full scroll-mt-48" id="vas">
           <SecondBox />
         </div>
-        <div className="h-fit w-full" id="services">
+        <div className="h-fit w-full scroll-mt-48" id="services">
           <ThirdBox />
         </div>
-        <div className="h-fit w-full" id="specialisedServices">
+        <div className="h-fit w-full scroll-mt-54" id="specialisedServices">
                 <FourthBox/>
             </div>
       </div>
@@ -293,7 +293,7 @@ function ThirdBox() {
         </h1>
 
         <p className="font-normal dark:text-neutral-400 mt-2 text-sm md:text-base">
-          Get any specialized support services you need
+          Get any service you need, we have the best service providers.
         </p>
 
         <div className="w-full mt-4 flex flex-col gap-4 items-center md:items-start">
