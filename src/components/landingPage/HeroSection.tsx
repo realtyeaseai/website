@@ -44,7 +44,7 @@ export default function HeroSection() {
 function TextWithTooltip(){
   return(
     <div className="md:pt-0 pt-12 flex flex-col items-center justify-center w-full">
-      <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-4xl font-bold dark:text-transparent md:text-7xl">
+      <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl">
         <span className="inline-flex items-center justify-center w-full text-center"> Your Trusted Partner 
           {/* --------------Tooltip containing the profile pics ---------- */}
           <Tooltip/> 
