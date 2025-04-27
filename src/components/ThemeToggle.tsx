@@ -26,11 +26,13 @@ export default function ThemeToggle() {
 
   return (
     <button
-      onClick={handleToggle}
-      aria-label="Toggle Theme"
-      className="cursor-pointer p-2 rounded-full bg-gray-200 dark:bg-gray-800 transition-colors duration-300 z-100"
-    >
-      {isDark ? <HiSun size={24} className="text-yellow-400" /> : <HiMoon size={24} className="text-blue-400" />}
-    </button>
+  onClick={handleToggle}
+  aria-label="Toggle Theme"
+  title="Toggle Theme" 
+  className="cursor-pointer p-2 rounded-full bg-gray-200 dark:bg-gray-800 transition-colors duration-300 z-100"
+>
+  {isDark ? <HiSun size={24} className="text-yellow-400 hover:text-yellow-100" /> : <HiMoon size={24} className="text-blue-400 hover:bg-blue-100" />}
+</button>
+
   )
 }
