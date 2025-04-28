@@ -245,7 +245,7 @@ export const NavbarLogo = () => {
   >
     {/* Light mode logo */}
     <Image
-      src="/RealtyEaseAI-07_1.png"
+      src="/RealtyEaseAI-07_1.PNG"
       alt="logo-light"
       width={50}
       height={50}
@@ -253,7 +253,7 @@ export const NavbarLogo = () => {
     />
     {/* Dark mode logo */}
     <Image
-      src="/RealtyEaseAI-08_1.png"
+      src="/RealtyEaseAI-08_1.PNG"
       alt="logo-dark"
       width={36}
       height={36}
