@@ -245,19 +245,19 @@ export const NavbarLogo = () => {
   >
     {/* Light mode logo */}
     <Image
-      src="/RealtyEaseAI-07.png"
+      src="/RealtyEaseAI-07_1.png"
       alt="logo-light"
-      width={70}
-      height={70}
-      className="block dark:hidden md:flex justify-center items-center w-full h-[60px]"
+      width={50}
+      height={50}
+      className="block dark:hidden md:flex justify-center items-center w-full h-[36px]"
     />
     {/* Dark mode logo */}
     <Image
-      src="/RealtyEaseAI-08.png"
+      src="/RealtyEaseAI-08_1.png"
       alt="logo-dark"
-      width={70}
-      height={70}
-      className="hidden dark:block md:hidden justify-center items-center w-full h-[60px]"
+      width={36}
+      height={36}
+      className="hidden dark:block md:hidden justify-center items-center w-full h-[36px]"
     />
   </Link>
   );
