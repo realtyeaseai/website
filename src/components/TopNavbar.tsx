@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/resizable-navbar";
 import ThemeToggle from '@/components/ThemeToggle'
 import { useState } from 'react'
+import Link from "next/link";
 
 
 
@@ -90,14 +91,14 @@ export function TopNavbar(){
             onClose={() => setIsMobileMenuOpen(false)}
           >
             {navItems.map((item, idx) => (
-              <a
-                key={`mobile-link-${idx}`}
-                href={item.link}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="relative text-neutral-900 dark:text-neutral-300"
-              >
-                <span className="block">{item.name}</span>
-              </a>
+              <Link
+              key={`mobile-link-${idx}`}
+              href={item.link}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="relative text-neutral-900 dark:text-neutral-300"
+            >
+              <span className="block">{item.name}</span>
+            </Link>
             ))}
             <div className="flex w-full flex-col gap-4">
               
