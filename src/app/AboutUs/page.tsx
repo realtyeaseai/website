@@ -116,7 +116,7 @@ export default function AboutUs() {
       <section className="p-3 py-30 bg-white text-black dark:bg-neutral-950 dark:text-white">
         <div className="container mx-auto grid md:grid-cols-2 gap-10 py-10 px-10 items-center">
           <div>
-            <h4 className="text-2xl font-semibold mb-4 text-center md:text-start text-blue-700 font-hu">Why Realty Ease AI?</h4>
+            <h4 className="text-2xl font-semibold mb-4 text-center md:text-start">Why Realty Ease AI?</h4>
             <div className="mb-6 text-black dark:text-neutral-400 text-start space-y-4">
   <p>
     Rooted in our <strong>Dominican</strong> heritage and first-generation American experience, we carry a deep understanding of the value of <strong>hard work, community, and innovation.</strong>
