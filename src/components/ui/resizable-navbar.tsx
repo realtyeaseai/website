@@ -249,7 +249,7 @@ export const NavbarLogo = () => {
       alt="logo-light"
       width={50}
       height={50}
-      className="block dark:hidden md:flex justify-center items-center w-full h-[36px]"
+      className="block dark:hidden md:flex justify-center items-center w-full h-[36px] md:p-0 p-[6px]"
     />
     {/* Dark mode logo */}
     <Image
@@ -257,7 +257,7 @@ export const NavbarLogo = () => {
       alt="logo-dark"
       width={36}
       height={36}
-      className="hidden dark:block md:hidden justify-center items-center w-full h-[36px]"
+      className="hidden dark:block md:hidden justify-center items-center w-full h-[36px] md:p-0 p-[6px]"
     />
   </Link>
   );
