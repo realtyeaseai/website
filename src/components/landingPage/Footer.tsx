@@ -8,7 +8,7 @@ export default function Footer() {
   const { theme } = useTheme();
   return (
 
-    <div className='flex flex-col md:justify-end justify-center items-center min-h-[40dvh] w-full text-black bg-gray-200 dark:bg-gray-950 pt-12 dark:text-gray-200'>
+    <div className='flex flex-col md:justify-end justify-center items-center min-h-[40dvh] w-full text-black bg-gray-200 dark:bg-black pt-12 dark:text-gray-200'>
 
       <div className="w-full h-auto flex flex-col md:flex-row items-start justify-between">
         {/* ---------------------------- Left Section (Logo + Links) ---------------------------- */}
@@ -26,39 +26,39 @@ export default function Footer() {
           {/* Services */}
           <div className="p-6  md:w-[220px] w-full md:text-start text-center md:mr-10">
             <h2 className="text-[14px] md:text-2xl font-semibold mb-4">Services</h2>
-            <ul className="space-y-4 text-[11px] md:text-[16px] list-none">
-              <li><Link href="#">Virtual Assistant</Link></li>
-              <li><Link href="#">Remote Services</Link></li>
-              <li><Link href="#">Credit Score</Link></li>
-              <li><Link href="#">Real Estate</Link></li>
+            <ul className="space-y-4 text-[12px] md:text-[16px] list-none">
+              <li><Link href="#" className='hover:border-b-2'>Virtual Assistant</Link></li>
+              <li><Link href="#" className='hover:border-b-2'>Remote Services</Link></li>
+              <li><Link href="#" className='hover:border-b-2'>Credit Score</Link></li>
+              <li><Link href="#" className='hover:border-b-2'>Real Estate</Link></li>
             </ul>
           </div>
 
           {/* Resources */}
           <div className="p-6  md:w-[140px] w-full md:text-start text-center md:mr-10">
             <h2 className="text-[14px] font-semibold md:text-2xl mb-4">Resources</h2>
-            <ul className="space-y-4 text-[11px] md:text-[16px] list-none">
-              <li><Link href="#">Developers</Link></li>
-              <li><Link href="#">Support</Link></li>
+            <ul className="space-y-4 text-[12px] md:text-[16px] list-none">
+              <li><Link href="#" className='hover:border-b-2'>Developers</Link></li>
+              <li><Link href="#" className='hover:border-b-2'>Support</Link></li>
             </ul>
           </div>
 
           {/* Company */}
           <div className="p-6  md:w-[140px] w-full md:text-start text-center md:mr-10">
             <h2 className="text-[14px] font-semibold md:text-2xl mb-4">Company</h2>
-            <ul className="space-y-4 text-[11px] md:text-[16px] list-none">
-              <li><Link href="./AboutUs">About Us</Link></li>
-              <li><Link href="#">Careers</Link></li>
-              <li><Link href="#faq">FAQs</Link></li>
-              <li><Link href="#">Teams</Link></li>
-              <li><Link href="#contact">Contact Us</Link></li>
+            <ul className="space-y-4 text-[12px] md:text-[16px] list-none">
+              <li><Link href="./AboutUs" className='hover:border-b-2'>About Us</Link></li>
+              <li><Link href="#" className='hover:border-b-2'>Careers</Link></li>
+              <li><Link href="#faq" className='hover:border-b-2'>FAQs</Link></li>
+              <li><Link href="#" className='hover:border-b-2'>Teams</Link></li>
+              <li><Link href="#contact" className='hover:border-b-2'>Contact Us</Link></li>
             </ul>
           </div>
 
         </div>
 
         {/* ---------------------------- Right Section (Social Logos) ---------------------------- */}
-        <div className="w-full md:overflow-hidden flex justify-center md:justify-end md:mr-5">
+        <div className="w-full md:overflow-hidden flex justify-center md:justify-end md:mr-5 pb-10">
           <div className="flex justify-between w-[130px] ">
 
             {/* <button className="w-[60px] h-auto mr-4">

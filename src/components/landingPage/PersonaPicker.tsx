@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Meteors } from "../ui/meteors";
+// import { Meteors } from "../ui/meteors";
 import Image from "next/image";
 
 // edit this for top servicer 5 grid images 
@@ -65,8 +65,7 @@ function RenderPref(){
        <div className="md:w-[50%] w-full h-[320px] flex justify-center items-center flex-col md:mt-0">
            <div className="relative flex h-full w-full p-4 flex-row gap-4 md:gap-8 items-center justify-center">
                 
-                <div className="relative h-[80%] md:h-full w-full flex-[.45] rounded-[8px] dark:text-white text-center overflow-hidden border dark:border-[#ffffff30] dark:bg-[radial-gradient(circle_at_top_left,_#0073FF_20%,_black)] bg-[radial-gradient(circle_at_top_left,_#0073FF_1%,_white)]
- dark:bg-[#ffffff10] cursor-pointer transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)]">
+                <div className="relative h-[80%] md:h-full w-full flex-[.45] rounded-[8px] dark:text-white text-center overflow-hidden border border-[#00000040] dark:border-[#ffffff30] dark:bg-[radial-gradient(circle_at_top_left,_#0073FF_20%,_black)] bg-[radial-gradient(circle_at_top_left,_#0073FF_1%,_white)] dark:bg-[#ffffff10] cursor-pointer transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)]">
                     <Link href="/services/#RealEstateAgent">
                     <div className="w-full h-full flex flex-col items-center justify-between"> 
                         <div className="flex items-center justify-center flex-[.75] h-auto w-[100%]">
@@ -81,12 +80,12 @@ function RenderPref(){
                        </div>
                     </div>
                    
-                   <Meteors/>
+                   {/* <Meteors/> */}
                    </Link>
                 </div>
                 
                 
-                <div className="relative h-[80%] md:h-full w-full flex-[.45] rounded-[8px] dark:text-white text-center overflow-hidden border dark:border-[#ffffff30] dark:bg-[radial-gradient(circle_at_top_left,_#EC3880_20%,_black)] bg-[radial-gradient(circle_at_top_left,_#EC3880_1%,_white)] dark:bg-[#ffffff10] cursor-pointer transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)]">
+                <div className="relative h-[80%] md:h-full w-full flex-[.45] rounded-[8px] dark:text-white text-center overflow-hidden border border-[#00000040] dark:border-[#ffffff30] dark:bg-[radial-gradient(circle_at_top_left,_#EC3880_20%,_black)] bg-[radial-gradient(circle_at_top_left,_#EC3880_1%,_white)] dark:bg-[#ffffff10] cursor-pointer transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)]">
                     <Link href="/services/#vas">
                     <div className="w-full h-full flex flex-col items-center justify-between"> 
                         <div className="flex items-center justify-center flex-[.75] h-auto w-[100%]">
@@ -100,7 +99,7 @@ function RenderPref(){
                            {/* <p className="text-center text-[12px] text-[#ffffff8a]"><i>i&apos;m an owner looking for services</i></p> */}
                        </div>
                     </div> 
-                   <Meteors/>
+                   {/* <Meteors/> */}
                    </Link>
                 </div>
                 
@@ -114,7 +113,7 @@ function RenderCards(){
         <>
             {items.map((item, i) => (
                <Link href={item.link} className="w-full h-auto" key={i}>
-                <div className={`md:max-w-[300px] md:w-[300px] h-[270px] w-[100%] max-w-xl m-0 rounded-2xl cursor-pointer transition-shadow duration-300 border border-[#ffffff35] hover:border-black hover:shadow-[6px_6px_2px_2px_#333333] dark:hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)] `}>
+                <div className={`md:max-w-[300px] md:w-[300px] h-[270px] w-[100%] max-w-xl m-0 rounded-2xl cursor-pointer transition-shadow duration-300 border border-[#00000035] hover:border-black hover:shadow-[6px_6px_2px_2px_#333333] dark:hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)] `}>
                     <div className={`relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl shadow-xl dark:bg-[#ffffff10]`}>
                         <div className="flex-[.7] grid place-items-center h-[100%] w-[100%]">
                         <span className="h-[80%] w-[40%] flex items-center justify-center rounded-2xl dark:bg-transparent">
@@ -147,7 +146,7 @@ function LastCard(){
         <Link href="/services/#specialisedServices">
         <div className="md:max-w-[300px] md:w-[300px] h-[270px] w-[100%] max-w-xl cursor-pointer">
             <div className="relative w-full max-w-xl h-full">
-                <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#ffffff30] bg-[#ffffff10] transition-shadow duration-300 hover:border-black hover:shadow-[6px_6px_2px_2px_#333333] dark:hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)] px-4 py-8 shadow-xl">
+                <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#00000035] bg-[#ffffff10] transition-shadow duration-300 hover:border-black hover:shadow-[6px_6px_2px_2px_#333333] dark:hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)] px-4 py-8 shadow-xl">
                     <div className="relative flex h-full w-[100%] flex-col items-center justify-center">
                     <Image src="/personaSlectorItems/question-mark-svgrepo-com.svg" width={40} height={20} className="h-auto md:w-[30%] border mt-10 dark:invert-[100%]" alt="img"/>
                         <h1 className="md:text-[16px] text-[15px] mb-1 mt-10 text-[#000000dc] dark:text-white">Got something else ?</h1>
@@ -160,7 +159,7 @@ function LastCard(){
                             </span>
                         </button> */}
                     </div>
-                    <Meteors />
+                    {/* <Meteors /> */}
                 </div>
             </div>
         </div>

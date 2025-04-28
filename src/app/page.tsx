@@ -2,7 +2,6 @@
 import {
     HeroSection,
     PersonaPicker,
-    ContactUs,
     FAQ,
   } from '../components/landingPage/lpExports'
   import FadeInOnView from '@/components/FadeInOnView'
@@ -22,15 +21,6 @@ export default function HomePage() {
       <PersonaPicker />
     </FadeInOnView>
   </div>
-
-  {/* <ImageText /> */}
-
-  <div className="w-full scroll-mt-24">
-    <FadeInOnView delay={0.2}>
-      <ContactUs />
-    </FadeInOnView>
-  </div>
-
 
   <div id="faq" className="w-full">
     <FadeInOnView delay={0.3}>

@@ -76,7 +76,7 @@ export default function ScheduleCallForm() {
         <input type="text" placeholder="Timezone (optional)" value={form.timezone} onChange={(e) => setForm({ ...form, timezone: e.target.value })} className="w-full p-3 border rounded-md" />
         <textarea placeholder="What would you like to discuss?" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} required className="w-full min-h-[120px] p-3 border rounded-md" />
 
-        <button type="submit" disabled={loading} className="w-full p-3 rounded-md bg-green-500 hover:bg-green-600 text-black font-semibold">
+        <button type="submit" disabled={loading} className="w-full p-3 rounded-md bg-[#0073ffb2] hover:bg-[#0073ff80] text-white font-semibold cursor-pointer transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
           {loading ? 'Scheduling...' : 'Schedule Call'}
         </button>
       </form>

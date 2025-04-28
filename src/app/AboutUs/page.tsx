@@ -11,7 +11,7 @@ export default function AboutUs() {
       <TopNavbar />
 
       {/* About Section 1 - Mission */}
-      <section className="p-3 py-30 bg-white text-black dark:bg-neutral-950 dark:text-white">
+      <section className="p-3 py-30 bg-neutral-200 text-black dark:bg-neutral-950 dark:text-white">
         <div className="container mx-auto grid md:grid-cols-2 gap-10 py-10 px-10 items-center">
           <Image
             src="/assets/img/team/working.jpg"
@@ -22,21 +22,21 @@ export default function AboutUs() {
           />
           <div>
             <h4 className="text-4xl font-semibold mb-4 text-center">Our Mission</h4>
-            <div className="mb-6 text-black dark:text-neutral-400 space-y-4 text-justify">
-  <p>
-    Realty Ease AI is a consulting firm dedicated to transforming the real estate industry by:
-  </p>
+            <div className="mb-6 text-black dark:text-neutral-400 space-y-4 text-start">
+              <p>
+                Realty Ease AI is a consulting firm dedicated to transforming the real estate industry by:
+              </p>
 
-  <p><strong>Bridge Building:</strong> Acting as a seamless bridge between property owners, real estate agents, and service providers (plumbers, electricians, pest control, construction, HVAC companies).</p>
+              <p><strong>Bridge Building:</strong> Acting as a seamless bridge between property owners, real estate agents, and service providers (plumbers, electricians, pest control, construction, HVAC companies).</p>
 
-  <p><strong>Virtual Assistant Services:</strong> Providing tailored virtual assistant services to streamline daily operations.</p>
+              <p><strong>Virtual Assistant Services:</strong> Providing tailored virtual assistant services to streamline daily operations.</p>
 
-  <p><strong>RFP Management:</strong> Managing comprehensive Request for Proposal (RFP) processes to reduce workload and stress for real estate professionals.</p>
+              <p><strong>RFP Management:</strong> Managing comprehensive Request for Proposal (RFP) processes to reduce workload and stress for real estate professionals.</p>
 
-  <p><strong>Collaboration Network:</strong> Fostering collaboration and building a dynamic, evolving network of consistent opportunities.</p>
+              <p><strong>Collaboration Network:</strong> Fostering collaboration and building a dynamic, evolving network of consistent opportunities.</p>
 
-  <p><strong>Efficiency & Burnout Support:</strong> Helping clients enhance efficiency and combat burnout as their business needs grow.</p>
-</div>
+              <p><strong>Efficiency & Burnout Support:</strong> Helping clients enhance efficiency and combat burnout as their business needs grow.</p>
+            </div>
 
 
             <Link
@@ -55,7 +55,7 @@ export default function AboutUs() {
       </section>
 
       {/* About Section 3 - The Founder Story - Who we Are */}
-      <section className="p-5 py-10 md:py-20 flex items-center justify-center bg-white text-black dark:bg-neutral-950 dark:text-white text-center md:text-left">
+      <section className="p-5 py-10 md:py-20 flex items-center justify-center bg-neutral-200 text-black dark:bg-neutral-950 dark:text-white text-center md:text-left">
   <div className="container mx-auto grid md:grid-cols-2 gap-10 py-10 px-10 items-center">
     <div className="flex flex-col items-center md:items-start">
       <h2 className="text-xl md:text-4xl font-bold mb-4 text-center md:text-left">
@@ -106,35 +106,35 @@ export default function AboutUs() {
       
 
       {/* Fun Fact Section */}
-      <section className="p-3 py-20 bg-white text-black dark:bg-neutral-950 dark:text-white">
+      <section className="p-3 py-20 bg-neutral-200 text-black dark:bg-neutral-950 dark:text-white">
         <div className="container mx-auto">
           <FunFactCounter style={2} />
         </div>
       </section>
 
       {/* About Section 4 - Why Realty Ease AI? */}
-      <section className="p-3 py-30 bg-white text-black dark:bg-neutral-950 dark:text-white">
+      <section className="p-3 py-30 bg-neutral-200 text-black dark:bg-neutral-950 dark:text-white">
         <div className="container mx-auto grid md:grid-cols-2 gap-10 py-10 px-10 items-center">
           <div>
-            <h4 className="text-2xl font-semibold mb-4 text-center md:text-start text-blue-700 font-hu">Why Realty Ease AI?</h4>
+            <h4 className="text-4xl font-semibold mb-4 text-center md:text-start text-neutral-950 dark:text-neutral-100 font-hu">Why Realty Ease AI?</h4>
             <div className="mb-6 text-black dark:text-neutral-400 text-start space-y-4">
-  <p>
-    Rooted in our <strong>Dominican</strong> heritage and first-generation American experience, we carry a deep understanding of the value of <strong>hard work, community, and innovation.</strong>
-  </p>
-  <p>
-  <strong>Realty Ease AI : </strong> is more than a service provider — we are committed partners dedicated to helping real estate professionals thrive in an evolving market.
-  </p>
-  <p>
-  <strong> From managing : </strong> critical administrative tasks to connecting clients with top-tier service providers, we streamline operations and maximize efficiency.
-  </p>
-  <p>
-  <strong>Our goal : </strong> is to elevate your experience, simplify your business processes, and create pathways for lasting success in the real estate industry.
-  </p>
-  <p className="mt-6">
-    <strong>~ Kathy Tiburcio & Eyandra Molina <br />
-    ~ Co-Founders, Realty Ease AI</strong>
-  </p>
-</div>
+              <p>
+                Rooted in our <strong>Dominican</strong> heritage and first-generation American experience, we carry a deep understanding of the value of <strong>hard work, community, and innovation.</strong>
+              </p>
+              <p>
+              <strong>Realty Ease AI : </strong> is more than a service provider — we are committed partners dedicated to helping real estate professionals thrive in an evolving market.
+              </p>
+              <p>
+              <strong> From managing : </strong> critical administrative tasks to connecting clients with top-tier service providers, we streamline operations and maximize efficiency.
+              </p>
+              <p>
+              <strong>Our goal : </strong> is to elevate your experience, simplify your business processes, and create pathways for lasting success in the real estate industry.
+              </p>
+              <p className="mt-6">
+                <strong>~ Kathy Tiburcio & Eyandra Molina <br />
+                ~ Co-Founders, Realty Ease AI</strong>
+              </p>
+            </div>
 
             <Link
               href="/#contact"

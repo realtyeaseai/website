@@ -14,7 +14,7 @@ export default function MyGlobe() {
     showAtmosphere: true,
     atmosphereColor: "#FFFFFF",
     atmosphereAltitude: 0.1,
-    emissive: "#062056",
+    emissive: "#0d45bf",
     emissiveIntensity: 0.1,
     shininess: .9,
     polygonColor: "rgba(255, 255, 255, 0.9)",
@@ -414,7 +414,7 @@ export default function MyGlobe() {
           <h2 className="text-center text-xl md:text-5xl font-bold text-black dark:text-white">
           Our Global Impact
           </h2>
-          <p className="md:text-center text-base md:text-[16px] font-normal text-neutral-700 dark:text-neutral-200 md:w-[80%] w-[98%] mt-2 md:mt-8 mx-auto text-justify pb-6">
+          <p className="md:text-center text-base md:text-[16px] font-normal text-neutral-700 dark:text-neutral-200 md:w-[80%] w-[90%] mt-2 md:mt-8 mx-auto text-justify pb-6">
             With offices in the <strong>Dominican Republic</strong> and <strong>India</strong>, <strong>Realty Ease AI</strong> is committed to empowering communities in developing nations. By offering above-average wages and fostering a collaborative, empowering work environment, we aim to drive economic growth and opportunity. Our vision is to expand globally, bringing our model of professional excellence and social impact to new regions around the world.
           </p>
         </motion.div>

@@ -1,16 +1,14 @@
 'use client'
 import Image from "next/image";
-import ContactForm from "../ContactForm";
-import ScheduleCallForm from "../utilities/ScheduleCallForm";
+import ContactForm from "@/components/ContactForm";
+import ScheduleCallForm from "@/components/ScheduleCallForm";
 import { useState } from "react";
 
-
-
-export default function ContactUs() {
+export default function contact() {
   const [activeForm, setActiveForm] = useState<"message" | "call">("message");
 
   return (
-    <div className="bg-white text-black dark:bg-black min-h-[100dvh] pt-20 w-full flex items-center justify-evenly flex-col ">
+    <div className="bg-white text-black dark:bg-black min-h-[100dvh] pt-20 w-full flex items-center justify-evenly flex-col pb-8">
       {/* -------------- Static Box --------------  */}
       <div className="md:h-[380px] h-[600px] w-[96%] rounded-2xl border border-[#ffffff20] mt-4 hover:border-[#ffffff50] flex gap-4 items-center justify-center flex-col bg-indigo-700 dark:bg-[radial-gradient(circle_at_center,_#0072feb5,_#4883cc53,_#4883cc29,_#000)]">
 
@@ -75,16 +73,16 @@ export default function ContactUs() {
       {/* ------------------ Grid to Conatct --------------- */}
       <div id="contact" className="grid grid-cols-1 md:grid-cols-[1.5fr_2fr] gap-4 w-full md:w-[98%] p-4 scroll-mt-24">
   <div className="h-[600px] w-full md:w-auto flex flex-col justify-center items-center text-center">
-    <p className="text-4xl dark:text-white">
-      <span className="text-green-400 font-semibold italic">Have a Question ?</span><br />
-      You&apos;re just a <br /> Message Away!
+    <p className="text-4xl">
+      <span className="dark:text-white text-black font-semibold italic">Have a Question ?</span><br />
+      <span className="text-2xl dark:text-[#ffffffb2] text-[#000000b2]">You&apos;re just a Message Away!</span>
     </p>
 
     <div className="flex flex-col md:flex-row gap-4 mt-8">
     <button
   type="button"
   onClick={() => setActiveForm("call")}
-  className={`bg-indigo-600 hover:bg-indigo-700 cursor-pointer text-white font-semibold px-6 py-3 rounded-2xl transition duration-300 ${
+  className={`bg-indigo-600 hover:bg-indigo-700 cursor-pointer text-white font-semibold px-6 py-3 rounded-[6px] transition duration-300 ${
     activeForm === "call" ? "ring-2 ring-white" : ""
   }`}
 >
@@ -94,7 +92,7 @@ export default function ContactUs() {
 <button
   type="button"
   onClick={() => setActiveForm("message")}
-  className={`bg-green-600 hover:bg-green-700 cursor-pointer text-black font-semibold px-6 py-3 rounded-2xl transition duration-300 ${
+  className={`dark:bg-neutral-100 dark:hover:bg-neutral-300 bg-[#000] hover:bg-neutral-800 text-white cursor-pointer dark:text-black font-semibold px-6 py-3 rounded-[6px] transition duration-300 ${
     activeForm === "message" ? "ring-2 ring-white" : ""
   }`}
 >
