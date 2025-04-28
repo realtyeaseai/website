@@ -14,10 +14,10 @@ export default function LoaderWrapper({ children }: { children: React.ReactNode 
   if (loading) {
     return (
       <div className="h-screen w-screen flex flex-col items-center justify-center bg-black text-white space-y-4">
-  <p className="text-3xl font-light font-sans tracking-wide typewriter-effect">
+  <p className="text-3xl font-light font-sans">
     RealtyEaseAI
   </p>
-  <p className="text-lg text-green-500 font-semibold">
+  <p className="text-lg text-green-500 font-semibold tracking-wide typewriter-effect">
     Welcome to the Network
   </p>
 </div>
