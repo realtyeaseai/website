@@ -8,7 +8,7 @@ export default function Footer() {
   const { theme } = useTheme();
   return (
 
-    <div className='flex flex-col md:justify-end justify-center items-center min-h-[40dvh] w-full text-black bg-gray-200 dark:bg-gray-950 pt-12 dark:text-gray-200'>
+    <div className='flex flex-col md:justify-end justify-center items-center min-h-[40dvh] w-full text-black bg-gray-200 dark:bg-neutral-900 pt-12 dark:text-gray-100'>
 
       <div className="w-full h-auto flex flex-col md:flex-row items-start justify-between">
         {/* ---------------------------- Left Section (Logo + Links) ---------------------------- */}
@@ -26,18 +26,18 @@ export default function Footer() {
           {/* Services */}
           <div className="p-6  md:w-[220px] w-full md:text-start text-center md:mr-10">
             <h2 className="text-[14px] md:text-2xl font-semibold mb-4">Services</h2>
-            <ul className="space-y-4 text-[11px] md:text-[16px] list-none">
-              <li><Link href="#">Virtual Assistant</Link></li>
-              <li><Link href="#">Remote Services</Link></li>
-              <li><Link href="#">Credit Score</Link></li>
-              <li><Link href="#">Real Estate</Link></li>
+            <ul className="space-y-4 text-[11px] md:text-[16px] list-none dark:text-gray-300">
+              <li><Link href="#">Virtual Assistants</Link></li>
+              <li><Link href="#">Service Providers</Link></li>
+              <li><Link href="#">Specialized Services</Link></li>
+              <li><Link href="#">Real Estate Agents</Link></li>
             </ul>
           </div>
 
           {/* Resources */}
           <div className="p-6  md:w-[140px] w-full md:text-start text-center md:mr-10">
             <h2 className="text-[14px] font-semibold md:text-2xl mb-4">Resources</h2>
-            <ul className="space-y-4 text-[11px] md:text-[16px] list-none">
+            <ul className="space-y-4 text-[11px] md:text-[16px] list-none dark:text-gray-300">
               <li><Link href="#">Developers</Link></li>
               <li><Link href="#">Support</Link></li>
             </ul>
@@ -46,7 +46,7 @@ export default function Footer() {
           {/* Company */}
           <div className="p-6  md:w-[140px] w-full md:text-start text-center md:mr-10">
             <h2 className="text-[14px] font-semibold md:text-2xl mb-4">Company</h2>
-            <ul className="space-y-4 text-[11px] md:text-[16px] list-none">
+            <ul className="space-y-4 text-[11px] md:text-[16px] list-none dark:text-gray-300">
               <li><Link href="./AboutUs">About Us</Link></li>
               <li><Link href="#">Careers</Link></li>
               <li><Link href="#faq">FAQs</Link></li>
