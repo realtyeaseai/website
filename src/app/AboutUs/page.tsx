@@ -116,12 +116,26 @@ export default function AboutUs() {
       <section className="p-3 py-30 bg-white text-black dark:bg-neutral-950 dark:text-white">
         <div className="container mx-auto grid md:grid-cols-2 gap-10 py-10 px-10 items-center">
           <div>
-            <h4 className="text-2xl font-semibold mb-4 text-center md:text-start">Why Realty Ease AI?</h4>
-            <p className="mb-6 text-black dark:text-neutral-400 text-start">
-              Rooted in our Dominican heritage and first-generation American experience, we understand the value of hard work, community, and innovation. Realty Ease AI isn&apos;t just a service provider—we&apos;re a partner dedicated to helping real estate professionals thrive. Whether it&apos;s managing administrative tasks or facilitating connections with top-tier service providers, we&apos;re here to simplify your operations, elevate your experience, and foster success.
-              <br /><br /> ~ Kathy Tiburcio & Eyandra Molina
-              <br /> ~ Co-Founders, Realty Ease AI
-            </p>
+            <h4 className="text-2xl font-semibold mb-4 text-center md:text-start text-blue-700 font-hu">Why Realty Ease AI?</h4>
+            <div className="mb-6 text-black dark:text-neutral-400 text-start space-y-4">
+  <p>
+    Rooted in our <strong>Dominican</strong> heritage and first-generation American experience, we carry a deep understanding of the value of <strong>hard work, community, and innovation.</strong>
+  </p>
+  <p>
+  <strong>Realty Ease AI : </strong> is more than a service provider — we are committed partners dedicated to helping real estate professionals thrive in an evolving market.
+  </p>
+  <p>
+  <strong> From managing : </strong> critical administrative tasks to connecting clients with top-tier service providers, we streamline operations and maximize efficiency.
+  </p>
+  <p>
+  <strong>Our goal : </strong> is to elevate your experience, simplify your business processes, and create pathways for lasting success in the real estate industry.
+  </p>
+  <p className="mt-6">
+    <strong>~ Kathy Tiburcio & Eyandra Molina <br />
+    ~ Co-Founders, Realty Ease AI</strong>
+  </p>
+</div>
+
             <Link
               href="/#contact"
               className="bg-black hover:bg-gray-700 hover:dark:bg-gray-500 text-white dark:bg-white dark:text-black px-6 py-3 rounded-md mt-6 justify-center flex items-center"

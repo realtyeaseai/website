@@ -10,6 +10,7 @@ import {
 import Link from "next/link";
 import React, { useRef, useState } from "react";
 import Image from "next/image";
+import { useTheme } from 'next-themes';
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -49,7 +50,7 @@ interface MobileNavMenuProps {
   onClose: () => void;
 }
 
-export const Navbar = ({ children, className }: NavbarProps) => {
+export const Navbar = ({ children, className }: NavbarProps) => { 
   const ref = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll({
     target: ref,
@@ -232,18 +233,20 @@ export const MobileNavToggle = ({
 };
 
 export const NavbarLogo = () => {
+  const { theme } = useTheme(); // Access the theme using the useTheme hook
+
   return (
     <Link
-      href="#"
+      href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
     >
       {/* https://i.pinimg.com/736x/e5/c3/22/e5c32248e3140ff77622d5caa65f53b4.jpg */}
       <Image
-        src="/Picture1.png"
+        src={theme === 'dark' ? "/RealtyEaseAI-08.png" : "/RealtyEaseAI-07.png"} // Change the source based on theme
         alt="logo"
-        width={50}
-        height={50}
-        className="rounded-[4px]"
+        width={70}
+        height={70}
+        className="flex justify-center items-center w-full h-[60]"
       />
       <span className="font-medium text-black dark:text-white"></span>
     </Link>
