@@ -392,7 +392,7 @@ function BottomBox() {
       <p className="text-center text-[14px] dark:text-[#ffffff8a]">Contact us now to know more details</p>
 
       <div className="flex items-center justify-center h-fit md:h-[20%] w-[80%] md:mt-0 ">
-      <Link href="/#contact" className="h-[50px] dark:text-black w-[50%] rounded-[4px] text-center flex items-center justify-center bg-black text-white hover:bg-gray-700 dark:bg-[#ffffff] hover:dark:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
+      <Link href="/contact" className="h-[50px] dark:text-black w-[50%] rounded-[4px] text-center flex items-center justify-center bg-[#ffffff] hover:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
             Contact Us
           </Link>
       </div>

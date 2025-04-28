@@ -238,14 +238,14 @@ export const NavbarLogo = () => {
   return (
     <Link
       href="/"
-      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
+      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 border border-black text-sm font-normal text-black"
     >
       {/* https://i.pinimg.com/736x/e5/c3/22/e5c32248e3140ff77622d5caa65f53b4.jpg */}
       <Image
         src={theme === 'dark' ? "/RealtyEaseAI-08.png" : "/RealtyEaseAI-07.png"} // Change the source based on theme
         alt="logo"
-        width={70}
-        height={70}
+        width={100}
+        height={100}
         className="flex justify-center items-center w-full h-[60]"
       />
       <span className="font-medium text-black dark:text-white"></span>
