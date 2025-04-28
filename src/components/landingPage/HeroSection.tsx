@@ -1,19 +1,36 @@
-"use client"
+// "use client"
 import { Tooltip } from "../Tooltip";
-// import { Spotlight } from "@/components/ui/Spotlight";
+import { Spotlight } from "@/components/ui/Spotlight";
 // import Image from "next/image";
 import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <div className="relative flex flex-col h-fit min-h-[600px] md:min-h-[850px] w-full overflow-hidden rounded-md antialiased items-center justify-center">
+    <div className="dark:bg-black bg-white relative flex flex-col h-fit min-h-[600px] md:min-h-[850px] w-full overflow-hidden rounded-md antialiased items-center justify-center">
   {/* Spotlight */}
-  {/* <Spotlight className="absolute -top-32 left-0 md:-top-20 md:left-60" fill="white" /> */}
+  <Spotlight className="absolute -top-32 left-0 md:-top-20 md:left-60" fill="white" />
 
   {/* Overlay (dark layer over video) */}
   <span className="absolute top-0 left-0 w-full h-full dark:bg-black/30 z-[1]" />
 
   {/* Background Video */}
+  <video
+  autoPlay
+  loop
+  muted
+  playsInline
+  title="Cloud background video"
+  aria-hidden="true"
+  className="absolute top-0 left-0 w-full h-full object-cover z-1 dark:hidden"
+  style={{
+    WebkitMaskImage: 'linear-gradient(to bottom, #000000 60%, rgba(0,0,0,0) 100%)',
+    maskImage: 'linear-gradient(to bottom, #000000 60%, rgba(0,0,0,0) 100%)',
+  }}
+  >
+    <source src="/cloud-white-bg.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
   <video
     autoPlay
     loop
@@ -21,7 +38,7 @@ export default function HeroSection() {
     playsInline
     title="Cloud background video"
     aria-hidden="true"
-    className="absolute top-0 left-0 w-full h-full object-cover z-0"
+    className="absolute top-0 left-0 w-full h-full object-cover z-1 hidden dark:block"
     style={{
       WebkitMaskImage: 'linear-gradient(to bottom, #000000 60%, rgba(0,0,0,0) 100%)',
       maskImage: 'linear-gradient(to bottom, #000000 60%, rgba(0,0,0,0) 100%)',
@@ -44,15 +61,15 @@ export default function HeroSection() {
 function TextWithTooltip(){
   return(
     <div className="md:pt-0 pt-12 flex flex-col items-center justify-center w-full">
-      <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl">
+      <h1 className="bg-opacity-50 bg-gradient-to-b dark:from-neutral-50 dark:to-neutral-400 from-neutral-700 to-neutral-900  bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl">
         <span className="inline-flex items-center justify-center w-full text-center"> Your Trusted Partner 
           {/* --------------Tooltip containing the profile pics ---------- */}
           <Tooltip/> 
         </span> 
         in Real Estate Excellence
       </h1>
-      <p className="mx-auto mt-6 max-w-xl text-center text-base font-normal text-white dark:text-neutral-300">
-      Tailored Virtual Assistance for Real Estate Professionals  <span className="text-amber-100 dark:text-blue-400">so you can focus on closing deals, building relationships, and growing your portfolio. Reclaim Your Time</span>  Scale Your Business.
+      <p className="mx-auto mt-6 max-w-xl text-center text-base font-normal dark:text-white text-neutral-800 ">
+      Tailored Virtual Assistance for Real Estate Professionals  <span className="text-blue-600">so you can focus on closing deals, building relationships, and growing your portfolio. Reclaim Your Time</span>  Scale Your Business.
       </p>
     </div>
   )
