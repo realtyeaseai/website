@@ -222,7 +222,7 @@ function FirstBox() {
           height={100}
           src="/ServicesItems/FirstImage.svg"
           alt="Virtual Assistant Service"
-          className="w-[80%] max-w-xs md:max-w-none h-auto object-cover"
+          className="w-[80%] max-w-xs md:max-w-none h-auto object-cover border-8 border-gray-600 rounded-2xl"
         />
       </div>
 
@@ -236,13 +236,13 @@ function SecondBox() {
   return (
       <div className="relative flex items-center justify-between md:flex-row flex-col gap-8 w-full h-[80%]">
         {/*--------------- image --------------*/}
-        <span className="md:w-[50%] flex w-full h-full items-center justify-center md:justify-start">
+        <span className="md:w-1/2 flex w-full h-full items-center justify-center md:justify-start">
           <Image
             width={200}
             height={200}
             src="/ServicesItems/SecImage.svg"
             alt=""
-            className="w-[70%] h-auto object-cover"
+            className="w-[80%] h-auto object-cover rounded-2xl border-8 border-gray-600"
           />
         </span>
         {/*-------------- text + FAQ -----------*/}
@@ -318,9 +318,9 @@ function ThirdBox() {
         <Image
           width={100}
           height={100}
-          src="/ServicesItems/ThiImage.svg"
+          src="/ServicesItems/ThirdImage.svg"
           alt="Virtual Assistant Services"
-          className="w-[80%] max-w-xs md:max-w-none h-auto object-cover"
+          className="w-[80%] max-w-xs md:max-w-none h-auto object-cover border-8 border-gray-600 rounded-2xl"
         />
       </div>
 
@@ -338,9 +338,9 @@ function FourthBox() {
         <Image
           width={200}
           height={200}
-          src="/ServicesItems/SecImage.svg"
+          src="/ServicesItems/FourthImage.svg"
           alt="Specialized Support Services"
-          className="w-[70%] h-auto object-cover"
+          className="w-[80%] h-auto object-cover rounded-2xl border-8 border-gray-600"
         />
       </div>
 

@@ -95,7 +95,7 @@ body {
     max-width: 0;
   }
   to {
-    max-width: 12ch; /* match number of characters */
+    max-width: 22ch; /* match number of characters */
   }
 }
 
@@ -112,7 +112,7 @@ body {
   border-right: 0.1em solid white;
   font-family: serif;
   max-width: 0;
-  animation: typewriter 2.5s steps(11) forwards, blinkText 0.75s step-end infinite;
+  animation: typewriter 2.5s steps(20) forwards, blinkText 0.75s step-end infinite;
 }
 
 @layer utilities {
