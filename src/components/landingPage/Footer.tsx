@@ -2,8 +2,10 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useTheme } from 'next-themes'
 
 export default function Footer() {
+  const { theme } = useTheme();
   return (
 
     <div className='flex flex-col md:justify-end justify-center items-center min-h-[40dvh] w-full text-black bg-gray-200 dark:bg-gray-950 pt-12 dark:text-gray-200'>
@@ -13,12 +15,12 @@ export default function Footer() {
         <div className="w-full flex flex-col md:flex-row items-start justify-between p-4 ">
 
           {/* LOGO */}
-          <div className="p-4 md:p-6 md:py-20 flex justify-center items-center  md:w-[280px] w-full">
-            <span className="h-[40px] w-auto">
-              <Image src="/Logo.png" alt="Logo" className="h-full w-full" width={30}
-          height={30} />
+          <div className="p-4 md:p-6 md:py-10 flex justify-center items-center  md:w-[280px] w-full">
+            <span className="h-[170px] w-auto">
+              <Image src={theme === 'dark' ? "/RealtyEaseAI-08.png" : "/RealtyEaseAI-07.png"} alt="Logo" className="h-full w-full" width={70}
+          height={70} />
             </span>
-            <p className="ml-4 text-sm md:text-xl font-bold py-4">Realty Ease</p>
+            {/* <p className="ml-4 text-sm md:text-xl font-bold py-4"></p> */}
           </div>
 
           {/* Services */}
