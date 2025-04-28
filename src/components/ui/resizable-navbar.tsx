@@ -10,7 +10,7 @@ import {
 import Link from "next/link";
 import React, { useRef, useState } from "react";
 import Image from "next/image";
-import { useTheme } from 'next-themes';
+import ThemeToggle from "../ThemeToggle";
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -212,6 +212,7 @@ export const MobileNavMenu = ({
           )}
         >
           {children}
+          <ThemeToggle />
         </motion.div>
       )}
     </AnimatePresence>
@@ -233,23 +234,30 @@ export const MobileNavToggle = ({
 };
 
 export const NavbarLogo = () => {
-  const { theme } = useTheme(); // Access the theme using the useTheme hook
+
 
   return (
     <Link
-      href="/"
-      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
-    >
-      {/* https://i.pinimg.com/736x/e5/c3/22/e5c32248e3140ff77622d5caa65f53b4.jpg */}
-      <Image
-        src={theme === 'dark' ? "/RealtyEaseAI-08.png" : "/RealtyEaseAI-07.png"} // Change the source based on theme
-        alt="logo"
-        width={70}
-        height={70}
-        className="flex justify-center items-center w-full h-[60]"
-      />
-      {/* <span className="font-medium text-black dark:text-white"></span> */}
-    </Link>
+    href="/"
+    className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
+  >
+    {/* Light mode logo */}
+    <Image
+      src="/RealtyEaseAI-07.png"
+      alt="logo-light"
+      width={70}
+      height={70}
+      className="block dark:hidden md:flex justify-center items-center w-full h-[60px]"
+    />
+    {/* Dark mode logo */}
+    <Image
+      src="/RealtyEaseAI-08.png"
+      alt="logo-dark"
+      width={70}
+      height={70}
+      className="hidden dark:block md:flex justify-center items-center w-full h-[60px]"
+    />
+  </Link>
   );
 };
 
