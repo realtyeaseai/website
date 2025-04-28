@@ -22,7 +22,7 @@ export function TopNavbar(){
   const navItems = [
     {
       name: "Home",
-      link: "/#hero", // Matches the id of HeroSection
+      link: "/", // Matches the id of HeroSection
     },
     {
       name: "About Us",
