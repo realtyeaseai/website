@@ -43,7 +43,7 @@ export default function PersonaPicker(){
             
             <div className="md:w-[80%] w-full flex justify-center items-center flex-col mt-8">
                  
-                <h1 className="w-[70%] m-2 py-4 px-2 text-4xl rounded-[8px] dark:text-white text-center "><a href="/services" className="h-fit w-full">Service Providers</a></h1>
+                <h1 className="w-[70%] m-2 py-4 px-2 text-4xl rounded-[8px] dark:text-white text-center "><Link href="/services" className="h-fit w-full">Service Providers</Link></h1>
                 {/* border border-[#ffffff80] bg-[#ffffff10]  */}
                 
             </div>
