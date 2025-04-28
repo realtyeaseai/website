@@ -4,7 +4,7 @@ import ContactForm from "@/components/ContactForm";
 import ScheduleCallForm from "@/components/ScheduleCallForm";
 import { useState } from "react";
 
-export default function contact() {
+export default function Contact() {
   const [activeForm, setActiveForm] = useState<"message" | "call">("message");
 
   return (
