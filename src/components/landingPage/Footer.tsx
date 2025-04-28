@@ -39,10 +39,10 @@ export default function Footer() {
           </div>
 
           {/* Services */}
-          <div className="p-6  md:w-[220px] w-full md:text-start text-center md:mr-10">
-            <h2 className="text-[14px] md:text-2xl font-semibold mb-4">Services</h2>
+          <div className="p-4  md:w-[220px] w-full md:text-start text-center">
+            <h2 className="text-[20px] md:text-2xl font-semibold mb-4">Services</h2>
             <ul className="space-y-4 text-[12px] md:text-[16px] list-none">
-              <li><Link href="#" className='hover:border-b-2'>Virtual Assistant</Link></li>
+              <li><Link href="/services" className='hover:border-b-2'>Virtual Assistant</Link></li>
               <li><Link href="#" className='hover:border-b-2'>Remote Services</Link></li>
               <li><Link href="#" className='hover:border-b-2'>Credit Score</Link></li>
               <li><Link href="#" className='hover:border-b-2'>Real Estate</Link></li>
@@ -50,8 +50,8 @@ export default function Footer() {
           </div>
 
           {/* Resources */}
-          <div className="p-6  md:w-[140px] w-full md:text-start text-center md:mr-10">
-            <h2 className="text-[14px] font-semibold md:text-2xl mb-4">Resources</h2>
+          <div className="p-4 md:w-[220px] w-full md:text-start text-center">
+            <h2 className="text-[20px] font-semibold md:text-2xl mb-4">Resources</h2>
             <ul className="space-y-4 text-[12px] md:text-[16px] list-none">
               <li><Link href="#" className='hover:border-b-2'>Developers</Link></li>
               <li><Link href="#" className='hover:border-b-2'>Support</Link></li>
@@ -59,14 +59,14 @@ export default function Footer() {
           </div>
 
           {/* Company */}
-          <div className="p-6  md:w-[140px] w-full md:text-start text-center md:mr-10">
-            <h2 className="text-[14px] font-semibold md:text-2xl mb-4">Company</h2>
+          <div className="p-4 md:w-[220px] w-full md:text-start text-center pb-8">
+            <h2 className="text-[20px] font-semibold md:text-2xl mb-4">Company</h2>
             <ul className="space-y-4 text-[12px] md:text-[16px] list-none">
               <li><Link href="./AboutUs" className='hover:border-b-2'>About Us</Link></li>
               <li><Link href="#" className='hover:border-b-2'>Careers</Link></li>
               <li><Link href="#faq" className='hover:border-b-2'>FAQs</Link></li>
               <li><Link href="#" className='hover:border-b-2'>Teams</Link></li>
-              <li><Link href="#contact" className='hover:border-b-2'>Contact Us</Link></li>
+              <li><Link href="/contact" className='hover:border-b-2'>Contact Us</Link></li>
             </ul>
           </div>
 
