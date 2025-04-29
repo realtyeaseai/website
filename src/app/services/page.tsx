@@ -210,7 +210,7 @@ function FirstBox() {
           ))}
         </div>
 
-        <Link href="/#contact" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-black text-white hover:bg-gray-700 dark:bg-[#ffffff] hover:dark:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
+        <Link href="/contact" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-black text-white hover:bg-gray-700 dark:bg-[#ffffff] hover:dark:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
             Contact Us
           </Link>
       </div>
@@ -268,7 +268,7 @@ function SecondBox() {
               />
             ))}
           </div>
-          <Link href="/#contact" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-black text-white hover:bg-gray-700 dark:bg-[#ffffff] hover:dark:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
+          <Link href="/contact" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-black text-white hover:bg-gray-700 dark:bg-[#ffffff] hover:dark:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
             Contact Us
           </Link>
         </span>
@@ -308,7 +308,7 @@ function ThirdBox() {
           ))}
         </div>
 
-        <Link href="/#contact" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-black text-white hover:bg-gray-700 dark:bg-[#ffffff] hover:dark:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
+        <Link href="/contact" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-black text-white hover:bg-gray-700 dark:bg-[#ffffff] hover:dark:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
             Contact Us
           </Link>
       </div>
@@ -372,7 +372,7 @@ function FourthBox() {
           ))}
         </div>
 
-        <Link href="/#contact" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-black text-white hover:bg-gray-700 dark:bg-[#ffffff] hover:dark:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
+        <Link href="/contact" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-black text-white hover:bg-gray-700 dark:bg-[#ffffff] hover:dark:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
             Contact Us
           </Link>
       </div>
