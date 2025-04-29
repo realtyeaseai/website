@@ -40,7 +40,7 @@ export default function AboutUs() {
 
 
             <Link
-              href="/#contact"
+              href="/contact"
               className="bg-black hover:bg-gray-700 hover:dark:bg-gray-500 text-white dark:bg-white dark:text-black px-6 py-3 rounded-md mt-6 justify-center flex items-center"
             >
               Learn More
@@ -137,7 +137,7 @@ export default function AboutUs() {
             </div>
 
             <Link
-              href="/#contact"
+              href="/contact"
               className="bg-black hover:bg-gray-700 hover:dark:bg-gray-500 text-white dark:bg-white dark:text-black px-6 py-3 rounded-md mt-6 justify-center flex items-center"
             >
               Learn More
