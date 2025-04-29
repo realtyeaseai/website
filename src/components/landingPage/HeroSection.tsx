@@ -68,8 +68,8 @@ function TextWithTooltip(){
         </span> 
         in Real Estate Excellence
       </h1>
-      <p className="mx-auto mt-6 max-w-xl text-center text-base font-normal dark:text-white text-neutral-800 ">
-      Tailored Virtual Assistance for Real Estate Professionals  <span className="text-blue-600">so you can focus on closing deals, building relationships, and growing your portfolio. Reclaim Your Time</span>  Scale Your Business.
+      <p className="mx-auto mt-6 max-w-xl text-center text-base dark:text-white text-neutral-800 font-bold">
+      Tailored Virtual Assistance for Real Estate Professionals  <span className="">so you can focus on closing deals, building relationships, and growing your portfolio. Reclaim Your Time</span>  Scale Your Business.
       </p>
     </div>
   )
