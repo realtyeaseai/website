@@ -13,7 +13,7 @@ export default function Services() {
       <TopHeading />
       <RenderedServices />
       <BottomBox />
-      
+
     </div>
   )
 }
@@ -23,35 +23,83 @@ export default function Services() {
 const faqs = [
   [
     {
-      question: "Property Management Support",
+      question: "Essential Real Estate Support",
       answer:
         `
-              <p>
-                Manage listings, schedules, tenant communications, and paperwork—without the overhead.
-              </p>
+              <h2>
+              Roles & Responsibilities : 
+              </h2>
+              <br />
+              <li>Manage emails and calendars</li>
+              <li>Set reminders for tasks and deadlines</li>
+              <li>Organize files and documents</li>
+              <li>Enter contact and listing info into CRM</li>
+              <li>Prepare open house materials</li>
+              <br />
+               <h2>
+              Required Skills : 
+              </h2>
+              <br />
+              <li>M-Basic admin & communication skills</li>
+              <li>-Familiar with tools like Gmail, Google Calendar, Google Drive</li>
+              <li>Minimal or no real estate experience</li>
+              
             `,
     }, {
-      question: "Lead Generation & Marketing",
+      question: "Enhanced Listing & Lead Solutions",
       answer:
         `
-              <p>
-                Optimize your marketing strategy, manage ads, and capture high-quality leads.
-              </p>
+            <h2>
+              Roles & Responsibilities : 
+              </h2>
+              <br />
+              <li>Every task in level 1</li>
+              <li>Write and update property listings</li>
+              <li>Coordinate with vendors (photos, staging, etc.)</li>
+              <li>Design flyers and email campaigns</li>
+<li>Research and contact potential leads</li>
+              <li>Set up automated follow-up systems</li>
+              <br />
+               <h2>
+              Required Skills : 
+              </h2>
+              <br />
+              <li>Knows how real estate deals work</li>
+<li>Comfortable using MLS, Canva, CRMs</li>
+<li>Can work more independently and follow workflows</li>
             `,
     },
     {
-      question: "Client Relations",
+      question: "Comprehensive Real Estate Operations",
       answer:
         `
-              <p>
-                Keep your clients engaged with timely follow-ups, meeting scheduling, and communication.
-              </p>
+              <h2>
+              Roles & Responsibilities : 
+              </h2>
+              <br />
+              <li>Every task in level 2</li>
+              <li>Manage transactions from contract to closing</li>
+              <li>Review documents for accuracy</li>
+              <li>Research investment properties</li>
+              <li>Track team performance</li>
+              <li>Provide training to the staff</li>
+              <br />
+               <h2>
+              Required Skills : 
+              </h2>
+              <br />
+              <li>Strong understanding of real estate processes</li>
+              <li>Can manage deadlines, documents, and communication with all parties</li>
+              <li>Skilled in reporting, automations, and team coordination</li>
+
+              
+
             `,
     },
   ],
   [
     {
-      question: "Project Coordination",
+      question: "Basic Property Management",
       answer:
         `
           <p>
@@ -59,7 +107,7 @@ const faqs = [
           </p>
         `,
     }, {
-      question: "Vendor & Subcontractor Management",
+      question: "Enhanced Guest & Property Coordination",
       answer:
         `
           <p>
@@ -67,7 +115,7 @@ const faqs = [
           </p>
         `,
     }, {
-      question: "Time & Budget Tracking",
+      question: "Advanced Property & Guest Experience Management",
       answer:
         `
           <p>
@@ -114,7 +162,7 @@ const faqs = [
   ],
   [
     {
-      question: "Web Development Services",
+      question: "Foundational Business Planning",
       answer:
         `
           <p>
@@ -145,16 +193,16 @@ const faqs = [
 function TopHeading() {
   return (
     <div className="flex flex-col items-center justify-start w-full h-fit px-4 md:px-8 py-8">
-  <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-center bg-clip-text bg-gradient-to-b from-neutral-700 to-gray-900 dark:from-neutral-50 dark:to-neutral-400 dark:text-transparent">
-    Our Services
-  </h1>
-  
-  <p className="mt-6 mb-6 max-w-2xl text-center text-sm md:text-base font-normal text-neutral-600 dark:text-neutral-300">
-    From managing and client communications to coordinating and administrative workflows, our virtual assistants adapt to your priorities.
-    <br className="hidden md:block" />
-    No two businesses are alike—that&apos;s why every service we deliver is tailored to your unique goals, processes, and growth ambitions.
-  </p>
-</div>
+      <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-center bg-clip-text bg-gradient-to-b from-neutral-700 to-gray-900 dark:from-neutral-50 dark:to-neutral-400 dark:text-transparent">
+        Our Services
+      </h1>
+
+      <p className="mt-6 mb-6 max-w-2xl text-center text-sm md:text-base font-normal text-neutral-600 dark:text-neutral-300">
+        From managing and client communications to coordinating and administrative workflows, our virtual assistants adapt to your priorities.
+        <br className="hidden md:block" />
+        No two businesses are alike—that&apos;s why every service we deliver is tailored to your unique goals, processes, and growth ambitions.
+      </p>
+    </div>
 
   );
 }
@@ -173,8 +221,8 @@ function RenderedServices() {
           <ThirdBox />
         </div>
         <div className="h-fit w-full scroll-mt-54" id="specialisedServices">
-                <FourthBox/>
-            </div>
+          <FourthBox />
+        </div>
       </div>
     </div>
   );
@@ -183,7 +231,7 @@ function RenderedServices() {
 function FirstBox() {
   return (
     <div className="relative flex flex-col-reverse md:flex-row items-center justify-between gap-8 w-full h-auto px-4 md:px-10 py-6">
-      
+
       {/* Text + FAQ */}
       <div className="w-full md:w-1/2 h-full flex flex-col items-center md:items-start text-center md:text-left">
         <div className="flex gap-2 mb-4">
@@ -211,8 +259,8 @@ function FirstBox() {
         </div>
 
         <Link href="/contact" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-black text-white hover:bg-gray-700 dark:bg-[#ffffff] hover:dark:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
-            Contact Us
-          </Link>
+          Contact Us
+        </Link>
       </div>
 
       {/* Image */}
@@ -234,45 +282,45 @@ function FirstBox() {
 
 function SecondBox() {
   return (
-      <div className="relative flex items-center justify-between md:flex-row flex-col gap-8 w-full h-[80%]">
-        {/*--------------- image --------------*/}
-        <span className="md:w-1/2 flex w-full h-full items-center justify-center md:justify-start">
-          <Image
-            width={200}
-            height={200}
-            src="/ServicesItems/SecImage.svg"
-            alt=""
-            className="w-[80%] h-auto object-cover rounded-2xl border-8 border-gray-600"
-          />
-        </span>
-        {/*-------------- text + FAQ -----------*/}
-        <span className="w-full md:w-[50%] h-full flex flex-col items-center">
+    <div className="relative flex items-center justify-between md:flex-row flex-col gap-8 w-full h-[80%]">
+      {/*--------------- image --------------*/}
+      <span className="md:w-1/2 flex w-full h-full items-center justify-center md:justify-start">
+        <Image
+          width={200}
+          height={200}
+          src="/ServicesItems/SecImage.svg"
+          alt=""
+          className="w-[80%] h-auto object-cover rounded-2xl border-8 border-gray-600"
+        />
+      </span>
+      {/*-------------- text + FAQ -----------*/}
+      <span className="w-full md:w-[50%] h-full flex flex-col items-center md:items-start">
         <div className="flex gap-2 mb-4">
           <AgentTag type="property-owner" />
         </div>
-        <h1 className="text-2xl md:text-4xl font-bold bg-clip-text bg-gradient-to-b from-neutral-700 to-gray-900 dark:from-neutral-50 dark:to-neutral-400 dark:text-transparent">
+        <h1 className="text-2xl md:text-4xl font-bold bg-clip-text bg-gradient-to-b from-neutral-700 to-gray-900 dark:from-neutral-50 dark:to-neutral-400 dark:text-transparent md:text-left">
           Virtual Assistant Services
         </h1>
-          <p className="text-start font-normal dark:text-neutral-400 mt-2">
-            Have your own VAs that are ready to help at anytime
-          </p>
-          {/* FAQ */}
-          <div className="w-full h-[80%] mt-4 flex gap-4 items-center justify-center flex-col">
-            {faqs[1].map((item, i) => (
-              <DropdownCompo
-                key={i}
-                question={item.question}
-                description={item.answer}
-                width="w-full"
-                height="h-auto"
-              />
-            ))}
-          </div>
-          <Link href="/contact" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-black text-white hover:bg-gray-700 dark:bg-[#ffffff] hover:dark:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
-            Contact Us
-          </Link>
-        </span>
-      </div>
+        <p className="text-start font-normal dark:text-neutral-400 mt-2">
+          Have your own VAs that are ready to help at anytime
+        </p>
+        {/* FAQ */}
+        <div className="w-full h-[80%] mt-4 flex gap-4 items-center justify-center flex-col">
+          {faqs[1].map((item, i) => (
+            <DropdownCompo
+              key={i}
+              question={item.question}
+              description={item.answer}
+              width="w-full"
+              height="h-auto"
+            />
+          ))}
+        </div>
+        <Link href="/contact" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-black text-white hover:bg-gray-700 dark:bg-[#ffffff] hover:dark:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
+          Contact Us
+        </Link>
+      </span>
+    </div>
   )
 }
 
@@ -309,8 +357,8 @@ function ThirdBox() {
         </div>
 
         <Link href="/contact" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-black text-white hover:bg-gray-700 dark:bg-[#ffffff] hover:dark:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
-            Contact Us
-          </Link>
+          Contact Us
+        </Link>
       </div>
 
       {/* Image */}
@@ -332,7 +380,7 @@ function ThirdBox() {
 function FourthBox() {
   return (
     <div className="relative flex flex-col md:flex-row items-center justify-between gap-8 w-full h-auto px-2 sm:px-4 md:px-10 py-6">
-      
+
       {/* Image */}
       <div className="w-full md:w-1/2 h-full flex items-center justify-center md:justify-start">
         <Image
@@ -373,8 +421,8 @@ function FourthBox() {
         </div>
 
         <Link href="/contact" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-black text-white hover:bg-gray-700 dark:bg-[#ffffff] hover:dark:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
-            Contact Us
-          </Link>
+          Contact Us
+        </Link>
       </div>
 
     </div>
@@ -392,9 +440,9 @@ function BottomBox() {
       <p className="text-center text-[14px] dark:text-[#ffffff8a]">Contact us now to know more details</p>
 
       <div className="flex items-center justify-center h-fit md:h-[20%] w-[80%] md:mt-0 ">
-      <Link href="/contact" className="h-[50px] text-black w-[50%] rounded-[4px] text-center flex items-center justify-center bg-[#ffffff] hover:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
-            Contact Us
-          </Link>
+        <Link href="/contact" className="h-[50px] text-black w-[50%] rounded-[4px] text-center flex items-center justify-center bg-[#ffffff] hover:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
+          Contact Us
+        </Link>
       </div>
     </div>
   )

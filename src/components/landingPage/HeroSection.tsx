@@ -14,7 +14,7 @@ export default function HeroSection() {
   <span className="absolute top-0 left-0 w-full h-full dark:bg-black/30 z-[1]" />
 
   {/* Background Video */}
-  <video
+  {/* <video
   autoPlay
   loop
   muted
@@ -46,7 +46,7 @@ export default function HeroSection() {
   >
     <source src="/cloud-bg.mp4" type="video/mp4" />
     Your browser does not support the video tag.
-  </video>
+  </video> */}
 
   {/* Content Layer */}
   <div className="relative z-10 w-full max-w-[1920px] px-4 sm:px-6 lg:px-12 pt-24 md:pt-32 flex flex-col items-center text-center">
@@ -68,8 +68,8 @@ function TextWithTooltip(){
         </span> 
         in Real Estate Excellence
       </h1>
-      <p className="mx-auto mt-6 max-w-xl text-center text-base dark:text-white text-neutral-800 font-bold">
-      Tailored Virtual Assistance for Real Estate Professionals  <span className="">so you can focus on closing deals, building relationships, and growing your portfolio. Reclaim Your Time</span>  Scale Your Business.
+      <p className="mx-auto mt-6 max-w-xl text-center text-base dark:text-white text-neutral-800 font-bold opacity-80">
+      On-Demand Virtual Assistance for Real Estate Professionals empowering you to close deals, build connections, and grow your portfolio. Reclaim your time. Scale your business with confidence
       </p>
     </div>
   )
