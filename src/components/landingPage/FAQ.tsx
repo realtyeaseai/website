@@ -143,7 +143,7 @@ function TextBoxWithContactBtn(){
         Got Questions? We&apos;ve Got Answers!
         </h2>
         <p className="mx-auto mt-2 max-w-xl text-base font-normal dark:text-neutral-300 md:ml-6 ">
-        Explore our frequently asked questions below to find clarity on our services, processes, and everything in between. Can&apos;t find what you&apos;re looking for? <Link href="/contact" className="text-[#0073ff] font-semibold hover:border-b-2">Contact us</Link> – we&apos;re always here to help!
+        Explore our frequently asked questions below to find clarity on our services, processes, and everything in between. Can&apos;t find what you&apos;re looking for? <Link href="/contact" className="text-[#1ca2dc] font-semibold hover:border-b-2">Contact us</Link> - we&apos;re always here to help!
 
         </p>
 

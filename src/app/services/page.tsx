@@ -384,7 +384,7 @@ function FourthBox() {
 
 function BottomBox() {
   return (
-    <div className="md:h-[380px] h-[600px] w-[96%] rounded-2xl text-white border border-neutral-950 dark:border-[#ffffff20] mt-10 mb-10 hover:border-[#ffffff50] flex gap-4 items-center justify-center flex-col bg-indigo-700 dark:bg-[radial-gradient(circle_at_center,_#0072feb5,_#4883cc53,_#4883cc29,_#000)]">
+    <div className="md:h-[380px] h-[600px] w-[96%] rounded-2xl text-white border border-neutral-950 dark:border-[#ffffff20] mt-10 mb-10 hover:border-[#ffffff50] flex gap-4 items-center justify-center flex-col bg-[#1ca2dc] dark:bg-[radial-gradient(circle_at_center,_#1ca2dc58,_#1ca2dc53,_#1ca2dc29,_#000)]">
       <span className="h-[50px] w-[50px] rounded-[4px] flex items-center justify-center">
         <Image width={1000} height={1000} src="/contactUsItems/mail.svg" alt="icon" className="w-[75%] h-auto" />
       </span>

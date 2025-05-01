@@ -59,7 +59,7 @@ export default function ScheduleCallForm() {
   };
 
   return (
-    <div className="bg-[radial-gradient(circle_at_top_right,_#8e2de2,_#4a00e0aa,_#2c006aaa,_#000)]
+    <div className="bg-[radial-gradient(circle_at_top_right,_#8e2de2,_#3d3994aa,_#3d3994aa,_#000)]
 
  border border-[#ffffff50] min-h-[750px] w-full md:w-auto rounded-lg flex items-center justify-center flex-col p-6 text-white font-bold">
     <h1 className='text-whitet mb-10 text-center w-[70%] md:w-[90%] text-3xl'>Schedule a Call With Us</h1>
@@ -76,7 +76,7 @@ export default function ScheduleCallForm() {
         <input type="text" placeholder="Timezone (optional)" value={form.timezone} onChange={(e) => setForm({ ...form, timezone: e.target.value })} className="w-full p-3 border rounded-md" />
         <textarea placeholder="What would you like to discuss?" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} required className="w-full min-h-[120px] p-3 border rounded-md" />
 
-        <button type="submit" disabled={loading} className="w-full p-3 rounded-md bg-[#0073ffb2] hover:bg-[#0073ff80] text-white font-semibold cursor-pointer transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+        <button type="submit" disabled={loading} className="w-full p-3 rounded-md bg-[#ffffff] hover:bg-[#ffffffd5] text-[#000] cursor-pointer transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
           {loading ? 'Scheduling...' : 'Schedule Call'}
         </button>
       </form>
