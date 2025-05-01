@@ -43,7 +43,7 @@ export default function PersonaPicker(){
             
             <div className="md:w-[80%] w-full flex justify-center items-center flex-col mt-8">
                  
-                <h1 className="w-[70%] m-2 py-4 px-2 text-4xl rounded-[8px] dark:text-white text-center "><Link href="/services" className="h-fit w-full">Service Providers</Link></h1>
+                <h1 className="w-[70%] m-2 py-4 px-2 text-4xl rounded-[8px] dark:text-white text-center "><Link href="/services" className="h-fit w-full">Service Provider</Link></h1>
                 {/* border border-[#ffffff80] bg-[#ffffff10]  */}
                 
             </div>
@@ -65,7 +65,7 @@ function RenderPref(){
        <div className="md:w-[50%] w-full h-[320px] flex justify-center items-center flex-col md:mt-0">
            <div className="relative flex h-full w-full p-4 flex-row gap-4 md:gap-8 items-center justify-center">
                 
-                <div className="relative h-[80%] md:h-full w-full flex-[.45] rounded-[8px] dark:text-white text-center overflow-hidden border border-[#00000040] dark:border-[#ffffff30] dark:bg-[radial-gradient(circle_at_top_left,_#0073FF_20%,_black)] bg-[radial-gradient(circle_at_top_left,_#0073FF_1%,_white)] dark:bg-[#ffffff10] cursor-pointer transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)]">
+                <div className="relative h-[80%] md:h-full w-full flex-[.45] rounded-[8px] dark:text-white text-center overflow-hidden border border-[#00000040] dark:border-[#ffffff30] dark:bg-[radial-gradient(circle_at_top_left,_#1ca2dc_20%,_black)] bg-[radial-gradient(circle_at_top_left,_#1ca2dc_1%,_white)] dark:bg-[#ffffff10] cursor-pointer transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)]">
                     <Link href="/services/#RealEstateAgent">
                     <div className="w-full h-full flex flex-col items-center justify-between"> 
                         <div className="flex items-center justify-center flex-[.75] h-auto w-[100%]">
@@ -85,7 +85,7 @@ function RenderPref(){
                 </div>
                 
                 
-                <div className="relative h-[80%] md:h-full w-full flex-[.45] rounded-[8px] dark:text-white text-center overflow-hidden border border-[#00000040] dark:border-[#ffffff30] dark:bg-[radial-gradient(circle_at_top_left,_#EC3880_20%,_black)] bg-[radial-gradient(circle_at_top_left,_#EC3880_1%,_white)] dark:bg-[#ffffff10] cursor-pointer transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)]">
+                <div className="relative h-[80%] md:h-full w-full flex-[.45] rounded-[8px] dark:text-white text-center overflow-hidden border border-[#00000040] dark:border-[#ffffff30] dark:bg-[radial-gradient(circle_at_top_left,_#3d3994_20%,_black)] bg-[radial-gradient(circle_at_top_left,_#3d3994_1%,_white)] dark:bg-[#ffffff10] cursor-pointer transition-shadow duration-300 hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)]">
                     <Link href="/services/#vas">
                     <div className="w-full h-full flex flex-col items-center justify-between"> 
                         <div className="flex items-center justify-center flex-[.75] h-auto w-[100%]">

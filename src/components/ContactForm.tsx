@@ -49,7 +49,7 @@ export default function ContactForm() {
         icon: '✅',
         style: {
           borderRadius: '10px',
-          background: '#22c55e', // Tailwind green-500
+          background: '#1ca2dc',
           color: '#fff',
           fontWeight: '600',
         },
@@ -76,7 +76,7 @@ export default function ContactForm() {
   //bg-[radial-gradient(circle_at_top_right,_#00c26e,_#00d77ab3,_#66e6aab3,_#1e3d2f)]
 
   return (
-    <div className="bg-gradient-to-tr to-[#0072feb5] from-black border-2 dark:border-[#ffffffb1] h-fit md:min-h-[750px] max-w-4xl w-full md:w-auto rounded-3xl flex items-center justify-center flex-col p-6 dark:dark:text-white font-bold text-white border-black shadow-black shadow-md">
+    <div className="bg-gradient-to-tr to-[#1ca2dcb5] from-[#1ca2dc] dark:border-[#ffffffb1] h-fit md:min-h-[750px] max-w-4xl w-full md:w-auto rounded-xl flex items-center justify-center flex-col p-6 dark:dark:text-white font-bold text-white border">
   <h2 className="text-2xl text-white dark:text-white mb-8">Get in Touch With Us</h2>
   <form onSubmit={handleSubmit} className="max-w-2xl w-full space-y-4">
 
