@@ -1,4 +1,4 @@
-// 'use client'; // Only include this if the component uses interactivity or state
+'use client'; // Only include this if the component uses interactivity or state
 
 // // import Breadcrumb from "@/components/utilities/BreadCrumb";
 // // import Pricing from "@/components/utilities/Pricing";

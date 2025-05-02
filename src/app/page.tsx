@@ -3,6 +3,7 @@ import {
     HeroSection,
     PersonaPicker,
     FAQ,
+    PricingSection,
   } from '../components/landingPage/lpExports'
   import FadeInOnView from '@/components/FadeInOnView'
 
@@ -22,6 +23,8 @@ export default function HomePage() {
     </FadeInOnView>
   </div>
 
+    <PricingSection/>
+    
   <div id="faq" className="w-full">
     <FadeInOnView delay={0.3}>
       <FAQ />
