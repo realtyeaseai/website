@@ -8,7 +8,7 @@ export default function HeroSection() {
   return (
     <div className="dark:bg-black bg-white relative flex flex-col h-fit min-h-[600px] md:min-h-[850px] w-full overflow-hidden rounded-md antialiased items-center justify-center">
   {/* Spotlight */}
-  <Spotlight className="absolute -top-32 left-0 md:-top-20 md:left-60" fill="white" />
+  <Spotlight className="absolute -top-32 left-0 md:-top-20 md:left-60" />
 
   {/* Overlay (dark layer over video) */}
   <span className="absolute top-0 left-0 w-full h-full dark:bg-black/30 z-[1]" />
