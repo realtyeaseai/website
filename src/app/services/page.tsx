@@ -35,15 +35,6 @@ const faqs = [
               <li>Organize files and documents</li>
               <li>Enter contact and listing info into CRM</li>
               <li>Prepare open house materials</li>
-              <br />
-               <h2>
-              Required Skills : 
-              </h2>
-              <br />
-              <li>M-Basic admin & communication skills</li>
-              <li>-Familiar with tools like Gmail, Google Calendar, Google Drive</li>
-              <li>Minimal or no real estate experience</li>
-              
             `,
     }, {
       question: "Enhanced Listing & Lead Solutions",
@@ -59,14 +50,6 @@ const faqs = [
               <li>Design flyers and email campaigns</li>
 <li>Research and contact potential leads</li>
               <li>Set up automated follow-up systems</li>
-              <br />
-               <h2>
-              Required Skills : 
-              </h2>
-              <br />
-              <li>Knows how real estate deals work</li>
-<li>Comfortable using MLS, Canva, CRMs</li>
-<li>Can work more independently and follow workflows</li>
             `,
     },
     {
@@ -82,17 +65,7 @@ const faqs = [
               <li>Review documents for accuracy</li>
               <li>Research investment properties</li>
               <li>Track team performance</li>
-              <li>Provide training to the staff</li>
-              <br />
-               <h2>
-              Required Skills : 
-              </h2>
-              <br />
-              <li>Strong understanding of real estate processes</li>
-              <li>Can manage deadlines, documents, and communication with all parties</li>
-              <li>Skilled in reporting, automations, and team coordination</li>
-
-              
+              <li>Provide training to the staff</li>           
 
             `,
     },
@@ -170,7 +143,7 @@ const faqs = [
           </p>
         `,
     }, {
-      question: "Social Media Management Services",
+      question: "Marketing & Social Media Management Services",
       answer:
         `
           <p>
@@ -178,7 +151,7 @@ const faqs = [
           </p>
         `,
     }, {
-      question: "Business Development Services",
+      question: "Web Development Services",
       answer:
         `
           <p>

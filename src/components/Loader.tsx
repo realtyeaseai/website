@@ -17,7 +17,7 @@ export default function LoaderWrapper({ children }: { children: React.ReactNode 
   <p className="text-3xl font-light font-sans">
     RealtyEaseAI
   </p>
-  <p className="text-lg text-green-500 font-semibold tracking-wide typewriter-effect">
+  <p className="text-lg text-cyan-200 font-semibold tracking-wide typewriter-effect italic">
     Welcome to the Network
   </p>
 </div>

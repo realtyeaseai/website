@@ -1,6 +1,7 @@
 import Link from "next/link";
 // import { Meteors } from "../ui/meteors";
 import Image from "next/image";
+import RenderCards from "../ui/RenderCards";
 
 // edit this for top servicer 5 grid images 
 const items = [{
@@ -51,7 +52,7 @@ export default function PersonaPicker(){
                 {/* ------------------------ Cards ------------------------ */} 
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-6 place-items-center m-2 md:m-0">
 
-                    <RenderCards/>
+                    <RenderCards items={items}/>
                     <LastCard/>
 
                 </div>
@@ -108,37 +109,38 @@ function RenderPref(){
     )
    }
 
-function RenderCards(){
-    return(
-        <>
-            {items.map((item, i) => (
-               <Link href={item.link} className="w-full h-auto" key={i}>
-                <div className={`md:max-w-[300px] md:w-[300px] h-[270px] w-[100%] max-w-xl m-0 rounded-2xl cursor-pointer transition-shadow duration-300 border border-[#00000035] hover:border-black hover:shadow-[6px_6px_2px_2px_#333333] dark:hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)] `}>
-                    <div className={`relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl shadow-xl dark:bg-[#ffffff10]`}>
-                        <div className="flex-[.7] grid place-items-center h-[100%] w-[100%]">
-                        <span className="h-[80%] w-[40%] flex items-center justify-center rounded-2xl dark:bg-transparent">
-                            <Image
-                              src={item.tag}
-                              width={100}
-                              height={100}
-                              className="h-auto md:w-[50%] w-[100%] border filter dark:invert-[100%]"
-                              alt="img"
-                            />
-                        </span>
+// function RenderCards(){
+//     return(
+//         <>
+//             {items.map((item, i) => (
+//                <Link href={item.link} className="w-full h-auto" key={i}>
+//                 <div className={`md:max-w-[300px] md:w-[300px] h-[270px] w-[100%] max-w-xl m-0 rounded-2xl cursor-pointer transition-shadow duration-300 border border-[#00000035] hover:border-black hover:shadow-[6px_6px_2px_2px_#333333] dark:hover:shadow-[-4px_0_10px_2px_rgba(33,150,243,0.6),4px_0_10px_2px_rgba(0,150,136,0.6)] `}>
+//                     <div className={`relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl shadow-xl dark:bg-[#ffffff10]`}>
+//                         <div className="flex-[.7] grid place-items-center h-[100%] w-[100%]">
+//                         <span className="h-[80%] w-[40%] flex items-center justify-center rounded-2xl dark:bg-transparent">
+//                             <Image
+//                               src={item.tag}
+//                               width={100}
+//                               height={100}
+//                               className="h-auto md:w-[50%] w-[100%] border filter dark:invert-[100%]"
+//                               alt="img"
+//                             />
+//                         </span>
 
-                       </div>
-                       <div className="flex-[.3] h-full w-full grid place-items-center">
-                           <p className="text-center text-xl h-full w-full dark:text-white">{item.title}</p>
-                           {/* <p className="text-center text-[11px] text-[#ffffff8a]"><i>{item.description}</i></p> */}
-                       </div>
-                       {/* <Meteors/> */}
-                   </div>
-               </div>
-                </Link>
-           ))}
-        </>
-    );
-}
+//                        </div>
+//                        <div className="flex-[.3] h-full w-full grid place-items-center">
+//                            <p className="text-center text-xl h-full w-full dark:text-white">{item.title}</p>
+//                            {/* <p className="text-center text-[11px] text-[#ffffff8a]"><i>{item.description}</i></p> */}
+//                        </div>
+//                        {/* <Meteors/> */}
+//                    </div>
+//                </div>
+//                 </Link>
+//            ))}
+//         </>
+//     );
+// }
+
 
 
 function LastCard(){
