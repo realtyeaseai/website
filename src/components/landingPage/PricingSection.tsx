@@ -1,45 +1,109 @@
-// 'use client'; // Only include this if the component uses interactivity or state
+export default function PricingCards() {
+    const businessPlans = [ {
+                name: "Basic",
+                description: "Try the essentials and see what a virtual assistant can do.",
+                features: [
+                  "Assist in drafting detailed business plans",
+                  "Organize and format SWOT analysis",
+                  "Maintain documentation for funding and grants",
+                  "Email support only",
+                ],
+                disabledFeatures: [
+                  "Basic email & chat support",
+                  "Unlimited task submissions (1 active at a time)",
+                  "Monthly performance reports",
+                ],
+                highlight: false,
+              },
+              {
+                name: "Intermediate",
+                description: "Ideal for individuals who need advanced features for professional works",
+                tag: "Most Popular",
+                features: [
+                  "Conduct market research and competitor analysis",
+                  "Gather financial data for projections and budgeting",
+                  "Outline business models (e.g., BMC templates)",
+                  "Help with licensing, compliance, and registration tracking",
+                  "Draft executive summaries and value propositions tailored to investors or partners",
+                ],
+                disabledFeatures: [],
+                highlight: true,
+              },
+              {
+                name: "Advanced",
+                description: "Tailored virtual support for growing teams and property networks.",
+                features: [
+                  "Create pitch decks and investor presentations",
+                  "Compile performance reports for stakeholders",
+                  "Track KPIs and operational goals",
+                  "Provide strategic insights and recommendations for business model scalability and profitability",
+                ],
+                disabledFeatures: [],
+                highlight: false,
+              },];
+    
+    return (
+      <>
+        <PricingSection title="Business Plan Development" plans={businessPlans} />
+      
+      </>
+    );
+  }
+interface Plan {
+  name: string;
+  description: string;
+  features: string[];
+  disabledFeatures?: string[];
+  highlight: boolean;
+  tag?: string;
+}
 
-// // import Breadcrumb from "@/components/utilities/BreadCrumb";
-// // import Pricing from "@/components/utilities/Pricing";
-// // import Image from "next/image";
-
-
-// export default function PricingSection() {
-//   return (
-//     <div className="w-full text-white">
-//       {/* <Breadcrumb pageName="Pricing Plan" pageTitle={Pricing} /> */}
-//       {/* <Pricing2 priceingClass="pricing-section-2" paddingTop="9" /> */}
-
-//       {/* <Pricing /> */}
-//       {/* <Pricing2 priceingClass="pricing-section-2" paddingTop="9" /> */}
-
-//       {/* <section className="testimonial-section fix section-padding">
-//         <div className="container">
-//           <div className="section-title text-center mb-0">
-//             <span className="sub-content wow fadeInUp inline-flex items-center gap-2">
-//               <Image src="/assets/img/bale.png" width={30} height={30} alt="Client icon" />
-//               Clients Feedback
-//             </span>
-//             <h2 className="wow fadeInUp mt-2 text-2xl font-semibold" data-wow-delay=".3s">
-//               We&apos;ve 1250+ Global Clients Say Us
-//             </h2>
-//           </div>
-
-//           <div className="testimonial-wrapper pt-5">
-//             <div className="flex flex-col lg:flex-row gap-4">
-//               <div className="lg:w-1/3">
-//                 <div className="testimonial-image">
-//                 <Image src="/assets/img/bale.png" width={30} height={30} alt="Testimonial icon" />
-//                 </div>
-//               </div>
-//               <div className="lg:w-2/3 pl-0 lg:pl-5">
-                
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </section> */}
-//     </div>
-//   )
-// }
+function PricingSection({ title, plans }: { title: string; plans: Plan[] }) {
+    return (
+      <div className="dark:bg-black bg-white text-white py-16 px-6">
+        <h2 className="text-black text-center text-4xl mb-10 font-bold mask-b-from-3">
+          {title}
+        </h2>
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+          {plans.map((plan, idx) => (
+            <div
+              key={idx}
+              className={`relative p-8 rounded-2xl border border-[#ffffff] ${
+                plan.highlight
+                  ? "bg-gradient-to-b from-blue-700 to-blue-900 border-blue-500"
+                  : "bg-neutral-900 border-neutral-800"
+              }`}
+            >
+              {plan.tag && (
+                <div className="absolute -top-3 right-4 bg-blue-500 text-white text-xs px-3 py-1 rounded-full shadow-md ">
+                  {plan.tag}
+                </div>
+              )}
+              <h3 className="text-xl font-bold mb-2">{plan.name}</h3>
+              <p className="text-sm text-neutral-300 mb-6">{plan.description}</p>
+              <button className="bg-white text-black font-semibold py-2 px-6 rounded-md mb-6 hover:bg-gray-200 transition">
+                Get started
+              </button>
+              <ul className="space-y-3 text-sm">
+                {plan.features.map((feature: string, i: number) => (
+                  <li key={i} className="flex items-start">
+                    <span className="text-green-400 mr-2">•</span>
+                    <span>{feature}</span>
+                  </li>
+                ))}
+                {plan.disabledFeatures?.map((feature: string, i: number) => (
+                  <li key={i} className="flex items-start text-neutral-500 line-through">
+                    <span className="mr-2">•</span>
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+  
+  
+  
