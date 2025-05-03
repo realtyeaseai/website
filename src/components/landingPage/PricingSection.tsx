@@ -1,3 +1,12 @@
+interface Plan {
+    name: string;
+    description: string;
+    features: string[];
+    disabledFeatures?: string[];
+    highlight: boolean;
+    tag?: string;
+  }
+
 export default function PricingCards() {
     const businessPlans = [ {
                 name: "Basic",
@@ -41,22 +50,102 @@ export default function PricingCards() {
                 disabledFeatures: [],
                 highlight: false,
               },];
+
+              const marketingPlans = [ {
+                name: "Basic",
+                description: "Try the essentials and see what a virtual assistant can do.",
+                features: [
+                  "Assist in drafting detailed business plans",
+                  "Organize and format SWOT analysis",
+                  "Maintain documentation for funding and grants",
+                  "Email support only",
+                ],
+                disabledFeatures: [
+                  "Basic email & chat support",
+                  "Unlimited task submissions (1 active at a time)",
+                  "Monthly performance reports",
+                ],
+                highlight: false,
+              },
+              {
+                name: "Intermediate",
+                description: "Ideal for individuals who need advanced features for professional works",
+                tag: "Most Popular",
+                features: [
+                  "Conduct market research and competitor analysis",
+                  "Gather financial data for projections and budgeting",
+                  "Outline business models (e.g., BMC templates)",
+                  "Help with licensing, compliance, and registration tracking",
+                  "Draft executive summaries and value propositions tailored to investors or partners",
+                ],
+                disabledFeatures: [],
+                highlight: true,
+              },
+              {
+                name: "Advanced",
+                description: "Tailored virtual support for growing teams and property networks.",
+                features: [
+                  "Create pitch decks and investor presentations",
+                  "Compile performance reports for stakeholders",
+                  "Track KPIs and operational goals",
+                  "Provide strategic insights and recommendations for business model scalability and profitability",
+                ],
+                disabledFeatures: [],
+                highlight: false,
+              },];
     
+              const webDevPlans = [ {
+                name: "Basic",
+                description: "Try the essentials and see what a virtual assistant can do.",
+                features: [
+                  "Assist in drafting detailed business plans",
+                  "Organize and format SWOT analysis",
+                  "Maintain documentation for funding and grants",
+                  "Email support only",
+                ],
+                disabledFeatures: [
+                  "Basic email & chat support",
+                  "Unlimited task submissions (1 active at a time)",
+                  "Monthly performance reports",
+                ],
+                highlight: false,
+              },
+              {
+                name: "Intermediate",
+                description: "Ideal for individuals who need advanced features for professional works",
+                tag: "Most Popular",
+                features: [
+                  "Conduct market research and competitor analysis",
+                  "Gather financial data for projections and budgeting",
+                  "Outline business models (e.g., BMC templates)",
+                  "Help with licensing, compliance, and registration tracking",
+                  "Draft executive summaries and value propositions tailored to investors or partners",
+                ],
+                disabledFeatures: [],
+                highlight: true,
+              },
+              {
+                name: "Advanced",
+                description: "Tailored virtual support for growing teams and property networks.",
+                features: [
+                  "Create pitch decks and investor presentations",
+                  "Compile performance reports for stakeholders",
+                  "Track KPIs and operational goals",
+                  "Provide strategic insights and recommendations for business model scalability and profitability",
+                ],
+                disabledFeatures: [],
+                highlight: false,
+              },];
     return (
       <>
         <PricingSection title="Business Plan Development" plans={businessPlans} />
+        <PricingSection title="Marketing & Social Media Management" plans={marketingPlans} />
+        <PricingSection title="Web Development" plans={webDevPlans} />
       
       </>
     );
   }
-interface Plan {
-  name: string;
-  description: string;
-  features: string[];
-  disabledFeatures?: string[];
-  highlight: boolean;
-  tag?: string;
-}
+
 
 function PricingSection({ title, plans }: { title: string; plans: Plan[] }) {
     return (
