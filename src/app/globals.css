@@ -110,7 +110,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   border-right: 0.1em solid white;
-  font-family: serif;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   max-width: 0;
   animation: typewriter 2.5s steps(20) forwards, blinkText 0.75s step-end infinite;
 }

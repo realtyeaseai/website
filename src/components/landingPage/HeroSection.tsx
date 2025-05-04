@@ -1,14 +1,19 @@
 // "use client"
 import { Tooltip } from "../Tooltip";
 import { Spotlight } from "@/components/ui/Spotlight";
+// import { WavyBackground } from "@/components/ui/wavy-background";
+// import { cn } from "@/lib/utils";
 // import Image from "next/image";
 import Link from "next/link";
 
 export default function HeroSection() {
   return (
     <div className="dark:bg-black bg-white relative flex flex-col h-fit min-h-[600px] md:min-h-[850px] w-full overflow-hidden rounded-md antialiased items-center justify-center">
+  
+  
   {/* Spotlight */}
-  <Spotlight className="absolute -top-32 left-0 md:-top-20 md:left-60" fill="white" />
+  <Spotlight className="absolute -top-32 left-0 md:-top-20 md:left-60" />
+  {/* hidden dark:block  */}
 
   {/* Overlay (dark layer over video) */}
   <span className="absolute top-0 left-0 w-full h-full dark:bg-black/30 z-[1]" />
@@ -49,11 +54,13 @@ export default function HeroSection() {
   </video> */}
 
   {/* Content Layer */}
+  {/* <WavyBackground className="max-w-full dark:hidden mx-auto pb-40"> */}
   <div className="relative z-10 w-full max-w-[1920px] px-4 sm:px-6 lg:px-12 pt-24 md:pt-32 flex flex-col items-center text-center">
     <TextWithTooltip />
     <InputTab />
     {/* <ImageText /> */}
   </div>
+  {/* </WavyBackground> */}
 </div>
   );
 } 

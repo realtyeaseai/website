@@ -25,139 +25,110 @@ const faqs = [
     {
       question: "Essential Real Estate Support",
       answer:
-        `
-              <h2>
-              Roles & Responsibilities : 
-              </h2>
-              <br />
+        `  
               <li>Manage emails and calendars</li>
               <li>Set reminders for tasks and deadlines</li>
               <li>Organize files and documents</li>
               <li>Enter contact and listing info into CRM</li>
               <li>Prepare open house materials</li>
-              <br />
-               <h2>
-              Required Skills : 
-              </h2>
-              <br />
-              <li>M-Basic admin & communication skills</li>
-              <li>-Familiar with tools like Gmail, Google Calendar, Google Drive</li>
-              <li>Minimal or no real estate experience</li>
-              
             `,
     }, {
       question: "Enhanced Listing & Lead Solutions",
       answer:
-        `
-            <h2>
-              Roles & Responsibilities : 
-              </h2>
-              <br />
+        `         
               <li>Every task in level 1</li>
               <li>Write and update property listings</li>
               <li>Coordinate with vendors (photos, staging, etc.)</li>
               <li>Design flyers and email campaigns</li>
-<li>Research and contact potential leads</li>
+              <li>Research and contact potential leads</li>
               <li>Set up automated follow-up systems</li>
-              <br />
-               <h2>
-              Required Skills : 
-              </h2>
-              <br />
-              <li>Knows how real estate deals work</li>
-<li>Comfortable using MLS, Canva, CRMs</li>
-<li>Can work more independently and follow workflows</li>
             `,
     },
     {
       question: "Comprehensive Real Estate Operations",
       answer:
-        `
-              <h2>
-              Roles & Responsibilities : 
-              </h2>
-              <br />
-              <li>Every task in level 2</li>
-              <li>Manage transactions from contract to closing</li>
-              <li>Review documents for accuracy</li>
-              <li>Research investment properties</li>
-              <li>Track team performance</li>
-              <li>Provide training to the staff</li>
-              <br />
-               <h2>
-              Required Skills : 
-              </h2>
-              <br />
-              <li>Strong understanding of real estate processes</li>
-              <li>Can manage deadlines, documents, and communication with all parties</li>
-              <li>Skilled in reporting, automations, and team coordination</li>
-
-              
-
-            `,
+        `     
+        <li>Every task in Level 2</li>
+        <li>Manage transactions from contract to closing</li>
+        <li>Review documents for accuracy</li>
+        <li>Research investment properties</li>
+        <li>Track team performance</li>
+        <li>Provide training to the staff</li>
+                   
+      `,
     },
   ],
   [
     {
       question: "Basic Property Management",
-      answer:
-        `
-          <p>
-            Assist with scheduling, client communication, and documentation to ensure your projects stay on track.
-          </p>
-        `,
+      answer: `
+        
+        
+          <li>List property on rental platforms (Airbnb, Vrbo, etc.)</li>
+          <li>Respond to general inquiries</li>
+          <li>Handle basic maintenance requests</li>
+          <li>Schedule cleaning services</li>
+        
+      `,
+
     }, {
       question: "Enhanced Guest & Property Coordination",
-      answer:
-        `
-          <p>
-            Handle communication and logistics for subcontractors and vendors.
-          </p>
-        `,
+      answer: `
+       
+       
+          <li>Coordinate with cleaning and maintenance teams between guest stays</li>
+          <li>Respond to guest messages and reviews professionally</li>
+          <li>Update booking calendars</li>
+          <li>Manage simple guest issues or escalate to owners</li>
+          <li>Organize and maintain property documents</li>
+        
+      `,
+
     }, {
       question: "Advanced Property & Guest Experience Management",
-      answer:
-        `
-          <p>
-            Maintain project timelines, update budgets, and monitor expenses
-          </p>
-        `,
+      answer: `
+      <li>Manage property upgrades and renovations</li>
+      <li>Oversee all guest interactions and resolve escalations</li>
+      <li>Handle financials (rent collection, billing, etc.)</li>
+      <li>Negotiate lease renewals or new agreements</li>
+      <li>Coordinate vendor services (repairs, supplies)</li>
+      `,
+    
+
     },
   ],
   [
     {
-      question: "Construction & Rennovation",
-      answer:
-        `
-          <p>
-            Organize emails, schedule appointments, and manage documentation.
-          </p>
-        `,
+      question: "Essential Trade Support",
+      answer: `
+        <li>Answering calls and responding to emails</li>
+        <li>Scheduling appointments and sending reminders</li>
+        <li>Data entry (clients, invoices, service logs)</li>
+        <li>Managing calendars and job bookings</li>
+        <li>Organizing digital documents and files</li>
+      `,
+
     }, {
-      question: "HVAC & Plumbing Services",
-      answer:
-        `
-          <p>
-            Offer 24/7 customer support via phone, email, or chat.
-          </p>
-        `,
+      question: "Enhanced Operations & Client Engagement",
+      answer: `
+        <li>Creating and updating service/job listings</li>
+        <li>Communicating with clients about estimates, timelines, and changes</li>
+        <li>Coordinating with field technicians for schedules and parts</li>
+        <li>Managing online reviews and feedback</li>
+        <li>Tracking and assigning new leads</li>
+      `,
+
     }, {
-      question: "Plumbery & Electrical Services",
-      answer:
-        `
-          <p>
-            Manage social media, create marketing content, and assist with business development.
-          </p>
-        `,
-    },
-    {
-      question: "Pest control Services",
-      answer:
-        `
-          <p>
-            Manage social media, create marketing content, and assist with business development.
-          </p>
-        `,
+      question: "Strategic Growth & Automation for Trades",
+      answer: `
+        <li>Managing customer lifecycle from inquiry to job completion</li>
+        <li>Setting up automations (quote follow-ups, review requests, etc.)</li>
+        <li>Overseeing dispatch and technician routing</li>
+        <li>Generating performance and job reports</li>
+        <li>Supporting hiring, onboarding, and team coordination</li>
+        <li>Track team performance</li>
+      `,
+
     },
   ],
   [
@@ -170,7 +141,7 @@ const faqs = [
           </p>
         `,
     }, {
-      question: "Social Media Management Services",
+      question: "Marketing & Social Media Management Services",
       answer:
         `
           <p>
@@ -178,7 +149,7 @@ const faqs = [
           </p>
         `,
     }, {
-      question: "Business Development Services",
+      question: "Web Development Services",
       answer:
         `
           <p>
@@ -420,8 +391,8 @@ function FourthBox() {
           ))}
         </div>
 
-        <Link href="/contact" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-black text-white hover:bg-gray-700 dark:bg-[#ffffff] hover:dark:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
-          Contact Us
+        <Link href="/pricing" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-black text-white hover:bg-gray-700 dark:bg-[#ffffff] hover:dark:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
+          Check out our services
         </Link>
       </div>
 
