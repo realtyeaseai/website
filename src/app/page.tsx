@@ -7,7 +7,6 @@ import {
     // PricingSection,
   } from '../components/landingPage/lpExports'
   import FadeInOnView from '@/components/FadeInOnView'
-import PricingCards from '@/components/landingPage/PricingSection';
 
 
 
@@ -31,11 +30,6 @@ export default function HomePage() {
   <div id="faq" className="w-full">
     <FadeInOnView delay={0.3}>
       <FAQ />
-    </FadeInOnView>
-  </div>
-  <div id="faq" className="w-full">
-    <FadeInOnView delay={0.3}>
-      <PricingCards />
     </FadeInOnView>
   </div>
   </div>
