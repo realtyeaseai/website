@@ -149,8 +149,8 @@ export default function PricingCards() {
 
 function PricingSection({ title, plans }: { title: string; plans: Plan[] }) {
   return (
-    <div className="dark:bg-black bg-white grid place-items-center">
-      <h2 className="text-black dark:text-white text-center text-5xl w-[90%] mb-10 font-bold mask-b-from-3">
+    <div className="dark:bg-black text-white grid place-items-center">
+      <h2 className="text-white dark:text-white text-center text-5xl w-[90%] mb-10 font-bold mask-b-from-3">
         {title}
       </h2>
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 p-8">

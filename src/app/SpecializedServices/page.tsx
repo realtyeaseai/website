@@ -149,7 +149,7 @@ interface Plan {
   
   function PricingSection({ title, plans }: { title: string; plans: Plan[] }) {
     return (
-      <div className="dark:bg-black bg-white grid place-items-center pt-34">
+      <div className="dark:bg-black text-white bg-white grid place-items-center pt-34">
         <h2 className="text-black dark:text-white text-center text-5xl w-[90%] mb-10 font-bold">
           {title}
         </h2>
