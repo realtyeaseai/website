@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface Plan {
     name: string;
     description: string;
@@ -170,9 +172,11 @@ interface Plan {
               )}
               <h3 className="text-xl font-bold mb-2">{plan.name}</h3>
               <p className="text-sm text-neutral-300 mb-6">{plan.description}</p>
+              <Link href="/contact">
               <button className="bg-white text-black font-semibold py-2 px-6 w-full cursor-pointer rounded-md mb-6 hover:bg-gray-200 transition">
                 Get started
               </button>
+              </Link>
               <ul className="space-y-3 text-sm">
                 {plan.features.map((feature: string, i: number) => (
                   <li key={i} className="flex items-start">
