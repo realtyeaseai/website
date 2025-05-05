@@ -5,11 +5,12 @@ import Link from 'next/link'
 
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
 
-    <div className='flex flex-col md:justify-end justify-center items-center min-h-[40dvh] w-full text-black bg-gray-200 dark:bg-black pt-12 dark:text-gray-200'>
+    <div className='flex flex-col min-h-[40dvh] text-black bg-gray-200 dark:bg-black pt-12 dark:text-gray-200'>
 
-      <div className="w-full h-auto flex flex-col md:flex-row items-start justify-between">
+      <div className="w-full h-auto flex flex-col md:flex-row justify-between">
         {/* ---------------------------- Left Section (Logo + Links) ---------------------------- */}
         <div className="w-full flex flex-col md:flex-row items-start justify-between p-4 ">
 
@@ -118,10 +119,27 @@ export default function Footer() {
             </Link>
 
           </div>
+           
         </div>
 
       </div>
-
+{/* ------------------------------ Footer Bottom Links and Copyright ------------------------------ */}
+<div className="w-full flex flex-col mt-6 mb-4 px-4">
+  <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-neutral-400">
+    <Link href="/privacy-policy" className="hover:text-white hover:underline transition">
+      Privacy Policy
+    </Link>
+    <Link href="/terms-of-service" className="hover:text-white hover:underline transition">
+      Terms of Service
+    </Link>
+    <Link href="/contact" className="hover:text-white hover:underline transition">
+      Contact
+    </Link>
+  </div>
+  <p className="text-sm text-neutral-400 text-center justify-center md:pl-8 mt-4">
+    &copy; {currentYear} RealtyEaseAI. All rights reserved.
+  </p>
+</div>
         {/* ------------------------------------------------- BOTTOM REALTY EASE DESIGN TEXT -------------------------------------------- */}
         {/* <div className='w-full h-auto mt-20 mb-18 md:text-start text-center'>
             <h1 className='w-[90%] md:text-[65px] text-4xl m-4'>RealtyEaseAI</h1>
