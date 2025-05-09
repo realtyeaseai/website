@@ -62,26 +62,20 @@ const faqs = [
     {
       question: "Basic Property Management",
       answer: `
-        
-        
           <li>List property on rental platforms (Airbnb, Vrbo, etc.)</li>
           <li>Respond to general inquiries</li>
           <li>Handle basic maintenance requests</li>
           <li>Schedule cleaning services</li>
-        
       `,
 
     }, {
       question: "Enhanced Guest & Property Coordination",
       answer: `
-       
-       
           <li>Coordinate with cleaning and maintenance teams between guest stays</li>
           <li>Respond to guest messages and reviews professionally</li>
           <li>Update booking calendars</li>
           <li>Manage simple guest issues or escalate to owners</li>
           <li>Organize and maintain property documents</li>
-        
       `,
 
     }, {
@@ -137,10 +131,8 @@ const faqs = [
       answer:
         `
           <p>
-            Create business plans, including market analysis and financial projections.
+            Build and maintain websites, including e-commerce platforms and landing pages.
           </p>
-          <br/>
-           <p>Click <b>Check out Our Services</b> to know more about our services.<p>
         `,
     }, {
       question: "Marketing & Social Media Management Services",
@@ -149,18 +141,14 @@ const faqs = [
           <p>
             Create, schedule, and manage social media posts across various platforms.
           </p>
-          <br/>
-           <p>Click <b>Check out Our Services</b> to know more about our services.<p>
         `,
     }, {
       question: "Web Development Services",
       answer:
         `
           <p>
-            Build and maintain websites, including e-commerce platforms and landing pages.
+            Create and manage property listings on various platforms, including MLS and social media.
           </p>
-          <br/>
-           <p>Click <b>Check out Our Services</b> to know more about our services.<p>
         `,
     }
   ]
@@ -223,7 +211,7 @@ function FirstBox() {
           Get Connected with verified assistants quickly and shortly
         </p>
 
-        <div className="w-full mt-4 flex flex-col gap-4 items-center md:items-start font-semibold">
+        <div className="w-full mt-4 flex flex-col gap-4 items-center md:items-start">
           {faqs[0].map((item, i) => (
             <DropdownCompo
               key={i}
@@ -282,7 +270,7 @@ function SecondBox() {
           Have your own VAs that are ready to help at anytime
         </p>
         {/* FAQ */}
-        <div className="w-full h-[80%] mt-4 flex gap-4 items-center justify-center flex-col font-semibold">
+        <div className="w-full h-[80%] mt-4 flex gap-4 items-center justify-center flex-col">
           {faqs[1].map((item, i) => (
             <DropdownCompo
               key={i}
@@ -305,7 +293,7 @@ function SecondBox() {
 
 function ThirdBox() {
   return (
-    <div className="relative flex flex-col-reverse md:flex-row items-center justify-between gap-8 w-full h-auto px-4 md:px-10 py-6 font-semibold">
+    <div className="relative flex flex-col-reverse md:flex-row items-center justify-between gap-8 w-full h-auto px-4 md:px-10 py-6">
 
       {/* Text + FAQ */}
       <div className="w-full md:w-1/2 h-full flex flex-col items-center md:items-start text-center md:text-left">
@@ -356,7 +344,7 @@ function ThirdBox() {
 
 function FourthBox() {
   return (
-    <div className="relative flex flex-col md:flex-row items-center justify-between gap-8 w-full h-auto px-2 sm:px-4 md:px-10 py-6 font-semibold">
+    <div className="relative flex flex-col md:flex-row items-center justify-between gap-8 w-full h-auto px-2 sm:px-4 md:px-10 py-6">
 
       {/* Image */}
       <div className="w-full md:w-1/2 h-full flex items-center justify-center md:justify-start">
@@ -382,7 +370,7 @@ function FourthBox() {
         </h1>
 
         <p className="font-normal dark:text-neutral-400 mt-2 text-sm md:text-base">
-          Need something else? We can help with that too! Just ask us or Select from Below
+          Need something else? The AI finds trusted pros fast.
         </p>
 
         <div className="w-full mt-4 flex flex-col gap-4 items-center md:items-start">
@@ -397,7 +385,7 @@ function FourthBox() {
           ))}
         </div>
 
-        <Link href="/SpecializedServices" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-black text-white hover:bg-gray-700 dark:bg-[#ffffff] hover:dark:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
+        <Link href="/pricing" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-black text-white hover:bg-gray-700 dark:bg-[#ffffff] hover:dark:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
           Check out our services
         </Link>
       </div>

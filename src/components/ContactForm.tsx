@@ -76,13 +76,14 @@ export default function ContactForm() {
   //bg-[radial-gradient(circle_at_top_right,_#00c26e,_#00d77ab3,_#66e6aab3,_#1e3d2f)]
 
   return (
-    <div className="bg-gradient-to-tr to-[#1ca2dcb5] from-[#1ca2dc] dark:border-[#ffffffb1] h-fit md:min-h-[750px] max-w-4xl w-full md:w-auto rounded-xl flex items-center justify-center flex-col p-6 dark:dark:text-white font-bold text-white border">
-  <h2 className="text-2xl text-white dark:text-white mb-8">Get in Touch With Us</h2>
+    // bg-gradient-to-tr to-[#1ca2dcb5] from-[#1ca2dc]
+    <div className="bg-neutral-200 dark:bg-transparent dark:border-[#ffffffb1] h-fit md:min-h-[750px] max-w-4xl w-full md:w-auto rounded-xl flex items-center justify-center flex-col p-6 dark:text-white font-bold text-black dark:border">
+  <h2 className="text-2xl text-black dark:text-white mb-8">Get in Touch With Us</h2>
   <form onSubmit={handleSubmit} className="max-w-2xl w-full space-y-4">
 
     {/*----------------- Name Block ------------- */}
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <label htmlFor="fname" className="dark:text-white flex flex-col">
+      <label htmlFor="fname" className="flex flex-col">
         <span className='w-full pb-2 text-[16px]'>First Name</span>
         <input
           type="text"
@@ -158,8 +159,8 @@ export default function ContactForm() {
             key={item}
             type="button"
             aria-pressed={form.client === item}
-            className={`border border-black px-4 py-2 rounded-[8px] cursor-pointer dark:text-white ${
-              form.client === item ? 'border-2 border-black bg-cyan-700' : 'border-white'
+            className={`border border-[#00000000] px-4 py-2 rounded-[8px] cursor-pointer dark:text-white ${
+              form.client === item ? ' bg-[#1ca2dc] text-white' : 'border-black dark:border-white'
             }`}
             onClick={() => setForm({ ...form, client: item })}
           >
@@ -208,7 +209,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={loading}
-        className="bg-white text-neutral-900 w-full px-6 py-3 rounded-md font-medium disabled:opacity-60 cursor-pointer transition duration-300 dark:text-black hover:bg-neutral-300"
+        className="bg-[#1ca2dc] dark:bg-white text-white dark:text-black hover:bg-[#1ca2dcd7] dark:hover:bg-neutral-300 w-full px-6 py-3 rounded-md font-medium disabled:opacity-60 cursor-pointer transition duration-300 "
       >
         {loading ? 'Sending...' : 'Send Message'}
       </button>
