@@ -10,137 +10,183 @@ interface Plan {
   }
   
   export default function PricingCards() {
-    const businessPlans = [ {
-                name: "Basic",
-                description: "Try the essentials and see what a virtual assistant can do.",
-                features: [
-                  "Assist in drafting detailed business plans",
-                  "Organize and format SWOT analysis",
-                  "Maintain documentation for funding and grants",
-                  "Email support only",
-                ],
-                disabledFeatures: [
-                  "Basic email & chat support",
-                  "Unlimited task submissions (1 active at a time)",
-                  "Monthly performance reports",
-                ],
-                highlight: false,
-              },
-              {
-                name: "Pro",
-                description: "Ideal for individuals who need advanced features for professional works",
-                tag: "Most Popular",
-                features: [
-                  "Conduct market research and competitor analysis",
-                  "Gather financial data for projections and budgeting",
-                  "Outline business models (e.g., BMC templates)",
-                  "Help with licensing, compliance, and registration tracking",
-                  "Draft executive summaries and value propositions tailored to investors or partners",
-                ],
-                disabledFeatures: [],
-                highlight: true,
-              },
-              {
-                name: "Elite",
-                description: "Tailored virtual support for growing teams and property networks.",
-                features: [
-                  "Create pitch decks and investor presentations",
-                  "Compile performance reports for stakeholders",
-                  "Track KPIs and operational goals",
-                  "Provide strategic insights and recommendations for business model scalability and profitability",
-                ],
-                disabledFeatures: [],
-                highlight: false,
-              },];
+   const businessPlans = [
+  {
+    name: "Basic",
+    description: "Essential support to get started with your business planning.",
+    features: [
+      "Assist in drafting detailed business plans",
+      "Organize and format SWOT analysis",
+      "Maintain documentation for funding and grants",
+      "Email support only"
+    ],
+    disabledFeatures: ["Conduct market research and competitor analysis", // Not available in Basic
+      "Gather financial data for projections and budgeting", // Not available in Basic
+      "Outline business models (e.g., BMC templates)", // Not available in Basic
+      "Help with licensing, compliance, and registration tracking", // Not available in Basic
+      "Draft executive summaries and value propositions tailored to investors or partners", // Not available in Basic
+      "Create pitch decks and investor presentations", // Not available in Basic
+      "Support preparation for investor meetings and due diligence requests", // Not available in Basic
+      "Track KPIs and operational goals", // Not available in Basic
+      "Provide strategic insights and recommendations to improve scalability, profitability, and market positioning", // Not available in Basic
+    ],
+    highlight: false,
+  },
+  {
+    name: "Pro",
+    description: "Comprehensive support for growing businesses with strategic insights.",
+    tag: "Most Popular",
+    features: [
+      "All Basic Features",      
+      // Pro features
+      "Conduct market research and competitor analysis",
+      "Gather financial data for projections and budgeting",
+      "Outline business models (e.g., BMC templates)",
+      "Help with licensing, compliance, and registration tracking",
+      "Draft executive summaries and value propositions tailored to investors or partners"
+    ],
+    disabledFeatures: [ "Create pitch decks and investor presentations", // Not available in Pro
+      "Support preparation for investor meetings and due diligence requests", // Not available in Pro
+      "Track KPIs and operational goals", // Not available in Pro
+      "Provide strategic insights and recommendations to improve scalability, profitability, and market positioning" // Not available in Pro],
+    ],
+    highlight: true,
+  },
+  {
+    name: "Elite",
+    description: "Complete support for high-growth teams and enterprise-level projects.",
+    features: [
+     "All Basic and Pro Features",      
+      // Elite features
+      "Create pitch decks and investor presentations",
+      "Support preparation for investor meetings and due diligence requests",
+      "Track KPIs and operational goals",
+      "Provide strategic insights and recommendations to improve scalability, profitability, and market positioning"
+    ],
+    disabledFeatures: [],
+    highlight: false,
+  }
+];
+
   
-              const marketingPlans = [ {
-                name: "Basic",
-                description: "Try the essentials and see what a virtual assistant can do.",
-                features: [
-                  "Assist in drafting detailed business plans",
-                  "Organize and format SWOT analysis",
-                  "Maintain documentation for funding and grants",
-                  "Email support only",
-                ],
-                disabledFeatures: [
-                  "Basic email & chat support",
-                  "Unlimited task submissions (1 active at a time)",
-                  "Monthly performance reports",
-                ],
-                highlight: false,
-              },
-              {
-                name: "Pro",
-                description: "Ideal for individuals who need advanced features for professional works",
-                tag: "Most Popular",
-                features: [
-                  "Conduct market research and competitor analysis",
-                  "Gather financial data for projections and budgeting",
-                  "Outline business models (e.g., BMC templates)",
-                  "Help with licensing, compliance, and registration tracking",
-                  "Draft executive summaries and value propositions tailored to investors or partners",
-                ],
-                disabledFeatures: [],
-                highlight: true,
-              },
-              {
-                name: "Elite",
-                description: "Tailored virtual support for growing teams and property networks.",
-                features: [
-                  "Create pitch decks and investor presentations",
-                  "Compile performance reports for stakeholders",
-                  "Track KPIs and operational goals",
-                  "Provide strategic insights and recommendations for business model scalability and profitability",
-                ],
-                disabledFeatures: [],
-                highlight: false,
-              },];
+             const marketingPlans = [
+  {
+    name: "Basic",
+    description: "Social media essentials to build your online presence.",
+    features: [
+      "Write engaging captions for posts and stories",
+      "Hashtag research & trend tracking",
+      "Reply to comments and direct messages",
+      "Write platform-appropriate content",
+      "Create content for 3-5 posts weekly"
+    ],
+    disabledFeatures: [
+      "Managing content calendars",
+      "Analyzing performance reports",
+      "Collaborating with influencers",
+      "Visual content planning",
+      "Paid ad support or strategy",
+      "Custom campaigns"
+    ],
+    highlight: false,
+  },
+  {
+    name: "Pro",
+    description: "Broader support for managing and growing your social channels.",
+    tag: "Most Popular",
+    features: [
+      "Manage and update content calendars",
+      "Monitor brand mentions & reputation",
+      "Analyze insights and performance data",
+      "Coordinate with influencers & partners",
+      "Suggest creative ideas (polls, quizzes, story formats)",
+      "Ensure consistent posting: 3-5 static posts/week"
+    ],
+    disabledFeatures: [
+      "Ad management",
+      "Full campaign strategy",
+      "Advanced video content",
+      "Cross-platform consistency planning"
+    ],
+    highlight: true,
+  },
+  {
+    name: "Elite",
+    description: "Complete social media strategy, design, and execution support.",
+    features: [
+      "Everything in Basic & Pro",
+      "Run and manage ads (on request)",
+      "Develop full campaign strategies using analytics",
+      "Create videos & static post content (4-5 per week)",
+      "Design content aligned with brand guidelines",
+      "Maintain & update content calendars weekly",
+      "Ensure consistent posting across all platforms"
+    ],
+    disabledFeatures: [],
+    highlight: false,
+  }
+];
+
     
-              const webDevPlans = [ {
-                name: "Basic",
-                description: "Try the essentials and see what a virtual assistant can do.",
-                features: [
-                  "Assist in drafting detailed business plans",
-                  "Organize and format SWOT analysis",
-                  "Maintain documentation for funding and grants",
-                  "Email support only",
-                ],
-                disabledFeatures: [
-                  "Basic email & chat support",
-                  "Unlimited task submissions (1 active at a time)",
-                  "Monthly performance reports",
-                ],
-                highlight: false,
-              },
-              {
-                name: "Pro",
-                description: "Ideal for individuals who need advanced features for professional works",
-                tag: "Most Popular",
-                features: [
-                  "Conduct market research and competitor analysis",
-                  "Gather financial data for projections and budgeting",
-                  "Outline business models (e.g., BMC templates)",
-                  "Help with licensing, compliance, and registration tracking",
-                  "Draft executive summaries and value propositions tailored to investors or partners",
-                ],
-                disabledFeatures: [],
-                highlight: true,
-              },
-              {
-                name: "Elite",
-                description: "Tailored virtual support for growing teams and property networks.",
-                features: [
-                  "Plan, manage, and track sprints and feature rollouts",
-                  "Perform UX audits and research to guide improvement",
-                  "Operate web content workflows from intake to publishing",
-                  "Set up and manage API integrations and automation tools",
-                  "Maintain project documentation and train internal teams",
-                  "Ensure alignment across cross-functional teams and timelines",
-                  "Leverage AI-powered tools or insights where beneficial (bonus)",
-                ],
-                disabledFeatures: [],
-                highlight: false,
-              },];
+              const webDevPlans = [
+  {
+    name: "Basic",
+    description: "Essential support for keeping your website running smoothly.",
+    features: [
+      "Website updates & edits",
+      "Use builders like WordPress or Wix",
+      "Assist with simple page creation",
+      "Basic layout & text improvements",
+      "Team support for web tasks"
+    ],
+    disabledFeatures: [
+      "Advanced design or features",
+      "Device testing",
+      "Performance tracking",
+      "Custom workflows or tools",
+      "API/automation setup",
+      "Unlimited tasks (1 active at a time)",
+      "Monthly reports"
+    ],
+    highlight: false,
+  },
+  {
+    name: "Pro",
+    description: "Advanced help for professionals who want more control and features.",
+    tag: "Most Popular",
+    features: [
+      "Build and improve pages independently",
+      "Mobile and cross-device testing",
+      "Add interactive features",
+      "Collaborate on content & design",
+      "Streamlined content updates"
+    ],
+    disabledFeatures: [
+      "Project management",
+      "Custom integrations",
+      "AI-based tools",
+      "Team training or documentation"
+    ],
+    highlight: true,
+  },
+  {
+    name: "Elite",
+    description: "Complete website support for growing teams — all features included.",
+    features: [
+      "Everything in Basic & Pro",
+      "AI-powered insights",
+      "Full project & sprint management",
+      "UX audits & improvements",
+      "Custom workflows & publishing",
+      "API integrations & automation",
+      "Internal team training",
+      
+    ],
+    disabledFeatures: [],
+    highlight: false,
+  }
+];
+
     return (
       <>
         <PricingSection title="Business Plan Development" plans={businessPlans} />

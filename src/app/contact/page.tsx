@@ -24,11 +24,11 @@ export default function Contact() {
       </p>
 
 
-      <div className="flex flex-col md:flex-row gap-4 mt-8 items-center">
+      <div className="flex flex-col md:flex-row gap-4 mt-8 justify-center items-center">
         <button
           type="button"
           onClick={() => setActiveForm("call")}
-          className={`bg-[#ffffff] hover:bg-[#ffffffcc] cursor-pointer text-black font-semibold px-6 py-3 rounded-[6px] transition duration-300 w-[90%] ${
+          className={`bg-[#ffffff] hover:bg-[#ffffffcc] cursor-pointer text-black font-semibold px-6 py-3 rounded-[6px] transition duration-300 w-auto ${
             activeForm === "call" ? "ring-2 ring-white" : ""
           }`}
         >
@@ -38,7 +38,7 @@ export default function Contact() {
         <button
           type="button"
           onClick={() => setActiveForm("message")}
-          className={`bg-[#1ca2dc] hover:bg-[#1ca2dccc] text-white cursor-pointer font-semibold px-6 py-3 rounded-[6px] transition duration-300 w-[90%] ${
+          className={`bg-[#1ca2dc] hover:bg-[#1ca2dccc] text-white cursor-pointer font-semibold px-6 py-3 rounded-[6px] transition duration-300 w-auto ${
             activeForm === "message" ? "ring-2 ring-white" : ""
           }`}
         >
@@ -107,13 +107,13 @@ export default function Contact() {
       <div className="md:h-[380px] h-[600px] w-[96%] rounded-2xl border border-[#ffffff20] mt-4 hover:border-[#ffffff50] flex gap-4 items-center justify-center flex-col bg-[#1ca2dc] dark:bg-[radial-gradient(circle_at_center,_#1ca2dc,_#1ca2dc53,_#1ca2dc29,_#1ca2dc1f)]">
 
         <span className="h-[50px] w-[50px] rounded-[4px] flex items-center justify-center">
-          <Image src="/contactUsItems/mail.svg"
+          {/* <Image src="/contactUsItems/mail.svg"
             width={30}
             height={30}
             alt="icon"
-            className="w-[75%] h-auto" />
+            className="w-[75%] h-auto" /> */}
         </span>
-        <h1 className="md:text-4xl md:w-[55%] w-[90%] text-2xl text-center text-white"><b>Here&apos;s what some of our <span className="text-[#3d3994cc]"> satisfied user&apos;s</span> have said about us.</b></h1>
+        <h1 className="md:text-4xl md:w-[55%] w-[90%] text-2xl text-center text-white"><b>Here&apos;s what some of our <span className="text-[#2b1243]"> satisfied user&apos;s</span> have said about us.</b></h1>
         {/* <p className="text-center text-[14px] text-[#ffffff8a]">Here&apos;s what some of our satisfied <span className="">user&apos;s</span> have said about us.</p> */}
 
         <div className="flex items-center justify-center flex-col md:flex-row gap-8 h-[220px] md:h-[20%] w-[80%] md:mt-0 text-white">
