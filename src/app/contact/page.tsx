@@ -10,66 +10,7 @@ export default function Contact() {
 
   return (
     <div className="bg-white text-black dark:bg-black min-h-[100dvh] pt-20 w-full flex items-center justify-evenly flex-col pb-8">
-      {/* -------------- Static Box --------------  */}
-      <div className="md:h-[380px] h-[600px] w-[96%] rounded-2xl border border-[#ffffff20] mt-4 hover:border-[#ffffff50] flex gap-4 items-center justify-center flex-col bg-[#1ca2dc] dark:bg-[radial-gradient(circle_at_center,_#1ca2dc,_#1ca2dc53,_#1ca2dc29,_#1ca2dc1f)]">
-
-        <span className="h-[50px] w-[50px] rounded-[4px] flex items-center justify-center">
-          <Image src="/contactUsItems/mail.svg"
-            width={30}
-            height={30}
-            alt="icon"
-            className="w-[75%] h-auto" />
-        </span>
-        <h1 className="md:text-4xl md:w-[55%] w-[90%] text-2xl text-center text-white"><b>Here&apos;s what some of our <span className="text-[#3d3994cc]"> satisfied user&apos;s</span> have said about us.</b></h1>
-        {/* <p className="text-center text-[14px] text-[#ffffff8a]">Here&apos;s what some of our satisfied <span className="">user&apos;s</span> have said about us.</p> */}
-
-        <div className="flex items-center justify-center flex-col md:flex-row gap-8 h-[220px] md:h-[20%] w-[80%] md:mt-0 text-white">
-          <div className=" flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15] hover:bg-[#ffffff56]">
-            <span>
-              <Image src="/contactUsItems/Clock.svg" width={30}
-                height={30} alt="Clock" />
-            </span>
-              Efficient
-          </div>
-          <div className="flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15] hover:bg-[#ffffff56]">
-            <span>
-              <Image src="/contactUsItems/star.svg" width={30}
-                height={30} alt="Star" />
-            </span>
-            Supportive
-          </div>
-          <div className="flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15] hover:bg-[#ffffff56]">
-            <span>
-              <Image src="/contactUsItems/moneyBag.svg" width={30}
-                height={30} alt="bag" />
-            </span>
-              Reliable 
-          </div>
-          {/* <div className="flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15] hover:bg-gray-900">
-            <span>
-              <Image src="/contactUsItems/moneyBag.svg" width={30}
-                height={30} alt="bag" />
-            </span>
-            efficient
-          </div>
-          <div className="flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15] hover:bg-gray-900">
-            <span>
-              <Image src="/contactUsItems/moneyBag.svg" width={30}
-                height={30} alt="bag" />
-            </span>
-            Supportive
-          </div>
-          <div className="flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15] hover:bg-gray-900">
-            <span>
-              <Image src="/contactUsItems/moneyBag.svg" width={30}
-                height={30} alt="bag" />
-            </span>
-            Reliable
-          </div> */}
-          
-        </div>
-
-      </div>
+      
 
       {/* ------------------ Grid to Conatct --------------- */}
       <div id="contact" className="grid grid-cols-1 md:grid-cols-[1.5fr_2fr] gap-4 w-full md:w-[98%] p-4 scroll-mt-24">
@@ -83,11 +24,11 @@ export default function Contact() {
       </p>
 
 
-      <div className="flex flex-col md:flex-row gap-4 mt-8">
+      <div className="flex flex-col md:flex-row gap-4 mt-8 items-center">
         <button
           type="button"
           onClick={() => setActiveForm("call")}
-          className={`bg-[#ffffff] hover:bg-[#ffffffcc] cursor-pointer text-black font-semibold px-6 py-3 rounded-[6px] transition duration-300 ${
+          className={`bg-[#ffffff] hover:bg-[#ffffffcc] cursor-pointer text-black font-semibold px-6 py-3 rounded-[6px] transition duration-300 w-[90%] ${
             activeForm === "call" ? "ring-2 ring-white" : ""
           }`}
         >
@@ -97,7 +38,7 @@ export default function Contact() {
         <button
           type="button"
           onClick={() => setActiveForm("message")}
-          className={`bg-[#1ca2dc] hover:bg-[#1ca2dccc] text-white cursor-pointer font-semibold px-6 py-3 rounded-[6px] transition duration-300 ${
+          className={`bg-[#1ca2dc] hover:bg-[#1ca2dccc] text-white cursor-pointer font-semibold px-6 py-3 rounded-[6px] transition duration-300 w-[90%] ${
             activeForm === "message" ? "ring-2 ring-white" : ""
           }`}
         >
@@ -161,6 +102,66 @@ export default function Contact() {
         {activeForm === "message" ? <ContactForm /> : <ScheduleCallForm />}
 
         {/* </div> */}
+      </div>
+      {/* -------------- Static Box --------------  */}
+      <div className="md:h-[380px] h-[600px] w-[96%] rounded-2xl border border-[#ffffff20] mt-4 hover:border-[#ffffff50] flex gap-4 items-center justify-center flex-col bg-[#1ca2dc] dark:bg-[radial-gradient(circle_at_center,_#1ca2dc,_#1ca2dc53,_#1ca2dc29,_#1ca2dc1f)]">
+
+        <span className="h-[50px] w-[50px] rounded-[4px] flex items-center justify-center">
+          <Image src="/contactUsItems/mail.svg"
+            width={30}
+            height={30}
+            alt="icon"
+            className="w-[75%] h-auto" />
+        </span>
+        <h1 className="md:text-4xl md:w-[55%] w-[90%] text-2xl text-center text-white"><b>Here&apos;s what some of our <span className="text-[#3d3994cc]"> satisfied user&apos;s</span> have said about us.</b></h1>
+        {/* <p className="text-center text-[14px] text-[#ffffff8a]">Here&apos;s what some of our satisfied <span className="">user&apos;s</span> have said about us.</p> */}
+
+        <div className="flex items-center justify-center flex-col md:flex-row gap-8 h-[220px] md:h-[20%] w-[80%] md:mt-0 text-white">
+          <div className=" flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15] hover:bg-[#ffffff56]">
+            <span>
+              <Image src="/contactUsItems/Clock.svg" width={30}
+                height={30} alt="Clock" />
+            </span>
+              Efficient
+          </div>
+          <div className="flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15] hover:bg-[#ffffff56]">
+            <span>
+              <Image src="/contactUsItems/star.svg" width={30}
+                height={30} alt="Star" />
+            </span>
+            Supportive
+          </div>
+          <div className="flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15] hover:bg-[#ffffff56]">
+            <span>
+              <Image src="/contactUsItems/moneyBag.svg" width={30}
+                height={30} alt="bag" />
+            </span>
+              Reliable 
+          </div>
+          {/* <div className="flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15] hover:bg-gray-900">
+            <span>
+              <Image src="/contactUsItems/moneyBag.svg" width={30}
+                height={30} alt="bag" />
+            </span>
+            efficient
+          </div>
+          <div className="flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15] hover:bg-gray-900">
+            <span>
+              <Image src="/contactUsItems/moneyBag.svg" width={30}
+                height={30} alt="bag" />
+            </span>
+            Supportive
+          </div>
+          <div className="flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15] hover:bg-gray-900">
+            <span>
+              <Image src="/contactUsItems/moneyBag.svg" width={30}
+                height={30} alt="bag" />
+            </span>
+            Reliable
+          </div> */}
+          
+        </div>
+
       </div>
     </div>
   )
