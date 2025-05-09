@@ -27,7 +27,7 @@ interface Plan {
                 highlight: false,
               },
               {
-                name: "Intermediate",
+                name: "Pro",
                 description: "Ideal for individuals who need advanced features for professional works",
                 tag: "Most Popular",
                 features: [
@@ -41,7 +41,7 @@ interface Plan {
                 highlight: true,
               },
               {
-                name: "Advanced",
+                name: "Elite",
                 description: "Tailored virtual support for growing teams and property networks.",
                 features: [
                   "Create pitch decks and investor presentations",
@@ -70,7 +70,7 @@ interface Plan {
                 highlight: false,
               },
               {
-                name: "Intermediate",
+                name: "Pro",
                 description: "Ideal for individuals who need advanced features for professional works",
                 tag: "Most Popular",
                 features: [
@@ -84,7 +84,7 @@ interface Plan {
                 highlight: true,
               },
               {
-                name: "Advanced",
+                name: "Elite",
                 description: "Tailored virtual support for growing teams and property networks.",
                 features: [
                   "Create pitch decks and investor presentations",
@@ -113,7 +113,7 @@ interface Plan {
                 highlight: false,
               },
               {
-                name: "Intermediate",
+                name: "Pro",
                 description: "Ideal for individuals who need advanced features for professional works",
                 tag: "Most Popular",
                 features: [
@@ -127,13 +127,16 @@ interface Plan {
                 highlight: true,
               },
               {
-                name: "Advanced",
+                name: "Elite",
                 description: "Tailored virtual support for growing teams and property networks.",
                 features: [
-                  "Create pitch decks and investor presentations",
-                  "Compile performance reports for stakeholders",
-                  "Track KPIs and operational goals",
-                  "Provide strategic insights and recommendations for business model scalability and profitability",
+                  "Plan, manage, and track sprints and feature rollouts",
+                  "Perform UX audits and research to guide improvement",
+                  "Operate web content workflows from intake to publishing",
+                  "Set up and manage API integrations and automation tools",
+                  "Maintain project documentation and train internal teams",
+                  "Ensure alignment across cross-functional teams and timelines",
+                  "Leverage AI-powered tools or insights where beneficial (bonus)",
                 ],
                 disabledFeatures: [],
                 highlight: false,

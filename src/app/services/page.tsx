@@ -23,7 +23,7 @@ export default function Services() {
 const faqs = [
   [
     {
-      question: "Essential Real Estate Support",
+      question: "Basic Real Estate Support",
       answer:
         `  
               <li>Manage emails and calendars</li>
@@ -33,7 +33,7 @@ const faqs = [
               <li>Prepare open house materials</li>
             `,
     }, {
-      question: "Enhanced Listing & Lead Solutions",
+      question: "Pro Listing & Lead Solutions",
       answer:
         `         
               <li>Every task in level 1</li>
@@ -45,7 +45,7 @@ const faqs = [
             `,
     },
     {
-      question: "Comprehensive Real Estate Operations",
+      question: "Elite Real Estate Operations",
       answer:
         `     
         <li>Every task in Level 2</li>
@@ -72,7 +72,7 @@ const faqs = [
       `,
 
     }, {
-      question: "Enhanced Guest & Property Coordination",
+      question: "Pro Guest & Property Coordination",
       answer: `
        
        
@@ -85,7 +85,7 @@ const faqs = [
       `,
 
     }, {
-      question: "Advanced Property & Guest Experience Management",
+      question: "Elite Property & Guest Experience Management",
       answer: `
       <li>Manage property upgrades and renovations</li>
       <li>Oversee all guest interactions and resolve escalations</li>
@@ -99,7 +99,7 @@ const faqs = [
   ],
   [
     {
-      question: "Essential Trade Support",
+      question: "Basic Trade Support",
       answer: `
         <li>Answering calls and responding to emails</li>
         <li>Scheduling appointments and sending reminders</li>
@@ -109,7 +109,7 @@ const faqs = [
       `,
 
     }, {
-      question: "Enhanced Operations & Client Engagement",
+      question: "Pro Operations & Client Engagement",
       answer: `
         <li>Creating and updating service/job listings</li>
         <li>Communicating with clients about estimates, timelines, and changes</li>
@@ -119,7 +119,7 @@ const faqs = [
       `,
 
     }, {
-      question: "Strategic Growth & Automation for Trades",
+      question: "Elite Growth & Automation for Trades",
       answer: `
         <li>Managing customer lifecycle from inquiry to job completion</li>
         <li>Setting up automations (quote follow-ups, review requests, etc.)</li>
