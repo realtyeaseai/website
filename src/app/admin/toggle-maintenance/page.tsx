@@ -59,7 +59,7 @@ export default function ToggleMaintenancePage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center gap-6 p-8 bg-gray-100">
+    <div className="min-h-screen flex flex-col items-center justify-center gap-6 p-8 bg-gray-100 dark:bg-black dark:text-white">
       <h1 className="text-3xl font-bold">Maintenance Mode Toggle</h1>
 
       <input
@@ -73,7 +73,7 @@ export default function ToggleMaintenancePage() {
       <button
         onClick={fetchStatus}
         disabled={loading || !secret}
-        className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 disabled:opacity-50"
+        className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 disabled:opacity-50 cursor-pointer"
       >
         {loading ? 'Checking...' : 'Check Status'}
       </button>
@@ -91,14 +91,14 @@ export default function ToggleMaintenancePage() {
         <button
           onClick={toggle}
           disabled={loading || !secret}
-          className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 disabled:opacity-50"
+          className="bg-black text-white dark:bg-gray-700 dark:text-white px-4 py-2 rounded hover:bg-gray-800 disabled:opacity-50 cursor-pointer"
         >
           {loading ? 'Toggling...' : `Turn ${enabled ? 'OFF' : 'ON'}`}
         </button>
       )}
 
       {message && (
-        <p className="mt-4 text-sm text-gray-700 text-center max-w-sm">{message}</p>
+        <p className="mt-4 text-sm text-gray-700 text-center max-w-sm dark:text-green-400">{message}</p>
       )}
     </div>
   );
