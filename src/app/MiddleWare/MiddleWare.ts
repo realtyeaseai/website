@@ -1,24 +1,21 @@
 import { NextRequest, NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+import { connectToDatabase } from '@/lib/mongodb'; // use named import, not clientPromise
 
-export function middleware(req: NextRequest) {
-  const maintenanceFile = path.resolve(process.cwd(), 'config/maintenance.json');
-
+export async function middleware(req: NextRequest) {
+  const url = req.nextUrl.clone();
   let isMaintenance = false;
 
   try {
-    const data = fs.readFileSync(maintenanceFile, 'utf-8');
-    isMaintenance = JSON.parse(data).enabled;
+    const { db, client } = await connectToDatabase();
+    const doc = await db.collection('maintenance').findOne({ key: 'mode' });
+    isMaintenance = doc?.enabled === true;
+    await client.close(); // cleanup
   } catch (error) {
-    console.error('Error reading maintenance config:', error);
+    console.error('MongoDB maintenance check failed:', error);
   }
-
-  const url = req.nextUrl.clone();
 
   if (!isMaintenance) return NextResponse.next();
 
-  // Allow access to maintenance page and static resources
   if (
     url.pathname === '/maintenance' ||
     url.pathname.startsWith('/_next') ||
@@ -28,7 +25,10 @@ export function middleware(req: NextRequest) {
     return NextResponse.next();
   }
 
-  // Redirect everything else to /maintenance
   url.pathname = '/maintenance';
   return NextResponse.rewrite(url);
 }
+
+export const config = {
+  matcher: ['/((?!_next|favicon|maintenance|api).*)'],
+};
