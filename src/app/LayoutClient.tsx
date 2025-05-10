@@ -1,35 +1,43 @@
-'use client'
-import { usePathname } from 'next/navigation'
-import { useEffect, useState } from 'react'
-import { Toaster } from "react-hot-toast";
-import { ThemeProvider } from "next-themes";
-import LoaderWrapper from "@/components/Loader";
-import { TopNavbar } from "@/components/TopNavbar";
-import Footer from "@/components/landingPage/Footer";
-import ScrollToTop from "@/components/ScrollToTop";
-import MaintenancePage from "@/app/Maintenance/page";  // Import the MaintenancePage component
+'use client';
+
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import { Toaster } from 'react-hot-toast';
+import { ThemeProvider } from 'next-themes';
+import LoaderWrapper from '@/components/Loader';
+import { TopNavbar } from '@/components/TopNavbar';
+import Footer from '@/components/landingPage/Footer';
+import ScrollToTop from '@/components/ScrollToTop';
+import MaintenancePage from '@/app/Maintenance/page';
 
 export default function LayoutClient({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const isAdminPage = pathname?.startsWith('/admin');
-  const [isMaintenance, setIsMaintenance] = useState(false);
+  const [isMaintenance, setIsMaintenance] = useState<boolean | null>(null); // null = loading
 
-  // Fetch maintenance status when the component mounts
   useEffect(() => {
     const checkMaintenanceStatus = async () => {
       try {
-        const response = await fetch('/api/maintenance?secret=supersecret');  // Fetch maintenance status
+        const response = await fetch('/api/maintenance');
         const data = await response.json();
         setIsMaintenance(data.enabled);
       } catch (error) {
         console.error('Error fetching maintenance status:', error);
+        setIsMaintenance(false); // Fallback to off if error
       }
     };
 
     checkMaintenanceStatus();
-  }, []);  // Run once on component mount
+  }, []);
 
-  // If in maintenance mode, render the maintenance page, unless it's an admin page
+  if (isMaintenance === null) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p className="text-gray-600 text-xl">Checking maintenance status...</p>
+      </div>
+    );
+  }
+
   if (isMaintenance && !isAdminPage) {
     return <MaintenancePage />;
   }

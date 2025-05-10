@@ -1,20 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { connectToDatabase } from '@/lib/mongodb'; // use named import, not clientPromise
 
-export async function middleware(req: NextRequest) {
+// Hardcoded fallback for environments where dynamic check isn't possible
+const FALLBACK_MAINTENANCE = false;
+
+export function middleware(req: NextRequest) {
   const url = req.nextUrl.clone();
-  let isMaintenance = false;
 
-  try {
-    const { db, client } = await connectToDatabase();
-    const doc = await db.collection('maintenance').findOne({ key: 'mode' });
-    isMaintenance = doc?.enabled === true;
-    await client.close(); // cleanup
-  } catch (error) {
-    console.error('MongoDB maintenance check failed:', error);
-  }
-
-  if (!isMaintenance) return NextResponse.next();
+  if (!FALLBACK_MAINTENANCE) return NextResponse.next();
 
   if (
     url.pathname === '/maintenance' ||
@@ -28,7 +20,3 @@ export async function middleware(req: NextRequest) {
   url.pathname = '/maintenance';
   return NextResponse.rewrite(url);
 }
-
-export const config = {
-  matcher: ['/((?!_next|favicon|maintenance|api).*)'],
-};
