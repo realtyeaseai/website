@@ -103,7 +103,7 @@ export default function Footer() {
 
             {/* Instagram */}
             <Link
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/realtyease.ai"
               target="_blank"
               rel="noopener noreferrer"
               className="w-[60px] h-[40px] flex items-center justify-center bg-white rounded-md hover:bg-gray-400 dark:hover:bg-[#ffffffc5] transition"
