@@ -11,6 +11,7 @@ export default function BookingPage() {
             width: '100%',
             height: '1000px', // hardcode a large height to reduce internal iframe scroll
             border: 'none',
+
           }}
         />
       </div>

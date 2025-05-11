@@ -30,25 +30,36 @@ export default function Contact() {
             </p>
 
             <div className="flex flex-col md:flex-row gap-4 mt-8 justify-center items-center">
-              <button
-                type="button"
-                onClick={() => setActiveForm("call")}
-                className={`bg-[#ffffff] hover:bg-[#ffffffcc] cursor-pointer text-black font-semibold px-6 py-3 rounded-[6px] transition duration-300 w-auto ${
-                  activeForm === "call" ? "ring-2 ring-white" : ""
-                }`}
-              >
-                Schedule Call
-              </button>
+             <div className="flex flex-col md:flex-row gap-4 mt-8 justify-center items-center">
+  <button
+    type="button"
+    onClick={() => setActiveForm("call")}
+    aria-pressed={activeForm === "call"}
+    aria-label="Schedule a call"
+    className={`px-8 py-4 min-w-[160px] rounded-[6px] font-semibold w-auto text-black transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transform active:scale-95 cursor-pointer ${
+      activeForm === "call"
+        ? "bg-white ring-2 ring-white"
+        : "bg-white/90 hover:bg-white"
+    }`}
+  >
+    Schedule Call
+  </button>
 
-              <button
-                type="button"
-                onClick={() => setActiveForm("message")}
-                className={`bg-[#1ca2dc] hover:bg-[#1ca2dccc] text-white cursor-pointer font-semibold px-6 py-3 rounded-[6px] transition duration-300 w-auto ${
-                  activeForm === "message" ? "ring-2 ring-white" : ""
-                }`}
-              >
-                Send Message
-              </button>
+  <button
+    type="button"
+    onClick={() => setActiveForm("message")}
+    aria-pressed={activeForm === "message"}
+    aria-label="Send a message"
+    className={`px-8 py-4 min-w-[160px] rounded-[6px] font-semibold w-auto text-white transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transform active:scale-95 cursor-pointer ${
+      activeForm === "message"
+        ? "bg-[#1ca2dc] ring-2 ring-white"
+        : "bg-[#1ca2dc]/90 hover:bg-[#1ca2dc]"
+    }`}
+  >
+    Send Message
+  </button>
+</div>
+
             </div>
           </div>
           {/* ---------------------------- Left Section (Social Logos) ---------------------------- */}
@@ -107,7 +118,7 @@ export default function Contact() {
         <h1 className="md:text-4xl md:w-[55%] w-[90%] text-2xl text-center text-white">
           <b>
             Here&apos;s what some of our{" "}
-            <span className="text-[#2b1243]"> satisfied user&apos;s</span> have
+            <span className="text-[#2b1243]"> Satisfied Clients</span> have
             said about us.
           </b>
         </h1>
