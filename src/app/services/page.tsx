@@ -2,6 +2,7 @@ import Image from "next/image";
 import DropdownCompo from "@/components/ui/DropdownCompo";
 import Link from "next/link";
 import AgentTag from '@/components/AgentTag';
+import { IconArrowRight } from "@tabler/icons-react";
 
 export default function Services() {
 
@@ -162,10 +163,10 @@ function TopHeading() {
         Our Services
       </h1>
 
-      <p className="mt-6 mb-6 max-w-2xl text-center text-sm md:text-base font-normal text-neutral-600 dark:text-neutral-300">
+      <p className="mt-6 mb-6 max-w-2xl text-center text-sm md:text-base font-semibold text-neutral-600 dark:text-neutral-300">
         From managing and client communications to coordinating and administrative workflows, our virtual assistants adapt to your priorities.
         <br className="hidden md:block" />
-        No two businesses are alike—that&apos;s why every service we deliver is tailored to your unique goals, processes, and growth ambitions.
+        No two businesses are alike, that&apos;s why every service we deliver is tailored to your unique goals, processes, and growth ambitions.
       </p>
     </div>
 
@@ -370,7 +371,7 @@ function FourthBox() {
         </h1>
 
         <p className="font-normal dark:text-neutral-400 mt-2 text-sm md:text-base">
-          Need something else? The AI finds trusted pros fast.
+          Don’t see exactly what you&apos;re looking for?  We&apos;re flexible, select from below or tell us what you need!
         </p>
 
         <div className="w-full mt-4 flex flex-col gap-4 items-center md:items-start">
@@ -386,7 +387,7 @@ function FourthBox() {
         </div>
 
         <Link href="/SpecializedServices" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-black text-white hover:bg-gray-700 dark:bg-[#ffffff] hover:dark:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
-          Check out our services
+          Check out our services   <span className="px-4"><IconArrowRight/></span>
         </Link>
       </div>
 

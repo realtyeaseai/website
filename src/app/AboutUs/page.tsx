@@ -108,7 +108,7 @@ export default function AboutUs() {
       {/* Fun Fact Section */}
       <section className="p-3 py-20 bg-neutral-200 text-black dark:bg-neutral-950 dark:text-white">
         <div className="container mx-auto">
-          <FunFactCounter style={2} />
+          <FunFactCounter className="mt-8" />
         </div>
       </section>
 

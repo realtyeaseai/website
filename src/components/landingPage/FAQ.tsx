@@ -9,10 +9,10 @@ import Link from "next/link";
 
 const faqs = [
   {
-    question: "What is a Virtual Assistant?",
+    question: "What is RealtyEase AI? AI or a Human?",
     answer: `
       <p>
-        A <b>Virtual Assistant (VA)</b> is a professional who provides administrative, technical, or creative support services remotely.
+       At <strong>RealtyEase</strong>, we Provide Virtual Assistants  (VAs) who leverage AI to enhance productivity and streamline processes, allowing us to offer exceptional service at a competitive rate. However, every task is ultimately managed and quality-checked by our trained human assistants, ensuring accuracy, reliability, and a personal touch in everything we deliver.
       </p>
     `,
   },
@@ -180,7 +180,7 @@ function RenderFaqs(){
               onClick={() => toggle(i)}
             >
               <div className="flex justify-between items-center">
-                <h1 className="text-lg font-medium w-[90%]">{faq.question}</h1>
+                <h1 className="text-lg font-bold w-[90%]">{faq.question}</h1>
                 <span className="relative w-6 h-6">
   {openIndex === i ? (
     <>
@@ -230,7 +230,7 @@ function RenderFaqs(){
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
-                    className="overflow-hidden text-sm mt-2 dark:text-gray-300"
+                    className="overflow-hidden text-md mt-2 dark:text-gray-300"
                   >
                     <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
                   </motion.div>

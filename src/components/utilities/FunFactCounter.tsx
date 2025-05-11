@@ -1,7 +1,18 @@
 import Counter from "./Counter";
 
-const FunFactCounter = ({ style }) => {
-  const data = [
+interface FunFactItem {
+  end: number;
+  suffix: string;
+  title: string;
+  desc: string;
+}
+
+interface FunFactCounterProps {
+  className?: string;
+}
+
+const FunFactCounter: React.FC<FunFactCounterProps> = ({ className = "" }) => {
+  const data: FunFactItem[] = [
     {
       end: 98,
       suffix: "%",
@@ -29,7 +40,9 @@ const FunFactCounter = ({ style }) => {
   ];
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div
+      className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 ${className}`}
+    >
       {data.map((item, index) => (
         <div
           key={index}

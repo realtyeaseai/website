@@ -13,7 +13,8 @@ import MaintenancePage from '@/app/Maintenance/page';
 export default function LayoutClient({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const isAdminPage = pathname?.startsWith('/admin');
-  const [isMaintenance, setIsMaintenance] = useState<boolean | null>(null); // null = loading
+  const [isMaintenance, setIsMaintenance] = useState(false);
+  const [checked, setChecked] = useState(false);
 
   useEffect(() => {
     const checkMaintenanceStatus = async () => {
@@ -23,19 +24,18 @@ export default function LayoutClient({ children }: { children: React.ReactNode }
         setIsMaintenance(data.enabled);
       } catch (error) {
         console.error('Error fetching maintenance status:', error);
-        setIsMaintenance(false); // Fallback to off if error
+        setIsMaintenance(false);
+      } finally {
+        setChecked(true);
       }
     };
 
     checkMaintenanceStatus();
   }, []);
 
-  if (isMaintenance === null) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <p className="text-gray-600 text-xl">Checking maintenance status...</p>
-      </div>
-    );
+  // Just show blank screen while checking (no text)
+  if (!checked && !isAdminPage) {
+    return <div className="min-h-screen bg-black" />;
   }
 
   if (isMaintenance && !isAdminPage) {

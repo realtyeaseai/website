@@ -46,7 +46,7 @@ export function TopNavbar(){
       link: "/#faq", // Matches the id of FAQ
     },
     {
-      name: "Contact",
+      name: "Contact Us",
       link: "/contact", // Navigate to Contact page
     }
     // {

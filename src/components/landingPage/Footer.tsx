@@ -125,18 +125,18 @@ export default function Footer() {
       </div>
 {/* ------------------------------ Footer Bottom Links and Copyright ------------------------------ */}
 <div className="w-full flex flex-col mt-6 mb-4 px-4">
-  <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-neutral-400">
-    <Link href="/privacy-policy" className="hover:text-white hover:underline transition">
+  <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-neutral-500 dark:text-neutral-400">
+    <Link href="/privacy-policy" className="hover:text-gray-600 dark:hover:text-white hover:underline transition">
       Privacy Policy
     </Link>
-    <Link href="/terms-of-service" className="hover:text-white hover:underline transition">
+    <Link href="/terms-of-service" className="hover:text-gray-600 dark:hover:text-white hover:underline transition">
       Terms of Service
     </Link>
-    <Link href="/contact" className="hover:text-white hover:underline transition">
+    <Link href="/contact" className="hover:text-gray-600 dark:hover:text-white hover:underline transition">
       Contact
     </Link>
   </div>
-  <p className="text-sm text-neutral-400 text-center justify-center md:pl-8 mt-4">
+  <p className="text-sm text-neutral-900 text-center justify-center md:pl-8 mt-4">
     &copy; {currentYear} RealtyEaseAI. All rights reserved.
   </p>
 </div>

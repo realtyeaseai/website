@@ -1,7 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const Breadcrumb = ({ pageName = "About Company", pageTitle }) => {
+interface BreadcrumbProps {
+  pageName?: string;
+  pageTitle?: string;
+}
+
+const Breadcrumb: React.FC<BreadcrumbProps> = ({ pageName = "About Company", pageTitle }) => {
   return (
     <section className="relative py-20 bg-gray-900 text-white overflow-hidden">
       <Image
