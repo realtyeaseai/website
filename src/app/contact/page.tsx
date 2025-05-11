@@ -1,22 +1,23 @@
 'use client'
 import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
-import ScheduleCallForm from "@/components/ScheduleCallForm";
+// import ScheduleCallForm from "@/components/ScheduleCallForm";
 import { useState } from "react";
 import Link from "next/link";
+import BookingPage from "@/components/utilities/Calendly";
 
 export default function Contact() {
   const [activeForm, setActiveForm] = useState<"message" | "call">("message");
 
   return (
-    <div className="bg-white text-black dark:bg-black min-h-[100dvh] pt-20 w-full flex items-center justify-evenly flex-col pb-8">
+    <div className="bg-white text-black dark:bg-black min-h-[100dvh] pt-20 w-full flex items-center justify-evenly flex-col pb-12">
       
 
       {/* ------------------ Grid to Conatct --------------- */}
-      <div id="contact" className="grid grid-cols-1 md:grid-cols-[1.5fr_2fr] gap-4 w-full md:w-[98%] p-4 scroll-mt-24">
+      <div id="contact" className="grid grid-cols-1 md:grid-cols-[1.5fr_2fr] gap-4 w-full md:w-[98%] p-4">
           
   {/* left part  */}
-  <div className="min-h-[600px] max-h-[1200px] w-full md:w-auto flex flex-col justify-between items-center text-center bg-neutral-200 dark:bg-black dark:border dark:border-neutral-500 rounded-[8px]">
+  <div className="min-h-[650px] max-h-[1200px] w-full md:w-auto flex flex-col justify-between items-center text-center bg-neutral-200 dark:bg-black dark:border dark:border-neutral-500 rounded-[8px]">
     <div className="pt-20">
       <p className="text-4xl">
         <span className="dark:text-white text-black font-semibold italic">Have a Question ?</span><br />
@@ -49,7 +50,7 @@ export default function Contact() {
     </div>
     {/* ---------------------------- Right Section (Social Logos) ---------------------------- */}
     <div className="w-full md:overflow-hidden flex justify-center md:justify-start md:pl-8 pb-10">
-          <div className="flex justify-between w-[130px] ">
+          <div className="flex justify-between w-[130px]">
 
             {/* <button className="w-[60px] h-auto mr-4">
               <Image src="/Logo.png" alt="Social 1" className="h-full w-full" />
@@ -99,8 +100,9 @@ export default function Contact() {
   </div>
 
         {/* <div className="bg-black border border-[#ffffff50] h-[600px] w-full md:w-auto rounded-lg"> */}
-        {activeForm === "message" ? <ContactForm /> : <ScheduleCallForm />}
+        {activeForm === "message" ? <ContactForm /> : <BookingPage />}  
 
+        {/* <ScheduleCallForm/> */}
         {/* </div> */}
       </div>
       {/* -------------- Static Box --------------  */}

@@ -77,7 +77,7 @@ export default function ContactForm() {
 
   return (
     // bg-gradient-to-tr to-[#1ca2dcb5] from-[#1ca2dc]
-    <div className="bg-neutral-200 dark:bg-transparent dark:border-[#ffffffb1] h-fit md:min-h-[750px] max-w-4xl w-full md:w-auto rounded-xl flex items-center justify-center flex-col p-6 dark:text-white font-bold text-black dark:border">
+    <div className="bg-neutral-200 dark:bg-transparent dark:border-[#ffffffb1] h-fit md:min-h-[700px] max-w-4xl w-full md:w-auto rounded-xl flex items-center justify-center flex-col p-6 dark:text-white font-bold text-black dark:border">
   <h2 className="text-2xl text-black dark:text-white mb-8">Get in Touch With Us</h2>
   <form onSubmit={handleSubmit} className="max-w-2xl w-full space-y-4">
 
