@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 // import ScheduleCallForm from "@/components/ScheduleCallForm";
@@ -11,55 +11,49 @@ export default function Contact() {
 
   return (
     <div className="bg-white text-black dark:bg-black min-h-[100dvh] pt-20 w-full flex items-center justify-evenly flex-col pb-12">
-      
-
       {/* ------------------ Grid to Conatct --------------- */}
-      <div id="contact" className="grid grid-cols-1 md:grid-cols-[1.5fr_2fr] gap-4 w-full md:w-[98%] p-4">
-          
-  {/* left part  */}
-  <div className="min-h-[650px] max-h-[1200px] w-full md:w-auto flex flex-col justify-between items-center text-center bg-neutral-200 dark:bg-black dark:border dark:border-neutral-500 rounded-[8px]">
-    <div className="pt-20">
-      <p className="text-4xl">
-        <span className="dark:text-white text-black font-semibold italic">Have a Question ?</span><br />
-        <span className="text-2xl dark:text-[#ffffffb2] text-[#000000b2]">You&apos;re just a Message Away!</span>
-      </p>
+      <div
+        id="contact"
+        className="grid grid-cols-1 md:grid-cols-[1.5fr_2fr] gap-4 w-full md:w-[98%] p-4"
+      >
+        {/* left part  */}
+        <div className="min-h-[700px] max-h-[1200px] w-full md:w-auto flex flex-col justify-between items-center text-center bg-neutral-200 dark:bg-black dark:border dark:border-neutral-500 rounded-[8px]">
+          <div className="pt-20">
+            <p className="text-4xl">
+              <span className="dark:text-white text-black font-semibold italic">
+                Have a Question ?
+              </span>
+              <br />
+              <span className="text-2xl dark:text-[#ffffffb2] text-[#000000b2]">
+                You&apos;re just a Message Away!
+              </span>
+            </p>
 
+            <div className="flex flex-col md:flex-row gap-4 mt-8 justify-center items-center">
+              <button
+                type="button"
+                onClick={() => setActiveForm("call")}
+                className={`bg-[#ffffff] hover:bg-[#ffffffcc] cursor-pointer text-black font-semibold px-6 py-3 rounded-[6px] transition duration-300 w-auto ${
+                  activeForm === "call" ? "ring-2 ring-white" : ""
+                }`}
+              >
+                Schedule Call
+              </button>
 
-      <div className="flex flex-col md:flex-row gap-4 mt-8 justify-center items-center">
-        <button
-          type="button"
-          onClick={() => setActiveForm("call")}
-          className={`bg-[#ffffff] hover:bg-[#ffffffcc] cursor-pointer text-black font-semibold px-6 py-3 rounded-[6px] transition duration-300 w-auto ${
-            activeForm === "call" ? "ring-2 ring-white" : ""
-          }`}
-        >
-          Schedule Call
-        </button>
-        
-        <button
-          type="button"
-          onClick={() => setActiveForm("message")}
-          className={`bg-[#1ca2dc] hover:bg-[#1ca2dccc] text-white cursor-pointer font-semibold px-6 py-3 rounded-[6px] transition duration-300 w-auto ${
-            activeForm === "message" ? "ring-2 ring-white" : ""
-          }`}
-        >
-          Send Message
-        </button>
-
-      </div>
-    </div>
-    {/* ---------------------------- Right Section (Social Logos) ---------------------------- */}
-    <div className="w-full md:overflow-hidden flex justify-center md:justify-start md:pl-8 pb-10">
-          <div className="flex justify-between w-[130px]">
-
-            {/* <button className="w-[60px] h-auto mr-4">
-              <Image src="/Logo.png" alt="Social 1" className="h-full w-full" />
-            </button>
-            <button className="w-[60px] h-auto">
-              <Image src="/Logo.png" alt="Social 2" className="h-full w-full" />
-            </button> */}
-
-             {/* LinkedIn */}
+              <button
+                type="button"
+                onClick={() => setActiveForm("message")}
+                className={`bg-[#1ca2dc] hover:bg-[#1ca2dccc] text-white cursor-pointer font-semibold px-6 py-3 rounded-[6px] transition duration-300 w-auto ${
+                  activeForm === "message" ? "ring-2 ring-white" : ""
+                }`}
+              >
+                Send Message
+              </button>
+            </div>
+          </div>
+          {/* ---------------------------- Left Section (Social Logos) ---------------------------- */}
+          <div className="w-full md:overflow-hidden flex justify-center md:justify-start md:pl-8 pb-10">
+            {/* LinkedIn */}
             <Link
               href="https://www.linkedin.com"
               target="_blank"
@@ -89,25 +83,20 @@ export default function Contact() {
                 fill="black"
                 viewBox="0 0 24 24"
               >
-                <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.3.4.5.2.9.4 1.3.8.4.4.6.8.8 1.3.2.4.3 1.1.4 2.3.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.4 2.3-.2.5-.4.9-.8 1.3-.4.4-.8.6-1.3.8-.4.2-1.1.3-2.3.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.2-2.3-.4-.5-.2-.9-.4-1.3-.8-.4-.4-.6-.8-.8-1.3-.2-.4-.3-1.1-.4-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.9.4-2.3.2-.5.4-.9.8-1.3.4-.4.8-.6 1.3-.8.4-.2 1.1-.3 2.3-.4C8.4 2.2 8.8 2.2 12 2.2M12 0C8.7 0 8.3 0 7 .1 5.7.2 4.6.4 3.7.8c-.9.4-1.7 1-2.4 1.7C.4 3.2 0 4.1 0 5c-.2.9-.3 2.1-.4 3.3C-.1 9.7 0 10.1 0 12s0 2.3.1 3.6c.1 1.2.2 2.4.4 3.3.2.9.6 1.8 1.3 2.5.7.7 1.6 1.3 2.5 1.7.9.4 2.1.6 3.3.7 1.3.1 1.7.1 4.9.1s3.6 0 4.9-.1c1.2-.1 2.4-.2 3.3-.7.9-.4 1.8-1 2.5-1.7.7-.7 1.3-1.6 1.7-2.5.4-.9.6-2.1.7-3.3.1-1.3.1-1.7.1-4.9s0-3.6-.1-4.9c-.1-1.2-.2-2.4-.7-3.3-.4-.9-1-1.8-1.7-2.5C20.8.4 19.9 0 19 .6c-.9-.2-2.1-.3-3.3-.4C15.6-.1 15.2 0 12 0zM12 5.8A6.2 6.2 0 0 0 5.8 12 6.2 6.2 0 0 0 12 18.2 6.2 6.2 0 0 0 18.2 12 6.2 6.2 0 0 0 12 5.8m0 10.2A4 4 0 1 1 16 12a4 4 0 0 1-4 4.2zM18.4 4.6a1.44 1.44 0 1 1-1.44 1.44 1.44 1.44 0 0 1 1.44-1.44z"/>
+                <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.3.4.5.2.9.4 1.3.8.4.4.6.8.8 1.3.2.4.3 1.1.4 2.3.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.4 2.3-.2.5-.4.9-.8 1.3-.4.4-.8.6-1.3.8-.4.2-1.1.3-2.3.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.2-2.3-.4-.5-.2-.9-.4-1.3-.8-.4-.4-.6-.8-.8-1.3-.2-.4-.3-1.1-.4-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.9.4-2.3.2-.5.4-.9.8-1.3.4-.4.8-.6 1.3-.8.4-.2 1.1-.3 2.3-.4C8.4 2.2 8.8 2.2 12 2.2M12 0C8.7 0 8.3 0 7 .1 5.7.2 4.6.4 3.7.8c-.9.4-1.7 1-2.4 1.7C.4 3.2 0 4.1 0 5c-.2.9-.3 2.1-.4 3.3C-.1 9.7 0 10.1 0 12s0 2.3.1 3.6c.1 1.2.2 2.4.4 3.3.2.9.6 1.8 1.3 2.5.7.7 1.6 1.3 2.5 1.7.9.4 2.1.6 3.3.7 1.3.1 1.7.1 4.9.1s3.6 0 4.9-.1c1.2-.1 2.4-.2 3.3-.7.9-.4 1.8-1 2.5-1.7.7-.7 1.3-1.6 1.7-2.5.4-.9.6-2.1.7-3.3.1-1.3.1-1.7.1-4.9s0-3.6-.1-4.9c-.1-1.2-.2-2.4-.7-3.3-.4-.9-1-1.8-1.7-2.5C20.8.4 19.9 0 19 .6c-.9-.2-2.1-.3-3.3-.4C15.6-.1 15.2 0 12 0zM12 5.8A6.2 6.2 0 0 0 5.8 12 6.2 6.2 0 0 0 12 18.2 6.2 6.2 0 0 0 18.2 12 6.2 6.2 0 0 0 12 5.8m0 10.2A4 4 0 1 1 16 12a4 4 0 0 1-4 4.2zM18.4 4.6a1.44 1.44 0 1 1-1.44 1.44 1.44 1.44 0 0 1 1.44-1.44z" />
               </svg>
             </Link>
-
           </div>
-           
         </div>
 
-  </div>
-
         {/* <div className="bg-black border border-[#ffffff50] h-[600px] w-full md:w-auto rounded-lg"> */}
-        {activeForm === "message" ? <ContactForm /> : <BookingPage />}  
+        {activeForm === "message" ? <ContactForm /> : <BookingPage />}
 
         {/* <ScheduleCallForm/> */}
         {/* </div> */}
       </div>
       {/* -------------- Static Box --------------  */}
       <div className="md:h-[380px] h-[600px] w-[96%] rounded-2xl border border-[#ffffff20] mt-4 hover:border-[#ffffff50] flex gap-4 items-center justify-center flex-col bg-[#1ca2dc] dark:bg-[radial-gradient(circle_at_center,_#1ca2dc,_#1ca2dc53,_#1ca2dc29,_#1ca2dc1f)]">
-
         <span className="h-[50px] w-[50px] rounded-[4px] flex items-center justify-center">
           {/* <Image src="/contactUsItems/mail.svg"
             width={30}
@@ -115,30 +104,48 @@ export default function Contact() {
             alt="icon"
             className="w-[75%] h-auto" /> */}
         </span>
-        <h1 className="md:text-4xl md:w-[55%] w-[90%] text-2xl text-center text-white"><b>Here&apos;s what some of our <span className="text-[#2b1243]"> satisfied user&apos;s</span> have said about us.</b></h1>
+        <h1 className="md:text-4xl md:w-[55%] w-[90%] text-2xl text-center text-white">
+          <b>
+            Here&apos;s what some of our{" "}
+            <span className="text-[#2b1243]"> satisfied user&apos;s</span> have
+            said about us.
+          </b>
+        </h1>
         {/* <p className="text-center text-[14px] text-[#ffffff8a]">Here&apos;s what some of our satisfied <span className="">user&apos;s</span> have said about us.</p> */}
 
         <div className="flex items-center justify-center flex-col md:flex-row gap-8 h-[220px] md:h-[20%] w-[80%] md:mt-0 text-white">
           <div className=" flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15] hover:bg-[#ffffff56]">
             <span>
-              <Image src="/contactUsItems/Clock.svg" width={30}
-                height={30} alt="Clock" />
+              <Image
+                src="/contactUsItems/Clock.svg"
+                width={30}
+                height={30}
+                alt="Clock"
+              />
             </span>
-              Efficient
+            Efficient
           </div>
           <div className="flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15] hover:bg-[#ffffff56]">
             <span>
-              <Image src="/contactUsItems/star.svg" width={30}
-                height={30} alt="Star" />
+              <Image
+                src="/contactUsItems/star.svg"
+                width={30}
+                height={30}
+                alt="Star"
+              />
             </span>
             Supportive
           </div>
           <div className="flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15] hover:bg-[#ffffff56]">
             <span>
-              <Image src="/contactUsItems/moneyBag.svg" width={30}
-                height={30} alt="bag" />
+              <Image
+                src="/contactUsItems/moneyBag.svg"
+                width={30}
+                height={30}
+                alt="bag"
+              />
             </span>
-              Reliable 
+            Reliable
           </div>
           {/* <div className="flex items-center justify-center gap-2 min-h-[50px] w-full md:w-[20%] min-w-[200px] rounded-[8px] border border-[#ffffff80] bg-[#ffffff15] hover:bg-gray-900">
             <span>
@@ -161,15 +168,11 @@ export default function Contact() {
             </span>
             Reliable
           </div> */}
-          
         </div>
-
       </div>
     </div>
-  )
+  );
 }
-
-
 
 // function ContactInfo() {
 //   return (
@@ -183,8 +186,6 @@ export default function Contact() {
 //         info@realtyeaseai.com
 //       </div>
 
-      
-      
 //       <div className="box mt-20 pl-9 w-full md:w-[500px] h-[100px] border rounded-2xl float-left cursor-pointer hover:bg-gray-700 inline-flex md:justify-center items-center">
 //         <Image src="/contactUsItems/mail.svg" alt="Mail Icon 2" width={24} height={24} className="mr-5 text-gray-200" />
 
@@ -232,5 +233,3 @@ export default function Contact() {
 //     </div>
 //   )
 // }
-
-
