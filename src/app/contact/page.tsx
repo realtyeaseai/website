@@ -36,9 +36,9 @@ export default function Contact() {
     onClick={() => setActiveForm("call")}
     aria-pressed={activeForm === "call"}
     aria-label="Schedule a call"
-    className={`px-8 py-4 min-w-[160px] rounded-[6px] font-semibold w-auto text-black transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transform active:scale-95 cursor-pointer ${
+    className={`px-8 py-4 min-w-[160px] rounded-[6px] font-semibold w-auto text-black transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-400 transform active:scale-95 cursor-pointer ${
       activeForm === "call"
-        ? "bg-white ring-2 ring-white"
+        ? "bg-white ring-2 ring-red-400"
         : "bg-white/90 hover:bg-white"
     }`}
   >
@@ -50,9 +50,9 @@ export default function Contact() {
     onClick={() => setActiveForm("message")}
     aria-pressed={activeForm === "message"}
     aria-label="Send a message"
-    className={`px-8 py-4 min-w-[160px] rounded-[6px] font-semibold w-auto text-white transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transform active:scale-95 cursor-pointer ${
+    className={`px-8 py-4 min-w-[160px] rounded-[6px] font-semibold w-auto text-white transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-400 transform active:scale-95 cursor-pointer ${
       activeForm === "message"
-        ? "bg-[#1ca2dc] ring-2 ring-white"
+        ? "bg-[#1ca2dc] ring-2 ring-red-400"
         : "bg-[#1ca2dc]/90 hover:bg-[#1ca2dc]"
     }`}
   >
@@ -107,7 +107,7 @@ export default function Contact() {
         {/* </div> */}
       </div>
       {/* -------------- Static Box --------------  */}
-      <div className="md:h-[380px] h-[600px] w-[96%] rounded-2xl border border-[#ffffff20] mt-4 hover:border-[#ffffff50] flex gap-4 items-center justify-center flex-col bg-[#1ca2dc] dark:bg-[radial-gradient(circle_at_center,_#1ca2dc,_#1ca2dc53,_#1ca2dc29,_#1ca2dc1f)]">
+      <div className="md:h-[380px] h-[600px] w-[96%] rounded-2xl border border-[#ffffff20] mt-4 hover:border-[#ffffff50] flex gap-4 items-center justify-center flex-col bg-[#1ca2dc] dark:bg-[radial-gradient(circle_at_center,_#1ca2dc58,_#1ca2dc53,_#1ca2dc29,_#000)]">
         <span className="h-[50px] w-[50px] rounded-[4px] flex items-center justify-center">
           {/* <Image src="/contactUsItems/mail.svg"
             width={30}
@@ -118,7 +118,7 @@ export default function Contact() {
         <h1 className="md:text-4xl md:w-[55%] w-[90%] text-2xl text-center text-white">
           <b>
             Here&apos;s what some of our{" "}
-            <span className="text-[#2b1243]"> Satisfied Clients</span> have
+            <span className="text-[#5302cc85]"> Satisfied Clients</span> have
             said about us.
           </b>
         </h1>

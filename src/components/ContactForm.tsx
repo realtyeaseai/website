@@ -1,4 +1,5 @@
 "use client";
+import Image from 'next/image';
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
 
@@ -214,6 +215,7 @@ export default function ContactForm() {
         {loading ? 'Sending...' : 'Send Message'}
       </button>
     </div>
+    <Image src="/contactUsItems/Arrow-contact.svg" alt="Arrow-contact" className='relative bottom-0 h-[200px] w-[700px] flex justify-start opacity-70' width="100" height="100"/>
   </form>
 </div>
 
