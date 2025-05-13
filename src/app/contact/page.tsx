@@ -69,7 +69,7 @@ export default function Contact() {
               href="https://www.linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-[60px] h-[40px] flex items-center justify-center mr-4 bg-white rounded-md hover:bg-neutral-400 dark:hover:bg-[#ffffffc5] transition"
+              className="border border-[#00000040] w-[60px] h-[40px] flex items-center justify-center mr-4 bg-white rounded-md hover:bg-neutral-200 dark:hover:bg-[#ffffffd0] transition"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +86,7 @@ export default function Contact() {
               href="https://www.instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-[60px] h-[40px] flex items-center justify-center bg-white rounded-md hover:bg-neutral-400 dark:hover:bg-[#ffffffc5] transition"
+              className="border border-[#00000040] w-[60px] h-[40px] flex items-center justify-center bg-white rounded-md hover:bg-neutral-200 dark:hover:bg-[#ffffffd0] transition"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
