@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { InlineWidget } from 'react-calendly';
+// import { InlineWidget } from 'react-calendly';
 
 export default function BookingPage() {
   const [loading, setLoading] = React.useState(true); // Set initial state to true for loading

@@ -10,14 +10,14 @@ export default function Contact() {
   const [activeForm, setActiveForm] = useState<"message" | "call">("message");
 
   return (
-    <div className="bg-white text-black dark:bg-black min-h-[100dvh] pt-20 w-full flex items-center justify-evenly flex-col pb-12">
+    <div className="bg-[#faf9f6] text-black dark:bg-black min-h-[100dvh] pt-20 w-full flex items-center justify-evenly flex-col pb-12">
       {/* ------------------ Grid to Conatct --------------- */}
       <div
         id="contact"
         className="grid grid-cols-1 md:grid-cols-[1.5fr_2fr] gap-4 w-full md:w-[98%] p-4"
       >
         {/* left part  */}
-        <div className="min-h-[700px] max-h-[1200px] w-full md:w-auto flex flex-col justify-between items-center text-center bg-neutral-200 dark:bg-black dark:border dark:border-neutral-500 rounded-[8px]">
+        <div className="relative overflow-hidden min-h-[700px] max-h-[1200px] w-full md:w-auto flex flex-col justify-between items-center text-center bg-white dark:bg-black border border-[#0000000f] dark:border-neutral-700 rounded-[8px]">
           <div className="pt-20">
             <p className="text-4xl">
               <span className="dark:text-white text-black font-semibold italic">
@@ -31,34 +31,34 @@ export default function Contact() {
 
             <div className="flex flex-col md:flex-row gap-4 mt-8 justify-center items-center">
              <div className="flex flex-col md:flex-row gap-4 mt-8 justify-center items-center">
-  <button
-    type="button"
-    onClick={() => setActiveForm("call")}
-    aria-pressed={activeForm === "call"}
-    aria-label="Schedule a call"
-    className={`px-8 py-4 min-w-[160px] rounded-[6px] font-semibold w-auto text-black transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-400 transform active:scale-95 cursor-pointer ${
-      activeForm === "call"
-        ? "bg-white ring-2 ring-red-400"
-        : "bg-white/90 hover:bg-white"
-    }`}
-  >
-    Schedule Call
-  </button>
+                <button
+                  type="button"
+                  onClick={() => setActiveForm("call")}
+                  aria-pressed={activeForm === "call"}
+                  aria-label="Schedule a call"
+                  className={`px-8 py-4 min-w-[160px] rounded-[6px] font-semibold w-auto text-black transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-400 transform active:scale-95 cursor-pointer ${
+                    activeForm === "call"
+                      ? "bg-neutral-200 ring-2 ring-[#1ca2dc]"
+                      : "bg-neutral-100 border border-[#0000000f] hover:bg-neutral-100"
+                  }`}
+                >
+                  Schedule Call
+                </button>
 
-  <button
-    type="button"
-    onClick={() => setActiveForm("message")}
-    aria-pressed={activeForm === "message"}
-    aria-label="Send a message"
-    className={`px-8 py-4 min-w-[160px] rounded-[6px] font-semibold w-auto text-white transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-400 transform active:scale-95 cursor-pointer ${
-      activeForm === "message"
-        ? "bg-[#1ca2dc] ring-2 ring-red-400"
-        : "bg-[#1ca2dc]/90 hover:bg-[#1ca2dc]"
-    }`}
-  >
-    Send Message
-  </button>
-</div>
+                <button
+                  type="button"
+                  onClick={() => setActiveForm("message")}
+                  aria-pressed={activeForm === "message"}
+                  aria-label="Send a message"
+                  className={`px-8 py-4 min-w-[160px] rounded-[6px] font-semibold w-auto text-white transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-400 transform active:scale-95 cursor-pointer ${
+                    activeForm === "message"
+                      ? "bg-[#1ca2dc] ring-2 ring-neutral-400"
+                      : "bg-[#1ca2dc]/90 hover:bg-[#1ca2dc]"
+                  }`}
+                >
+                  Send Message
+                </button>
+              </div>
 
             </div>
           </div>
@@ -98,6 +98,20 @@ export default function Contact() {
               </svg>
             </Link>
           </div>
+          <Image 
+            src="/contactUsItems/Cube-Black.svg" 
+            width={30}
+            height={30}
+            alt="icon"
+            className="absolute hidden dark:block right-0 bottom-0 w-[50%] h-auto"
+            />
+          <Image 
+            src="/contactUsItems/cube-white.svg" 
+            width={30}
+            height={30}
+            alt="icon"
+            className="absolute dark:hidden right-0 bottom-0 w-[50%] h-auto"
+            />
         </div>
 
         {/* <div className="bg-black border border-[#ffffff50] h-[600px] w-full md:w-auto rounded-lg"> */}
