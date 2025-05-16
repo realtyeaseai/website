@@ -29,7 +29,7 @@ const FooterSection: React.FC<FooterSectionProps> = ({ title, links }) => {
       {/* Mobile/Tablet Dropdown */}
       <div className="md:hidden">
         <button
-          className="flex justify-between items-center w-full text-[20px] font-semibold text-white"
+          className="flex justify-between items-center w-full text-[20px] font-semibold dark:text-white"
           onClick={() => setIsOpen(!isOpen)}
         >
           {title}
@@ -43,7 +43,7 @@ const FooterSection: React.FC<FooterSectionProps> = ({ title, links }) => {
           <ul className="mt-2 pl-2 text-start text-[14px] space-y-2">
             {links.map((link, i) => (
               <li key={i}>
-                <Link href={link.href} className="block text-white hover:underline">
+                <Link href={link.href} className="block dark:text-white hover:underline">
                   {link.label}
                 </Link>
               </li>
@@ -90,7 +90,7 @@ export default function Footer() {
             {/* <p className="ml-4 text-sm md:text-xl font-bold py-4"></p> */}
           </div>
 
-       <div className="flex flex-col w-full md:flex-row bg-black text-white mb-10">
+       <div className="flex flex-col w-full md:flex-row dark:bg-black dark:text-white mb-10">
       <FooterSection
         title="Services"
         links={[
