@@ -2,7 +2,58 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { ChevronDown } from 'lucide-react';
 
+type FooterSectionProps = {
+  title: string;
+  links: { label: string; href: string }[];
+};
+
+const FooterSection: React.FC<FooterSectionProps> = ({ title, links }) => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  return (
+    <div className="p-4 md:w-[220px] w-full text-center md:text-start">
+      {/* Desktop View */}
+      <div className="hidden md:block">
+        <h2 className="text-[20px] md:text-2xl font-semibold mb-4">{title}</h2>
+        <ul className="space-y-4 text-[12px] md:text-[16px] list-none">
+          {links.map((link, i) => (
+            <li key={i}>
+              <Link href={link.href} className="hover:border-b-2">{link.label}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Mobile/Tablet Dropdown */}
+      <div className="md:hidden">
+        <button
+          className="flex justify-between items-center w-full text-[20px] font-semibold text-white"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {title}
+          <ChevronDown
+            className={`h-5 w-5 transition-transform duration-300 ${
+              isOpen ? 'rotate-180' : ''
+            }`}
+          />
+        </button>
+        {isOpen && (
+          <ul className="mt-2 pl-2 text-start text-[14px] space-y-2">
+            {links.map((link, i) => (
+              <li key={i}>
+                <Link href={link.href} className="block text-white hover:underline">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+  );
+};
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -39,37 +90,34 @@ export default function Footer() {
             {/* <p className="ml-4 text-sm md:text-xl font-bold py-4"></p> */}
           </div>
 
-          {/* Services */}
-          <div className="p-4  md:w-[220px] w-full md:text-start text-center">
-            <h2 className="text-[20px] md:text-2xl font-semibold mb-4">Services</h2>
-            <ul className="space-y-4 text-[12px] md:text-[16px] list-none">
-              <li><Link href="/services" className='hover:border-b-2'>Virtual Assistant</Link></li>
-              <li><Link href="#" className='hover:border-b-2'>Remote Services</Link></li>
-              <li><Link href="#" className='hover:border-b-2'>Credit Score</Link></li>
-              <li><Link href="#" className='hover:border-b-2'>Real Estate</Link></li>
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div className="p-4 md:w-[220px] w-full md:text-start text-center">
-            <h2 className="text-[20px] font-semibold md:text-2xl mb-4">Resources</h2>
-            <ul className="space-y-4 text-[12px] md:text-[16px] list-none">
-              <li><Link href="#" className='hover:border-b-2'>Developers</Link></li>
-              <li><Link href="#" className='hover:border-b-2'>Support</Link></li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div className="p-4 md:w-[220px] w-full md:text-start text-center pb-8">
-            <h2 className="text-[20px] font-semibold md:text-2xl mb-4">Company</h2>
-            <ul className="space-y-4 text-[12px] md:text-[16px] list-none">
-              <li><Link href="./AboutUs" className='hover:border-b-2'>About Us</Link></li>
-              <li><Link href="#" className='hover:border-b-2'>Careers</Link></li>
-              <li><Link href="#faq" className='hover:border-b-2'>FAQs</Link></li>
-              <li><Link href="#" className='hover:border-b-2'>Teams</Link></li>
-              <li><Link href="/contact" className='hover:border-b-2'>Contact Us</Link></li>
-            </ul>
-          </div>
+       <div className="flex flex-col w-full md:flex-row bg-black text-white mb-10">
+      <FooterSection
+        title="Services"
+        links={[
+          { label: 'Virtual Assistant', href: '/services' },
+          { label: 'Remote Services', href: '#' },
+          { label: 'Credit Score', href: '#' },
+          { label: 'Real Estate', href: '#' },
+        ]}
+      />
+      <FooterSection
+        title="Resources"
+        links={[
+          { label: 'Developers', href: '#' },
+          { label: 'Support', href: '#' },
+        ]}
+      />
+      <FooterSection
+        title="Company"
+        links={[
+          { label: 'About Us', href: './AboutUs' },
+          { label: 'Careers', href: '#' },
+          { label: 'FAQs', href: '#faq' },
+          { label: 'Teams', href: '#' },
+          { label: 'Contact Us', href: '/contact' },
+        ]}
+      />
+    </div>
 
         </div>
 
