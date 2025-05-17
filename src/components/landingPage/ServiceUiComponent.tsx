@@ -7,22 +7,25 @@ export default function ServicesShowcase() {
   const [input, setInput] = useState('');
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden bg-black text-white font-sans">
+    <div className="relative min-h-screen w-full overflow-hidden bg-black text-white font-sans border">
       {/* Background Grid Effect */}
-      <div className="absolute inset-0 bg-[url('/grid-bg.png')] opacity-30 z-0"></div>
+      {/* <div className="absolute inset-0 bg-[url('/grid-bg.png')] opacity-30 z-0 "></div> */}
 
       {/* Center Component */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen p-4">
 
         {/* 3D Cards Section */}
-        <div className="relative flex items-center justify-center gap-4 mb-8">
-          {[...Array(7)].map((_, i) => (
-            <div
-              key={i}
-              className={`h-64 w-40 rounded-xl bg-gray-800 shadow-lg transform transition-transform duration-300 ${i === 3 ? 'scale-110 z-20' : 'scale-90'} ${i < 3 ? '-rotate-y-12 -translate-x-6' : i > 3 ? 'rotate-y-12 translate-x-6' : ''}`}
-              style={{ backgroundImage: "url('/placeholder.png')", backgroundSize: 'cover' }}
-            />
-          ))}
+        <div className="h-fit w-[80%] relative flex items-center justify-center gap-4 mb-8 border">
+
+          <Image 
+            src="/suc/bgCards.svg"
+            alt="3D Card"
+            width={400}
+            height={300}
+            className="h-full w-full -z-1 rounded-xl shadow-lg"
+            // style={{ backgroundSize: 'cover' }}
+          />
+
         </div>
 
         {/* Info Card */}
@@ -80,10 +83,10 @@ export default function ServicesShowcase() {
         {/* </div> */}
 
         {/* Footer Text */}
-        <div className="absolute bottom-10 text-center">
+        {/* <div className="absolute bottom-10 text-center">
           <h2 className="text-xl font-semibold">Get the services that help elevate your workflow</h2>
           <p className="text-sm text-gray-400">Contact RealtyEaseAI and leave all your worries to us</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
