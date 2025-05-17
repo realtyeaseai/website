@@ -19,7 +19,7 @@ export default function HomePage() {
       <HeroSection />
     </FadeInOnView>
   </div>
-  <div id="hero" className="w-full overflow-hidden">
+  <div id="hero" className="w-full overflow-hidden lg:block hidden">
     <FadeInOnView delay={0}>
      <ServicesShowcase />
     </FadeInOnView>
