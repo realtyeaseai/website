@@ -99,7 +99,7 @@ export default function Contact() {
             </Link>
           </div>
           <Image 
-            src="/contactUsItems/cube-Black.svg" 
+            src="/contactUsItems/cube-black.svg" 
             width={30}
             height={30}
             alt="icon"
