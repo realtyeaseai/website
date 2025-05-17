@@ -1,5 +1,6 @@
 // import ImageText from '@/components/HireVa'
 
+import ServicesShowcase from '@/components/landingPage/ServiceUiComponent';
 import {
     HeroSection,
     PersonaPicker,
@@ -16,6 +17,11 @@ export default function HomePage() {
   <div id="hero" className="w-full overflow-hidden">
     <FadeInOnView delay={0}>
       <HeroSection />
+    </FadeInOnView>
+  </div>
+  <div id="hero" className="w-full overflow-hidden">
+    <FadeInOnView delay={0}>
+     <ServicesShowcase />
     </FadeInOnView>
   </div>
 

@@ -59,15 +59,17 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
 
-    <div className='flex flex-col min-h-[40dvh] text-black bg-gray-200 dark:bg-black pt-12 dark:text-gray-200'>
+    <div className='flex flex-col min-h-[40dvh] text-black bg-gray-200 dark:bg-transparent pt-12 dark:text-gray-200'>
+    
 
       <div className="w-full h-auto flex flex-col md:flex-row justify-between">
         {/* ---------------------------- Left Section (Logo + Links) ---------------------------- */}
+          
         <div className="w-full flex flex-col md:flex-row items-start justify-between p-4 ">
 
           {/* LOGO */}
-          <div className="p-4 md:p-6 md:py-10 flex justify-center items-center  md:w-[280px] w-full">
-            <span className="h-[170px] w-auto">
+          <div className="p-4 md:p-6 md:py-6 flex justify-center items-center  md:w-[300px] w-full">
+            <span className="h-[180px] w-auto">
             <div className="relative h-full w-full">
       {/* Light mode logo */}
       <Image
