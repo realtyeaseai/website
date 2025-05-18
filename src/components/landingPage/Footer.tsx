@@ -59,7 +59,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
 
-    <div className='flex flex-col min-h-[40dvh] text-black bg-gray-200 dark:bg-transparent pt-12 dark:text-gray-200'>
+    <div className='flex flex-col min-h-[40dvh] text-black bg-gray-200 dark:bg-black pt-12 dark:text-gray-200'>
     
 
       <div className="w-full h-auto flex flex-col md:flex-row justify-between">
