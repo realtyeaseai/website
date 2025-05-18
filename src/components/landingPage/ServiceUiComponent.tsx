@@ -73,16 +73,16 @@ export function LeftItems() {
       </div>
 
       {/* Bottom Button */}
-      <div className="w-full flex-[.10] flex items-center justify-between px-4 py-3 bg-[#ffffff0f] dark:bg-[#1d1d1d80] dark:hover:bg-[#2c2c2c80]  border border-[#ffffff0f] rounded-md shadow-md backdrop-blur-md cursor-pointer">
+      <div className="w-full flex-[.10] flex items-center justify-between px-4 py-3 bg-[#ffffff0f] dark:bg-[#1d1d1d80] dark:hover:bg-[#2c2c2c80]  border border-[#ffffff0f] rounded-2xl shadow-md backdrop-blur-md cursor-pointer">
         <div className="flex items-center space-x-3">
           {/* Profile Image */}
-          <div className="w-12 h-12 rounded-full overflow-hidden border">
+          <div className="w-12 h-12 rounded-full overflow-hidden transform transition-transform hover:scale-105">
             <Image
-              src="/userLogo.jpeg" // Put the image in public folder and use this path
+              src="/suc/jhonathan.svg" // Put the image in public folder and use this path
               alt="Jhonathan Read"
               width={48}
               height={48}
-              className="object-cover w-full h-full"
+              className="w-full h-full bg-purple-700"
             />
           </div>
 

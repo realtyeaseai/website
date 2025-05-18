@@ -87,14 +87,14 @@ export const Spotlight = ({ className }: SpotlightProps) => {
           height="200%"
           colorInterpolationFilters="sRGB"
         >
-          <feGaussianBlur stdDeviation="151" />
+          <feGaussianBlur stdDeviation="141" />
         </filter>
       </defs>
 
       <g filter="url(#blur)">
         <ellipse
           cx="2024.71"
-          cy="273.501"
+          cy="359.501"
           rx="2224.71"
           ry="273.501"
           transform="matrix(-0.822377 -0.568943 -0.568943 0.822377 3631.88 2291.09)"
