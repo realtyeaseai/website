@@ -13,7 +13,7 @@ export default function HeroSection() {
   
   <GridBackgroundDemo/>
   {/* Spotlight */}
-  <Spotlight className="absolute -top-32 left-0 md:-top-20 md:left-60" />
+  <Spotlight className="absolute hidden dark:block -top-32 left-0 md:-top-20 md:left-60" />
   {/* hidden dark:block  */}
 
 
