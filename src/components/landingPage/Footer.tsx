@@ -97,15 +97,15 @@ export default function Footer() {
         title="Services"
         links={[
           { label: 'Virtual Assistant', href: '/services' },
-          { label: 'Remote Services', href: '#' },
-          { label: 'Credit Score', href: '#' },
-          { label: 'Real Estate', href: '#' },
+          { label: 'Foundational Business Planning', href: '/SpecializedServices' },
+          { label: 'DIgital Marketing', href: '/SpecializedServices' },
+          { label: 'Web Development', href: '/SpecializedServices' },
         ]}
       />
       <FooterSection
         title="Resources"
         links={[
-          { label: 'Developers', href: '#' },
+          { label: 'Team', href: '#' },
           { label: 'Support', href: '#' },
         ]}
       />
@@ -113,9 +113,9 @@ export default function Footer() {
         title="Company"
         links={[
           { label: 'About Us', href: './AboutUs' },
-          { label: 'Careers', href: '#' },
-          { label: 'FAQs', href: '#faq' },
-          { label: 'Teams', href: '#' },
+          { label: 'Careers', href: 'linkedin.com' },
+          { label: 'FAQs', href: '/faq' },
+          { label: 'Team', href: '#' },
           { label: 'Contact Us', href: '/contact' },
         ]}
       />

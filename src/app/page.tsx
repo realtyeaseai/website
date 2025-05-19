@@ -1,6 +1,6 @@
 // import ImageText from '@/components/HireVa'
 
-import ServicesShowcase from '@/components/landingPage/ServiceUiComponent';
+// import ServicesShowcase from '@/components/landingPage/ServiceUiComponent';
 import {
     HeroSection,
     PersonaPicker,
@@ -19,11 +19,11 @@ export default function HomePage() {
       <HeroSection />
     </FadeInOnView>
   </div>
-  <div id="hero" className="w-full overflow-hidden lg:block hidden">
+  {/* <div id="hero" className="w-full overflow-hidden lg:block hidden">
     <FadeInOnView delay={0}>
      <ServicesShowcase />
     </FadeInOnView>
-  </div>
+  </div> */}
 
   <div id="clients" className="w-full scroll-mt-24">
     <FadeInOnView delay={0.1}>

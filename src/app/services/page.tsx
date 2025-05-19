@@ -132,7 +132,7 @@ const faqs = [
       answer:
         `
           <p>
-            Build and maintain websites, including e-commerce platforms and landing pages.
+            Create a business plan, including goals, target market, and strategies.
           </p>
         `,
     }, {
@@ -140,7 +140,7 @@ const faqs = [
       answer:
         `
           <p>
-            Create, schedule, and manage social media posts across various platforms.
+            Create, schedule, and manage social media Posts/Calendars across various platforms.
           </p>
         `,
     }, {
@@ -148,7 +148,7 @@ const faqs = [
       answer:
         `
           <p>
-            Create and manage property listings on various platforms, including MLS and social media.
+            Design develop and Maintain a professional website Customized to your business needs.
           </p>
         `,
     }
