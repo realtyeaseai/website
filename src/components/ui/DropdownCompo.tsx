@@ -15,7 +15,7 @@ export default function DropdownCompo({ question, description, width = "w-full",
 
   return (
     <div
-      className={`border dark:border-transparent border-gray-300 border-b-blue-900 dark:border-b-[#ffffff69]  p-4 cursor-pointer dark:bg-[#ffffff0a] ${width} ${height}`}
+      className={`border border-transparent border-b-blue-900 dark:border-b-[#ffffff69]  p-4 cursor-pointer dark:bg-[#ffffff0a] ${width} ${height}`}
       onClick={() => setIsOpen(!isOpen)}
     >
       <div className="flex justify-between items-center">
