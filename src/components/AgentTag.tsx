@@ -5,9 +5,9 @@ interface AgentTagProps {
   }
   
   const bgClasses = {
-    'property-owner': 'bg-green-500',
-    'agent': 'bg-yellow-500',
-    'service-provider': 'bg-pink-100',
+    'property-owner': 'bg-[#1ca2dc50]',
+    'agent': 'bg-[#1ca2dc50]',
+    'service-provider': 'bg-[#1ca2dc50]',
   };
   
   const labelTexts = {
@@ -22,7 +22,7 @@ interface AgentTagProps {
   
     return (
       <span
-        className={`text-sm text-gray-900 ${bgColor} px-3 py-1 rounded-xl font-extrabold text-center w-fit min-w-[80px]`}
+        className={`text-sm text-gray-900 ${bgColor} px-3 py-2 rounded-md font-extrabold text-center w-fit min-w-[80px]`}
       >
         {label}
       </span>

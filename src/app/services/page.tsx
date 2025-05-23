@@ -11,7 +11,7 @@ export default function Services() {
 
   return (
     <div className="bg-white">
-    <div className="relative w-full h-fit pb-8 flex flex-col justify-start items-center min-h-[100dvh] dark:bg-black bg-[#1CA2DC50] dark:text-white text-black pt-28 md:pt-40">
+    <div className="relative w-full h-fit pb-8 flex flex-col justify-start items-center min-h-[100dvh] dark:bg-black bg-green-50 dark:text-white text-black pt-28 md:pt-40">
       <TopHeading />
       <RenderedServices />
       <BottomBox />
