@@ -21,11 +21,13 @@ interface AgentTagProps {
     const label = labelTexts[type];
   
     return (
+      <div className="rounded-md h-fit w-fit flex items-center justify-center bg-white">
       <span
         className={`text-sm text-gray-900 ${bgColor} px-3 py-2 rounded-md font-extrabold text-center w-fit min-w-[80px]`}
       >
         {label}
       </span>
+      </div>
     );
   }
   

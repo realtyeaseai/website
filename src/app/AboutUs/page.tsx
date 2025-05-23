@@ -12,15 +12,16 @@ export default function AboutUs() {
 
       {/* About Section 1 - Mission */}
       <section className="p-3 py-30 bg-neutral-200 text-black dark:bg-neutral-950 dark:text-white">
-        <div className="container mx-auto grid md:grid-cols-2 gap-10 py-10 px-10 items-center">
+        <div className="container mx-auto grid md:grid-cols-2 gap-2 py-10 px-10 items-center">
+          <span className="w-full h-full flex items-center justify-center">
           <Image
-            src="/assets/img/team/working.jpg"
-            width={500}
-            height={400}
+            src="/profilePics/k_c_1.jpg"
+            width={400}
+            height={300}
             alt="about"
             className="rounded-2xl"
-          />
-          <div>
+          /></span>
+          <div className="flex flex-col items-center md:items-start">
             <h4 className="text-4xl font-semibold mb-4 text-center">Our Mission</h4>
             <div className="mb-6 text-black dark:text-neutral-400 space-y-4 text-start">
               <p>
@@ -60,11 +61,11 @@ export default function AboutUs() {
 
           <span className="h-fit w-full flex items-center justify-center">
             <Image
-              src="/assets/img/team/working2.png"
+              src="/profilePics/k_e.png"
               width={500}
               height={400}
               alt="about"
-              className="rounded-xl w-[140px] md:w-[300px] h-auto"
+              className="rounded-md w-[300px] md:w-[480px] h-auto"
             />
           </span>
         </div>
@@ -108,9 +109,9 @@ export default function AboutUs() {
           </div>
           <span className="flex justify-center items-center">
             <Image
-              src="/assets/img/team/working.jpg"
-              width={500}
-              height={400}
+              src="/profilePics/e_1.jpg"
+              width={400}
+              height={300}
               alt="about"
               className="rounded-2xl"
             />
