@@ -15,7 +15,7 @@ const people: Person[] = [
     name: "Kathy Tiburcio",
     designation: "CEO & Co-Founder",
     image:
-      "/profilePics/k_c_3.jpg",
+      "/profilePics/k_c_3.JPG",
   },
   {
     id: 2,
