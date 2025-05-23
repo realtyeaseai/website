@@ -12,38 +12,36 @@ interface Person {
 const people: Person[] = [
   {
     id: 1,
-    name: "Robert Johnson",
-    designation: "Product Manager",
+    name: "Kathy Tiburcio",
+    designation: "CEO & Co-Founder",
     image:
-      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+      "/profilePics/k_c_3.jpg",
   },
   {
     id: 2,
-    name: "Jane Smith",
-    designation: "Data Scientist",
+    name: "Eyandra Molina",
+    designation: "COO & Co Founder",
     image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-  },
-  {
+      "/profilePics/e_1.jpg",
+  },{
     id: 3,
-    name: "Emily Davis",
-    designation: "UX Designer",
-    image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-  },
-  {
-    id: 4,
-    name: "Tyler Durden",
+    name: "Vishvam Shah",
     designation: "Web Developer",
     image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80",
+      "/profilePics/v_1.jpg",
+  },{
+    id: 4,
+    name: "Aadi Srivastava",
+    designation: "UX Designer",
+    image:
+      "/profilePics/a_1.jpg",
   },
   {
     id: 5,
-    name: "Reyna Davis",
-    designation: "UX Designer",
+    name: "Varun Singh",
+    designation: "Web Developer",
     image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+      "/profilePics/vs_1.jpg",
   },
 ];
 
