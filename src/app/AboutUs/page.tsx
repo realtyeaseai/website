@@ -15,7 +15,7 @@ export default function AboutUs() {
         <div className="container mx-auto grid md:grid-cols-2 gap-2 py-10 px-10 items-center">
           <span className="w-full h-full flex items-center justify-center">
           <Image
-            src="/profilePics/k_c_1.jpg"
+            src="/profilePics/k_c_1.JPG"
             width={400}
             height={300}
             alt="about"
