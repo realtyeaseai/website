@@ -388,7 +388,7 @@ function FourthBox() {
         </div>
 
         <Link href="/SpecializedServices" className="h-[50px] dark:text-black w-full rounded-[4px] text-center flex items-center justify-center bg-black text-white hover:bg-gray-700 dark:bg-[#ffffff] hover:dark:bg-[#ffffffdc] transition-all duration-300 ease-in mt-4">
-          Check out our services   <span className="px-4"><IconArrowRight/></span>
+          Check out our plans   <span className="px-4"><IconArrowRight/></span>
         </Link>
       </div>
 
